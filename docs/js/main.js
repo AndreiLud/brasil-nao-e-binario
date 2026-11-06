@@ -7,6 +7,7 @@ const SECTIONS = ["pergunta", "tres-eleicoes", "mapa", "bolha", "em-2018", "em-2
 const safe = (fn) => async () => { try { await fn(); } catch (e) { console.error(e); } };
 
 hero();
+shareButton();
 langSwitch();
 restorePosition();
 
@@ -37,6 +38,50 @@ async function deepLink() {
 }
 deepLink().catch(console.error);
 window.addEventListener("hashchange", () => deepLink().catch(console.error));
+
+// ---- share: native sheet on touch devices, a small menu elsewhere ----
+function shareButton() {
+  const btn = $("share-btn"), menu = $("share-menu"), status = $("share-status");
+  if (!btn) return;
+  const canon = document.querySelector('link[rel="canonical"]');
+  const url = canon ? canon.href : location.href.split("#")[0];
+  const title = btn.dataset.shareTitle, text = btn.dataset.shareText;
+  const enc = encodeURIComponent;
+  const links = {
+    whatsapp: `https://wa.me/?text=${enc(`${text} ${url}`)}`,
+    linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${enc(url)}`,
+    x: `https://twitter.com/intent/tweet?text=${enc(text)}&url=${enc(url)}`,
+  };
+  menu.querySelectorAll("a[data-net]").forEach((a) => { a.href = links[a.dataset.net]; });
+  const label = btn.querySelector(".share-label"), original = label.textContent;
+  const open = (v) => {
+    menu.hidden = !v; btn.setAttribute("aria-expanded", String(v));
+    if (v) menu.querySelector(".share-item").focus();
+  };
+  const touch = window.matchMedia("(pointer: coarse)").matches;
+  btn.addEventListener("click", async () => {
+    if (touch && navigator.share) {
+      try { await navigator.share({ title, text, url }); } catch (e) { /* closed by the reader */ }
+      return;
+    }
+    open(menu.hidden);
+  });
+  menu.querySelector('[data-net="copy"]').addEventListener("click", async () => {
+    let ok = false;
+    try { await navigator.clipboard.writeText(url); ok = true; } catch (e) { /* not allowed */ }
+    open(false); btn.focus();
+    if (ok) {
+      label.textContent = T.linkCopied; status.textContent = T.linkCopied;
+      setTimeout(() => { label.textContent = original; }, 2200);
+    } else {
+      status.textContent = `${T.copyFailed} ${url}`;
+      window.prompt(T.copyFailed, url);
+    }
+  });
+  menu.querySelectorAll("a[data-net]").forEach((a) => a.addEventListener("click", () => open(false)));
+  document.addEventListener("pointerdown", (e) => { if (!menu.hidden && !$("share").contains(e.target)) open(false); });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !menu.hidden) { open(false); btn.focus(); } });
+}
 
 // ---- language switch: always reachable, keeps the reader at the same point of the story ----
 

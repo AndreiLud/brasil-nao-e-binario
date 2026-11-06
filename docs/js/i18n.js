@@ -87,6 +87,7 @@ const S = {
     // city
     noMatch: "Nenhum município encontrado", noMatchFor: (q) => `Nenhum município encontrado para ${q}.`,
     showing: (n) => `Mostrando ${n}.`, allBrazil: "Brasil inteiro", brazil: "Brasil",
+    linkCopied: "Link copiado", copyFailed: "Não deu para copiar. O link é:",
     clearSearch: "Limpar a busca e voltar ao Brasil inteiro", backToBrazil: "Ver o Brasil inteiro", showingAll: "Mostrando o Brasil inteiro.",
     cityMeta: (uf, reg, pop) => `${uf}, região ${reg}. População: ${pop} habitantes.`,
     allMeta: "Todos os eleitores, inclusive os que votam no exterior. Busque um município acima.",
@@ -168,6 +169,7 @@ const S = {
     head2022: "Change in share from Haddad (2018) to Lula (2022)",
     noMatch: "No municipality found", noMatchFor: (q) => `No municipality found for ${q}.`,
     showing: (n) => `Showing ${n}.`, allBrazil: "All of Brazil", brazil: "Brazil",
+    linkCopied: "Link copied", copyFailed: "Could not copy. The link is:",
     clearSearch: "Clear the search and go back to all of Brazil", backToBrazil: "See all of Brazil", showingAll: "Showing all of Brazil.",
     cityMeta: (uf, reg, pop) => `${uf}, ${reg} region. Population: ${pop}.`,
     allMeta: "All voters, including those who vote abroad. Search for a municipality above.",

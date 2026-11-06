@@ -5,26 +5,31 @@
 Checks both language versions (/ and /en/), at phone and desktop sizes: no JavaScript errors or failed requests while scrolling
 the whole page; no horizontal overflow; the map caption follows rapid control clicks; a tap
 on the map shows a tooltip (touch); the city search finds a municipality; the deep link
-#cidade-<IBGE> opens the city view. Exits with status 1 on any failure.
+#cidade-<IBGE> opens the city view; the share button in the opening offers the networks and
+copies the page address. Exits with status 1 on any failure.
 """
 from __future__ import annotations
 
 import sys
 from pathlib import Path
+from urllib.parse import quote
 
 if __package__ in (None, ""):
     sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from playwright.sync_api import sync_playwright
 
+from src.config import SITE_URL
 from src.screenshots import scroll_through, serve
 
 
 LANGS = {
     "pt": {"path": "", "clicks": ("2014", "1º", "2018", "Proporção", "2022", "2º", "Pontos", "2026", "Vencedor"),
-           "caption": "2º turno de 2026", "nomatch": "Nenhum", "all": "Brasil inteiro"},
+           "caption": "2º turno de 2026", "nomatch": "Nenhum", "all": "Brasil inteiro",
+           "copied": "Link copiado", "canon": SITE_URL},
     "en": {"path": "en/", "clicks": ("2014", "First", "2018", "Share", "2022", "Runoff", "Dots", "2026", "Winner"),
-           "caption": "2026 runoff", "nomatch": "No municipality", "all": "All of Brazil"},
+           "caption": "2026 runoff", "nomatch": "No municipality", "all": "All of Brazil",
+           "copied": "Link copied", "canon": SITE_URL + "en/"},
 }
 
 
@@ -40,12 +45,36 @@ def main() -> int:
             url = root + L["path"]
             name = f"{lang}/{vname}"
             ctx = browser.new_context(**opts)
+            ctx.grant_permissions(["clipboard-read", "clipboard-write"], origin=root.rstrip("/"))
             page = ctx.new_page()
             errors = []
             page.on("pageerror", lambda e: errors.append(f"pageerror: {e}"))
             page.on("console", lambda m: errors.append(f"console: {m.text}") if m.type == "error" else None)
             page.on("requestfailed", lambda r: errors.append(f"requestfailed: {r.url}"))
             page.goto(url, wait_until="networkidle")
+
+            # share button in the opening (headless Chromium has no native share sheet: the row of options opens)
+            share = page.locator("#share-btn")
+            if not share.is_visible():
+                failures.append(f"{name}: share button not visible in the opening")
+            else:
+                share.click()
+                page.wait_for_timeout(300)
+                wa = page.locator('#share-menu [data-net="whatsapp"]')
+                if not wa.is_visible() or quote(L["canon"], safe="") not in (wa.get_attribute("href") or ""):
+                    failures.append(f"{name}: share options missing or not pointing to {L['canon']}")
+                page.keyboard.press("Escape")
+                page.wait_for_timeout(200)
+                if wa.is_visible():
+                    failures.append(f"{name}: Escape did not close the share options")
+                share.click()
+                page.locator('#share-menu [data-net="copy"]').click()
+                page.wait_for_timeout(300)
+                if L["copied"] not in share.inner_text():
+                    failures.append(f"{name}: no confirmation after copying the link")
+                if page.evaluate("navigator.clipboard.readText()") != L["canon"]:
+                    failures.append(f"{name}: clipboard does not hold {L['canon']}")
+
             scroll_through(page, step=600, wait=100)
             page.wait_for_timeout(800)
             overflow = page.evaluate("document.documentElement.scrollWidth - window.innerWidth")

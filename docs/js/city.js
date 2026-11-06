@@ -44,7 +44,7 @@ export async function initCity() {
   const clearBtn = document.createElement("button");
   clearBtn.type = "button"; clearBtn.className = "city-clear"; clearBtn.hidden = true;
   clearBtn.setAttribute("aria-label", T.clearSearch); clearBtn.title = T.clearSearch;
-  clearBtn.textContent = "\u00d7";
+  clearBtn.innerHTML = '<svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M3.5 3.5l9 9M12.5 3.5l-9 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>';
   input.after(clearBtn);
   const updateClear = () => { clearBtn.hidden = !input.value; };
   input.addEventListener("input", updateClear);
