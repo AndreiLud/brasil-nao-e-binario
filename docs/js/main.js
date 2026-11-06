@@ -3,9 +3,12 @@ import { C, T, getJSON, results, municipios, row, whenNear, reducedMotion } from
 import { peopleSVG } from "./people.js";
 
 const $ = (id) => document.getElementById(id);
+const SECTIONS = ["pergunta", "tres-eleicoes", "mapa", "bolha", "em-2018", "em-2022", "em-2026", "sua-cidade", "metodo"];  // chapters, in order
 const safe = (fn) => async () => { try { await fn(); } catch (e) { console.error(e); } };
 
 hero();
+langSwitch();
+restorePosition();
 
 whenNear($("pergunta"), safe(async () => { const m = await import("./charts.js"); await m.minorityBar(); }));
 whenNear($("tres-eleicoes"), safe(async () => { const m = await import("./charts.js"); await m.nationalBars(); }));
@@ -31,6 +34,62 @@ async function deepLink() {
 }
 deepLink().catch(console.error);
 window.addEventListener("hashchange", () => deepLink().catch(console.error));
+
+// ---- language switch: always reachable, keeps the reader at the same point of the story ----
+
+function langSwitch() {
+  const nav = document.querySelector(".lang-switch");
+  if (!nav) return;
+  const link = nav.querySelector("a[hreflang]");
+  link.addEventListener("click", (e) => {
+    const line = innerHeight * 0.3;
+    let cur = null, ratio = 0;
+    for (const id of SECTIONS) {
+      const el = $(id);
+      if (!el) continue;
+      const r = el.getBoundingClientRect();
+      if (r.top <= line) { cur = id; ratio = Math.min(1, Math.max(0, (line - r.top) / r.height)); }
+    }
+    if (!cur) return;                       // still at the opening: plain link
+    e.preventDefault();
+    const url = new URL(link.href, location.href);
+    url.searchParams.set("s", cur);
+    url.searchParams.set("p", ratio.toFixed(4));
+    if (/^#cidade-\d{7}$/.test(location.hash)) url.hash = location.hash;
+    location.href = url.toString();
+  });
+  // hide while reading down, show again when the reader scrolls up or reaches the top
+  let lastY = scrollY;
+  addEventListener("scroll", () => {
+    const y = scrollY;
+    if (y < 120 || y < lastY - 6) nav.classList.remove("is-hidden");
+    else if (y > lastY + 6) nav.classList.add("is-hidden");
+    lastY = y;
+  }, { passive: true });
+}
+
+// Arriving from the other language: go back to the same section and relative position.
+function restorePosition() {
+  const q = new URLSearchParams(location.search);
+  const id = q.get("s");
+  if (!id || !SECTIONS.includes(id) || !$(id)) return;
+  const p = Math.min(1, Math.max(0, parseFloat(q.get("p")) || 0));
+  if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+  let moved = false;
+  for (const ev of ["wheel", "touchstart", "keydown", "pointerdown"]) addEventListener(ev, () => { moved = true; }, { once: true, passive: true });
+  const go = () => {
+    if (moved) return;
+    const el = $(id);
+    const top = el.getBoundingClientRect().top + scrollY;
+    scrollTo({ top: Math.max(0, top + p * el.offsetHeight - innerHeight * 0.3), behavior: "instant" });
+  };
+  // charts above load lazily and change the page height: re-anchor a few times until the reader takes over
+  go();
+  for (const t of [200, 600, 1200, 2200, 3500]) setTimeout(go, t);
+  const clean = new URL(location.href);
+  clean.searchParams.delete("s"); clean.searchParams.delete("p");
+  history.replaceState(null, "", clean.pathname + clean.search + clean.hash);
+}
 
 async function extremes() {
   const [stories, res, mun] = await Promise.all([getJSON("data/stories.json"), results(2026, 2), municipios()]);

@@ -93,6 +93,31 @@ def main() -> int:
             if "São Paulo" not in page.locator("#city-out").inner_text():
                 failures.append(f"{name}: deep link #cidade-3550308 did not open São Paulo")
 
+            # language switch in the middle of the story keeps the reader in the same section
+            page.goto(url, wait_until="networkidle")
+            sec = page.locator("#em-2022")
+            sec.scroll_into_view_if_needed()
+            page.wait_for_timeout(600)
+            page.mouse.wheel(0, -120)                 # scrolling up reveals the switch
+            page.wait_for_timeout(500)
+            other = page.locator(".lang-switch a[hreflang]")
+            if not other.is_visible():
+                failures.append(f"{name}: language switch not visible after scrolling up")
+            else:
+                other.click()
+                page.wait_for_load_state("networkidle")
+                page.wait_for_timeout(2500)
+                want_en = lang == "pt"
+                at_en = "/en/" in page.url
+                top = page.evaluate("document.getElementById('em-2022').getBoundingClientRect().top")
+                vh = page.evaluate("innerHeight")
+                if at_en != want_en:
+                    failures.append(f"{name}: switch went to {page.url}")
+                if not (-page.evaluate("document.getElementById('em-2022').offsetHeight") < top < vh):
+                    failures.append(f"{name}: after switching, section em-2022 is not in view (top={top:.0f})")
+                if "s=" in page.url:
+                    failures.append(f"{name}: position parameters left in the address bar")
+
             failures += [f"{name}: {e}" for e in errors]
             print(f"{name}: done, {len(errors)} JS/network errors")
             ctx.close()
