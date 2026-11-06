@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>O Brasil não é binário</title>
+<meta name="description" content="No 2º turno de 2026, 46,6 milhões de pessoas votaram no candidato que perdeu no próprio município. Uma análise das eleições presidenciais de 2018, 2022 e 2026 com dados oficiais do TSE.">
+<meta name="theme-color" content="#17161c">
+<link rel="canonical" href="https://andreilud.github.io/brasil-nao-e-binario/">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="O Brasil não é binário">
+<meta property="og:description" content="No 2º turno de 2026, 46,6 milhões de pessoas votaram no candidato que perdeu no próprio município. O mapa de vencedores esconde um país misturado.">
+<meta property="og:url" content="https://andreilud.github.io/brasil-nao-e-binario/">
+<meta property="og:image" content="https://andreilud.github.io/brasil-nao-e-binario/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Mapa do Brasil feito de pontos violeta e ocre misturados, com o título O Brasil não é binário">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="O Brasil não é binário">
+<meta name="twitter:description" content="No 2º turno de 2026, 46,6 milhões de pessoas votaram no candidato que perdeu no próprio município.">
+<meta name="twitter:image" content="https://andreilud.github.io/brasil-nao-e-binario/img/og.png">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/fraunces-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="hero" aria-label="Abertura">
+  <canvas id="hero-canvas" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <p class="kicker">Eleições presidenciais de 2018, 2022 e 2026</p>
+    <h1>O Brasil não é <em>binário</em></h1>
+    <p class="lede">O mapa de quem venceu em cada cidade desenha um país partido em dois. Os votos mostram outra coisa: em todo município há eleitores dos dois lados, além de quem votou em outro candidato, anulou ou ficou em casa.</p>
+    <p class="byline">Dados oficiais do TSE e do IBGE, município por município.</p>
+    <p class="scroll-cue" aria-hidden="true">Role para começar</p>
+  </div>
+</header>
+
+<main id="conteudo">
+
+<!-- 1. A pergunta -->
+<section class="chapter bignum" id="pergunta" aria-labelledby="h-pergunta">
+  <div class="wrap">
+    <p class="kicker">A pergunta</p>
+    <h2 id="h-pergunta">O Brasil está dividido?</h2>
+    <div class="prose" style="margin-top:20px">
+      <p>No 2º turno de 2026, Lula venceu em 2.875 municípios e Flávio Bolsonaro em 2.695. Contados assim, os municípios parecem formar dois países quase do mesmo tamanho, cada um de uma cor.</p>
+    </div>
+    <p class="figure-num" style="margin-top:36px">46,6 <small>milhões</small></p>
+    <p class="lede">de pessoas votaram, no 2º turno de 2026, no candidato que perdeu no próprio município. São 37,6% dos votos válidos dados no Brasil.</p>
+    <figure class="chart" id="fig-minority" aria-labelledby="t-minority">
+      <p class="chart-title" id="t-minority">Mais de um terço dos votos foi para quem perdeu no município</p>
+      <p class="chart-sub">Votos válidos do 2º turno de 2026 nos municípios brasileiros, separados pelo resultado em cada município.</p>
+      <div class="mixbar" id="minority-bar" role="img" aria-label="Barra com os votos de Lula onde ele venceu, de Lula onde perdeu, de Flávio onde perdeu e de Flávio onde venceu."></div>
+      <div class="mixbar-legend" id="minority-legend"></div>
+      <p class="chart-foot">Fonte: TSE. Votos no exterior não entram nesta conta, porque não pertencem a nenhum município.</p>
+    </figure>
+    <div class="prose">
+      <p>Este texto mostra, com os dados oficiais das últimas eleições presidenciais, que o voto de cada lado está espalhado pelo país inteiro. Mostra também onde ele não está: há regiões e faixas de renda em que um dos lados domina, e isso aparece aqui com o mesmo destaque.</p>
+      <div class="city-note" role="note">
+        <p><strong>Como comparamos eleições diferentes.</strong> Os votos foram agrupados em dois campos. <span class="nowrap"><span class="swatch l"></span><span class="l">Campo lulista</span></span>: Fernando Haddad em 2018 e Luiz Inácio Lula da Silva em 2022 e 2026. <span class="nowrap"><span class="swatch b"></span><span class="b">Campo bolsonarista</span></span>: Jair Bolsonaro em 2018 e 2022 e Flávio Bolsonaro em 2026. A eleição de 2014, entre Dilma Rousseff e Aécio Neves, aparece só como ponto de partida, nas mesmas cores e sempre com o nome dos candidatos. Nenhum dos dois fazia parte desses campos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. Três eleições em um minuto -->
+<section class="chapter" id="tres-eleicoes" aria-labelledby="h-tres">
+  <div class="wrap">
+    <div class="chapter-head">
+      <p class="kicker">Três eleições em um minuto</p>
+      <h2 id="h-tres">Quem não escolheu nenhum dos dois também conta</h2>
+    </div>
+    <div class="prose">
+      <p>Os percentuais oficiais são calculados sobre os votos válidos. Aqui a conta parte de todo o eleitorado: quem votou em um dos dois campos, em outro candidato, em branco, nulo ou não foi votar.</p>
+    </div>
+  </div>
+  <div class="wrap">
+    <figure class="chart" aria-labelledby="t-nat">
+      <p class="chart-title" id="t-nat">Em nenhum turno de 2014 a 2026 um candidato teve o voto de metade do eleitorado</p>
+      <p class="chart-sub">Como se dividiu o eleitorado apto em cada turno, em %. Inclui o voto no exterior.</p>
+      <div class="legend" id="nat-legend"></div>
+      <div class="natbars" id="natbars" role="img" aria-label="Barras empilhadas com a divisão do eleitorado em cada turno de 2014 a 2026. Os valores estão na tabela abaixo."></div>
+      <details class="table-view"><summary>Ver os números em tabela</summary><div class="table-scroll" id="nat-table"></div></details>
+      <p class="chart-foot">Fonte: TSE, detalhe da apuração e votação nominal por município e zona. Em 2014, Dilma Rousseff e Aécio Neves aparecem nas mesmas cores só como referência.</p>
+    </figure>
+    <div class="prose">
+      <p>Em 2018, Jair Bolsonaro venceu com 55,1% dos votos válidos. Em 2022, Lula venceu com 50,9%. Em 2026, Flávio Bolsonaro terminou o 1º turno à frente, com 47,0% contra 45,2% de Lula. No 2º turno, Lula venceu com 51,8%.</p>
+      <p>O maior apoio no período foi o de Lula no 2º turno de 2026: 40,5% do eleitorado. No campo bolsonarista, o maior foi o de Jair Bolsonaro no 2º turno de 2018: 39,2%. Em cada turno, entre 19,2% e 21,3% dos eleitores não foram votar. No 2º turno de 2026, 21,8% do eleitorado não votou em nenhum dos dois: 19,2% não compareceram e 2,6% votaram em branco ou anularam.</p>
+      <p>A abstenção inclui registros desatualizados, de pessoas que mudaram de cidade ou morreram. Por isso, parte dela não reflete uma decisão de não votar.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 3. O mapa que engana -->
+<section class="dark" id="mapa" aria-labelledby="h-mapa">
+  <div class="wrap" style="padding-top:96px;padding-bottom:24px">
+    <p class="kicker">O mapa que engana</p>
+    <h2 id="h-mapa">Um país em duas cores, ou em muitas</h2>
+  </div>
+  <div class="scrolly" id="scrolly">
+    <div class="sticky">
+      <div class="map-ui map-ui-top">
+        <div class="map-legend" id="map-legend"></div>
+      </div>
+      <div class="mapbox" id="mainmap" role="img" aria-label="Mapa dos municípios do Brasil. Os números de cada município estão na seção Sua cidade, mais abaixo.">
+        <canvas class="layer" id="map-fill" aria-hidden="true"></canvas>
+        <canvas class="layer" id="map-dots" aria-hidden="true" style="opacity:0"></canvas>
+        <canvas id="map-hover" aria-hidden="true"></canvas>
+        <div class="tooltip" id="map-tip" aria-hidden="true"></div>
+      </div>
+      <div class="map-ui">
+        <div class="controls" id="map-controls" role="group" aria-label="Controles do mapa"></div>
+        <p class="chart-sub map-caption" id="map-caption"></p>
+      </div>
+    </div>
+    <div class="steps">
+      <div class="step" data-step="0"><div class="card">
+        <p>Este é o mapa de sempre. Cada município ganha a cor de quem teve mais votos ali. No 2º turno de 2026, <span class="l">Lula</span> venceu em 2.875 municípios e <span class="b">Flávio</span> em 2.695.</p>
+      </div></div>
+      <div class="step" data-step="1"><div class="card">
+        <p>Os municípios vencidos por Lula reúnem metade do eleitorado que vota no Brasil, e os vencidos por Flávio, a outra metade (50,0% e 50,0%). Parece um país cortado ao meio. Mas a cor de cada município esconde quem votou no perdedor ali.</p>
+      </div></div>
+      <div class="step" data-step="2"><div class="card">
+        <p>Agora a mesma eleição em proporção. Quanto mais perto do <span style="color:var(--mix)">rosé</span>, mais equilibrado foi o município. Em 3.554 municípios, quem perdeu teve mais de 30% dos votos. Em 1.804, mais de 40%.</p>
+      </div></div>
+      <div class="step" data-step="3"><div class="card">
+        <p>Por fim, cada ponto vale 1.000 votos e fica em um lugar sorteado dentro do município. O mapa passa a mostrar onde estão os votos. Onde há mais eleitores, as duas cores aparecem misturadas.</p>
+      </div></div>
+      <div class="step" data-step="4"><div class="card">
+        <p>Lula teve 24,3 milhões de votos em municípios onde Flávio venceu. Flávio teve 22,3 milhões em municípios onde Lula venceu. São 37,9% e 37,4% dos votos de cada um no Brasil.</p>
+      </div></div>
+      <div class="step" data-step="5"><div class="card">
+        <p><strong>Agora é com você.</strong> Use os botões abaixo do mapa para trocar o ano, o turno e o tipo de mapa. Passe o mouse ou toque em um município para ver os números. Sem mouse, busque o município em <a href="#sua-cidade">Sua cidade</a>.</p>
+      </div></div>
+      <div class="step step-spacer" data-step="6" aria-hidden="true"></div>
+    </div>
+  </div>
+  <div class="wrap explore" id="explore">
+    <p class="chart-foot">No 1º turno de 2014 e de 2018, um terceiro candidato chegou em primeiro em alguns municípios: 99 em 2014 (Marina Silva) e 103 em 2018 (Ciro Gomes). No mapa de vencedor eles aparecem em cinza azulado. No mapa de proporção, a cor mostra só a divisão entre os dois campos. Boa Esperança do Norte (MT) foi instalado em 2025; nas eleições presidenciais anteriores, sua área aparece hachurada. Fonte: TSE e IBGE (malha municipal 2025). Projeção cônica equivalente de Albers, que mantém as áreas proporcionais. Votos no exterior não aparecem no mapa.</p>
+  </div>
+</section>
+
+<!-- 4. Ninguém vive numa bolha -->
+<section class="chapter" id="bolha" aria-labelledby="h-bolha">
+  <div class="wrap">
+    <div class="chapter-head">
+      <p class="kicker">Ninguém vive numa bolha</p>
+      <h2 id="h-bolha">Quem perde numa cidade não some dela</h2>
+    </div>
+    <div class="prose">
+      <p>No 2º turno de 2026, o lado derrotado passou de 10% dos votos válidos em 5.558 dos 5.571 municípios.</p>
+    </div>
+    <figure class="chart" aria-labelledby="t-hist">
+      <p class="chart-title" id="t-hist">No 2º turno de 2026, quem perdeu teve mais de 30% dos votos válidos em 3.554 municípios</p>
+      <p class="chart-sub">Número de municípios pela fatia de cada lado nos votos válidos do 2º turno. Cada barra reúne 5 pontos percentuais. Use os botões para ver outros anos.</p>
+      <div class="controls" id="hist-controls"></div>
+      <div id="hist" class="svg-chart" role="img" aria-label="Histograma dos municípios pela fatia de votos de cada lado no 2º turno."></div>
+      <details class="table-view"><summary>Ver os números em tabela</summary><div class="table-scroll" id="hist-table"></div></details>
+      <p class="chart-foot">Fonte: TSE. A faixa clara marca os municípios onde o lado derrotado teve mais de 30%. Municípios com empate exato ficam fora da contagem de derrotados.</p>
+    </figure>
+
+    <figure class="chart" aria-labelledby="t-reg">
+      <p class="chart-title" id="t-reg">Cada lado tem milhões de votos nas regiões onde perde</p>
+      <p class="chart-sub">Votos de cada candidato no 2º turno de 2026, por região.</p>
+      <div class="legend"><span class="key"><i style="background:var(--l)"></i>Lula</span><span class="key"><i style="background:var(--b)"></i>Flávio Bolsonaro</span></div>
+      <div id="regions" class="svg-chart" role="img" aria-label="Barras com os votos de Lula e de Flávio Bolsonaro em cada região no 2º turno de 2026."></div>
+      <details class="table-view"><summary>Ver os números em tabela</summary><div class="table-scroll" id="regions-table"></div></details>
+      <p class="chart-foot">Fonte: TSE. Exterior: votos de brasileiros que votaram fora do país.</p>
+    </figure>
+    <div class="prose">
+      <p>Flávio teve 10,8 milhões de votos no Nordeste, mais do que em 11 unidades da federação de outras regiões somadas (AP, RR, AC, TO, RO, MS, AM, DF, ES, MT e PA). Lula teve 6,8 milhões no Sul, mais do que em 11 unidades de outras regiões somadas (RR, AC, AP, RO, TO, MS, MT, DF, SE, ES e AM). No Norte, os dois ficaram a 1.079 votos de distância, num total de 10,0 milhões de votos.</p>
+      <p>Isso não quer dizer que as regiões votem igual. No Nordeste, Lula venceu em 1.774 dos 1.794 municípios. No Sul, Flávio venceu em 1.054 de 1.191, e no Centro-Oeste em 406 de 468. A vantagem de Lula no Nordeste foi de 13,7 milhões de votos. A de Flávio, somando Sudeste, Sul e Centro-Oeste, foi de 9,3 milhões.</p>
+    </div>
+
+    <figure class="chart" aria-labelledby="t-ext">
+      <p class="chart-title" id="t-ext">Nem os municípios de resultado mais desequilibrado votaram em um lado só</p>
+      <p class="chart-sub">Os dois municípios com o resultado mais desequilibrado do 2º turno de 2026, como se cada um tivesse 100 eleitores.</p>
+      <div class="cards">
+        <div class="card-x">
+          <h3>Carnaubeira da Penha (PE)</h3>
+          <p class="where">O município mais lulista do país</p>
+          <div class="people" id="people-most-l"></div>
+          <p>Lula teve 92,3% dos votos válidos. Ainda assim, 786 eleitores votaram em Flávio (7,7% dos votos válidos).</p>
+        </div>
+        <div class="card-x">
+          <h3>Nova Pádua (RS)</h3>
+          <p class="where">O município mais bolsonarista do país</p>
+          <div class="people" id="people-most-b"></div>
+          <p>Flávio teve 90,6% dos votos válidos. Ainda assim, 197 eleitores votaram em Lula (9,4% dos votos válidos).</p>
+        </div>
+      </div>
+      <p class="chart-foot">Cada boneco é 1% do eleitorado apto, inclusive quem não votou (bonecos vazados). Por isso a contagem de bonecos não é igual à fatia dos votos válidos. Fonte: TSE.</p>
+    </figure>
+    <div class="prose">
+      <p>Entre os municípios com 100 mil eleitores ou mais, o mais lulista foi Cametá (PA), onde Flávio teve 21,8%. O mais bolsonarista foi Sinop (MT), onde Lula teve 22,3%.</p>
+    </div>
+
+    <h3 style="margin-top:56px">Renda, tamanho e região</h3>
+    <div class="prose" style="margin-top:12px">
+      <p>O voto também se associa a características dos municípios. O gráfico mostra, para cada grupo, onde fica a maior parte dos municípios, e não só a mediana.</p>
+    </div>
+    <figure class="chart" aria-labelledby="t-ctx">
+      <p class="chart-title" id="t-ctx">A fatia de Lula varia muito entre faixas de renda e pouco entre tamanhos de município</p>
+      <p class="chart-sub">Fatia de Lula nos votos válidos dos municípios de cada grupo, 2º turno de 2026. A barra grossa reúne a metade central dos municípios; a fina, 80% deles; o ponto marca a mediana.</p>
+      <div id="context" class="svg-chart" role="img" aria-label="Distribuição da fatia de Lula por faixa de renda, por tamanho do município e por região."></div>
+      <details class="table-view"><summary>Ver os números em tabela</summary><div class="table-scroll" id="context-table"></div></details>
+      <p class="chart-foot">Fonte: TSE (votos) e IBGE, Censo 2022 (renda e população). Renda: rendimento domiciliar per capita mediano do município. Faixas cortadas em R$ 552,40, R$ 731,00, R$ 1.015,50 e R$ 1.212,00. Muitos municípios têm mediana igual a um salário mínimo de 2022, então as faixas não têm o mesmo número de municípios. Tamanho: população do Censo 2022.</p>
+    </figure>
+    <div class="prose">
+      <p>Entre essas três medidas, a renda é a que mais se associa ao voto. Na faixa de menor renda, a mediana de Lula foi 76,4%; na de maior renda, 31,9%. Nas faixas extremas, os resultados quase não se cruzam. Renda e região andam juntas: 907 dos 1.114 municípios de menor renda ficam no Nordeste, e 578 dos 836 de maior renda ficam no Sul. Mesmo comparando cada município com a média da sua região, renda maior se associa a fatia menor de Lula.</p>
+      <p>Há exceções dos dois lados: Flávio venceu em 32 municípios da faixa de menor renda, e Lula em 24 da faixa de maior renda. E isso descreve lugares, não pessoas. Cidades de renda alta também têm eleitores pobres, e o contrário.</p>
+      <p>O tamanho do município quase não se associa ao voto no país como um todo. Municípios pequenos e grandes aparecem nos dois lados.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 5. 2018 -->
+<section class="chapter" id="em-2018" aria-labelledby="h-2018" style="background:var(--paper-2)">
+  <div class="wrap">
+    <div class="chapter-head">
+      <p class="kicker">2018</p>
+      <h2 id="h-2018">O adversário do PT ganha espaço nas cinco regiões</h2>
+    </div>
+    <div class="prose">
+      <p>Para medir a chegada de Jair Bolsonaro, a comparação parte do 2º turno de 2014, quando Aécio Neves (PSDB) enfrentou Dilma Rousseff (PT). Não é o mesmo movimento político. O que se mede é quanto cresceu, em cada município, o candidato que disputou o 2º turno contra o PT.</p>
+    </div>
+    <figure class="chart" aria-labelledby="t-2018">
+      <p class="chart-title" id="t-2018">O candidato que enfrentou o PT ganhou espaço em 3.830 dos 5.570 municípios</p>
+      <p class="chart-sub">Variação da fatia de cada lado no 2º turno, de 2014 (Dilma e Aécio) para 2018 (Haddad e Bolsonaro), em pontos percentuais.</p>
+      <div class="legend" id="legend-2018"></div>
+      <div class="twocol">
+        <div class="smallmap" id="map-2018" role="img" aria-label="Mapa da variação da fatia de cada lado entre 2014 e 2018 por município. O resumo por região está no gráfico ao lado e na tabela."><div class="tooltip" aria-hidden="true"></div></div>
+        <div id="bars-2018" class="svg-chart" role="img" aria-label="Variação por região da fatia do candidato não petista entre 2014 e 2018."></div>
+      </div>
+      <details class="table-view"><summary>Ver os números por região</summary><div class="table-scroll" id="table-2018"></div></details>
+      <p class="chart-foot">Fonte: TSE. Fatia de Bolsonaro (2018) menos a fatia de Aécio (2014) nos votos válidos do 2º turno, e o mesmo para Haddad e Dilma.</p>
+    </figure>
+    <div class="prose">
+      <p>A fatia subiu 8,4 pontos no Norte, 9,2 pontos no Sudeste, 9,4 pontos no Sul e 9,1 pontos no Centro-Oeste. No Nordeste, 2,0 pontos. Em 775 municípios, Dilma tinha vencido em 2014 e Bolsonaro venceu em 2018. Em 58, o caminho foi o inverso: Aécio venceu em 2014 e Haddad, em 2018.</p>
+      <p>Entre os municípios com 50 mil eleitores ou mais, as 10 maiores altas foram todas no estado do Rio de Janeiro. A maior foi em Belford Roxo (RJ). Ali, Aécio teve 25,2% dos votos válidos em 2014, e Bolsonaro, 68,9% em 2018.</p>
+      <p>No total do país, Bolsonaro teve 6,8 milhões de votos a mais que Aécio no 2º turno. Haddad teve 7,5 milhões a menos que Dilma.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 6. 2022 -->
+<section class="chapter" id="em-2022" aria-labelledby="h-2022">
+  <div class="wrap">
+    <div class="chapter-head">
+      <p class="kicker">2022</p>
+      <h2 id="h-2022">A volta de Lula passa pelo Sudeste</h2>
+    </div>
+    <div class="prose">
+      <p>De 2018 para 2022, Lula teve 13,3 milhões de votos a mais que Haddad no 2º turno. Bolsonaro teve 409 mil a mais do que na eleição anterior.</p>
+    </div>
+    <figure class="chart" aria-labelledby="t-2022">
+      <p class="chart-title" id="t-2022">A fatia de Lula cresceu em 3.300 municípios e caiu em 2.270</p>
+      <p class="chart-sub">Variação da fatia de cada lado no 2º turno, de 2018 (Haddad e Bolsonaro) para 2022 (Lula e Bolsonaro), em pontos percentuais.</p>
+      <div class="legend" id="legend-2022"></div>
+      <div class="twocol">
+        <div class="smallmap" id="map-2022" role="img" aria-label="Mapa da variação da fatia de cada lado entre 2018 e 2022 por município. O resumo por região está no gráfico ao lado e na tabela."><div class="tooltip" aria-hidden="true"></div></div>
+        <div id="bars-2022" class="svg-chart" role="img" aria-label="Variação por região da fatia de Lula entre 2018 e 2022."></div>
+      </div>
+      <details class="table-view"><summary>Ver os números por região</summary><div class="table-scroll" id="table-2022"></div></details>
+      <p class="chart-foot">Fonte: TSE. Fatia de Lula (2022) menos a fatia de Haddad (2018) nos votos válidos do 2º turno.</p>
+    </figure>
+    <div class="prose">
+      <p>A fatia lulista subiu 11,1 pontos no Sudeste, 6,4 pontos no Sul, 6,3 pontos no Centro-Oeste e 0,9 ponto no Norte. No Nordeste, ficou praticamente igual (−0,3 ponto). O Sudeste respondeu por 58,9% do aumento de votos de Lula dentro do Brasil.</p>
+      <p>Ao todo, 368 municípios passaram de Bolsonaro para Lula, e 54 fizeram o caminho inverso. Entre os municípios com 50 mil eleitores ou mais, as 10 maiores altas foram todas no estado de São Paulo. A maior foi em Cruzeiro (SP): 17,0 pontos.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 7. 2026 -->
+<section class="chapter" id="em-2026" aria-labelledby="h-2026" style="background:var(--paper-2)">
+  <div class="wrap">
+    <div class="chapter-head">
+      <p class="kicker">2026</p>
+      <h2 id="h-2026">A virada entre um domingo e outro</h2>
+    </div>
+    <div class="prose">
+      <p>No 1º turno, em 4 de outubro, Flávio Bolsonaro terminou 2,2 milhões de votos à frente de Lula. No 2º, em 25 de outubro, Lula venceu por 4,4 milhões.</p>
+    </div>
+    <figure class="chart" aria-labelledby="t-bridge">
+      <p class="chart-title" id="t-bridge">Entre os turnos, Lula somou 10,4 milhões de votos e Flávio, 3,7 milhões</p>
+      <p class="chart-sub">O que mudou entre os dois turnos no total do país, em votos. As duas barras somam o mesmo valor.</p>
+      <div id="bridge" class="svg-chart"></div>
+      <p class="chart-foot">A conta fecha para o país, mas não mostra quem mudou de voto. Um eleitor de terceiro no 1º turno pode ter votado em Lula ou em Flávio, anulado ou ficado em casa. Fonte: TSE.</p>
+    </figure>
+
+    <figure class="chart" aria-labelledby="t-scatter">
+      <p class="chart-title" id="t-scatter">Onde os terceiros tiveram mais votos, os dois cresceram mais</p>
+      <p class="chart-sub">Cada círculo é um município, com área proporcional ao eleitorado. Horizontal: votos em terceiros no 1º turno ou variação do comparecimento. Vertical: variação de cada candidato entre os turnos, em pontos do eleitorado.</p>
+      <div class="controls" id="scatter-controls"></div>
+      <div id="scatter" class="svg-chart" role="img" aria-label="Dois gráficos de dispersão, um para Lula e outro para Flávio, com o crescimento entre os turnos em cada município."></div>
+      <div class="tooltip" id="scatter-tip" aria-hidden="true"></div>
+      <details class="table-view"><summary>Ver os números por grupo de municípios</summary><div class="table-scroll" id="scatter-table"></div></details>
+      <p class="chart-foot">Fonte: TSE. Associação entre municípios, não entre pessoas.</p>
+    </figure>
+    <div class="prose">
+      <p>Onde os candidatos de fora da disputa principal tiveram mais votos no 1º turno, Lula e Flávio cresceram mais no 2º. Onde o comparecimento subiu mais, também. Parte disso é aritmética: em pontos do eleitorado, o crescimento dos dois soma os votos em terceiros e o aumento do comparecimento, menos a variação de brancos e nulos.</p>
+      <p>Em todos esses grupos, porém, Lula cresceu mais que Flávio, e por uma diferença parecida: de 3,7 a 5,1 pontos do eleitorado. Município a município, Lula cresceu mais que Flávio em 5.230; Flávio cresceu mais que Lula em 340.</p>
+    </div>
+    <figure class="chart" aria-labelledby="t-2026map">
+      <p class="chart-title" id="t-2026map">Lula cresceu mais que Flávio em 5.230 dos 5.571 municípios</p>
+      <p class="chart-sub">Crescimento de Lula menos crescimento de Flávio entre o 1º e o 2º turno de 2026, em pontos do eleitorado.</p>
+      <div class="legend" id="legend-2026"></div>
+      <div class="smallmap" id="map-2026" style="max-width:720px" role="img" aria-label="Mapa da diferença entre o crescimento de Lula e o de Flávio entre os turnos de 2026, por município. O resumo por região está na tabela."><div class="tooltip" aria-hidden="true"></div></div>
+      <details class="table-view"><summary>Ver os números por região</summary><div class="table-scroll" id="table-2026"></div></details>
+      <p class="chart-foot">Fonte: TSE.</p>
+    </figure>
+    <div class="prose">
+      <p>Em 211 municípios, Flávio estava à frente no 1º turno e Lula terminou à frente no 2º. Em 1, o caminho foi o inverso: Uirapuru (GO).</p>
+      <p>Entre os municípios com 50 mil eleitores ou mais, Lula teve o maior crescimento em Mariana (MG): 11,2 pontos do eleitorado. O de Flávio foi em Trindade (GO): 7,6 pontos. Em número de votos, o maior ganho de Lula foi em São Paulo (SP) (812 mil), e o de Flávio, em São Paulo (SP) (337 mil).</p>
+      <div class="city-note" role="note"><p><strong>Um cuidado.</strong> Dados por município não dizem como cada pessoa votou. Se um município teve muitos votos em terceiros e Lula ou Flávio cresceu ali, não dá para concluir que aqueles eleitores mudaram de candidato. Esse erro de leitura se chama falácia ecológica.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. Sua cidade -->
+<section class="chapter" id="sua-cidade" aria-labelledby="h-cidade">
+  <div class="wrap">
+    <div class="chapter-head">
+      <p class="kicker">Sua cidade</p>
+      <h2 id="h-cidade">E se a sua cidade tivesse 100 eleitores?</h2>
+    </div>
+    <div class="prose">
+      <p>Digite o nome do município. Cada boneco é 1% do eleitorado. Os vazados representam quem não foi votar.</p>
+    </div>
+    <div class="city-search" id="city-search">
+      <label for="city-input" class="sr-only">Nome do município</label>
+      <input id="city-input" type="text" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="city-list" autocomplete="off" spellcheck="false" placeholder="Ex.: Campinas, Sobral, Chapecó">
+      <ul id="city-list" role="listbox" aria-label="Municípios encontrados" hidden></ul>
+    </div>
+    <p class="sr-only" id="city-status" aria-live="polite"></p>
+    <div class="city-out" id="city-out"></div>
+  </div>
+</section>
+
+<!-- 9. Como fizemos -->
+<section class="chapter method" id="metodo" aria-labelledby="h-metodo">
+  <div class="wrap">
+    <div class="chapter-head">
+      <p class="kicker">Como fizemos</p>
+      <h2 id="h-metodo">Fontes, método e limites</h2>
+    </div>
+    <h3>Fontes</h3>
+    <ul>
+      <li><strong>Votos e comparecimento:</strong> Portal de Dados Abertos do TSE, tabelas de votação nominal por município e zona e de detalhe da apuração por município e zona, de 2014, 2018, 2022 e 2026. Os arquivos de 2026 já trazem os dois turnos.</li>
+      <li><strong>Códigos de município:</strong> tabela oficial do TSE que liga o código do TSE ao do IBGE, conferida com o diretório de municípios da Base dos Dados.</li>
+      <li><strong>Mapa:</strong> malha municipal 2025 do IBGE, simplificada sem descolar as fronteiras entre vizinhos.</li>
+      <li><strong>População e renda:</strong> Censo 2022 do IBGE (tabelas 4709 e 10295 do Sidra).</li>
+    </ul>
+    <h3>Conferência</h3>
+    <p>Os totais de cada turno, no Brasil, em cada estado e no exterior, foram comparados um a um com os relatórios oficiais de totalização do TSE e, em 2026, também com os arquivos do portal de resultados. Foram comparados 3.625 números. Só uma diferença apareceu, e ela tem explicação: no 2º turno de 2018, o arquivo municipal conta como abstenção os eleitores de seções não apuradas, que o relatório oficial separa. Para 2014 não há relatório oficial acessível; a conferência foi feita com a votação por seção, que vem da mesma base do TSE.</p>
+    <h3>Decisões</h3>
+    <ul>
+      <li>Votos no exterior entram nos totais nacionais e ficam fora dos mapas.</li>
+      <li>Nos mapas de proporção, a cor mostra a fatia de cada campo na soma dos votos dos dois. No 1º turno, isso deixa de fora os outros candidatos.</li>
+      <li>No mapa de pontos, cada ponto vale 1.000 votos e é colocado em um lugar sorteado dentro do município, com semente fixa. A posição dentro do município não tem significado.</li>
+      <li>Boa Esperança do Norte (MT) foi instalado em 2025, com partes de Sorriso e Nova Ubiratã, e teve sua primeira eleição presidencial em 2026. Os resultados de 2026 desses dois municípios cobrem uma área menor que nas eleições anteriores.</li>
+      <li>“Não votou” é o eleitorado apto menos o comparecimento. Inclui eleitores de seções não instaladas.</li>
+    </ul>
+    <h3>Limites</h3>
+    <ul>
+      <li>Dados por município descrevem lugares, não pessoas. Nenhum número aqui diz como um eleitor específico votou.</li>
+      <li>As associações com renda, tamanho, terceiros e comparecimento não indicam causa.</li>
+      <li>A comparação com 2014 mede o candidato que enfrentou o PT no 2º turno, não um mesmo grupo político.</li>
+      <li>A abstenção inclui registros desatualizados, de pessoas que mudaram de cidade ou morreram.</li>
+    </ul>
+    <p>Código, consultas SQL, registro de qualidade e dados processados estão no <a href="https://github.com/AndreiLud/brasil-nao-e-binario">repositório do projeto</a>.</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Dados: Tribunal Superior Eleitoral e Instituto Brasileiro de Geografia e Estatística. Fontes tipográficas: Fraunces e Inter, sob a licença SIL Open Font License.</p>
+  </div>
+</footer>
+
+<script src="vendor/d3-custom.min.js"></script>
+<script src="vendor/topojson-client.min.js"></script>
+<script src="vendor/scrollama.min.js"></script>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+year,round,source,scopes,cells,cells_with_difference,unexplained,max_abs_difference
+2014,1,sections_2014,29,406,0,0,0
+2014,2,sections_2014,29,145,0,0,0
+2018,1,report_pdf,29,580,0,0,0
+2018,2,report_pdf,29,261,3,0,669
+2022,1,report_pdf,29,493,0,0,0
+2022,2,report_pdf,29,232,0,0,0
+2026,1,portal_json,29,522,0,0,0
+2026,1,report_pdf,29,522,0,0,0
+2026,2,portal_json,29,232,0,0,0
+2026,2,report_pdf,29,232,0,0,0

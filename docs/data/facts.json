@@ -1,0 +1,7319 @@
+{
+ "n_mun_2026": {
+  "value": 5571,
+  "kind": "int",
+  "pt": "5.571",
+  "en": "5,571",
+  "desc": "Municipalities in 2026"
+ },
+ "n_mun_2022": {
+  "value": 5570,
+  "kind": "int",
+  "pt": "5.570",
+  "en": "5,570",
+  "desc": "Municipalities in 2014, 2018 and 2022"
+ },
+ "mun_zero_votes_any_side": {
+  "value": 0,
+  "kind": "int",
+  "pt": "0",
+  "en": "0",
+  "desc": "Municipality-elections (all 8 election rounds) where one of the two camps got zero votes"
+ },
+ "e2014r1_aptos": {
+  "value": 142822046,
+  "kind": "mi",
+  "pt": "142,8 milhões",
+  "en": "142.8 million",
+  "desc": "2014, 1º turno: aptos"
+ },
+ "e2014r1_camp_l": {
+  "value": 43267668,
+  "kind": "mi",
+  "pt": "43,3 milhões",
+  "en": "43.3 million",
+  "desc": "2014, 1º turno: camp_l"
+ },
+ "e2014r1_camp_b": {
+  "value": 34897211,
+  "kind": "mi",
+  "pt": "34,9 milhões",
+  "en": "34.9 million",
+  "desc": "2014, 1º turno: camp_b"
+ },
+ "e2014r1_others": {
+  "value": 25858923,
+  "kind": "mi",
+  "pt": "25,9 milhões",
+  "en": "25.9 million",
+  "desc": "2014, 1º turno: others"
+ },
+ "e2014r1_blank_null": {
+  "value": 11099081,
+  "kind": "mi",
+  "pt": "11,1 milhões",
+  "en": "11.1 million",
+  "desc": "2014, 1º turno: blank_null"
+ },
+ "e2014r1_absent": {
+  "value": 27699163,
+  "kind": "mi",
+  "pt": "27,7 milhões",
+  "en": "27.7 million",
+  "desc": "2014, 1º turno: absent"
+ },
+ "e2014r1_comparecimento": {
+  "value": 115122883,
+  "kind": "mi",
+  "pt": "115,1 milhões",
+  "en": "115.1 million",
+  "desc": "2014, 1º turno: comparecimento"
+ },
+ "e2014r1_pct_l_aptos": {
+  "value": 0.30294810368421693,
+  "kind": "pct",
+  "pt": "30,3%",
+  "en": "30.3%",
+  "desc": "2014, 1º turno: pct_l_aptos"
+ },
+ "e2014r1_pct_b_aptos": {
+  "value": 0.2443405060868544,
+  "kind": "pct",
+  "pt": "24,4%",
+  "en": "24.4%",
+  "desc": "2014, 1º turno: pct_b_aptos"
+ },
+ "e2014r1_pct_others_aptos": {
+  "value": 0.1810569427075705,
+  "kind": "pct",
+  "pt": "18,1%",
+  "en": "18.1%",
+  "desc": "2014, 1º turno: pct_others_aptos"
+ },
+ "e2014r1_pct_blank_null_aptos": {
+  "value": 0.07771265929070922,
+  "kind": "pct",
+  "pt": "7,8%",
+  "en": "7.8%",
+  "desc": "2014, 1º turno: pct_blank_null_aptos"
+ },
+ "e2014r1_pct_absent_aptos": {
+  "value": 0.19394178823064892,
+  "kind": "pct",
+  "pt": "19,4%",
+  "en": "19.4%",
+  "desc": "2014, 1º turno: pct_absent_aptos"
+ },
+ "e2014r1_pct_l_valid": {
+  "value": 0.41594007494553986,
+  "kind": "pct",
+  "pt": "41,6%",
+  "en": "41.6%",
+  "desc": "2014, 1º turno: pct_l_valid"
+ },
+ "e2014r1_pct_b_valid": {
+  "value": 0.3354733275370958,
+  "kind": "pct",
+  "pt": "33,5%",
+  "en": "33.5%",
+  "desc": "2014, 1º turno: pct_b_valid"
+ },
+ "e2014r1_pct_others_valid": {
+  "value": 0.24858659751736434,
+  "kind": "pct",
+  "pt": "24,9%",
+  "en": "24.9%",
+  "desc": "2014, 1º turno: pct_others_valid"
+ },
+ "e2014r1_pct_neither_aptos": {
+  "value": 0.45271139022892865,
+  "kind": "pct",
+  "pt": "45,3%",
+  "en": "45.3%",
+  "desc": "2014, 1º turno: pct_neither_aptos"
+ },
+ "e2014r1_camp_l_int": {
+  "value": 43267668,
+  "kind": "int",
+  "pt": "43.267.668",
+  "en": "43,267,668",
+  "desc": "2014, 1º turno: votes of the L side (exact)"
+ },
+ "e2014r1_camp_b_int": {
+  "value": 34897211,
+  "kind": "int",
+  "pt": "34.897.211",
+  "en": "34,897,211",
+  "desc": "2014, 1º turno: votes of the B side (exact)"
+ },
+ "e2014r1_margin_votes": {
+  "value": 8370457,
+  "kind": "mi",
+  "pt": "8,4 milhões",
+  "en": "8.4 million",
+  "desc": "2014, 1º turno: vote margin between the two camps"
+ },
+ "e2014r1_led_by_l": {
+  "value": 3648,
+  "kind": "int",
+  "pt": "3.648",
+  "en": "3,648",
+  "desc": "2014, 1º turno: municipalities where led_by_l (who came first; 'other' = a third candidate came first)"
+ },
+ "e2014r1_led_by_b": {
+  "value": 1821,
+  "kind": "int",
+  "pt": "1.821",
+  "en": "1,821",
+  "desc": "2014, 1º turno: municipalities where led_by_b (who came first; 'other' = a third candidate came first)"
+ },
+ "e2014r1_led_by_other": {
+  "value": 99,
+  "kind": "int",
+  "pt": "99",
+  "en": "99",
+  "desc": "2014, 1º turno: municipalities where led_by_other (who came first; 'other' = a third candidate came first)"
+ },
+ "e2014r1_ties": {
+  "value": 2,
+  "kind": "int",
+  "pt": "2",
+  "en": "2",
+  "desc": "2014, 1º turno: municipalities where ties (who came first; 'other' = a third candidate came first)"
+ },
+ "e2014r1_aptos_share_in_l_led": {
+  "value": 0.4842024774844681,
+  "kind": "pct",
+  "pt": "48,4%",
+  "en": "48.4%",
+  "desc": "2014, 1º turno: share of the domestic electorate living in municipalities led by L"
+ },
+ "e2014r1_aptos_share_in_b_led": {
+  "value": 0.4193015816782908,
+  "kind": "pct",
+  "pt": "41,9%",
+  "en": "41.9%",
+  "desc": "2014, 1º turno: share of the domestic electorate living in municipalities led by B"
+ },
+ "e2014r1_l_share_of_votes_where_b_led": {
+  "value": 0.28191416407368397,
+  "kind": "pct",
+  "pt": "28,2%",
+  "en": "28.2%",
+  "desc": "2014, 1º turno: share of the L camp's votes cast in Brazil that came from municipalities led by B"
+ },
+ "e2014r1_b_share_of_votes_where_l_led": {
+  "value": 0.3275527512483098,
+  "kind": "pct",
+  "pt": "32,8%",
+  "en": "32.8%",
+  "desc": "2014, 1º turno: share of the B camp's votes cast in Brazil that came from municipalities led by L"
+ },
+ "e2014r1_l_votes_where_b_led": {
+  "value": 12190903,
+  "kind": "mi",
+  "pt": "12,2 milhões",
+  "en": "12.2 million",
+  "desc": "2014, 1º turno: L votes in municipalities led by B"
+ },
+ "e2014r1_b_votes_where_l_led": {
+  "value": 11409153,
+  "kind": "mi",
+  "pt": "11,4 milhões",
+  "en": "11.4 million",
+  "desc": "2014, 1º turno: B votes in municipalities led by L"
+ },
+ "e2014r1_n_minority_over_30": {
+  "value": 3127,
+  "kind": "int",
+  "pt": "3.127",
+  "en": "3,127",
+  "desc": "2014, 1º turno: municipalities where the local loser got more than X% of the two-camp vote"
+ },
+ "e2014r1_n_minority_over_40": {
+  "value": 1788,
+  "kind": "int",
+  "pt": "1.788",
+  "en": "1,788",
+  "desc": "2014, 1º turno: municipalities where the local loser got more than X% of the two-camp vote"
+ },
+ "e2014r1_n_minority_over_20": {
+  "value": 4151,
+  "kind": "int",
+  "pt": "4.151",
+  "en": "4,151",
+  "desc": "2014, 1º turno: municipalities where the local loser got more than X% of the two-camp vote"
+ },
+ "e2014r1_n_minority_over_10": {
+  "value": 5093,
+  "kind": "int",
+  "pt": "5.093",
+  "en": "5,093",
+  "desc": "2014, 1º turno: municipalities where the local loser got more than X% of the two-camp vote"
+ },
+ "e2014r1_share_minority_over_30": {
+  "value": 0.5616020114942529,
+  "kind": "pct",
+  "pt": "56,2%",
+  "en": "56.2%",
+  "desc": "2014, 1º turno: share_minority_over_30"
+ },
+ "e2014r1_share_minority_over_40": {
+  "value": 0.32112068965517243,
+  "kind": "pct",
+  "pt": "32,1%",
+  "en": "32.1%",
+  "desc": "2014, 1º turno: share_minority_over_40"
+ },
+ "e2014r1_share_minority_over_10": {
+  "value": 0.914691091954023,
+  "kind": "pct",
+  "pt": "91,5%",
+  "en": "91.5%",
+  "desc": "2014, 1º turno: share_minority_over_10"
+ },
+ "e2014r1_aptos_share_minority_over_30": {
+  "value": 0.6484564355921206,
+  "kind": "pct",
+  "pt": "64,8%",
+  "en": "64.8%",
+  "desc": "2014, 1º turno: aptos_share_minority_over_30"
+ },
+ "e2014r1_aptos_share_minority_over_40": {
+  "value": 0.31455635890993167,
+  "kind": "pct",
+  "pt": "31,5%",
+  "en": "31.5%",
+  "desc": "2014, 1º turno: aptos_share_minority_over_40"
+ },
+ "e2014r1_min_minority_share": {
+  "value": 0.018233618233618243,
+  "kind": "pct",
+  "pt": "1,8%",
+  "en": "1.8%",
+  "desc": "2014, 1º turno: min_minority_share"
+ },
+ "e2014r1_local_minority_vote_share": {
+  "value": 0.32977494428663745,
+  "kind": "pct",
+  "pt": "33,0%",
+  "en": "33.0%",
+  "desc": "2014, 1º turno: local_minority_vote_share"
+ },
+ "e2014r1_min_share_l2": {
+  "value": 0.12415902140672783,
+  "kind": "pct",
+  "pt": "12,4%",
+  "en": "12.4%",
+  "desc": "2014, 1º turno: min_share_l2"
+ },
+ "e2014r1_max_share_l2": {
+  "value": 0.9817663817663818,
+  "kind": "pct",
+  "pt": "98,2%",
+  "en": "98.2%",
+  "desc": "2014, 1º turno: max_share_l2"
+ },
+ "e2014r1_local_minority_votes": {
+  "value": 25745428,
+  "kind": "mi",
+  "pt": "25,7 milhões",
+  "en": "25.7 million",
+  "desc": "2014, 1º turno: votes cast for the side that lost in that municipality"
+ },
+ "e2014r1_local_minority_votes_num": {
+  "value": 25745428,
+  "kind": "mi_num",
+  "pt": "25,7",
+  "en": "25.7",
+  "desc": "same, number part"
+ },
+ "e2014r1_local_minority_votes_unit": {
+  "value": 25745428,
+  "kind": "mi_unit",
+  "pt": "milhões",
+  "en": "million",
+  "desc": "same, unit word"
+ },
+ "e2014r2_aptos": {
+  "value": 142822046,
+  "kind": "mi",
+  "pt": "142,8 milhões",
+  "en": "142.8 million",
+  "desc": "2014, 2º turno: aptos"
+ },
+ "e2014r2_camp_l": {
+  "value": 54501118,
+  "kind": "mi",
+  "pt": "54,5 milhões",
+  "en": "54.5 million",
+  "desc": "2014, 2º turno: camp_l"
+ },
+ "e2014r2_camp_b": {
+  "value": 51041155,
+  "kind": "mi",
+  "pt": "51,0 milhões",
+  "en": "51.0 million",
+  "desc": "2014, 2º turno: camp_b"
+ },
+ "e2014r2_others": {
+  "value": 0,
+  "kind": "mi",
+  "pt": "0",
+  "en": "0",
+  "desc": "2014, 2º turno: others"
+ },
+ "e2014r2_blank_null": {
+  "value": 7141606,
+  "kind": "mi",
+  "pt": "7,1 milhões",
+  "en": "7.1 million",
+  "desc": "2014, 2º turno: blank_null"
+ },
+ "e2014r2_absent": {
+  "value": 30138167,
+  "kind": "mi",
+  "pt": "30,1 milhões",
+  "en": "30.1 million",
+  "desc": "2014, 2º turno: absent"
+ },
+ "e2014r2_comparecimento": {
+  "value": 112683879,
+  "kind": "mi",
+  "pt": "112,7 milhões",
+  "en": "112.7 million",
+  "desc": "2014, 2º turno: comparecimento"
+ },
+ "e2014r2_pct_l_aptos": {
+  "value": 0.3816015771122618,
+  "kind": "pct",
+  "pt": "38,2%",
+  "en": "38.2%",
+  "desc": "2014, 2º turno: pct_l_aptos"
+ },
+ "e2014r2_pct_b_aptos": {
+  "value": 0.35737588439252577,
+  "kind": "pct",
+  "pt": "35,7%",
+  "en": "35.7%",
+  "desc": "2014, 2º turno: pct_b_aptos"
+ },
+ "e2014r2_pct_others_aptos": {
+  "value": 0.0,
+  "kind": "pct",
+  "pt": "0,0%",
+  "en": "0.0%",
+  "desc": "2014, 2º turno: pct_others_aptos"
+ },
+ "e2014r2_pct_blank_null_aptos": {
+  "value": 0.050003526766448925,
+  "kind": "pct",
+  "pt": "5,0%",
+  "en": "5.0%",
+  "desc": "2014, 2º turno: pct_blank_null_aptos"
+ },
+ "e2014r2_pct_absent_aptos": {
+  "value": 0.2110190117287635,
+  "kind": "pct",
+  "pt": "21,1%",
+  "en": "21.1%",
+  "desc": "2014, 2º turno: pct_absent_aptos"
+ },
+ "e2014r2_pct_l_valid": {
+  "value": 0.5163913610236536,
+  "kind": "pct",
+  "pt": "51,6%",
+  "en": "51.6%",
+  "desc": "2014, 2º turno: pct_l_valid"
+ },
+ "e2014r2_pct_b_valid": {
+  "value": 0.4836086389763465,
+  "kind": "pct",
+  "pt": "48,4%",
+  "en": "48.4%",
+  "desc": "2014, 2º turno: pct_b_valid"
+ },
+ "e2014r2_pct_others_valid": {
+  "value": 0.0,
+  "kind": "pct",
+  "pt": "0,0%",
+  "en": "0.0%",
+  "desc": "2014, 2º turno: pct_others_valid"
+ },
+ "e2014r2_pct_neither_aptos": {
+  "value": 0.26102253849521245,
+  "kind": "pct",
+  "pt": "26,1%",
+  "en": "26.1%",
+  "desc": "2014, 2º turno: pct_neither_aptos"
+ },
+ "e2014r2_camp_l_int": {
+  "value": 54501118,
+  "kind": "int",
+  "pt": "54.501.118",
+  "en": "54,501,118",
+  "desc": "2014, 2º turno: votes of the L side (exact)"
+ },
+ "e2014r2_camp_b_int": {
+  "value": 51041155,
+  "kind": "int",
+  "pt": "51.041.155",
+  "en": "51,041,155",
+  "desc": "2014, 2º turno: votes of the B side (exact)"
+ },
+ "e2014r2_margin_votes": {
+  "value": 3459963,
+  "kind": "mi",
+  "pt": "3,5 milhões",
+  "en": "3.5 million",
+  "desc": "2014, 2º turno: vote margin between the two camps"
+ },
+ "e2014r2_led_by_l": {
+  "value": 3527,
+  "kind": "int",
+  "pt": "3.527",
+  "en": "3,527",
+  "desc": "2014, 2º turno: municipalities where led_by_l (who came first; 'other' = a third candidate came first)"
+ },
+ "e2014r2_led_by_b": {
+  "value": 2043,
+  "kind": "int",
+  "pt": "2.043",
+  "en": "2,043",
+  "desc": "2014, 2º turno: municipalities where led_by_b (who came first; 'other' = a third candidate came first)"
+ },
+ "e2014r2_led_by_other": {
+  "value": 0,
+  "kind": "int",
+  "pt": "0",
+  "en": "0",
+  "desc": "2014, 2º turno: municipalities where led_by_other (who came first; 'other' = a third candidate came first)"
+ },
+ "e2014r2_ties": {
+  "value": 0,
+  "kind": "int",
+  "pt": "0",
+  "en": "0",
+  "desc": "2014, 2º turno: municipalities where ties (who came first; 'other' = a third candidate came first)"
+ },
+ "e2014r2_aptos_share_in_l_led": {
+  "value": 0.5133098184293498,
+  "kind": "pct",
+  "pt": "51,3%",
+  "en": "51.3%",
+  "desc": "2014, 2º turno: share of the domestic electorate living in municipalities led by L"
+ },
+ "e2014r2_aptos_share_in_b_led": {
+  "value": 0.48669018157065025,
+  "kind": "pct",
+  "pt": "48,7%",
+  "en": "48.7%",
+  "desc": "2014, 2º turno: share of the domestic electorate living in municipalities led by B"
+ },
+ "e2014r2_l_share_of_votes_where_b_led": {
+  "value": 0.35720726867580593,
+  "kind": "pct",
+  "pt": "35,7%",
+  "en": "35.7%",
+  "desc": "2014, 2º turno: share of the L camp's votes cast in Brazil that came from municipalities led by B"
+ },
+ "e2014r2_b_share_of_votes_where_l_led": {
+  "value": 0.35430641682042185,
+  "kind": "pct",
+  "pt": "35,4%",
+  "en": "35.4%",
+  "desc": "2014, 2º turno: share of the B camp's votes cast in Brazil that came from municipalities led by L"
+ },
+ "e2014r2_l_votes_where_b_led": {
+  "value": 19457101,
+  "kind": "mi",
+  "pt": "19,5 milhões",
+  "en": "19.5 million",
+  "desc": "2014, 2º turno: L votes in municipalities led by B"
+ },
+ "e2014r2_b_votes_where_l_led": {
+  "value": 18047318,
+  "kind": "mi",
+  "pt": "18,0 milhões",
+  "en": "18.0 million",
+  "desc": "2014, 2º turno: B votes in municipalities led by L"
+ },
+ "e2014r2_n_minority_over_30": {
+  "value": 3587,
+  "kind": "int",
+  "pt": "3.587",
+  "en": "3,587",
+  "desc": "2014, 2º turno: municipalities where the local loser got more than X% of the two-camp vote"
+ },
+ "e2014r2_n_minority_over_40": {
+  "value": 1997,
+  "kind": "int",
+  "pt": "1.997",
+  "en": "1,997",
+  "desc": "2014, 2º turno: municipalities where the local loser got more than X% of the two-camp vote"
+ },
+ "e2014r2_n_minority_over_20": {
+  "value": 4752,
+  "kind": "int",
+  "pt": "4.752",
+  "en": "4,752",
+  "desc": "2014, 2º turno: municipalities where the local loser got more than X% of the two-camp vote"
+ },
+ "e2014r2_n_minority_over_10": {
+  "value": 5506,
+  "kind": "int",
+  "pt": "5.506",
+  "en": "5,506",
+  "desc": "2014, 2º turno: municipalities where the local loser got more than X% of the two-camp vote"
+ },
+ "e2014r2_share_minority_over_30": {
+  "value": 0.6439856373429085,
+  "kind": "pct",
+  "pt": "64,4%",
+  "en": "64.4%",
+  "desc": "2014, 2º turno: share_minority_over_30"
+ },
+ "e2014r2_share_minority_over_40": {
+  "value": 0.3585278276481149,
+  "kind": "pct",
+  "pt": "35,9%",
+  "en": "35.9%",
+  "desc": "2014, 2º turno: share_minority_over_40"
+ },
+ "e2014r2_share_minority_over_10": {
+  "value": 0.9885098743267504,
+  "kind": "pct",
+  "pt": "98,9%",
+  "en": "98.9%",
+  "desc": "2014, 2º turno: share_minority_over_10"
+ },
+ "e2014r2_aptos_share_minority_over_30": {
+  "value": 0.7398371822657512,
+  "kind": "pct",
+  "pt": "74,0%",
+  "en": "74.0%",
+  "desc": "2014, 2º turno: aptos_share_minority_over_30"
+ },
+ "e2014r2_aptos_share_minority_over_40": {
+  "value": 0.35673406003895175,
+  "kind": "pct",
+  "pt": "35,7%",
+  "en": "35.7%",
+  "desc": "2014, 2º turno: aptos_share_minority_over_40"
+ },
+ "e2014r2_min_minority_share": {
+  "value": 0.060718057022175254,
+  "kind": "pct",
+  "pt": "6,1%",
+  "en": "6.1%",
+  "desc": "2014, 2º turno: min_minority_share"
+ },
+ "e2014r2_local_minority_vote_share": {
+  "value": 0.3558054579875379,
+  "kind": "pct",
+  "pt": "35,6%",
+  "en": "35.6%",
+  "desc": "2014, 2º turno: local_minority_vote_share"
+ },
+ "e2014r2_min_share_l2": {
+  "value": 0.11858974358974358,
+  "kind": "pct",
+  "pt": "11,9%",
+  "en": "11.9%",
+  "desc": "2014, 2º turno: min_share_l2"
+ },
+ "e2014r2_max_share_l2": {
+  "value": 0.9392819429778247,
+  "kind": "pct",
+  "pt": "93,9%",
+  "en": "93.9%",
+  "desc": "2014, 2º turno: max_share_l2"
+ },
+ "e2014r2_local_minority_votes": {
+  "value": 37504419,
+  "kind": "mi",
+  "pt": "37,5 milhões",
+  "en": "37.5 million",
+  "desc": "2014, 2º turno: votes cast for the side that lost in that municipality"
+ },
+ "e2014r2_local_minority_votes_num": {
+  "value": 37504419,
+  "kind": "mi_num",
+  "pt": "37,5",
+  "en": "37.5",
+  "desc": "same, number part"
+ },
+ "e2014r2_local_minority_votes_unit": {
+  "value": 37504419,
+  "kind": "mi_unit",
+  "pt": "milhões",
+  "en": "million",
+  "desc": "same, unit word"
+ },
+ "e2018r1_aptos": {
+  "value": 147306295,
+  "kind": "mi",
+  "pt": "147,3 milhões",
+  "en": "147.3 million",
+  "desc": "2018 round 1: aptos"
+ },
+ "e2018r1_camp_l": {
+  "value": 31342051,
+  "kind": "mi",
+  "pt": "31,3 milhões",
+  "en": "31.3 million",
+  "desc": "2018 round 1: camp_l"
+ },
+ "e2018r1_camp_b": {
+  "value": 49277010,
+  "kind": "mi",
+  "pt": "49,3 milhões",
+  "en": "49.3 million",
+  "desc": "2018 round 1: camp_b"
+ },
+ "e2018r1_others": {
+  "value": 26431688,
+  "kind": "mi",
+  "pt": "26,4 milhões",
+  "en": "26.4 million",
+  "desc": "2018 round 1: others"
+ },
+ "e2018r1_blank_null": {
+  "value": 10313905,
+  "kind": "mi",
+  "pt": "10,3 milhões",
+  "en": "10.3 million",
+  "desc": "2018 round 1: blank_null"
+ },
+ "e2018r1_absent": {
+  "value": 29941641,
+  "kind": "mi",
+  "pt": "29,9 milhões",
+  "en": "29.9 million",
+  "desc": "2018 round 1: absent"
+ },
+ "e2018r1_comparecimento": {
+  "value": 117364654,
+  "kind": "mi",
+  "pt": "117,4 milhões",
+  "en": "117.4 million",
+  "desc": "2018 round 1: comparecimento"
+ },
+ "e2018r1_pct_l_aptos": {
+  "value": 0.21276789970177445,
+  "kind": "pct",
+  "pt": "21,3%",
+  "en": "21.3%",
+  "desc": "2018 round 1: pct_l_aptos"
+ },
+ "e2018r1_pct_b_aptos": {
+  "value": 0.33452073450085756,
+  "kind": "pct",
+  "pt": "33,5%",
+  "en": "33.5%",
+  "desc": "2018 round 1: pct_b_aptos"
+ },
+ "e2018r1_pct_others_aptos": {
+  "value": 0.17943352658486184,
+  "kind": "pct",
+  "pt": "17,9%",
+  "en": "17.9%",
+  "desc": "2018 round 1: pct_others_aptos"
+ },
+ "e2018r1_pct_blank_null_aptos": {
+  "value": 0.07001672942761883,
+  "kind": "pct",
+  "pt": "7,0%",
+  "en": "7.0%",
+  "desc": "2018 round 1: pct_blank_null_aptos"
+ },
+ "e2018r1_pct_absent_aptos": {
+  "value": 0.20326110978488734,
+  "kind": "pct",
+  "pt": "20,3%",
+  "en": "20.3%",
+  "desc": "2018 round 1: pct_absent_aptos"
+ },
+ "e2018r1_pct_l_valid": {
+  "value": 0.2927775031261108,
+  "kind": "pct",
+  "pt": "29,3%",
+  "en": "29.3%",
+  "desc": "2018 round 1: pct_l_valid"
+ },
+ "e2018r1_pct_b_valid": {
+  "value": 0.4603144813120364,
+  "kind": "pct",
+  "pt": "46,0%",
+  "en": "46.0%",
+  "desc": "2018 round 1: pct_b_valid"
+ },
+ "e2018r1_pct_others_valid": {
+  "value": 0.24690801556185282,
+  "kind": "pct",
+  "pt": "24,7%",
+  "en": "24.7%",
+  "desc": "2018 round 1: pct_others_valid"
+ },
+ "e2018r1_pct_neither_aptos": {
+  "value": 0.452711365797368,
+  "kind": "pct",
+  "pt": "45,3%",
+  "en": "45.3%",
+  "desc": "2018 round 1: pct_neither_aptos"
+ },
+ "e2018r1_camp_l_int": {
+  "value": 31342051,
+  "kind": "int",
+  "pt": "31.342.051",
+  "en": "31,342,051",
+  "desc": "2018 round 1: votes of the L side (exact)"
+ },
+ "e2018r1_camp_b_int": {
+  "value": 49277010,
+  "kind": "int",
+  "pt": "49.277.010",
+  "en": "49,277,010",
+  "desc": "2018 round 1: votes of the B side (exact)"
+ },
+ "e2018r1_margin_votes": {
+  "value": 17934959,
+  "kind": "mi",
+  "pt": "17,9 milhões",
+  "en": "17.9 million",
+  "desc": "2018 round 1: vote margin between the two camps"
+ },
+ "e2018r1_led_by_l": {
+  "value": 2614,
+  "kind": "int",
+  "pt": "2.614",
+  "en": "2,614",
+  "desc": "2018 round 1: municipalities where led_by_l (who came first; 'other' = a third candidate came first)"
+ },
+ "e2018r1_led_by_b": {
+  "value": 2852,
+  "kind": "int",
+  "pt": "2.852",
+  "en": "2,852",
+  "desc": "2018 round 1: municipalities where led_by_b (who came first; 'other' = a third candidate came first)"
+ },
+ "e2018r1_led_by_other": {
+  "value": 103,
+  "kind": "int",
+  "pt": "103",
+  "en": "103",
+  "desc": "2018 round 1: municipalities where led_by_other (who came first; 'other' = a third candidate came first)"
+ },
+ "e2018r1_ties": {
+  "value": 1,
+  "kind": "int",
+  "pt": "1",
+  "en": "1",
+  "desc": "2018 round 1: municipalities where ties (who came first; 'other' = a third candidate came first)"
+ },
+ "e2018r1_aptos_share_in_l_led": {
+  "value": 0.25806203842344133,
+  "kind": "pct",
+  "pt": "25,8%",
+  "en": "25.8%",
+  "desc": "2018 round 1: share of the domestic electorate living in municipalities led by L"
+ },
+ "e2018r1_aptos_share_in_b_led": {
+  "value": 0.7127889941521787,
+  "kind": "pct",
+  "pt": "71,3%",
+  "en": "71.3%",
+  "desc": "2018 round 1: share of the domestic electorate living in municipalities led by B"
+ },
+ "e2018r1_l_share_of_votes_where_b_led": {
+  "value": 0.4634573198808997,
+  "kind": "pct",
+  "pt": "46,3%",
+  "en": "46.3%",
+  "desc": "2018 round 1: share of the L camp's votes cast in Brazil that came from municipalities led by B"
+ },
+ "e2018r1_b_share_of_votes_where_l_led": {
+  "value": 0.13012058583513075,
+  "kind": "pct",
+  "pt": "13,0%",
+  "en": "13.0%",
+  "desc": "2018 round 1: share of the B camp's votes cast in Brazil that came from municipalities led by L"
+ },
+ "e2018r1_l_votes_where_b_led": {
+  "value": 14516647,
+  "kind": "mi",
+  "pt": "14,5 milhões",
+  "en": "14.5 million",
+  "desc": "2018 round 1: L votes in municipalities led by B"
+ },
+ "e2018r1_b_votes_where_l_led": {
+  "value": 6397160,
+  "kind": "mi",
+  "pt": "6,4 milhões",
+  "en": "6.4 million",
+  "desc": "2018 round 1: B votes in municipalities led by L"
+ },
+ "e2018r1_n_minority_over_30": {
+  "value": 2474,
+  "kind": "int",
+  "pt": "2.474",
+  "en": "2,474",
+  "desc": "2018 round 1: municipalities where the local loser got more than X% of the two-camp vote"
+ },
+ "e2018r1_n_minority_over_40": {
+  "value": 1129,
+  "kind": "int",
+  "pt": "1.129",
+  "en": "1,129",
+  "desc": "2018 round 1: municipalities where the local loser got more than X% of the two-camp vote"
+ },
+ "e2018r1_n_minority_over_20": {
+  "value": 4001,
+  "kind": "int",
+  "pt": "4.001",
+  "en": "4,001",
+  "desc": "2018 round 1: municipalities where the local loser got more than X% of the two-camp vote"
+ },
+ "e2018r1_n_minority_over_10": {
+  "value": 5379,
+  "kind": "int",
+  "pt": "5.379",
+  "en": "5,379",
+  "desc": "2018 round 1: municipalities where the local loser got more than X% of the two-camp vote"
+ },
+ "e2018r1_share_minority_over_30": {
+  "value": 0.4442449272759921,
+  "kind": "pct",
+  "pt": "44,4%",
+  "en": "44.4%",
+  "desc": "2018 round 1: share_minority_over_30"
+ },
+ "e2018r1_share_minority_over_40": {
+  "value": 0.2027293948644281,
+  "kind": "pct",
+  "pt": "20,3%",
+  "en": "20.3%",
+  "desc": "2018 round 1: share_minority_over_40"
+ },
+ "e2018r1_share_minority_over_10": {
+  "value": 0.9658825641946489,
+  "kind": "pct",
+  "pt": "96,6%",
+  "en": "96.6%",
+  "desc": "2018 round 1: share_minority_over_10"
+ },
+ "e2018r1_aptos_share_minority_over_30": {
+  "value": 0.4031457427993492,
+  "kind": "pct",
+  "pt": "40,3%",
+  "en": "40.3%",
+  "desc": "2018 round 1: aptos_share_minority_over_30"
+ },
+ "e2018r1_aptos_share_minority_over_40": {
+  "value": 0.12980403393007572,
+  "kind": "pct",
+  "pt": "13,0%",
+  "en": "13.0%",
+  "desc": "2018 round 1: aptos_share_minority_over_40"
+ },
+ "e2018r1_min_minority_share": {
+  "value": 0.020400984875131867,
+  "kind": "pct",
+  "pt": "2,0%",
+  "en": "2.0%",
+  "desc": "2018 round 1: min_minority_share"
+ },
+ "e2018r1_local_minority_vote_share": {
+  "value": 0.2672458283938602,
+  "kind": "pct",
+  "pt": "26,7%",
+  "en": "26.7%",
+  "desc": "2018 round 1: local_minority_vote_share"
+ },
+ "e2018r1_min_share_l2": {
+  "value": 0.0449195291856834,
+  "kind": "pct",
+  "pt": "4,5%",
+  "en": "4.5%",
+  "desc": "2018 round 1: min_share_l2"
+ },
+ "e2018r1_max_share_l2": {
+  "value": 0.9795990151248681,
+  "kind": "pct",
+  "pt": "98,0%",
+  "en": "98.0%",
+  "desc": "2018 round 1: max_share_l2"
+ },
+ "e2018r1_local_minority_votes": {
+  "value": 21508866,
+  "kind": "mi",
+  "pt": "21,5 milhões",
+  "en": "21.5 million",
+  "desc": "2018 round 1: votes cast for the side that lost in that municipality"
+ },
+ "e2018r1_local_minority_votes_num": {
+  "value": 21508866,
+  "kind": "mi_num",
+  "pt": "21,5",
+  "en": "21.5",
+  "desc": "same, number part"
+ },
+ "e2018r1_local_minority_votes_unit": {
+  "value": 21508866,
+  "kind": "mi_unit",
+  "pt": "milhões",
+  "en": "million",
+  "desc": "same, unit word"
+ },
+ "e2018r2_aptos": {
+  "value": 147306294,
+  "kind": "mi",
+  "pt": "147,3 milhões",
+  "en": "147.3 million",
+  "desc": "2018 round 2: aptos"
+ },
+ "e2018r2_camp_l": {
+  "value": 47040906,
+  "kind": "mi",
+  "pt": "47,0 milhões",
+  "en": "47.0 million",
+  "desc": "2018 round 2: camp_l"
+ },
+ "e2018r2_camp_b": {
+  "value": 57797847,
+  "kind": "mi",
+  "pt": "57,8 milhões",
+  "en": "57.8 million",
+  "desc": "2018 round 2: camp_b"
+ },
+ "e2018r2_others": {
+  "value": 0,
+  "kind": "mi",
+  "pt": "0",
+  "en": "0",
+  "desc": "2018 round 2: others"
+ },
+ "e2018r2_blank_null": {
+  "value": 11094698,
+  "kind": "mi",
+  "pt": "11,1 milhões",
+  "en": "11.1 million",
+  "desc": "2018 round 2: blank_null"
+ },
+ "e2018r2_absent": {
+  "value": 31372843,
+  "kind": "mi",
+  "pt": "31,4 milhões",
+  "en": "31.4 million",
+  "desc": "2018 round 2: absent"
+ },
+ "e2018r2_comparecimento": {
+  "value": 115933451,
+  "kind": "mi",
+  "pt": "115,9 milhões",
+  "en": "115.9 million",
+  "desc": "2018 round 2: comparecimento"
+ },
+ "e2018r2_pct_l_aptos": {
+  "value": 0.3193407744003118,
+  "kind": "pct",
+  "pt": "31,9%",
+  "en": "31.9%",
+  "desc": "2018 round 2: pct_l_aptos"
+ },
+ "e2018r2_pct_b_aptos": {
+  "value": 0.39236508794390007,
+  "kind": "pct",
+  "pt": "39,2%",
+  "en": "39.2%",
+  "desc": "2018 round 2: pct_b_aptos"
+ },
+ "e2018r2_pct_others_aptos": {
+  "value": 0.0,
+  "kind": "pct",
+  "pt": "0,0%",
+  "en": "0.0%",
+  "desc": "2018 round 2: pct_others_aptos"
+ },
+ "e2018r2_pct_blank_null_aptos": {
+  "value": 0.075317202671598,
+  "kind": "pct",
+  "pt": "7,5%",
+  "en": "7.5%",
+  "desc": "2018 round 2: pct_blank_null_aptos"
+ },
+ "e2018r2_pct_absent_aptos": {
+  "value": 0.21297693498419015,
+  "kind": "pct",
+  "pt": "21,3%",
+  "en": "21.3%",
+  "desc": "2018 round 2: pct_absent_aptos"
+ },
+ "e2018r2_pct_l_valid": {
+  "value": 0.44869768719969416,
+  "kind": "pct",
+  "pt": "44,9%",
+  "en": "44.9%",
+  "desc": "2018 round 2: pct_l_valid"
+ },
+ "e2018r2_pct_b_valid": {
+  "value": 0.5513023128003058,
+  "kind": "pct",
+  "pt": "55,1%",
+  "en": "55.1%",
+  "desc": "2018 round 2: pct_b_valid"
+ },
+ "e2018r2_pct_others_valid": {
+  "value": 0.0,
+  "kind": "pct",
+  "pt": "0,0%",
+  "en": "0.0%",
+  "desc": "2018 round 2: pct_others_valid"
+ },
+ "e2018r2_pct_neither_aptos": {
+  "value": 0.28829413765578815,
+  "kind": "pct",
+  "pt": "28,8%",
+  "en": "28.8%",
+  "desc": "2018 round 2: pct_neither_aptos"
+ },
+ "e2018r2_camp_l_int": {
+  "value": 47040906,
+  "kind": "int",
+  "pt": "47.040.906",
+  "en": "47,040,906",
+  "desc": "2018 round 2: votes of the L side (exact)"
+ },
+ "e2018r2_camp_b_int": {
+  "value": 57797847,
+  "kind": "int",
+  "pt": "57.797.847",
+  "en": "57,797,847",
+  "desc": "2018 round 2: votes of the B side (exact)"
+ },
+ "e2018r2_margin_votes": {
+  "value": 10756941,
+  "kind": "mi",
+  "pt": "10,8 milhões",
+  "en": "10.8 million",
+  "desc": "2018 round 2: vote margin between the two camps"
+ },
+ "e2018r2_led_by_l": {
+  "value": 2810,
+  "kind": "int",
+  "pt": "2.810",
+  "en": "2,810",
+  "desc": "2018 round 2: municipalities where led_by_l (who came first; 'other' = a third candidate came first)"
+ },
+ "e2018r2_led_by_b": {
+  "value": 2760,
+  "kind": "int",
+  "pt": "2.760",
+  "en": "2,760",
+  "desc": "2018 round 2: municipalities where led_by_b (who came first; 'other' = a third candidate came first)"
+ },
+ "e2018r2_led_by_other": {
+  "value": 0,
+  "kind": "int",
+  "pt": "0",
+  "en": "0",
+  "desc": "2018 round 2: municipalities where led_by_other (who came first; 'other' = a third candidate came first)"
+ },
+ "e2018r2_ties": {
+  "value": 0,
+  "kind": "int",
+  "pt": "0",
+  "en": "0",
+  "desc": "2018 round 2: municipalities where ties (who came first; 'other' = a third candidate came first)"
+ },
+ "e2018r2_aptos_share_in_l_led": {
+  "value": 0.31887128523478686,
+  "kind": "pct",
+  "pt": "31,9%",
+  "en": "31.9%",
+  "desc": "2018 round 2: share of the domestic electorate living in municipalities led by L"
+ },
+ "e2018r2_aptos_share_in_b_led": {
+  "value": 0.6811287147652132,
+  "kind": "pct",
+  "pt": "68,1%",
+  "en": "68.1%",
+  "desc": "2018 round 2: share of the domestic electorate living in municipalities led by B"
+ },
+ "e2018r2_l_share_of_votes_where_b_led": {
+  "value": 0.4951288836766866,
+  "kind": "pct",
+  "pt": "49,5%",
+  "en": "49.5%",
+  "desc": "2018 round 2: share of the L camp's votes cast in Brazil that came from municipalities led by B"
+ },
+ "e2018r2_b_share_of_votes_where_l_led": {
+  "value": 0.1767630647123194,
+  "kind": "pct",
+  "pt": "17,7%",
+  "en": "17.7%",
+  "desc": "2018 round 2: share of the B camp's votes cast in Brazil that came from municipalities led by L"
+ },
+ "e2018r2_l_votes_where_b_led": {
+  "value": 23264708,
+  "kind": "mi",
+  "pt": "23,3 milhões",
+  "en": "23.3 million",
+  "desc": "2018 round 2: L votes in municipalities led by B"
+ },
+ "e2018r2_b_votes_where_l_led": {
+  "value": 10193250,
+  "kind": "mi",
+  "pt": "10,2 milhões",
+  "en": "10.2 million",
+  "desc": "2018 round 2: B votes in municipalities led by L"
+ },
+ "e2018r2_n_minority_over_30": {
+  "value": 2898,
+  "kind": "int",
+  "pt": "2.898",
+  "en": "2,898",
+  "desc": "2018 round 2: municipalities where the local loser got more than X% of the two-camp vote"
+ },
+ "e2018r2_n_minority_over_40": {
+  "value": 1361,
+  "kind": "int",
+  "pt": "1.361",
+  "en": "1,361",
+  "desc": "2018 round 2: municipalities where the local loser got more than X% of the two-camp vote"
+ },
+ "e2018r2_n_minority_over_20": {
+  "value": 4416,
+  "kind": "int",
+  "pt": "4.416",
+  "en": "4,416",
+  "desc": "2018 round 2: municipalities where the local loser got more than X% of the two-camp vote"
+ },
+ "e2018r2_n_minority_over_10": {
+  "value": 5457,
+  "kind": "int",
+  "pt": "5.457",
+  "en": "5,457",
+  "desc": "2018 round 2: municipalities where the local loser got more than X% of the two-camp vote"
+ },
+ "e2018r2_share_minority_over_30": {
+  "value": 0.5202872531418312,
+  "kind": "pct",
+  "pt": "52,0%",
+  "en": "52.0%",
+  "desc": "2018 round 2: share_minority_over_30"
+ },
+ "e2018r2_share_minority_over_40": {
+  "value": 0.24434470377019749,
+  "kind": "pct",
+  "pt": "24,4%",
+  "en": "24.4%",
+  "desc": "2018 round 2: share_minority_over_40"
+ },
+ "e2018r2_share_minority_over_10": {
+  "value": 0.9797127468581688,
+  "kind": "pct",
+  "pt": "98,0%",
+  "en": "98.0%",
+  "desc": "2018 round 2: share_minority_over_10"
+ },
+ "e2018r2_aptos_share_minority_over_30": {
+  "value": 0.617352919633426,
+  "kind": "pct",
+  "pt": "61,7%",
+  "en": "61.7%",
+  "desc": "2018 round 2: aptos_share_minority_over_30"
+ },
+ "e2018r2_aptos_share_minority_over_40": {
+  "value": 0.20366636100920352,
+  "kind": "pct",
+  "pt": "20,4%",
+  "en": "20.4%",
+  "desc": "2018 round 2: aptos_share_minority_over_40"
+ },
+ "e2018r2_min_minority_share": {
+  "value": 0.020081688223281158,
+  "kind": "pct",
+  "pt": "2,0%",
+  "en": "2.0%",
+  "desc": "2018 round 2: min_minority_share"
+ },
+ "e2018r2_local_minority_vote_share": {
+  "value": 0.3197026885483802,
+  "kind": "pct",
+  "pt": "32,0%",
+  "en": "32.0%",
+  "desc": "2018 round 2: local_minority_vote_share"
+ },
+ "e2018r2_min_share_l2": {
+  "value": 0.0703781512605042,
+  "kind": "pct",
+  "pt": "7,0%",
+  "en": "7.0%",
+  "desc": "2018 round 2: min_share_l2"
+ },
+ "e2018r2_max_share_l2": {
+  "value": 0.9799183117767188,
+  "kind": "pct",
+  "pt": "98,0%",
+  "en": "98.0%",
+  "desc": "2018 round 2: max_share_l2"
+ },
+ "e2018r2_local_minority_votes": {
+  "value": 33457958,
+  "kind": "mi",
+  "pt": "33,5 milhões",
+  "en": "33.5 million",
+  "desc": "2018 round 2: votes cast for the side that lost in that municipality"
+ },
+ "e2018r2_local_minority_votes_num": {
+  "value": 33457958,
+  "kind": "mi_num",
+  "pt": "33,5",
+  "en": "33.5",
+  "desc": "same, number part"
+ },
+ "e2018r2_local_minority_votes_unit": {
+  "value": 33457958,
+  "kind": "mi_unit",
+  "pt": "milhões",
+  "en": "million",
+  "desc": "same, unit word"
+ },
+ "e2022r1_aptos": {
+  "value": 156454011,
+  "kind": "mi",
+  "pt": "156,5 milhões",
+  "en": "156.5 million",
+  "desc": "2022 round 1: aptos"
+ },
+ "e2022r1_camp_l": {
+  "value": 57259504,
+  "kind": "mi",
+  "pt": "57,3 milhões",
+  "en": "57.3 million",
+  "desc": "2022 round 1: camp_l"
+ },
+ "e2022r1_camp_b": {
+  "value": 51072345,
+  "kind": "mi",
+  "pt": "51,1 milhões",
+  "en": "51.1 million",
+  "desc": "2022 round 1: camp_b"
+ },
+ "e2022r1_others": {
+  "value": 9897870,
+  "kind": "mi",
+  "pt": "9,9 milhões",
+  "en": "9.9 million",
+  "desc": "2022 round 1: others"
+ },
+ "e2022r1_blank_null": {
+  "value": 5452653,
+  "kind": "mi",
+  "pt": "5,5 milhões",
+  "en": "5.5 million",
+  "desc": "2022 round 1: blank_null"
+ },
+ "e2022r1_absent": {
+  "value": 32771639,
+  "kind": "mi",
+  "pt": "32,8 milhões",
+  "en": "32.8 million",
+  "desc": "2022 round 1: absent"
+ },
+ "e2022r1_comparecimento": {
+  "value": 123682372,
+  "kind": "mi",
+  "pt": "123,7 milhões",
+  "en": "123.7 million",
+  "desc": "2022 round 1: comparecimento"
+ },
+ "e2022r1_pct_l_aptos": {
+  "value": 0.3659829724659472,
+  "kind": "pct",
+  "pt": "36,6%",
+  "en": "36.6%",
+  "desc": "2022 round 1: pct_l_aptos"
+ },
+ "e2022r1_pct_b_aptos": {
+  "value": 0.3264367891469398,
+  "kind": "pct",
+  "pt": "32,6%",
+  "en": "32.6%",
+  "desc": "2022 round 1: pct_b_aptos"
+ },
+ "e2022r1_pct_others_aptos": {
+  "value": 0.06326376637285445,
+  "kind": "pct",
+  "pt": "6,3%",
+  "en": "6.3%",
+  "desc": "2022 round 1: pct_others_aptos"
+ },
+ "e2022r1_pct_blank_null_aptos": {
+  "value": 0.0348514746611386,
+  "kind": "pct",
+  "pt": "3,5%",
+  "en": "3.5%",
+  "desc": "2022 round 1: pct_blank_null_aptos"
+ },
+ "e2022r1_pct_absent_aptos": {
+  "value": 0.20946499735311996,
+  "kind": "pct",
+  "pt": "20,9%",
+  "en": "20.9%",
+  "desc": "2022 round 1: pct_absent_aptos"
+ },
+ "e2022r1_pct_l_valid": {
+  "value": 0.48430719859868737,
+  "kind": "pct",
+  "pt": "48,4%",
+  "en": "48.4%",
+  "desc": "2022 round 1: pct_l_valid"
+ },
+ "e2022r1_pct_b_valid": {
+  "value": 0.43197552554446994,
+  "kind": "pct",
+  "pt": "43,2%",
+  "en": "43.2%",
+  "desc": "2022 round 1: pct_b_valid"
+ },
+ "e2022r1_pct_others_valid": {
+  "value": 0.08371727585684273,
+  "kind": "pct",
+  "pt": "8,4%",
+  "en": "8.4%",
+  "desc": "2022 round 1: pct_others_valid"
+ },
+ "e2022r1_pct_neither_aptos": {
+  "value": 0.307580238387113,
+  "kind": "pct",
+  "pt": "30,8%",
+  "en": "30.8%",
+  "desc": "2022 round 1: pct_neither_aptos"
+ },
+ "e2022r1_camp_l_int": {
+  "value": 57259504,
+  "kind": "int",
+  "pt": "57.259.504",
+  "en": "57,259,504",
+  "desc": "2022 round 1: votes of the L side (exact)"
+ },
+ "e2022r1_camp_b_int": {
+  "value": 51072345,
+  "kind": "int",
+  "pt": "51.072.345",
+  "en": "51,072,345",
+  "desc": "2022 round 1: votes of the B side (exact)"
+ },
+ "e2022r1_margin_votes": {
+  "value": 6187159,
+  "kind": "mi",
+  "pt": "6,2 milhões",
+  "en": "6.2 million",
+  "desc": "2022 round 1: vote margin between the two camps"
+ },
+ "e2022r1_led_by_l": {
+  "value": 3376,
+  "kind": "int",
+  "pt": "3.376",
+  "en": "3,376",
+  "desc": "2022 round 1: municipalities where led_by_l (who came first; 'other' = a third candidate came first)"
+ },
+ "e2022r1_led_by_b": {
+  "value": 2191,
+  "kind": "int",
+  "pt": "2.191",
+  "en": "2,191",
+  "desc": "2022 round 1: municipalities where led_by_b (who came first; 'other' = a third candidate came first)"
+ },
+ "e2022r1_led_by_other": {
+  "value": 0,
+  "kind": "int",
+  "pt": "0",
+  "en": "0",
+  "desc": "2022 round 1: municipalities where led_by_other (who came first; 'other' = a third candidate came first)"
+ },
+ "e2022r1_ties": {
+  "value": 3,
+  "kind": "int",
+  "pt": "3",
+  "en": "3",
+  "desc": "2022 round 1: municipalities where ties (who came first; 'other' = a third candidate came first)"
+ },
+ "e2022r1_aptos_share_in_l_led": {
+  "value": 0.49943181327912844,
+  "kind": "pct",
+  "pt": "49,9%",
+  "en": "49.9%",
+  "desc": "2022 round 1: share of the domestic electorate living in municipalities led by L"
+ },
+ "e2022r1_aptos_share_in_b_led": {
+  "value": 0.5004335489386863,
+  "kind": "pct",
+  "pt": "50,0%",
+  "en": "50.0%",
+  "desc": "2022 round 1: share of the domestic electorate living in municipalities led by B"
+ },
+ "e2022r1_l_share_of_votes_where_b_led": {
+  "value": 0.3741795578339019,
+  "kind": "pct",
+  "pt": "37,4%",
+  "en": "37.4%",
+  "desc": "2022 round 1: share of the L camp's votes cast in Brazil that came from municipalities led by B"
+ },
+ "e2022r1_b_share_of_votes_where_l_led": {
+  "value": 0.36537183847857135,
+  "kind": "pct",
+  "pt": "36,5%",
+  "en": "36.5%",
+  "desc": "2022 round 1: share of the B camp's votes cast in Brazil that came from municipalities led by L"
+ },
+ "e2022r1_l_votes_where_b_led": {
+  "value": 21373350,
+  "kind": "mi",
+  "pt": "21,4 milhões",
+  "en": "21.4 million",
+  "desc": "2022 round 1: L votes in municipalities led by B"
+ },
+ "e2022r1_b_votes_where_l_led": {
+  "value": 18615621,
+  "kind": "mi",
+  "pt": "18,6 milhões",
+  "en": "18.6 million",
+  "desc": "2022 round 1: B votes in municipalities led by L"
+ },
+ "e2022r1_n_minority_over_30": {
+  "value": 3441,
+  "kind": "int",
+  "pt": "3.441",
+  "en": "3,441",
+  "desc": "2022 round 1: municipalities where the local loser got more than X% of the two-camp vote"
+ },
+ "e2022r1_n_minority_over_40": {
+  "value": 1953,
+  "kind": "int",
+  "pt": "1.953",
+  "en": "1,953",
+  "desc": "2022 round 1: municipalities where the local loser got more than X% of the two-camp vote"
+ },
+ "e2022r1_n_minority_over_20": {
+  "value": 4638,
+  "kind": "int",
+  "pt": "4.638",
+  "en": "4,638",
+  "desc": "2022 round 1: municipalities where the local loser got more than X% of the two-camp vote"
+ },
+ "e2022r1_n_minority_over_10": {
+  "value": 5499,
+  "kind": "int",
+  "pt": "5.499",
+  "en": "5,499",
+  "desc": "2022 round 1: municipalities where the local loser got more than X% of the two-camp vote"
+ },
+ "e2022r1_share_minority_over_30": {
+  "value": 0.618106700197593,
+  "kind": "pct",
+  "pt": "61,8%",
+  "en": "61.8%",
+  "desc": "2022 round 1: share_minority_over_30"
+ },
+ "e2022r1_share_minority_over_40": {
+  "value": 0.35081731632836355,
+  "kind": "pct",
+  "pt": "35,1%",
+  "en": "35.1%",
+  "desc": "2022 round 1: share_minority_over_40"
+ },
+ "e2022r1_share_minority_over_10": {
+  "value": 0.9877851625651158,
+  "kind": "pct",
+  "pt": "98,8%",
+  "en": "98.8%",
+  "desc": "2022 round 1: share_minority_over_10"
+ },
+ "e2022r1_aptos_share_minority_over_30": {
+  "value": 0.773809608124071,
+  "kind": "pct",
+  "pt": "77,4%",
+  "en": "77.4%",
+  "desc": "2022 round 1: aptos_share_minority_over_30"
+ },
+ "e2022r1_aptos_share_minority_over_40": {
+  "value": 0.48176459666778787,
+  "kind": "pct",
+  "pt": "48,2%",
+  "en": "48.2%",
+  "desc": "2022 round 1: aptos_share_minority_over_40"
+ },
+ "e2022r1_min_minority_share": {
+  "value": 0.05721551176096629,
+  "kind": "pct",
+  "pt": "5,7%",
+  "en": "5.7%",
+  "desc": "2022 round 1: min_minority_share"
+ },
+ "e2022r1_local_minority_vote_share": {
+  "value": 0.37008058487674667,
+  "kind": "pct",
+  "pt": "37,0%",
+  "en": "37.0%",
+  "desc": "2022 round 1: local_minority_vote_share"
+ },
+ "e2022r1_min_share_l2": {
+  "value": 0.10969116080937168,
+  "kind": "pct",
+  "pt": "11,0%",
+  "en": "11.0%",
+  "desc": "2022 round 1: min_share_l2"
+ },
+ "e2022r1_max_share_l2": {
+  "value": 0.9427844882390337,
+  "kind": "pct",
+  "pt": "94,3%",
+  "en": "94.3%",
+  "desc": "2022 round 1: max_share_l2"
+ },
+ "e2022r1_local_minority_votes": {
+  "value": 39988971,
+  "kind": "mi",
+  "pt": "40,0 milhões",
+  "en": "40.0 million",
+  "desc": "2022 round 1: votes cast for the side that lost in that municipality"
+ },
+ "e2022r1_local_minority_votes_num": {
+  "value": 39988971,
+  "kind": "mi_num",
+  "pt": "40,0",
+  "en": "40.0",
+  "desc": "same, number part"
+ },
+ "e2022r1_local_minority_votes_unit": {
+  "value": 39988971,
+  "kind": "mi_unit",
+  "pt": "milhões",
+  "en": "million",
+  "desc": "same, unit word"
+ },
+ "e2022r2_aptos": {
+  "value": 156454011,
+  "kind": "mi",
+  "pt": "156,5 milhões",
+  "en": "156.5 million",
+  "desc": "2022 round 2: aptos"
+ },
+ "e2022r2_camp_l": {
+  "value": 60345999,
+  "kind": "mi",
+  "pt": "60,3 milhões",
+  "en": "60.3 million",
+  "desc": "2022 round 2: camp_l"
+ },
+ "e2022r2_camp_b": {
+  "value": 58206354,
+  "kind": "mi",
+  "pt": "58,2 milhões",
+  "en": "58.2 million",
+  "desc": "2022 round 2: camp_b"
+ },
+ "e2022r2_others": {
+  "value": 0,
+  "kind": "mi",
+  "pt": "0",
+  "en": "0",
+  "desc": "2022 round 2: others"
+ },
+ "e2022r2_blank_null": {
+  "value": 5700443,
+  "kind": "mi",
+  "pt": "5,7 milhões",
+  "en": "5.7 million",
+  "desc": "2022 round 2: blank_null"
+ },
+ "e2022r2_absent": {
+  "value": 32201215,
+  "kind": "mi",
+  "pt": "32,2 milhões",
+  "en": "32.2 million",
+  "desc": "2022 round 2: absent"
+ },
+ "e2022r2_comparecimento": {
+  "value": 124252796,
+  "kind": "mi",
+  "pt": "124,3 milhões",
+  "en": "124.3 million",
+  "desc": "2022 round 2: comparecimento"
+ },
+ "e2022r2_pct_l_aptos": {
+  "value": 0.3857107824483963,
+  "kind": "pct",
+  "pt": "38,6%",
+  "en": "38.6%",
+  "desc": "2022 round 2: pct_l_aptos"
+ },
+ "e2022r2_pct_b_aptos": {
+  "value": 0.3720349106294245,
+  "kind": "pct",
+  "pt": "37,2%",
+  "en": "37.2%",
+  "desc": "2022 round 2: pct_b_aptos"
+ },
+ "e2022r2_pct_others_aptos": {
+  "value": 0.0,
+  "kind": "pct",
+  "pt": "0,0%",
+  "en": "0.0%",
+  "desc": "2022 round 2: pct_others_aptos"
+ },
+ "e2022r2_pct_blank_null_aptos": {
+  "value": 0.03643526275590339,
+  "kind": "pct",
+  "pt": "3,6%",
+  "en": "3.6%",
+  "desc": "2022 round 2: pct_blank_null_aptos"
+ },
+ "e2022r2_pct_absent_aptos": {
+  "value": 0.2058190441662758,
+  "kind": "pct",
+  "pt": "20,6%",
+  "en": "20.6%",
+  "desc": "2022 round 2: pct_absent_aptos"
+ },
+ "e2022r2_pct_l_valid": {
+  "value": 0.5090240511717216,
+  "kind": "pct",
+  "pt": "50,9%",
+  "en": "50.9%",
+  "desc": "2022 round 2: pct_l_valid"
+ },
+ "e2022r2_pct_b_valid": {
+  "value": 0.49097594882827844,
+  "kind": "pct",
+  "pt": "49,1%",
+  "en": "49.1%",
+  "desc": "2022 round 2: pct_b_valid"
+ },
+ "e2022r2_pct_others_valid": {
+  "value": 0.0,
+  "kind": "pct",
+  "pt": "0,0%",
+  "en": "0.0%",
+  "desc": "2022 round 2: pct_others_valid"
+ },
+ "e2022r2_pct_neither_aptos": {
+  "value": 0.2422543069221792,
+  "kind": "pct",
+  "pt": "24,2%",
+  "en": "24.2%",
+  "desc": "2022 round 2: pct_neither_aptos"
+ },
+ "e2022r2_camp_l_int": {
+  "value": 60345999,
+  "kind": "int",
+  "pt": "60.345.999",
+  "en": "60,345,999",
+  "desc": "2022 round 2: votes of the L side (exact)"
+ },
+ "e2022r2_camp_b_int": {
+  "value": 58206354,
+  "kind": "int",
+  "pt": "58.206.354",
+  "en": "58,206,354",
+  "desc": "2022 round 2: votes of the B side (exact)"
+ },
+ "e2022r2_margin_votes": {
+  "value": 2139645,
+  "kind": "mi",
+  "pt": "2,1 milhões",
+  "en": "2.1 million",
+  "desc": "2022 round 2: vote margin between the two camps"
+ },
+ "e2022r2_led_by_l": {
+  "value": 3123,
+  "kind": "int",
+  "pt": "3.123",
+  "en": "3,123",
+  "desc": "2022 round 2: municipalities where led_by_l (who came first; 'other' = a third candidate came first)"
+ },
+ "e2022r2_led_by_b": {
+  "value": 2445,
+  "kind": "int",
+  "pt": "2.445",
+  "en": "2,445",
+  "desc": "2022 round 2: municipalities where led_by_b (who came first; 'other' = a third candidate came first)"
+ },
+ "e2022r2_led_by_other": {
+  "value": 0,
+  "kind": "int",
+  "pt": "0",
+  "en": "0",
+  "desc": "2022 round 2: municipalities where led_by_other (who came first; 'other' = a third candidate came first)"
+ },
+ "e2022r2_ties": {
+  "value": 2,
+  "kind": "int",
+  "pt": "2",
+  "en": "2",
+  "desc": "2022 round 2: municipalities where ties (who came first; 'other' = a third candidate came first)"
+ },
+ "e2022r2_aptos_share_in_l_led": {
+  "value": 0.4675092808618587,
+  "kind": "pct",
+  "pt": "46,8%",
+  "en": "46.8%",
+  "desc": "2022 round 2: share of the domestic electorate living in municipalities led by L"
+ },
+ "e2022r2_aptos_share_in_b_led": {
+  "value": 0.5323869815767857,
+  "kind": "pct",
+  "pt": "53,2%",
+  "en": "53.2%",
+  "desc": "2022 round 2: share of the domestic electorate living in municipalities led by B"
+ },
+ "e2022r2_l_share_of_votes_where_b_led": {
+  "value": 0.40965877248310245,
+  "kind": "pct",
+  "pt": "41,0%",
+  "en": "41.0%",
+  "desc": "2022 round 2: share of the L camp's votes cast in Brazil that came from municipalities led by B"
+ },
+ "e2022r2_b_share_of_votes_where_l_led": {
+  "value": 0.3366786431326039,
+  "kind": "pct",
+  "pt": "33,7%",
+  "en": "33.7%",
+  "desc": "2022 round 2: share of the B camp's votes cast in Brazil that came from municipalities led by L"
+ },
+ "e2022r2_l_votes_where_b_led": {
+  "value": 24658629,
+  "kind": "mi",
+  "pt": "24,7 milhões",
+  "en": "24.7 million",
+  "desc": "2022 round 2: L votes in municipalities led by B"
+ },
+ "e2022r2_b_votes_where_l_led": {
+  "value": 19547929,
+  "kind": "mi",
+  "pt": "19,5 milhões",
+  "en": "19.5 million",
+  "desc": "2022 round 2: B votes in municipalities led by L"
+ },
+ "e2022r2_n_minority_over_30": {
+  "value": 3521,
+  "kind": "int",
+  "pt": "3.521",
+  "en": "3,521",
+  "desc": "2022 round 2: municipalities where the local loser got more than X% of the two-camp vote"
+ },
+ "e2022r2_n_minority_over_40": {
+  "value": 1913,
+  "kind": "int",
+  "pt": "1.913",
+  "en": "1,913",
+  "desc": "2022 round 2: municipalities where the local loser got more than X% of the two-camp vote"
+ },
+ "e2022r2_n_minority_over_20": {
+  "value": 4780,
+  "kind": "int",
+  "pt": "4.780",
+  "en": "4,780",
+  "desc": "2022 round 2: municipalities where the local loser got more than X% of the two-camp vote"
+ },
+ "e2022r2_n_minority_over_10": {
+  "value": 5526,
+  "kind": "int",
+  "pt": "5.526",
+  "en": "5,526",
+  "desc": "2022 round 2: municipalities where the local loser got more than X% of the two-camp vote"
+ },
+ "e2022r2_share_minority_over_30": {
+  "value": 0.6323635057471264,
+  "kind": "pct",
+  "pt": "63,2%",
+  "en": "63.2%",
+  "desc": "2022 round 2: share_minority_over_30"
+ },
+ "e2022r2_share_minority_over_40": {
+  "value": 0.34357040229885055,
+  "kind": "pct",
+  "pt": "34,4%",
+  "en": "34.4%",
+  "desc": "2022 round 2: share_minority_over_40"
+ },
+ "e2022r2_share_minority_over_10": {
+  "value": 0.9924568965517241,
+  "kind": "pct",
+  "pt": "99,2%",
+  "en": "99.2%",
+  "desc": "2022 round 2: share_minority_over_10"
+ },
+ "e2022r2_aptos_share_minority_over_30": {
+  "value": 0.7799694398967781,
+  "kind": "pct",
+  "pt": "78,0%",
+  "en": "78.0%",
+  "desc": "2022 round 2: aptos_share_minority_over_30"
+ },
+ "e2022r2_aptos_share_minority_over_40": {
+  "value": 0.47222069922890236,
+  "kind": "pct",
+  "pt": "47,2%",
+  "en": "47.2%",
+  "desc": "2022 round 2: aptos_share_minority_over_40"
+ },
+ "e2022r2_min_minority_share": {
+  "value": 0.06142584341183954,
+  "kind": "pct",
+  "pt": "6,1%",
+  "en": "6.1%",
+  "desc": "2022 round 2: min_minority_share"
+ },
+ "e2022r2_local_minority_vote_share": {
+  "value": 0.3738668967766409,
+  "kind": "pct",
+  "pt": "37,4%",
+  "en": "37.4%",
+  "desc": "2022 round 2: local_minority_vote_share"
+ },
+ "e2022r2_min_share_l2": {
+  "value": 0.11007827788649706,
+  "kind": "pct",
+  "pt": "11,0%",
+  "en": "11.0%",
+  "desc": "2022 round 2: min_share_l2"
+ },
+ "e2022r2_max_share_l2": {
+  "value": 0.9385741565881605,
+  "kind": "pct",
+  "pt": "93,9%",
+  "en": "93.9%",
+  "desc": "2022 round 2: max_share_l2"
+ },
+ "e2022r2_local_minority_votes": {
+  "value": 44206558,
+  "kind": "mi",
+  "pt": "44,2 milhões",
+  "en": "44.2 million",
+  "desc": "2022 round 2: votes cast for the side that lost in that municipality"
+ },
+ "e2022r2_local_minority_votes_num": {
+  "value": 44206558,
+  "kind": "mi_num",
+  "pt": "44,2",
+  "en": "44.2",
+  "desc": "same, number part"
+ },
+ "e2022r2_local_minority_votes_unit": {
+  "value": 44206558,
+  "kind": "mi_unit",
+  "pt": "milhões",
+  "en": "million",
+  "desc": "same, unit word"
+ },
+ "e2026r1_aptos": {
+  "value": 158745502,
+  "kind": "mi",
+  "pt": "158,7 milhões",
+  "en": "158.7 million",
+  "desc": "2026 round 1: aptos"
+ },
+ "e2026r1_camp_l": {
+  "value": 53879538,
+  "kind": "mi",
+  "pt": "53,9 milhões",
+  "en": "53.9 million",
+  "desc": "2026 round 1: camp_l"
+ },
+ "e2026r1_camp_b": {
+  "value": 56104503,
+  "kind": "mi",
+  "pt": "56,1 milhões",
+  "en": "56.1 million",
+  "desc": "2026 round 1: camp_b"
+ },
+ "e2026r1_others": {
+  "value": 9316747,
+  "kind": "mi",
+  "pt": "9,3 milhões",
+  "en": "9.3 million",
+  "desc": "2026 round 1: others"
+ },
+ "e2026r1_blank_null": {
+  "value": 5975047,
+  "kind": "mi",
+  "pt": "6,0 milhões",
+  "en": "6.0 million",
+  "desc": "2026 round 1: blank_null"
+ },
+ "e2026r1_absent": {
+  "value": 33469667,
+  "kind": "mi",
+  "pt": "33,5 milhões",
+  "en": "33.5 million",
+  "desc": "2026 round 1: absent"
+ },
+ "e2026r1_comparecimento": {
+  "value": 125275835,
+  "kind": "mi",
+  "pt": "125,3 milhões",
+  "en": "125.3 million",
+  "desc": "2026 round 1: comparecimento"
+ },
+ "e2026r1_pct_l_aptos": {
+  "value": 0.3394082813130668,
+  "kind": "pct",
+  "pt": "33,9%",
+  "en": "33.9%",
+  "desc": "2026 round 1: pct_l_aptos"
+ },
+ "e2026r1_pct_b_aptos": {
+  "value": 0.35342420599734536,
+  "kind": "pct",
+  "pt": "35,3%",
+  "en": "35.3%",
+  "desc": "2026 round 1: pct_b_aptos"
+ },
+ "e2026r1_pct_others_aptos": {
+  "value": 0.0586898329881498,
+  "kind": "pct",
+  "pt": "5,9%",
+  "en": "5.9%",
+  "desc": "2026 round 1: pct_others_aptos"
+ },
+ "e2026r1_pct_blank_null_aptos": {
+  "value": 0.03763915780114513,
+  "kind": "pct",
+  "pt": "3,8%",
+  "en": "3.8%",
+  "desc": "2026 round 1: pct_blank_null_aptos"
+ },
+ "e2026r1_pct_absent_aptos": {
+  "value": 0.21083852190029295,
+  "kind": "pct",
+  "pt": "21,1%",
+  "en": "21.1%",
+  "desc": "2026 round 1: pct_absent_aptos"
+ },
+ "e2026r1_pct_l_valid": {
+  "value": 0.451627679106361,
+  "kind": "pct",
+  "pt": "45,2%",
+  "en": "45.2%",
+  "desc": "2026 round 1: pct_l_valid"
+ },
+ "e2026r1_pct_b_valid": {
+  "value": 0.47027772356373704,
+  "kind": "pct",
+  "pt": "47,0%",
+  "en": "47.0%",
+  "desc": "2026 round 1: pct_b_valid"
+ },
+ "e2026r1_pct_others_valid": {
+  "value": 0.07809459732990197,
+  "kind": "pct",
+  "pt": "7,8%",
+  "en": "7.8%",
+  "desc": "2026 round 1: pct_others_valid"
+ },
+ "e2026r1_pct_neither_aptos": {
+  "value": 0.3071675126895879,
+  "kind": "pct",
+  "pt": "30,7%",
+  "en": "30.7%",
+  "desc": "2026 round 1: pct_neither_aptos"
+ },
+ "e2026r1_camp_l_int": {
+  "value": 53879538,
+  "kind": "int",
+  "pt": "53.879.538",
+  "en": "53,879,538",
+  "desc": "2026 round 1: votes of the L side (exact)"
+ },
+ "e2026r1_camp_b_int": {
+  "value": 56104503,
+  "kind": "int",
+  "pt": "56.104.503",
+  "en": "56,104,503",
+  "desc": "2026 round 1: votes of the B side (exact)"
+ },
+ "e2026r1_margin_votes": {
+  "value": 2224965,
+  "kind": "mi",
+  "pt": "2,2 milhões",
+  "en": "2.2 million",
+  "desc": "2026 round 1: vote margin between the two camps"
+ },
+ "e2026r1_led_by_l": {
+  "value": 2663,
+  "kind": "int",
+  "pt": "2.663",
+  "en": "2,663",
+  "desc": "2026 round 1: municipalities where led_by_l (who came first; 'other' = a third candidate came first)"
+ },
+ "e2026r1_led_by_b": {
+  "value": 2906,
+  "kind": "int",
+  "pt": "2.906",
+  "en": "2,906",
+  "desc": "2026 round 1: municipalities where led_by_b (who came first; 'other' = a third candidate came first)"
+ },
+ "e2026r1_led_by_other": {
+  "value": 0,
+  "kind": "int",
+  "pt": "0",
+  "en": "0",
+  "desc": "2026 round 1: municipalities where led_by_other (who came first; 'other' = a third candidate came first)"
+ },
+ "e2026r1_ties": {
+  "value": 2,
+  "kind": "int",
+  "pt": "2",
+  "en": "2",
+  "desc": "2026 round 1: municipalities where ties (who came first; 'other' = a third candidate came first)"
+ },
+ "e2026r1_aptos_share_in_l_led": {
+  "value": 0.4308133409324453,
+  "kind": "pct",
+  "pt": "43,1%",
+  "en": "43.1%",
+  "desc": "2026 round 1: share of the domestic electorate living in municipalities led by L"
+ },
+ "e2026r1_aptos_share_in_b_led": {
+  "value": 0.5691646352271656,
+  "kind": "pct",
+  "pt": "56,9%",
+  "en": "56.9%",
+  "desc": "2026 round 1: share of the domestic electorate living in municipalities led by B"
+ },
+ "e2026r1_l_share_of_votes_where_b_led": {
+  "value": 0.42602436004470484,
+  "kind": "pct",
+  "pt": "42,6%",
+  "en": "42.6%",
+  "desc": "2026 round 1: share of the L camp's votes cast in Brazil that came from municipalities led by B"
+ },
+ "e2026r1_b_share_of_votes_where_l_led": {
+  "value": 0.30924604225583485,
+  "kind": "pct",
+  "pt": "30,9%",
+  "en": "30.9%",
+  "desc": "2026 round 1: share of the B camp's votes cast in Brazil that came from municipalities led by L"
+ },
+ "e2026r1_l_votes_where_b_led": {
+  "value": 22886945,
+  "kind": "mi",
+  "pt": "22,9 milhões",
+  "en": "22.9 million",
+  "desc": "2026 round 1: L votes in municipalities led by B"
+ },
+ "e2026r1_b_votes_where_l_led": {
+  "value": 17305595,
+  "kind": "mi",
+  "pt": "17,3 milhões",
+  "en": "17.3 million",
+  "desc": "2026 round 1: B votes in municipalities led by L"
+ },
+ "e2026r1_n_minority_over_30": {
+  "value": 3405,
+  "kind": "int",
+  "pt": "3.405",
+  "en": "3,405",
+  "desc": "2026 round 1: municipalities where the local loser got more than X% of the two-camp vote"
+ },
+ "e2026r1_n_minority_over_40": {
+  "value": 1564,
+  "kind": "int",
+  "pt": "1.564",
+  "en": "1,564",
+  "desc": "2026 round 1: municipalities where the local loser got more than X% of the two-camp vote"
+ },
+ "e2026r1_n_minority_over_20": {
+  "value": 4993,
+  "kind": "int",
+  "pt": "4.993",
+  "en": "4,993",
+  "desc": "2026 round 1: municipalities where the local loser got more than X% of the two-camp vote"
+ },
+ "e2026r1_n_minority_over_10": {
+  "value": 5561,
+  "kind": "int",
+  "pt": "5.561",
+  "en": "5,561",
+  "desc": "2026 round 1: municipalities where the local loser got more than X% of the two-camp vote"
+ },
+ "e2026r1_share_minority_over_30": {
+  "value": 0.6114203627222122,
+  "kind": "pct",
+  "pt": "61,1%",
+  "en": "61.1%",
+  "desc": "2026 round 1: share_minority_over_30"
+ },
+ "e2026r1_share_minority_over_40": {
+  "value": 0.2808403663135213,
+  "kind": "pct",
+  "pt": "28,1%",
+  "en": "28.1%",
+  "desc": "2026 round 1: share_minority_over_40"
+ },
+ "e2026r1_share_minority_over_10": {
+  "value": 0.9985634763871432,
+  "kind": "pct",
+  "pt": "99,9%",
+  "en": "99.9%",
+  "desc": "2026 round 1: share_minority_over_10"
+ },
+ "e2026r1_aptos_share_minority_over_30": {
+  "value": 0.7505938837814616,
+  "kind": "pct",
+  "pt": "75,1%",
+  "en": "75.1%",
+  "desc": "2026 round 1: aptos_share_minority_over_30"
+ },
+ "e2026r1_aptos_share_minority_over_40": {
+  "value": 0.43669158972113326,
+  "kind": "pct",
+  "pt": "43,7%",
+  "en": "43.7%",
+  "desc": "2026 round 1: aptos_share_minority_over_40"
+ },
+ "e2026r1_min_minority_share": {
+  "value": 0.07821522309711286,
+  "kind": "pct",
+  "pt": "7,8%",
+  "en": "7.8%",
+  "desc": "2026 round 1: min_minority_share"
+ },
+ "e2026r1_local_minority_vote_share": {
+  "value": 0.3664519431064744,
+  "kind": "pct",
+  "pt": "36,6%",
+  "en": "36.6%",
+  "desc": "2026 round 1: local_minority_vote_share"
+ },
+ "e2026r1_min_share_l2": {
+  "value": 0.07821522309711286,
+  "kind": "pct",
+  "pt": "7,8%",
+  "en": "7.8%",
+  "desc": "2026 round 1: min_share_l2"
+ },
+ "e2026r1_max_share_l2": {
+  "value": 0.9116362702286155,
+  "kind": "pct",
+  "pt": "91,2%",
+  "en": "91.2%",
+  "desc": "2026 round 1: max_share_l2"
+ },
+ "e2026r1_local_minority_votes": {
+  "value": 40192540,
+  "kind": "mi",
+  "pt": "40,2 milhões",
+  "en": "40.2 million",
+  "desc": "2026 round 1: votes cast for the side that lost in that municipality"
+ },
+ "e2026r1_local_minority_votes_num": {
+  "value": 40192540,
+  "kind": "mi_num",
+  "pt": "40,2",
+  "en": "40.2",
+  "desc": "same, number part"
+ },
+ "e2026r1_local_minority_votes_unit": {
+  "value": 40192540,
+  "kind": "mi_unit",
+  "pt": "milhões",
+  "en": "million",
+  "desc": "same, unit word"
+ },
+ "e2026r2_aptos": {
+  "value": 158745502,
+  "kind": "mi",
+  "pt": "158,7 milhões",
+  "en": "158.7 million",
+  "desc": "2026 round 2: aptos"
+ },
+ "e2026r2_camp_l": {
+  "value": 64256232,
+  "kind": "mi",
+  "pt": "64,3 milhões",
+  "en": "64.3 million",
+  "desc": "2026 round 2: camp_l"
+ },
+ "e2026r2_camp_b": {
+  "value": 59826041,
+  "kind": "mi",
+  "pt": "59,8 milhões",
+  "en": "59.8 million",
+  "desc": "2026 round 2: camp_b"
+ },
+ "e2026r2_others": {
+  "value": 0,
+  "kind": "mi",
+  "pt": "0",
+  "en": "0",
+  "desc": "2026 round 2: others"
+ },
+ "e2026r2_blank_null": {
+  "value": 4153801,
+  "kind": "mi",
+  "pt": "4,2 milhões",
+  "en": "4.2 million",
+  "desc": "2026 round 2: blank_null"
+ },
+ "e2026r2_absent": {
+  "value": 30509428,
+  "kind": "mi",
+  "pt": "30,5 milhões",
+  "en": "30.5 million",
+  "desc": "2026 round 2: absent"
+ },
+ "e2026r2_comparecimento": {
+  "value": 128236074,
+  "kind": "mi",
+  "pt": "128,2 milhões",
+  "en": "128.2 million",
+  "desc": "2026 round 2: comparecimento"
+ },
+ "e2026r2_pct_l_aptos": {
+  "value": 0.4047751349830372,
+  "kind": "pct",
+  "pt": "40,5%",
+  "en": "40.5%",
+  "desc": "2026 round 2: pct_l_aptos"
+ },
+ "e2026r2_pct_b_aptos": {
+  "value": 0.3768676292950965,
+  "kind": "pct",
+  "pt": "37,7%",
+  "en": "37.7%",
+  "desc": "2026 round 2: pct_b_aptos"
+ },
+ "e2026r2_pct_others_aptos": {
+  "value": 0.0,
+  "kind": "pct",
+  "pt": "0,0%",
+  "en": "0.0%",
+  "desc": "2026 round 2: pct_others_aptos"
+ },
+ "e2026r2_pct_blank_null_aptos": {
+  "value": 0.026166416986101438,
+  "kind": "pct",
+  "pt": "2,6%",
+  "en": "2.6%",
+  "desc": "2026 round 2: pct_blank_null_aptos"
+ },
+ "e2026r2_pct_absent_aptos": {
+  "value": 0.19219081873576488,
+  "kind": "pct",
+  "pt": "19,2%",
+  "en": "19.2%",
+  "desc": "2026 round 2: pct_absent_aptos"
+ },
+ "e2026r2_pct_l_valid": {
+  "value": 0.517851828842626,
+  "kind": "pct",
+  "pt": "51,8%",
+  "en": "51.8%",
+  "desc": "2026 round 2: pct_l_valid"
+ },
+ "e2026r2_pct_b_valid": {
+  "value": 0.48214817115737396,
+  "kind": "pct",
+  "pt": "48,2%",
+  "en": "48.2%",
+  "desc": "2026 round 2: pct_b_valid"
+ },
+ "e2026r2_pct_others_valid": {
+  "value": 0.0,
+  "kind": "pct",
+  "pt": "0,0%",
+  "en": "0.0%",
+  "desc": "2026 round 2: pct_others_valid"
+ },
+ "e2026r2_pct_neither_aptos": {
+  "value": 0.2183572357218663,
+  "kind": "pct",
+  "pt": "21,8%",
+  "en": "21.8%",
+  "desc": "2026 round 2: pct_neither_aptos"
+ },
+ "e2026r2_camp_l_int": {
+  "value": 64256232,
+  "kind": "int",
+  "pt": "64.256.232",
+  "en": "64,256,232",
+  "desc": "2026 round 2: votes of the L side (exact)"
+ },
+ "e2026r2_camp_b_int": {
+  "value": 59826041,
+  "kind": "int",
+  "pt": "59.826.041",
+  "en": "59,826,041",
+  "desc": "2026 round 2: votes of the B side (exact)"
+ },
+ "e2026r2_margin_votes": {
+  "value": 4430191,
+  "kind": "mi",
+  "pt": "4,4 milhões",
+  "en": "4.4 million",
+  "desc": "2026 round 2: vote margin between the two camps"
+ },
+ "e2026r2_led_by_l": {
+  "value": 2875,
+  "kind": "int",
+  "pt": "2.875",
+  "en": "2,875",
+  "desc": "2026 round 2: municipalities where led_by_l (who came first; 'other' = a third candidate came first)"
+ },
+ "e2026r2_led_by_b": {
+  "value": 2695,
+  "kind": "int",
+  "pt": "2.695",
+  "en": "2,695",
+  "desc": "2026 round 2: municipalities where led_by_b (who came first; 'other' = a third candidate came first)"
+ },
+ "e2026r2_led_by_other": {
+  "value": 0,
+  "kind": "int",
+  "pt": "0",
+  "en": "0",
+  "desc": "2026 round 2: municipalities where led_by_other (who came first; 'other' = a third candidate came first)"
+ },
+ "e2026r2_ties": {
+  "value": 1,
+  "kind": "int",
+  "pt": "1",
+  "en": "1",
+  "desc": "2026 round 2: municipalities where ties (who came first; 'other' = a third candidate came first)"
+ },
+ "e2026r2_aptos_share_in_l_led": {
+  "value": 0.49986928559606086,
+  "kind": "pct",
+  "pt": "50,0%",
+  "en": "50.0%",
+  "desc": "2026 round 2: share of the domestic electorate living in municipalities led by L"
+ },
+ "e2026r2_aptos_share_in_b_led": {
+  "value": 0.5001061624873465,
+  "kind": "pct",
+  "pt": "50,0%",
+  "en": "50.0%",
+  "desc": "2026 round 2: share of the domestic electorate living in municipalities led by B"
+ },
+ "e2026r2_l_share_of_votes_where_b_led": {
+  "value": 0.3786662524046508,
+  "kind": "pct",
+  "pt": "37,9%",
+  "en": "37.9%",
+  "desc": "2026 round 2: share of the L camp's votes cast in Brazil that came from municipalities led by B"
+ },
+ "e2026r2_b_share_of_votes_where_l_led": {
+  "value": 0.3737760530027687,
+  "kind": "pct",
+  "pt": "37,4%",
+  "en": "37.4%",
+  "desc": "2026 round 2: share of the B camp's votes cast in Brazil that came from municipalities led by L"
+ },
+ "e2026r2_l_votes_where_b_led": {
+  "value": 24255875,
+  "kind": "mi",
+  "pt": "24,3 milhões",
+  "en": "24.3 million",
+  "desc": "2026 round 2: L votes in municipalities led by B"
+ },
+ "e2026r2_b_votes_where_l_led": {
+  "value": 22297440,
+  "kind": "mi",
+  "pt": "22,3 milhões",
+  "en": "22.3 million",
+  "desc": "2026 round 2: B votes in municipalities led by L"
+ },
+ "e2026r2_n_minority_over_30": {
+  "value": 3554,
+  "kind": "int",
+  "pt": "3.554",
+  "en": "3,554",
+  "desc": "2026 round 2: municipalities where the local loser got more than X% of the two-camp vote"
+ },
+ "e2026r2_n_minority_over_40": {
+  "value": 1804,
+  "kind": "int",
+  "pt": "1.804",
+  "en": "1,804",
+  "desc": "2026 round 2: municipalities where the local loser got more than X% of the two-camp vote"
+ },
+ "e2026r2_n_minority_over_20": {
+  "value": 4969,
+  "kind": "int",
+  "pt": "4.969",
+  "en": "4,969",
+  "desc": "2026 round 2: municipalities where the local loser got more than X% of the two-camp vote"
+ },
+ "e2026r2_n_minority_over_10": {
+  "value": 5558,
+  "kind": "int",
+  "pt": "5.558",
+  "en": "5,558",
+  "desc": "2026 round 2: municipalities where the local loser got more than X% of the two-camp vote"
+ },
+ "e2026r2_share_minority_over_30": {
+  "value": 0.6380610412926392,
+  "kind": "pct",
+  "pt": "63,8%",
+  "en": "63.8%",
+  "desc": "2026 round 2: share_minority_over_30"
+ },
+ "e2026r2_share_minority_over_40": {
+  "value": 0.3238779174147217,
+  "kind": "pct",
+  "pt": "32,4%",
+  "en": "32.4%",
+  "desc": "2026 round 2: share_minority_over_40"
+ },
+ "e2026r2_share_minority_over_10": {
+  "value": 0.9978456014362657,
+  "kind": "pct",
+  "pt": "99,8%",
+  "en": "99.8%",
+  "desc": "2026 round 2: share_minority_over_10"
+ },
+ "e2026r2_aptos_share_minority_over_30": {
+  "value": 0.7871982454180373,
+  "kind": "pct",
+  "pt": "78,7%",
+  "en": "78.7%",
+  "desc": "2026 round 2: aptos_share_minority_over_30"
+ },
+ "e2026r2_aptos_share_minority_over_40": {
+  "value": 0.4738540696076534,
+  "kind": "pct",
+  "pt": "47,4%",
+  "en": "47.4%",
+  "desc": "2026 round 2: aptos_share_minority_over_40"
+ },
+ "e2026r2_min_minority_share": {
+  "value": 0.0766081871345029,
+  "kind": "pct",
+  "pt": "7,7%",
+  "en": "7.7%",
+  "desc": "2026 round 2: min_minority_share"
+ },
+ "e2026r2_local_minority_vote_share": {
+  "value": 0.37631745583992676,
+  "kind": "pct",
+  "pt": "37,6%",
+  "en": "37.6%",
+  "desc": "2026 round 2: local_minority_vote_share"
+ },
+ "e2026r2_min_share_l2": {
+  "value": 0.09439386679444178,
+  "kind": "pct",
+  "pt": "9,4%",
+  "en": "9.4%",
+  "desc": "2026 round 2: min_share_l2"
+ },
+ "e2026r2_max_share_l2": {
+  "value": 0.9233918128654971,
+  "kind": "pct",
+  "pt": "92,3%",
+  "en": "92.3%",
+  "desc": "2026 round 2: max_share_l2"
+ },
+ "e2026r2_local_minority_votes": {
+  "value": 46553315,
+  "kind": "mi",
+  "pt": "46,6 milhões",
+  "en": "46.6 million",
+  "desc": "2026 round 2: votes cast for the side that lost in that municipality"
+ },
+ "e2026r2_local_minority_votes_num": {
+  "value": 46553315,
+  "kind": "mi_num",
+  "pt": "46,6",
+  "en": "46.6",
+  "desc": "same, number part"
+ },
+ "e2026r2_local_minority_votes_unit": {
+  "value": 46553315,
+  "kind": "mi_unit",
+  "pt": "milhões",
+  "en": "million",
+  "desc": "same, unit word"
+ },
+ "e2014r1_other_leader_names": {
+  "value": [
+   "Marina Silva"
+  ],
+  "kind": "list",
+  "pt": "Marina Silva",
+  "en": "Marina Silva",
+  "desc": "2014 round 1: third candidates who came first somewhere"
+ },
+ "e2018r1_other_leader_names": {
+  "value": [
+   "Ciro Gomes"
+  ],
+  "kind": "list",
+  "pt": "Ciro Gomes",
+  "en": "Ciro Gomes",
+  "desc": "2018 round 1: third candidates who came first somewhere"
+ },
+ "e2022r1_other_leader_names": {
+  "value": [
+   "nenhum"
+  ],
+  "kind": "list",
+  "pt": "nenhum",
+  "en": "nenhum",
+  "desc": "2022 round 1: third candidates who came first somewhere"
+ },
+ "e2026r1_other_leader_names": {
+  "value": [
+   "nenhum"
+  ],
+  "kind": "list",
+  "pt": "nenhum",
+  "en": "nenhum",
+  "desc": "2026 round 1: third candidates who came first somewhere"
+ },
+ "max_pct_aptos_any": {
+  "value": 0.4047751349830372,
+  "kind": "pct",
+  "pt": "40,5%",
+  "en": "40.5%",
+  "desc": "largest share of the electorate any candidate got, any round 2014-2026"
+ },
+ "max_pct_aptos_any_who": {
+  "value": "Lula, 2026, 2º turno",
+  "kind": "text",
+  "pt": "Lula, 2026, 2º turno",
+  "en": "Lula, 2026, 2º turno",
+  "desc": "who and when"
+ },
+ "max_pct_aptos_l": {
+  "value": 0.4047751349830372,
+  "kind": "pct",
+  "pt": "40,5%",
+  "en": "40.5%",
+  "desc": "largest share of the electorate of camp L, 2018-2026"
+ },
+ "max_pct_aptos_l_who": {
+  "value": "Lula no 2º turno de 2026",
+  "kind": "text",
+  "pt": "Lula no 2º turno de 2026",
+  "en": "Lula no 2º turno de 2026",
+  "desc": "who and when"
+ },
+ "max_pct_aptos_b": {
+  "value": 0.39236508794390007,
+  "kind": "pct",
+  "pt": "39,2%",
+  "en": "39.2%",
+  "desc": "largest share of the electorate of camp B, 2018-2026"
+ },
+ "max_pct_aptos_b_who": {
+  "value": "Jair Bolsonaro no 2º turno de 2018",
+  "kind": "text",
+  "pt": "Jair Bolsonaro no 2º turno de 2018",
+  "en": "Jair Bolsonaro no 2º turno de 2018",
+  "desc": "who and when"
+ },
+ "absent_min": {
+  "value": 0.19219081873576488,
+  "kind": "pct",
+  "pt": "19,2%",
+  "en": "19.2%",
+  "desc": "lowest share of the electorate that did not vote, any round"
+ },
+ "absent_max": {
+  "value": 0.21297693498419015,
+  "kind": "pct",
+  "pt": "21,3%",
+  "en": "21.3%",
+  "desc": "highest share of the electorate that did not vote, any round"
+ },
+ "e2026r2_two_camp_total": {
+  "value": 124082273,
+  "kind": "mi",
+  "pt": "124,1 milhões",
+  "en": "124.1 million",
+  "desc": "2026 runoff: valid votes (= votes of the two candidates)"
+ },
+ "e2014r2_reg_n_camp_l": {
+  "value": 4394511,
+  "kind": "mi",
+  "pt": "4,4 milhões",
+  "en": "4.4 million",
+  "desc": "2014 runoff, Norte: L votes"
+ },
+ "e2014r2_reg_n_camp_b": {
+  "value": 3378694,
+  "kind": "mi",
+  "pt": "3,4 milhões",
+  "en": "3.4 million",
+  "desc": "2014 runoff, Norte: B votes"
+ },
+ "e2014r2_reg_n_share_l2": {
+  "value": 0.5653409372324543,
+  "kind": "pct",
+  "pt": "56,5%",
+  "en": "56.5%",
+  "desc": "2014 runoff, Norte: L share"
+ },
+ "e2014r2_reg_n_share_b2": {
+  "value": 0.43465906276754573,
+  "kind": "pct",
+  "pt": "43,5%",
+  "en": "43.5%",
+  "desc": "2014 runoff, Norte: B share"
+ },
+ "e2014r2_reg_n_led_by_l": {
+  "value": 360,
+  "kind": "int",
+  "pt": "360",
+  "en": "360",
+  "desc": "2014 runoff, Norte: municipalities led by L"
+ },
+ "e2014r2_reg_n_led_by_b": {
+  "value": 90,
+  "kind": "int",
+  "pt": "90",
+  "en": "90",
+  "desc": "2014 runoff, Norte: municipalities led by B"
+ },
+ "e2014r2_reg_n_municipalities": {
+  "value": 450,
+  "kind": "int",
+  "pt": "450",
+  "en": "450",
+  "desc": "2014 runoff, Norte: municipalities"
+ },
+ "e2014r2_reg_n_two_camp_total": {
+  "value": 7773205,
+  "kind": "mi",
+  "pt": "7,8 milhões",
+  "en": "7.8 million",
+  "desc": "2014 runoff, Norte: votes of the two candidates"
+ },
+ "e2014r2_reg_n_diff_int": {
+  "value": 1015817,
+  "kind": "int",
+  "pt": "1.015.817",
+  "en": "1,015,817",
+  "desc": "2014 runoff, Norte: absolute vote difference (leader in key ..._leader)"
+ },
+ "e2014r2_reg_n_lead": {
+  "value": 1015817,
+  "kind": "mi",
+  "pt": "1,0 milhão",
+  "en": "1.0 million",
+  "desc": "2014 runoff, Norte: lead of the leader, votes"
+ },
+ "e2014r2_reg_n_leader": {
+  "value": "Dilma",
+  "kind": "text",
+  "pt": "Dilma",
+  "en": "Dilma",
+  "desc": "2014 runoff, Norte: candidate ahead"
+ },
+ "e2014r2_reg_ne_camp_l": {
+  "value": 20179823,
+  "kind": "mi",
+  "pt": "20,2 milhões",
+  "en": "20.2 million",
+  "desc": "2014 runoff, Nordeste: L votes"
+ },
+ "e2014r2_reg_ne_camp_b": {
+  "value": 7973477,
+  "kind": "mi",
+  "pt": "8,0 milhões",
+  "en": "8.0 million",
+  "desc": "2014 runoff, Nordeste: B votes"
+ },
+ "e2014r2_reg_ne_share_l2": {
+  "value": 0.7167835742168769,
+  "kind": "pct",
+  "pt": "71,7%",
+  "en": "71.7%",
+  "desc": "2014 runoff, Nordeste: L share"
+ },
+ "e2014r2_reg_ne_share_b2": {
+  "value": 0.2832164257831231,
+  "kind": "pct",
+  "pt": "28,3%",
+  "en": "28.3%",
+  "desc": "2014 runoff, Nordeste: B share"
+ },
+ "e2014r2_reg_ne_led_by_l": {
+  "value": 1773,
+  "kind": "int",
+  "pt": "1.773",
+  "en": "1,773",
+  "desc": "2014 runoff, Nordeste: municipalities led by L"
+ },
+ "e2014r2_reg_ne_led_by_b": {
+  "value": 21,
+  "kind": "int",
+  "pt": "21",
+  "en": "21",
+  "desc": "2014 runoff, Nordeste: municipalities led by B"
+ },
+ "e2014r2_reg_ne_municipalities": {
+  "value": 1794,
+  "kind": "int",
+  "pt": "1.794",
+  "en": "1,794",
+  "desc": "2014 runoff, Nordeste: municipalities"
+ },
+ "e2014r2_reg_ne_two_camp_total": {
+  "value": 28153300,
+  "kind": "mi",
+  "pt": "28,2 milhões",
+  "en": "28.2 million",
+  "desc": "2014 runoff, Nordeste: votes of the two candidates"
+ },
+ "e2014r2_reg_ne_diff_int": {
+  "value": 12206346,
+  "kind": "int",
+  "pt": "12.206.346",
+  "en": "12,206,346",
+  "desc": "2014 runoff, Nordeste: absolute vote difference (leader in key ..._leader)"
+ },
+ "e2014r2_reg_ne_lead": {
+  "value": 12206346,
+  "kind": "mi",
+  "pt": "12,2 milhões",
+  "en": "12.2 million",
+  "desc": "2014 runoff, Nordeste: lead of the leader, votes"
+ },
+ "e2014r2_reg_ne_leader": {
+  "value": "Dilma",
+  "kind": "text",
+  "pt": "Dilma",
+  "en": "Dilma",
+  "desc": "2014 runoff, Nordeste: candidate ahead"
+ },
+ "e2014r2_reg_se_camp_l": {
+  "value": 19876033,
+  "kind": "mi",
+  "pt": "19,9 milhões",
+  "en": "19.9 million",
+  "desc": "2014 runoff, Sudeste: L votes"
+ },
+ "e2014r2_reg_se_camp_b": {
+  "value": 25494736,
+  "kind": "mi",
+  "pt": "25,5 milhões",
+  "en": "25.5 million",
+  "desc": "2014 runoff, Sudeste: B votes"
+ },
+ "e2014r2_reg_se_share_l2": {
+  "value": 0.4380801436272769,
+  "kind": "pct",
+  "pt": "43,8%",
+  "en": "43.8%",
+  "desc": "2014 runoff, Sudeste: L share"
+ },
+ "e2014r2_reg_se_share_b2": {
+  "value": 0.5619198563727231,
+  "kind": "pct",
+  "pt": "56,2%",
+  "en": "56.2%",
+  "desc": "2014 runoff, Sudeste: B share"
+ },
+ "e2014r2_reg_se_led_by_l": {
+  "value": 764,
+  "kind": "int",
+  "pt": "764",
+  "en": "764",
+  "desc": "2014 runoff, Sudeste: municipalities led by L"
+ },
+ "e2014r2_reg_se_led_by_b": {
+  "value": 904,
+  "kind": "int",
+  "pt": "904",
+  "en": "904",
+  "desc": "2014 runoff, Sudeste: municipalities led by B"
+ },
+ "e2014r2_reg_se_municipalities": {
+  "value": 1668,
+  "kind": "int",
+  "pt": "1.668",
+  "en": "1,668",
+  "desc": "2014 runoff, Sudeste: municipalities"
+ },
+ "e2014r2_reg_se_two_camp_total": {
+  "value": 45370769,
+  "kind": "mi",
+  "pt": "45,4 milhões",
+  "en": "45.4 million",
+  "desc": "2014 runoff, Sudeste: votes of the two candidates"
+ },
+ "e2014r2_reg_se_diff_int": {
+  "value": 5618703,
+  "kind": "int",
+  "pt": "5.618.703",
+  "en": "5,618,703",
+  "desc": "2014 runoff, Sudeste: absolute vote difference (leader in key ..._leader)"
+ },
+ "e2014r2_reg_se_lead": {
+  "value": 5618703,
+  "kind": "mi",
+  "pt": "5,6 milhões",
+  "en": "5.6 million",
+  "desc": "2014 runoff, Sudeste: lead of the leader, votes"
+ },
+ "e2014r2_reg_se_leader": {
+  "value": "Aécio",
+  "kind": "text",
+  "pt": "Aécio",
+  "en": "Aécio",
+  "desc": "2014 runoff, Sudeste: candidate ahead"
+ },
+ "e2014r2_reg_s_camp_l": {
+  "value": 6762997,
+  "kind": "mi",
+  "pt": "6,8 milhões",
+  "en": "6.8 million",
+  "desc": "2014 runoff, Sul: L votes"
+ },
+ "e2014r2_reg_s_camp_b": {
+  "value": 9696410,
+  "kind": "mi",
+  "pt": "9,7 milhões",
+  "en": "9.7 million",
+  "desc": "2014 runoff, Sul: B votes"
+ },
+ "e2014r2_reg_s_share_l2": {
+  "value": 0.4108894688611807,
+  "kind": "pct",
+  "pt": "41,1%",
+  "en": "41.1%",
+  "desc": "2014 runoff, Sul: L share"
+ },
+ "e2014r2_reg_s_share_b2": {
+  "value": 0.5891105311388193,
+  "kind": "pct",
+  "pt": "58,9%",
+  "en": "58.9%",
+  "desc": "2014 runoff, Sul: B share"
+ },
+ "e2014r2_reg_s_led_by_l": {
+  "value": 442,
+  "kind": "int",
+  "pt": "442",
+  "en": "442",
+  "desc": "2014 runoff, Sul: municipalities led by L"
+ },
+ "e2014r2_reg_s_led_by_b": {
+  "value": 749,
+  "kind": "int",
+  "pt": "749",
+  "en": "749",
+  "desc": "2014 runoff, Sul: municipalities led by B"
+ },
+ "e2014r2_reg_s_municipalities": {
+  "value": 1191,
+  "kind": "int",
+  "pt": "1.191",
+  "en": "1,191",
+  "desc": "2014 runoff, Sul: municipalities"
+ },
+ "e2014r2_reg_s_two_camp_total": {
+  "value": 16459407,
+  "kind": "mi",
+  "pt": "16,5 milhões",
+  "en": "16.5 million",
+  "desc": "2014 runoff, Sul: votes of the two candidates"
+ },
+ "e2014r2_reg_s_diff_int": {
+  "value": 2933413,
+  "kind": "int",
+  "pt": "2.933.413",
+  "en": "2,933,413",
+  "desc": "2014 runoff, Sul: absolute vote difference (leader in key ..._leader)"
+ },
+ "e2014r2_reg_s_lead": {
+  "value": 2933413,
+  "kind": "mi",
+  "pt": "2,9 milhões",
+  "en": "2.9 million",
+  "desc": "2014 runoff, Sul: lead of the leader, votes"
+ },
+ "e2014r2_reg_s_leader": {
+  "value": "Aécio",
+  "kind": "text",
+  "pt": "Aécio",
+  "en": "Aécio",
+  "desc": "2014 runoff, Sul: candidate ahead"
+ },
+ "e2014r2_reg_co_camp_l": {
+  "value": 3256695,
+  "kind": "mi",
+  "pt": "3,3 milhões",
+  "en": "3.3 million",
+  "desc": "2014 runoff, Centro-Oeste: L votes"
+ },
+ "e2014r2_reg_co_camp_b": {
+  "value": 4393717,
+  "kind": "mi",
+  "pt": "4,4 milhões",
+  "en": "4.4 million",
+  "desc": "2014 runoff, Centro-Oeste: B votes"
+ },
+ "e2014r2_reg_co_share_l2": {
+  "value": 0.42568883871875135,
+  "kind": "pct",
+  "pt": "42,6%",
+  "en": "42.6%",
+  "desc": "2014 runoff, Centro-Oeste: L share"
+ },
+ "e2014r2_reg_co_share_b2": {
+  "value": 0.5743111612812486,
+  "kind": "pct",
+  "pt": "57,4%",
+  "en": "57.4%",
+  "desc": "2014 runoff, Centro-Oeste: B share"
+ },
+ "e2014r2_reg_co_led_by_l": {
+  "value": 188,
+  "kind": "int",
+  "pt": "188",
+  "en": "188",
+  "desc": "2014 runoff, Centro-Oeste: municipalities led by L"
+ },
+ "e2014r2_reg_co_led_by_b": {
+  "value": 279,
+  "kind": "int",
+  "pt": "279",
+  "en": "279",
+  "desc": "2014 runoff, Centro-Oeste: municipalities led by B"
+ },
+ "e2014r2_reg_co_municipalities": {
+  "value": 467,
+  "kind": "int",
+  "pt": "467",
+  "en": "467",
+  "desc": "2014 runoff, Centro-Oeste: municipalities"
+ },
+ "e2014r2_reg_co_two_camp_total": {
+  "value": 7650412,
+  "kind": "mi",
+  "pt": "7,7 milhões",
+  "en": "7.7 million",
+  "desc": "2014 runoff, Centro-Oeste: votes of the two candidates"
+ },
+ "e2014r2_reg_co_diff_int": {
+  "value": 1137022,
+  "kind": "int",
+  "pt": "1.137.022",
+  "en": "1,137,022",
+  "desc": "2014 runoff, Centro-Oeste: absolute vote difference (leader in key ..._leader)"
+ },
+ "e2014r2_reg_co_lead": {
+  "value": 1137022,
+  "kind": "mi",
+  "pt": "1,1 milhão",
+  "en": "1.1 million",
+  "desc": "2014 runoff, Centro-Oeste: lead of the leader, votes"
+ },
+ "e2014r2_reg_co_leader": {
+  "value": "Aécio",
+  "kind": "text",
+  "pt": "Aécio",
+  "en": "Aécio",
+  "desc": "2014 runoff, Centro-Oeste: candidate ahead"
+ },
+ "e2014r2_reg_zz_camp_l": {
+  "value": 31059,
+  "kind": "mi",
+  "pt": "31 mil",
+  "en": "31 thousand",
+  "desc": "2014 runoff, Exterior: L votes"
+ },
+ "e2014r2_reg_zz_camp_b": {
+  "value": 104121,
+  "kind": "mi",
+  "pt": "104 mil",
+  "en": "104 thousand",
+  "desc": "2014 runoff, Exterior: B votes"
+ },
+ "e2014r2_reg_zz_share_l2": {
+  "value": 0.22976031957390147,
+  "kind": "pct",
+  "pt": "23,0%",
+  "en": "23.0%",
+  "desc": "2014 runoff, Exterior: L share"
+ },
+ "e2014r2_reg_zz_share_b2": {
+  "value": 0.7702396804260985,
+  "kind": "pct",
+  "pt": "77,0%",
+  "en": "77.0%",
+  "desc": "2014 runoff, Exterior: B share"
+ },
+ "e2014r2_reg_zz_led_by_l": {
+  "value": 0,
+  "kind": "int",
+  "pt": "0",
+  "en": "0",
+  "desc": "2014 runoff, Exterior: municipalities led by L"
+ },
+ "e2014r2_reg_zz_led_by_b": {
+  "value": 0,
+  "kind": "int",
+  "pt": "0",
+  "en": "0",
+  "desc": "2014 runoff, Exterior: municipalities led by B"
+ },
+ "e2014r2_reg_zz_municipalities": {
+  "value": 0,
+  "kind": "int",
+  "pt": "0",
+  "en": "0",
+  "desc": "2014 runoff, Exterior: municipalities"
+ },
+ "e2014r2_reg_zz_two_camp_total": {
+  "value": 135180,
+  "kind": "mi",
+  "pt": "135 mil",
+  "en": "135 thousand",
+  "desc": "2014 runoff, Exterior: votes of the two candidates"
+ },
+ "e2014r2_reg_zz_diff_int": {
+  "value": 73062,
+  "kind": "int",
+  "pt": "73.062",
+  "en": "73,062",
+  "desc": "2014 runoff, Exterior: absolute vote difference (leader in key ..._leader)"
+ },
+ "e2014r2_reg_zz_lead": {
+  "value": 73062,
+  "kind": "mi",
+  "pt": "73 mil",
+  "en": "73 thousand",
+  "desc": "2014 runoff, Exterior: lead of the leader, votes"
+ },
+ "e2014r2_reg_zz_leader": {
+  "value": "Aécio",
+  "kind": "text",
+  "pt": "Aécio",
+  "en": "Aécio",
+  "desc": "2014 runoff, Exterior: candidate ahead"
+ },
+ "e2018r2_reg_n_camp_l": {
+  "value": 3933015,
+  "kind": "mi",
+  "pt": "3,9 milhões",
+  "en": "3.9 million",
+  "desc": "2018 runoff, Norte: L votes"
+ },
+ "e2018r2_reg_n_camp_b": {
+  "value": 4242504,
+  "kind": "mi",
+  "pt": "4,2 milhões",
+  "en": "4.2 million",
+  "desc": "2018 runoff, Norte: B votes"
+ },
+ "e2018r2_reg_n_share_l2": {
+  "value": 0.48107221082845014,
+  "kind": "pct",
+  "pt": "48,1%",
+  "en": "48.1%",
+  "desc": "2018 runoff, Norte: L share"
+ },
+ "e2018r2_reg_n_share_b2": {
+  "value": 0.5189277891715498,
+  "kind": "pct",
+  "pt": "51,9%",
+  "en": "51.9%",
+  "desc": "2018 runoff, Norte: B share"
+ },
+ "e2018r2_reg_n_led_by_l": {
+  "value": 300,
+  "kind": "int",
+  "pt": "300",
+  "en": "300",
+  "desc": "2018 runoff, Norte: municipalities led by L"
+ },
+ "e2018r2_reg_n_led_by_b": {
+  "value": 150,
+  "kind": "int",
+  "pt": "150",
+  "en": "150",
+  "desc": "2018 runoff, Norte: municipalities led by B"
+ },
+ "e2018r2_reg_n_municipalities": {
+  "value": 450,
+  "kind": "int",
+  "pt": "450",
+  "en": "450",
+  "desc": "2018 runoff, Norte: municipalities"
+ },
+ "e2018r2_reg_n_two_camp_total": {
+  "value": 8175519,
+  "kind": "mi",
+  "pt": "8,2 milhões",
+  "en": "8.2 million",
+  "desc": "2018 runoff, Norte: votes of the two candidates"
+ },
+ "e2018r2_reg_n_diff_int": {
+  "value": 309489,
+  "kind": "int",
+  "pt": "309.489",
+  "en": "309,489",
+  "desc": "2018 runoff, Norte: absolute vote difference (leader in key ..._leader)"
+ },
+ "e2018r2_reg_n_lead": {
+  "value": 309489,
+  "kind": "mi",
+  "pt": "309 mil",
+  "en": "309 thousand",
+  "desc": "2018 runoff, Norte: lead of the leader, votes"
+ },
+ "e2018r2_reg_n_leader": {
+  "value": "Jair Bolsonaro",
+  "kind": "text",
+  "pt": "Jair Bolsonaro",
+  "en": "Jair Bolsonaro",
+  "desc": "2018 runoff, Norte: candidate ahead"
+ },
+ "e2018r2_reg_ne_camp_l": {
+  "value": 20289812,
+  "kind": "mi",
+  "pt": "20,3 milhões",
+  "en": "20.3 million",
+  "desc": "2018 runoff, Nordeste: L votes"
+ },
+ "e2018r2_reg_ne_camp_b": {
+  "value": 8824454,
+  "kind": "mi",
+  "pt": "8,8 milhões",
+  "en": "8.8 million",
+  "desc": "2018 runoff, Nordeste: B votes"
+ },
+ "e2018r2_reg_ne_share_l2": {
+  "value": 0.6969027486387601,
+  "kind": "pct",
+  "pt": "69,7%",
+  "en": "69.7%",
+  "desc": "2018 runoff, Nordeste: L share"
+ },
+ "e2018r2_reg_ne_share_b2": {
+  "value": 0.3030972513612399,
+  "kind": "pct",
+  "pt": "30,3%",
+  "en": "30.3%",
+  "desc": "2018 runoff, Nordeste: B share"
+ },
+ "e2018r2_reg_ne_led_by_l": {
+  "value": 1771,
+  "kind": "int",
+  "pt": "1.771",
+  "en": "1,771",
+  "desc": "2018 runoff, Nordeste: municipalities led by L"
+ },
+ "e2018r2_reg_ne_led_by_b": {
+  "value": 23,
+  "kind": "int",
+  "pt": "23",
+  "en": "23",
+  "desc": "2018 runoff, Nordeste: municipalities led by B"
+ },
+ "e2018r2_reg_ne_municipalities": {
+  "value": 1794,
+  "kind": "int",
+  "pt": "1.794",
+  "en": "1,794",
+  "desc": "2018 runoff, Nordeste: municipalities"
+ },
+ "e2018r2_reg_ne_two_camp_total": {
+  "value": 29114266,
+  "kind": "mi",
+  "pt": "29,1 milhões",
+  "en": "29.1 million",
+  "desc": "2018 runoff, Nordeste: votes of the two candidates"
+ },
+ "e2018r2_reg_ne_diff_int": {
+  "value": 11465358,
+  "kind": "int",
+  "pt": "11.465.358",
+  "en": "11,465,358",
+  "desc": "2018 runoff, Nordeste: absolute vote difference (leader in key ..._leader)"
+ },
+ "e2018r2_reg_ne_lead": {
+  "value": 11465358,
+  "kind": "mi",
+  "pt": "11,5 milhões",
+  "en": "11.5 million",
+  "desc": "2018 runoff, Nordeste: lead of the leader, votes"
+ },
+ "e2018r2_reg_ne_leader": {
+  "value": "Haddad",
+  "kind": "text",
+  "pt": "Haddad",
+  "en": "Haddad",
+  "desc": "2018 runoff, Nordeste: candidate ahead"
+ },
+ "e2018r2_reg_se_camp_l": {
+  "value": 15016238,
+  "kind": "mi",
+  "pt": "15,0 milhões",
+  "en": "15.0 million",
+  "desc": "2018 runoff, Sudeste: L votes"
+ },
+ "e2018r2_reg_se_camp_b": {
+  "value": 28351800,
+  "kind": "mi",
+  "pt": "28,4 milhões",
+  "en": "28.4 million",
+  "desc": "2018 runoff, Sudeste: B votes"
+ },
+ "e2018r2_reg_se_share_l2": {
+  "value": 0.3462512645833782,
+  "kind": "pct",
+  "pt": "34,6%",
+  "en": "34.6%",
+  "desc": "2018 runoff, Sudeste: L share"
+ },
+ "e2018r2_reg_se_share_b2": {
+  "value": 0.6537487354166218,
+  "kind": "pct",
+  "pt": "65,4%",
+  "en": "65.4%",
+  "desc": "2018 runoff, Sudeste: B share"
+ },
+ "e2018r2_reg_se_led_by_l": {
+  "value": 439,
+  "kind": "int",
+  "pt": "439",
+  "en": "439",
+  "desc": "2018 runoff, Sudeste: municipalities led by L"
+ },
+ "e2018r2_reg_se_led_by_b": {
+  "value": 1229,
+  "kind": "int",
+  "pt": "1.229",
+  "en": "1,229",
+  "desc": "2018 runoff, Sudeste: municipalities led by B"
+ },
+ "e2018r2_reg_se_municipalities": {
+  "value": 1668,
+  "kind": "int",
+  "pt": "1.668",
+  "en": "1,668",
+  "desc": "2018 runoff, Sudeste: municipalities"
+ },
+ "e2018r2_reg_se_two_camp_total": {
+  "value": 43368038,
+  "kind": "mi",
+  "pt": "43,4 milhões",
+  "en": "43.4 million",
+  "desc": "2018 runoff, Sudeste: votes of the two candidates"
+ },
+ "e2018r2_reg_se_diff_int": {
+  "value": 13335562,
+  "kind": "int",
+  "pt": "13.335.562",
+  "en": "13,335,562",
+  "desc": "2018 runoff, Sudeste: absolute vote difference (leader in key ..._leader)"
+ },
+ "e2018r2_reg_se_lead": {
+  "value": 13335562,
+  "kind": "mi",
+  "pt": "13,3 milhões",
+  "en": "13.3 million",
+  "desc": "2018 runoff, Sudeste: lead of the leader, votes"
+ },
+ "e2018r2_reg_se_leader": {
+  "value": "Jair Bolsonaro",
+  "kind": "text",
+  "pt": "Jair Bolsonaro",
+  "en": "Jair Bolsonaro",
+  "desc": "2018 runoff, Sudeste: candidate ahead"
+ },
+ "e2018r2_reg_s_camp_l": {
+  "value": 5152685,
+  "kind": "mi",
+  "pt": "5,2 milhões",
+  "en": "5.2 million",
+  "desc": "2018 runoff, Sul: L votes"
+ },
+ "e2018r2_reg_s_camp_b": {
+  "value": 11084395,
+  "kind": "mi",
+  "pt": "11,1 milhões",
+  "en": "11.1 million",
+  "desc": "2018 runoff, Sul: B votes"
+ },
+ "e2018r2_reg_s_share_l2": {
+  "value": 0.3173406178943505,
+  "kind": "pct",
+  "pt": "31,7%",
+  "en": "31.7%",
+  "desc": "2018 runoff, Sul: L share"
+ },
+ "e2018r2_reg_s_share_b2": {
+  "value": 0.6826593821056495,
+  "kind": "pct",
+  "pt": "68,3%",
+  "en": "68.3%",
+  "desc": "2018 runoff, Sul: B share"
+ },
+ "e2018r2_reg_s_led_by_l": {
+  "value": 211,
+  "kind": "int",
+  "pt": "211",
+  "en": "211",
+  "desc": "2018 runoff, Sul: municipalities led by L"
+ },
+ "e2018r2_reg_s_led_by_b": {
+  "value": 980,
+  "kind": "int",
+  "pt": "980",
+  "en": "980",
+  "desc": "2018 runoff, Sul: municipalities led by B"
+ },
+ "e2018r2_reg_s_municipalities": {
+  "value": 1191,
+  "kind": "int",
+  "pt": "1.191",
+  "en": "1,191",
+  "desc": "2018 runoff, Sul: municipalities"
+ },
+ "e2018r2_reg_s_two_camp_total": {
+  "value": 16237080,
+  "kind": "mi",
+  "pt": "16,2 milhões",
+  "en": "16.2 million",
+  "desc": "2018 runoff, Sul: votes of the two candidates"
+ },
+ "e2018r2_reg_s_diff_int": {
+  "value": 5931710,
+  "kind": "int",
+  "pt": "5.931.710",
+  "en": "5,931,710",
+  "desc": "2018 runoff, Sul: absolute vote difference (leader in key ..._leader)"
+ },
+ "e2018r2_reg_s_lead": {
+  "value": 5931710,
+  "kind": "mi",
+  "pt": "5,9 milhões",
+  "en": "5.9 million",
+  "desc": "2018 runoff, Sul: lead of the leader, votes"
+ },
+ "e2018r2_reg_s_leader": {
+  "value": "Jair Bolsonaro",
+  "kind": "text",
+  "pt": "Jair Bolsonaro",
+  "en": "Jair Bolsonaro",
+  "desc": "2018 runoff, Sul: candidate ahead"
+ },
+ "e2018r2_reg_co_camp_l": {
+  "value": 2595426,
+  "kind": "mi",
+  "pt": "2,6 milhões",
+  "en": "2.6 million",
+  "desc": "2018 runoff, Centro-Oeste: L votes"
+ },
+ "e2018r2_reg_co_camp_b": {
+  "value": 5163023,
+  "kind": "mi",
+  "pt": "5,2 milhões",
+  "en": "5.2 million",
+  "desc": "2018 runoff, Centro-Oeste: B votes"
+ },
+ "e2018r2_reg_co_share_l2": {
+  "value": 0.3345289760878753,
+  "kind": "pct",
+  "pt": "33,5%",
+  "en": "33.5%",
+  "desc": "2018 runoff, Centro-Oeste: L share"
+ },
+ "e2018r2_reg_co_share_b2": {
+  "value": 0.6654710239121246,
+  "kind": "pct",
+  "pt": "66,5%",
+  "en": "66.5%",
+  "desc": "2018 runoff, Centro-Oeste: B share"
+ },
+ "e2018r2_reg_co_led_by_l": {
+  "value": 89,
+  "kind": "int",
+  "pt": "89",
+  "en": "89",
+  "desc": "2018 runoff, Centro-Oeste: municipalities led by L"
+ },
+ "e2018r2_reg_co_led_by_b": {
+  "value": 378,
+  "kind": "int",
+  "pt": "378",
+  "en": "378",
+  "desc": "2018 runoff, Centro-Oeste: municipalities led by B"
+ },
+ "e2018r2_reg_co_municipalities": {
+  "value": 467,
+  "kind": "int",
+  "pt": "467",
+  "en": "467",
+  "desc": "2018 runoff, Centro-Oeste: municipalities"
+ },
+ "e2018r2_reg_co_two_camp_total": {
+  "value": 7758449,
+  "kind": "mi",
+  "pt": "7,8 milhões",
+  "en": "7.8 million",
+  "desc": "2018 runoff, Centro-Oeste: votes of the two candidates"
+ },
+ "e2018r2_reg_co_diff_int": {
+  "value": 2567597,
+  "kind": "int",
+  "pt": "2.567.597",
+  "en": "2,567,597",
+  "desc": "2018 runoff, Centro-Oeste: absolute vote difference (leader in key ..._leader)"
+ },
+ "e2018r2_reg_co_lead": {
+  "value": 2567597,
+  "kind": "mi",
+  "pt": "2,6 milhões",
+  "en": "2.6 million",
+  "desc": "2018 runoff, Centro-Oeste: lead of the leader, votes"
+ },
+ "e2018r2_reg_co_leader": {
+  "value": "Jair Bolsonaro",
+  "kind": "text",
+  "pt": "Jair Bolsonaro",
+  "en": "Jair Bolsonaro",
+  "desc": "2018 runoff, Centro-Oeste: candidate ahead"
+ },
+ "e2018r2_reg_zz_camp_l": {
+  "value": 53730,
+  "kind": "mi",
+  "pt": "54 mil",
+  "en": "54 thousand",
+  "desc": "2018 runoff, Exterior: L votes"
+ },
+ "e2018r2_reg_zz_camp_b": {
+  "value": 131671,
+  "kind": "mi",
+  "pt": "132 mil",
+  "en": "132 thousand",
+  "desc": "2018 runoff, Exterior: B votes"
+ },
+ "e2018r2_reg_zz_share_l2": {
+  "value": 0.2898042621129336,
+  "kind": "pct",
+  "pt": "29,0%",
+  "en": "29.0%",
+  "desc": "2018 runoff, Exterior: L share"
+ },
+ "e2018r2_reg_zz_share_b2": {
+  "value": 0.7101957378870665,
+  "kind": "pct",
+  "pt": "71,0%",
+  "en": "71.0%",
+  "desc": "2018 runoff, Exterior: B share"
+ },
+ "e2018r2_reg_zz_led_by_l": {
+  "value": 0,
+  "kind": "int",
+  "pt": "0",
+  "en": "0",
+  "desc": "2018 runoff, Exterior: municipalities led by L"
+ },
+ "e2018r2_reg_zz_led_by_b": {
+  "value": 0,
+  "kind": "int",
+  "pt": "0",
+  "en": "0",
+  "desc": "2018 runoff, Exterior: municipalities led by B"
+ },
+ "e2018r2_reg_zz_municipalities": {
+  "value": 0,
+  "kind": "int",
+  "pt": "0",
+  "en": "0",
+  "desc": "2018 runoff, Exterior: municipalities"
+ },
+ "e2018r2_reg_zz_two_camp_total": {
+  "value": 185401,
+  "kind": "mi",
+  "pt": "185 mil",
+  "en": "185 thousand",
+  "desc": "2018 runoff, Exterior: votes of the two candidates"
+ },
+ "e2018r2_reg_zz_diff_int": {
+  "value": 77941,
+  "kind": "int",
+  "pt": "77.941",
+  "en": "77,941",
+  "desc": "2018 runoff, Exterior: absolute vote difference (leader in key ..._leader)"
+ },
+ "e2018r2_reg_zz_lead": {
+  "value": 77941,
+  "kind": "mi",
+  "pt": "78 mil",
+  "en": "78 thousand",
+  "desc": "2018 runoff, Exterior: lead of the leader, votes"
+ },
+ "e2018r2_reg_zz_leader": {
+  "value": "Jair Bolsonaro",
+  "kind": "text",
+  "pt": "Jair Bolsonaro",
+  "en": "Jair Bolsonaro",
+  "desc": "2018 runoff, Exterior: candidate ahead"
+ },
+ "e2022r2_reg_n_camp_l": {
+  "value": 4590184,
+  "kind": "mi",
+  "pt": "4,6 milhões",
+  "en": "4.6 million",
+  "desc": "2022 runoff, Norte: L votes"
+ },
+ "e2022r2_reg_n_camp_b": {
+  "value": 4782341,
+  "kind": "mi",
+  "pt": "4,8 milhões",
+  "en": "4.8 million",
+  "desc": "2022 runoff, Norte: B votes"
+ },
+ "e2022r2_reg_n_share_l2": {
+  "value": 0.4897489203816474,
+  "kind": "pct",
+  "pt": "49,0%",
+  "en": "49.0%",
+  "desc": "2022 runoff, Norte: L share"
+ },
+ "e2022r2_reg_n_share_b2": {
+  "value": 0.5102510796183526,
+  "kind": "pct",
+  "pt": "51,0%",
+  "en": "51.0%",
+  "desc": "2022 runoff, Norte: B share"
+ },
+ "e2022r2_reg_n_led_by_l": {
+  "value": 295,
+  "kind": "int",
+  "pt": "295",
+  "en": "295",
+  "desc": "2022 runoff, Norte: municipalities led by L"
+ },
+ "e2022r2_reg_n_led_by_b": {
+  "value": 155,
+  "kind": "int",
+  "pt": "155",
+  "en": "155",
+  "desc": "2022 runoff, Norte: municipalities led by B"
+ },
+ "e2022r2_reg_n_municipalities": {
+  "value": 450,
+  "kind": "int",
+  "pt": "450",
+  "en": "450",
+  "desc": "2022 runoff, Norte: municipalities"
+ },
+ "e2022r2_reg_n_two_camp_total": {
+  "value": 9372525,
+  "kind": "mi",
+  "pt": "9,4 milhões",
+  "en": "9.4 million",
+  "desc": "2022 runoff, Norte: votes of the two candidates"
+ },
+ "e2022r2_reg_n_diff_int": {
+  "value": 192157,
+  "kind": "int",
+  "pt": "192.157",
+  "en": "192,157",
+  "desc": "2022 runoff, Norte: absolute vote difference (leader in key ..._leader)"
+ },
+ "e2022r2_reg_n_lead": {
+  "value": 192157,
+  "kind": "mi",
+  "pt": "192 mil",
+  "en": "192 thousand",
+  "desc": "2022 runoff, Norte: lead of the leader, votes"
+ },
+ "e2022r2_reg_n_leader": {
+  "value": "Jair Bolsonaro",
+  "kind": "text",
+  "pt": "Jair Bolsonaro",
+  "en": "Jair Bolsonaro",
+  "desc": "2022 runoff, Norte: candidate ahead"
+ },
+ "e2022r2_reg_ne_camp_l": {
+  "value": 22534967,
+  "kind": "mi",
+  "pt": "22,5 milhões",
+  "en": "22.5 million",
+  "desc": "2022 runoff, Nordeste: L votes"
+ },
+ "e2022r2_reg_ne_camp_b": {
+  "value": 9962947,
+  "kind": "mi",
+  "pt": "10,0 milhões",
+  "en": "10.0 million",
+  "desc": "2022 runoff, Nordeste: B votes"
+ },
+ "e2022r2_reg_ne_share_l2": {
+  "value": 0.6934281074163714,
+  "kind": "pct",
+  "pt": "69,3%",
+  "en": "69.3%",
+  "desc": "2022 runoff, Nordeste: L share"
+ },
+ "e2022r2_reg_ne_share_b2": {
+  "value": 0.3065718925836286,
+  "kind": "pct",
+  "pt": "30,7%",
+  "en": "30.7%",
+  "desc": "2022 runoff, Nordeste: B share"
+ },
+ "e2022r2_reg_ne_led_by_l": {
+  "value": 1774,
+  "kind": "int",
+  "pt": "1.774",
+  "en": "1,774",
+  "desc": "2022 runoff, Nordeste: municipalities led by L"
+ },
+ "e2022r2_reg_ne_led_by_b": {
+  "value": 20,
+  "kind": "int",
+  "pt": "20",
+  "en": "20",
+  "desc": "2022 runoff, Nordeste: municipalities led by B"
+ },
+ "e2022r2_reg_ne_municipalities": {
+  "value": 1794,
+  "kind": "int",
+  "pt": "1.794",
+  "en": "1,794",
+  "desc": "2022 runoff, Nordeste: municipalities"
+ },
+ "e2022r2_reg_ne_two_camp_total": {
+  "value": 32497914,
+  "kind": "mi",
+  "pt": "32,5 milhões",
+  "en": "32.5 million",
+  "desc": "2022 runoff, Nordeste: votes of the two candidates"
+ },
+ "e2022r2_reg_ne_diff_int": {
+  "value": 12572020,
+  "kind": "int",
+  "pt": "12.572.020",
+  "en": "12,572,020",
+  "desc": "2022 runoff, Nordeste: absolute vote difference (leader in key ..._leader)"
+ },
+ "e2022r2_reg_ne_lead": {
+  "value": 12572020,
+  "kind": "mi",
+  "pt": "12,6 milhões",
+  "en": "12.6 million",
+  "desc": "2022 runoff, Nordeste: lead of the leader, votes"
+ },
+ "e2022r2_reg_ne_leader": {
+  "value": "Lula",
+  "kind": "text",
+  "pt": "Lula",
+  "en": "Lula",
+  "desc": "2022 runoff, Nordeste: candidate ahead"
+ },
+ "e2022r2_reg_se_camp_l": {
+  "value": 22793826,
+  "kind": "mi",
+  "pt": "22,8 milhões",
+  "en": "22.8 million",
+  "desc": "2022 runoff, Sudeste: L votes"
+ },
+ "e2022r2_reg_se_camp_b": {
+  "value": 27043936,
+  "kind": "mi",
+  "pt": "27,0 milhões",
+  "en": "27.0 million",
+  "desc": "2022 runoff, Sudeste: B votes"
+ },
+ "e2022r2_reg_se_share_l2": {
+  "value": 0.45736054520265174,
+  "kind": "pct",
+  "pt": "45,7%",
+  "en": "45.7%",
+  "desc": "2022 runoff, Sudeste: L share"
+ },
+ "e2022r2_reg_se_share_b2": {
+  "value": 0.5426394547973483,
+  "kind": "pct",
+  "pt": "54,3%",
+  "en": "54.3%",
+  "desc": "2022 runoff, Sudeste: B share"
+ },
+ "e2022r2_reg_se_led_by_l": {
+  "value": 698,
+  "kind": "int",
+  "pt": "698",
+  "en": "698",
+  "desc": "2022 runoff, Sudeste: municipalities led by L"
+ },
+ "e2022r2_reg_se_led_by_b": {
+  "value": 969,
+  "kind": "int",
+  "pt": "969",
+  "en": "969",
+  "desc": "2022 runoff, Sudeste: municipalities led by B"
+ },
+ "e2022r2_reg_se_municipalities": {
+  "value": 1668,
+  "kind": "int",
+  "pt": "1.668",
+  "en": "1,668",
+  "desc": "2022 runoff, Sudeste: municipalities"
+ },
+ "e2022r2_reg_se_two_camp_total": {
+  "value": 49837762,
+  "kind": "mi",
+  "pt": "49,8 milhões",
+  "en": "49.8 million",
+  "desc": "2022 runoff, Sudeste: votes of the two candidates"
+ },
+ "e2022r2_reg_se_diff_int": {
+  "value": 4250110,
+  "kind": "int",
+  "pt": "4.250.110",
+  "en": "4,250,110",
+  "desc": "2022 runoff, Sudeste: absolute vote difference (leader in key ..._leader)"
+ },
+ "e2022r2_reg_se_lead": {
+  "value": 4250110,
+  "kind": "mi",
+  "pt": "4,3 milhões",
+  "en": "4.3 million",
+  "desc": "2022 runoff, Sudeste: lead of the leader, votes"
+ },
+ "e2022r2_reg_se_leader": {
+  "value": "Jair Bolsonaro",
+  "kind": "text",
+  "pt": "Jair Bolsonaro",
+  "en": "Jair Bolsonaro",
+  "desc": "2022 runoff, Sudeste: candidate ahead"
+ },
+ "e2022r2_reg_s_camp_l": {
+  "value": 6750374,
+  "kind": "mi",
+  "pt": "6,8 milhões",
+  "en": "6.8 million",
+  "desc": "2022 runoff, Sul: L votes"
+ },
+ "e2022r2_reg_s_camp_b": {
+  "value": 10940158,
+  "kind": "mi",
+  "pt": "10,9 milhões",
+  "en": "10.9 million",
+  "desc": "2022 runoff, Sul: B votes"
+ },
+ "e2022r2_reg_s_share_l2": {
+  "value": 0.381581175738525,
+  "kind": "pct",
+  "pt": "38,2%",
+  "en": "38.2%",
+  "desc": "2022 runoff, Sul: L share"
+ },
+ "e2022r2_reg_s_share_b2": {
+  "value": 0.618418824261475,
+  "kind": "pct",
+  "pt": "61,8%",
+  "en": "61.8%",
+  "desc": "2022 runoff, Sul: B share"
+ },
+ "e2022r2_reg_s_led_by_l": {
+  "value": 255,
+  "kind": "int",
+  "pt": "255",
+  "en": "255",
+  "desc": "2022 runoff, Sul: municipalities led by L"
+ },
+ "e2022r2_reg_s_led_by_b": {
+  "value": 935,
+  "kind": "int",
+  "pt": "935",
+  "en": "935",
+  "desc": "2022 runoff, Sul: municipalities led by B"
+ },
+ "e2022r2_reg_s_municipalities": {
+  "value": 1191,
+  "kind": "int",
+  "pt": "1.191",
+  "en": "1,191",
+  "desc": "2022 runoff, Sul: municipalities"
+ },
+ "e2022r2_reg_s_two_camp_total": {
+  "value": 17690532,
+  "kind": "mi",
+  "pt": "17,7 milhões",
+  "en": "17.7 million",
+  "desc": "2022 runoff, Sul: votes of the two candidates"
+ },
+ "e2022r2_reg_s_diff_int": {
+  "value": 4189784,
+  "kind": "int",
+  "pt": "4.189.784",
+  "en": "4,189,784",
+  "desc": "2022 runoff, Sul: absolute vote difference (leader in key ..._leader)"
+ },
+ "e2022r2_reg_s_lead": {
+  "value": 4189784,
+  "kind": "mi",
+  "pt": "4,2 milhões",
+  "en": "4.2 million",
+  "desc": "2022 runoff, Sul: lead of the leader, votes"
+ },
+ "e2022r2_reg_s_leader": {
+  "value": "Jair Bolsonaro",
+  "kind": "text",
+  "pt": "Jair Bolsonaro",
+  "en": "Jair Bolsonaro",
+  "desc": "2022 runoff, Sul: candidate ahead"
+ },
+ "e2022r2_reg_co_camp_l": {
+  "value": 3523743,
+  "kind": "mi",
+  "pt": "3,5 milhões",
+  "en": "3.5 million",
+  "desc": "2022 runoff, Centro-Oeste: L votes"
+ },
+ "e2022r2_reg_co_camp_b": {
+  "value": 5331708,
+  "kind": "mi",
+  "pt": "5,3 milhões",
+  "en": "5.3 million",
+  "desc": "2022 runoff, Centro-Oeste: B votes"
+ },
+ "e2022r2_reg_co_share_l2": {
+  "value": 0.39791796036136384,
+  "kind": "pct",
+  "pt": "39,8%",
+  "en": "39.8%",
+  "desc": "2022 runoff, Centro-Oeste: L share"
+ },
+ "e2022r2_reg_co_share_b2": {
+  "value": 0.6020820396386362,
+  "kind": "pct",
+  "pt": "60,2%",
+  "en": "60.2%",
+  "desc": "2022 runoff, Centro-Oeste: B share"
+ },
+ "e2022r2_reg_co_led_by_l": {
+  "value": 101,
+  "kind": "int",
+  "pt": "101",
+  "en": "101",
+  "desc": "2022 runoff, Centro-Oeste: municipalities led by L"
+ },
+ "e2022r2_reg_co_led_by_b": {
+  "value": 366,
+  "kind": "int",
+  "pt": "366",
+  "en": "366",
+  "desc": "2022 runoff, Centro-Oeste: municipalities led by B"
+ },
+ "e2022r2_reg_co_municipalities": {
+  "value": 467,
+  "kind": "int",
+  "pt": "467",
+  "en": "467",
+  "desc": "2022 runoff, Centro-Oeste: municipalities"
+ },
+ "e2022r2_reg_co_two_camp_total": {
+  "value": 8855451,
+  "kind": "mi",
+  "pt": "8,9 milhões",
+  "en": "8.9 million",
+  "desc": "2022 runoff, Centro-Oeste: votes of the two candidates"
+ },
+ "e2022r2_reg_co_diff_int": {
+  "value": 1807965,
+  "kind": "int",
+  "pt": "1.807.965",
+  "en": "1,807,965",
+  "desc": "2022 runoff, Centro-Oeste: absolute vote difference (leader in key ..._leader)"
+ },
+ "e2022r2_reg_co_lead": {
+  "value": 1807965,
+  "kind": "mi",
+  "pt": "1,8 milhão",
+  "en": "1.8 million",
+  "desc": "2022 runoff, Centro-Oeste: lead of the leader, votes"
+ },
+ "e2022r2_reg_co_leader": {
+  "value": "Jair Bolsonaro",
+  "kind": "text",
+  "pt": "Jair Bolsonaro",
+  "en": "Jair Bolsonaro",
+  "desc": "2022 runoff, Centro-Oeste: candidate ahead"
+ },
+ "e2022r2_reg_zz_camp_l": {
+  "value": 152905,
+  "kind": "mi",
+  "pt": "153 mil",
+  "en": "153 thousand",
+  "desc": "2022 runoff, Exterior: L votes"
+ },
+ "e2022r2_reg_zz_camp_b": {
+  "value": 145264,
+  "kind": "mi",
+  "pt": "145 mil",
+  "en": "145 thousand",
+  "desc": "2022 runoff, Exterior: B votes"
+ },
+ "e2022r2_reg_zz_share_l2": {
+  "value": 0.5128132032505056,
+  "kind": "pct",
+  "pt": "51,3%",
+  "en": "51.3%",
+  "desc": "2022 runoff, Exterior: L share"
+ },
+ "e2022r2_reg_zz_share_b2": {
+  "value": 0.4871867967494944,
+  "kind": "pct",
+  "pt": "48,7%",
+  "en": "48.7%",
+  "desc": "2022 runoff, Exterior: B share"
+ },
+ "e2022r2_reg_zz_led_by_l": {
+  "value": 0,
+  "kind": "int",
+  "pt": "0",
+  "en": "0",
+  "desc": "2022 runoff, Exterior: municipalities led by L"
+ },
+ "e2022r2_reg_zz_led_by_b": {
+  "value": 0,
+  "kind": "int",
+  "pt": "0",
+  "en": "0",
+  "desc": "2022 runoff, Exterior: municipalities led by B"
+ },
+ "e2022r2_reg_zz_municipalities": {
+  "value": 0,
+  "kind": "int",
+  "pt": "0",
+  "en": "0",
+  "desc": "2022 runoff, Exterior: municipalities"
+ },
+ "e2022r2_reg_zz_two_camp_total": {
+  "value": 298169,
+  "kind": "mi",
+  "pt": "298 mil",
+  "en": "298 thousand",
+  "desc": "2022 runoff, Exterior: votes of the two candidates"
+ },
+ "e2022r2_reg_zz_diff_int": {
+  "value": 7641,
+  "kind": "int",
+  "pt": "7.641",
+  "en": "7,641",
+  "desc": "2022 runoff, Exterior: absolute vote difference (leader in key ..._leader)"
+ },
+ "e2022r2_reg_zz_lead": {
+  "value": 7641,
+  "kind": "mi",
+  "pt": "7.641",
+  "en": "7,641",
+  "desc": "2022 runoff, Exterior: lead of the leader, votes"
+ },
+ "e2022r2_reg_zz_leader": {
+  "value": "Lula",
+  "kind": "text",
+  "pt": "Lula",
+  "en": "Lula",
+  "desc": "2022 runoff, Exterior: candidate ahead"
+ },
+ "e2026r2_reg_n_camp_l": {
+  "value": 5024626,
+  "kind": "mi",
+  "pt": "5,0 milhões",
+  "en": "5.0 million",
+  "desc": "2026 runoff, Norte: L votes"
+ },
+ "e2026r2_reg_n_camp_b": {
+  "value": 5023547,
+  "kind": "mi",
+  "pt": "5,0 milhões",
+  "en": "5.0 million",
+  "desc": "2026 runoff, Norte: B votes"
+ },
+ "e2026r2_reg_n_share_l2": {
+  "value": 0.5000536913526469,
+  "kind": "pct",
+  "pt": "50,0%",
+  "en": "50.0%",
+  "desc": "2026 runoff, Norte: L share"
+ },
+ "e2026r2_reg_n_share_b2": {
+  "value": 0.4999463086473531,
+  "kind": "pct",
+  "pt": "50,0%",
+  "en": "50.0%",
+  "desc": "2026 runoff, Norte: B share"
+ },
+ "e2026r2_reg_n_led_by_l": {
+  "value": 267,
+  "kind": "int",
+  "pt": "267",
+  "en": "267",
+  "desc": "2026 runoff, Norte: municipalities led by L"
+ },
+ "e2026r2_reg_n_led_by_b": {
+  "value": 183,
+  "kind": "int",
+  "pt": "183",
+  "en": "183",
+  "desc": "2026 runoff, Norte: municipalities led by B"
+ },
+ "e2026r2_reg_n_municipalities": {
+  "value": 450,
+  "kind": "int",
+  "pt": "450",
+  "en": "450",
+  "desc": "2026 runoff, Norte: municipalities"
+ },
+ "e2026r2_reg_n_two_camp_total": {
+  "value": 10048173,
+  "kind": "mi",
+  "pt": "10,0 milhões",
+  "en": "10.0 million",
+  "desc": "2026 runoff, Norte: votes of the two candidates"
+ },
+ "e2026r2_reg_n_diff_int": {
+  "value": 1079,
+  "kind": "int",
+  "pt": "1.079",
+  "en": "1,079",
+  "desc": "2026 runoff, Norte: absolute vote difference (leader in key ..._leader)"
+ },
+ "e2026r2_reg_n_lead": {
+  "value": 1079,
+  "kind": "mi",
+  "pt": "1.079",
+  "en": "1,079",
+  "desc": "2026 runoff, Norte: lead of the leader, votes"
+ },
+ "e2026r2_reg_n_leader": {
+  "value": "Lula",
+  "kind": "text",
+  "pt": "Lula",
+  "en": "Lula",
+  "desc": "2026 runoff, Norte: candidate ahead"
+ },
+ "e2026r2_reg_ne_camp_l": {
+  "value": 24450432,
+  "kind": "mi",
+  "pt": "24,5 milhões",
+  "en": "24.5 million",
+  "desc": "2026 runoff, Nordeste: L votes"
+ },
+ "e2026r2_reg_ne_camp_b": {
+  "value": 10796736,
+  "kind": "mi",
+  "pt": "10,8 milhões",
+  "en": "10.8 million",
+  "desc": "2026 runoff, Nordeste: B votes"
+ },
+ "e2026r2_reg_ne_share_l2": {
+  "value": 0.693685007544436,
+  "kind": "pct",
+  "pt": "69,4%",
+  "en": "69.4%",
+  "desc": "2026 runoff, Nordeste: L share"
+ },
+ "e2026r2_reg_ne_share_b2": {
+  "value": 0.30631499245556404,
+  "kind": "pct",
+  "pt": "30,6%",
+  "en": "30.6%",
+  "desc": "2026 runoff, Nordeste: B share"
+ },
+ "e2026r2_reg_ne_led_by_l": {
+  "value": 1774,
+  "kind": "int",
+  "pt": "1.774",
+  "en": "1,774",
+  "desc": "2026 runoff, Nordeste: municipalities led by L"
+ },
+ "e2026r2_reg_ne_led_by_b": {
+  "value": 20,
+  "kind": "int",
+  "pt": "20",
+  "en": "20",
+  "desc": "2026 runoff, Nordeste: municipalities led by B"
+ },
+ "e2026r2_reg_ne_municipalities": {
+  "value": 1794,
+  "kind": "int",
+  "pt": "1.794",
+  "en": "1,794",
+  "desc": "2026 runoff, Nordeste: municipalities"
+ },
+ "e2026r2_reg_ne_two_camp_total": {
+  "value": 35247168,
+  "kind": "mi",
+  "pt": "35,2 milhões",
+  "en": "35.2 million",
+  "desc": "2026 runoff, Nordeste: votes of the two candidates"
+ },
+ "e2026r2_reg_ne_diff_int": {
+  "value": 13653696,
+  "kind": "int",
+  "pt": "13.653.696",
+  "en": "13,653,696",
+  "desc": "2026 runoff, Nordeste: absolute vote difference (leader in key ..._leader)"
+ },
+ "e2026r2_reg_ne_lead": {
+  "value": 13653696,
+  "kind": "mi",
+  "pt": "13,7 milhões",
+  "en": "13.7 million",
+  "desc": "2026 runoff, Nordeste: lead of the leader, votes"
+ },
+ "e2026r2_reg_ne_leader": {
+  "value": "Lula",
+  "kind": "text",
+  "pt": "Lula",
+  "en": "Lula",
+  "desc": "2026 runoff, Nordeste: candidate ahead"
+ },
+ "e2026r2_reg_se_camp_l": {
+  "value": 24037731,
+  "kind": "mi",
+  "pt": "24,0 milhões",
+  "en": "24.0 million",
+  "desc": "2026 runoff, Sudeste: L votes"
+ },
+ "e2026r2_reg_se_camp_b": {
+  "value": 26844501,
+  "kind": "mi",
+  "pt": "26,8 milhões",
+  "en": "26.8 million",
+  "desc": "2026 runoff, Sudeste: B votes"
+ },
+ "e2026r2_reg_se_share_l2": {
+  "value": 0.4724189575645974,
+  "kind": "pct",
+  "pt": "47,2%",
+  "en": "47.2%",
+  "desc": "2026 runoff, Sudeste: L share"
+ },
+ "e2026r2_reg_se_share_b2": {
+  "value": 0.5275810424354026,
+  "kind": "pct",
+  "pt": "52,8%",
+  "en": "52.8%",
+  "desc": "2026 runoff, Sudeste: B share"
+ },
+ "e2026r2_reg_se_led_by_l": {
+  "value": 636,
+  "kind": "int",
+  "pt": "636",
+  "en": "636",
+  "desc": "2026 runoff, Sudeste: municipalities led by L"
+ },
+ "e2026r2_reg_se_led_by_b": {
+  "value": 1032,
+  "kind": "int",
+  "pt": "1.032",
+  "en": "1,032",
+  "desc": "2026 runoff, Sudeste: municipalities led by B"
+ },
+ "e2026r2_reg_se_municipalities": {
+  "value": 1668,
+  "kind": "int",
+  "pt": "1.668",
+  "en": "1,668",
+  "desc": "2026 runoff, Sudeste: municipalities"
+ },
+ "e2026r2_reg_se_two_camp_total": {
+  "value": 50882232,
+  "kind": "mi",
+  "pt": "50,9 milhões",
+  "en": "50.9 million",
+  "desc": "2026 runoff, Sudeste: votes of the two candidates"
+ },
+ "e2026r2_reg_se_diff_int": {
+  "value": 2806770,
+  "kind": "int",
+  "pt": "2.806.770",
+  "en": "2,806,770",
+  "desc": "2026 runoff, Sudeste: absolute vote difference (leader in key ..._leader)"
+ },
+ "e2026r2_reg_se_lead": {
+  "value": 2806770,
+  "kind": "mi",
+  "pt": "2,8 milhões",
+  "en": "2.8 million",
+  "desc": "2026 runoff, Sudeste: lead of the leader, votes"
+ },
+ "e2026r2_reg_se_leader": {
+  "value": "Flávio Bolsonaro",
+  "kind": "text",
+  "pt": "Flávio Bolsonaro",
+  "en": "Flávio Bolsonaro",
+  "desc": "2026 runoff, Sudeste: candidate ahead"
+ },
+ "e2026r2_reg_s_camp_l": {
+  "value": 6809370,
+  "kind": "mi",
+  "pt": "6,8 milhões",
+  "en": "6.8 million",
+  "desc": "2026 runoff, Sul: L votes"
+ },
+ "e2026r2_reg_s_camp_b": {
+  "value": 11385893,
+  "kind": "mi",
+  "pt": "11,4 milhões",
+  "en": "11.4 million",
+  "desc": "2026 runoff, Sul: B votes"
+ },
+ "e2026r2_reg_s_share_l2": {
+  "value": 0.3742386136435621,
+  "kind": "pct",
+  "pt": "37,4%",
+  "en": "37.4%",
+  "desc": "2026 runoff, Sul: L share"
+ },
+ "e2026r2_reg_s_share_b2": {
+  "value": 0.625761386356438,
+  "kind": "pct",
+  "pt": "62,6%",
+  "en": "62.6%",
+  "desc": "2026 runoff, Sul: B share"
+ },
+ "e2026r2_reg_s_led_by_l": {
+  "value": 136,
+  "kind": "int",
+  "pt": "136",
+  "en": "136",
+  "desc": "2026 runoff, Sul: municipalities led by L"
+ },
+ "e2026r2_reg_s_led_by_b": {
+  "value": 1054,
+  "kind": "int",
+  "pt": "1.054",
+  "en": "1,054",
+  "desc": "2026 runoff, Sul: municipalities led by B"
+ },
+ "e2026r2_reg_s_municipalities": {
+  "value": 1191,
+  "kind": "int",
+  "pt": "1.191",
+  "en": "1,191",
+  "desc": "2026 runoff, Sul: municipalities"
+ },
+ "e2026r2_reg_s_two_camp_total": {
+  "value": 18195263,
+  "kind": "mi",
+  "pt": "18,2 milhões",
+  "en": "18.2 million",
+  "desc": "2026 runoff, Sul: votes of the two candidates"
+ },
+ "e2026r2_reg_s_diff_int": {
+  "value": 4576523,
+  "kind": "int",
+  "pt": "4.576.523",
+  "en": "4,576,523",
+  "desc": "2026 runoff, Sul: absolute vote difference (leader in key ..._leader)"
+ },
+ "e2026r2_reg_s_lead": {
+  "value": 4576523,
+  "kind": "mi",
+  "pt": "4,6 milhões",
+  "en": "4.6 million",
+  "desc": "2026 runoff, Sul: lead of the leader, votes"
+ },
+ "e2026r2_reg_s_leader": {
+  "value": "Flávio Bolsonaro",
+  "kind": "text",
+  "pt": "Flávio Bolsonaro",
+  "en": "Flávio Bolsonaro",
+  "desc": "2026 runoff, Sul: candidate ahead"
+ },
+ "e2026r2_reg_co_camp_l": {
+  "value": 3733919,
+  "kind": "mi",
+  "pt": "3,7 milhões",
+  "en": "3.7 million",
+  "desc": "2026 runoff, Centro-Oeste: L votes"
+ },
+ "e2026r2_reg_co_camp_b": {
+  "value": 5603867,
+  "kind": "mi",
+  "pt": "5,6 milhões",
+  "en": "5.6 million",
+  "desc": "2026 runoff, Centro-Oeste: B votes"
+ },
+ "e2026r2_reg_co_share_l2": {
+  "value": 0.3998719825020621,
+  "kind": "pct",
+  "pt": "40,0%",
+  "en": "40.0%",
+  "desc": "2026 runoff, Centro-Oeste: L share"
+ },
+ "e2026r2_reg_co_share_b2": {
+  "value": 0.600128017497938,
+  "kind": "pct",
+  "pt": "60,0%",
+  "en": "60.0%",
+  "desc": "2026 runoff, Centro-Oeste: B share"
+ },
+ "e2026r2_reg_co_led_by_l": {
+  "value": 62,
+  "kind": "int",
+  "pt": "62",
+  "en": "62",
+  "desc": "2026 runoff, Centro-Oeste: municipalities led by L"
+ },
+ "e2026r2_reg_co_led_by_b": {
+  "value": 406,
+  "kind": "int",
+  "pt": "406",
+  "en": "406",
+  "desc": "2026 runoff, Centro-Oeste: municipalities led by B"
+ },
+ "e2026r2_reg_co_municipalities": {
+  "value": 468,
+  "kind": "int",
+  "pt": "468",
+  "en": "468",
+  "desc": "2026 runoff, Centro-Oeste: municipalities"
+ },
+ "e2026r2_reg_co_two_camp_total": {
+  "value": 9337786,
+  "kind": "mi",
+  "pt": "9,3 milhões",
+  "en": "9.3 million",
+  "desc": "2026 runoff, Centro-Oeste: votes of the two candidates"
+ },
+ "e2026r2_reg_co_diff_int": {
+  "value": 1869948,
+  "kind": "int",
+  "pt": "1.869.948",
+  "en": "1,869,948",
+  "desc": "2026 runoff, Centro-Oeste: absolute vote difference (leader in key ..._leader)"
+ },
+ "e2026r2_reg_co_lead": {
+  "value": 1869948,
+  "kind": "mi",
+  "pt": "1,9 milhão",
+  "en": "1.9 million",
+  "desc": "2026 runoff, Centro-Oeste: lead of the leader, votes"
+ },
+ "e2026r2_reg_co_leader": {
+  "value": "Flávio Bolsonaro",
+  "kind": "text",
+  "pt": "Flávio Bolsonaro",
+  "en": "Flávio Bolsonaro",
+  "desc": "2026 runoff, Centro-Oeste: candidate ahead"
+ },
+ "e2026r2_reg_zz_camp_l": {
+  "value": 200154,
+  "kind": "mi",
+  "pt": "200 mil",
+  "en": "200 thousand",
+  "desc": "2026 runoff, Exterior: L votes"
+ },
+ "e2026r2_reg_zz_camp_b": {
+  "value": 171497,
+  "kind": "mi",
+  "pt": "171 mil",
+  "en": "171 thousand",
+  "desc": "2026 runoff, Exterior: B votes"
+ },
+ "e2026r2_reg_zz_share_l2": {
+  "value": 0.5385536430683625,
+  "kind": "pct",
+  "pt": "53,9%",
+  "en": "53.9%",
+  "desc": "2026 runoff, Exterior: L share"
+ },
+ "e2026r2_reg_zz_share_b2": {
+  "value": 0.4614463569316375,
+  "kind": "pct",
+  "pt": "46,1%",
+  "en": "46.1%",
+  "desc": "2026 runoff, Exterior: B share"
+ },
+ "e2026r2_reg_zz_led_by_l": {
+  "value": 0,
+  "kind": "int",
+  "pt": "0",
+  "en": "0",
+  "desc": "2026 runoff, Exterior: municipalities led by L"
+ },
+ "e2026r2_reg_zz_led_by_b": {
+  "value": 0,
+  "kind": "int",
+  "pt": "0",
+  "en": "0",
+  "desc": "2026 runoff, Exterior: municipalities led by B"
+ },
+ "e2026r2_reg_zz_municipalities": {
+  "value": 0,
+  "kind": "int",
+  "pt": "0",
+  "en": "0",
+  "desc": "2026 runoff, Exterior: municipalities"
+ },
+ "e2026r2_reg_zz_two_camp_total": {
+  "value": 371651,
+  "kind": "mi",
+  "pt": "372 mil",
+  "en": "372 thousand",
+  "desc": "2026 runoff, Exterior: votes of the two candidates"
+ },
+ "e2026r2_reg_zz_diff_int": {
+  "value": 28657,
+  "kind": "int",
+  "pt": "28.657",
+  "en": "28,657",
+  "desc": "2026 runoff, Exterior: absolute vote difference (leader in key ..._leader)"
+ },
+ "e2026r2_reg_zz_lead": {
+  "value": 28657,
+  "kind": "mi",
+  "pt": "29 mil",
+  "en": "29 thousand",
+  "desc": "2026 runoff, Exterior: lead of the leader, votes"
+ },
+ "e2026r2_reg_zz_leader": {
+  "value": "Lula",
+  "kind": "text",
+  "pt": "Lula",
+  "en": "Lula",
+  "desc": "2026 runoff, Exterior: candidate ahead"
+ },
+ "e2026r2_b_lead_where_b_led_regions": {
+  "value": 9253241,
+  "kind": "mi",
+  "pt": "9,3 milhões",
+  "en": "9.3 million",
+  "desc": "2026 runoff: Flavio's lead summed over the regions where he was ahead"
+ },
+ "e2026r2_b_led_regions": {
+  "value": [
+   "Sudeste",
+   "Sul",
+   "Centro-Oeste"
+  ],
+  "kind": "list",
+  "pt": "Sudeste, Sul e Centro-Oeste",
+  "en": "Sudeste, Sul and Centro-Oeste",
+  "desc": "regions where Flavio was ahead"
+ },
+ "e2026r2_b_ne_states_n": {
+  "value": 11,
+  "kind": "int",
+  "pt": "11",
+  "en": "11",
+  "desc": "2026 runoff: number of states outside Nordeste whose B votes, added from the smallest, stay below B's votes in Nordeste"
+ },
+ "e2026r2_b_ne_states_list": {
+  "value": [
+   "AP",
+   "RR",
+   "AC",
+   "TO",
+   "RO",
+   "MS",
+   "AM",
+   "DF",
+   "ES",
+   "MT",
+   "PA"
+  ],
+  "kind": "list",
+  "pt": "AP, RR, AC, TO, RO, MS, AM, DF, ES, MT e PA",
+  "en": "AP, RR, AC, TO, RO, MS, AM, DF, ES, MT and PA",
+  "desc": "those states"
+ },
+ "e2026r2_b_ne_states_sum": {
+  "value": 9576584.0,
+  "kind": "mi",
+  "pt": "9,6 milhões",
+  "en": "9.6 million",
+  "desc": "their combined votes"
+ },
+ "e2026r2_l_s_states_n": {
+  "value": 11,
+  "kind": "int",
+  "pt": "11",
+  "en": "11",
+  "desc": "2026 runoff: number of states outside Sul whose L votes, added from the smallest, stay below L's votes in Sul"
+ },
+ "e2026r2_l_s_states_list": {
+  "value": [
+   "RR",
+   "AC",
+   "AP",
+   "RO",
+   "TO",
+   "MS",
+   "MT",
+   "DF",
+   "SE",
+   "ES",
+   "AM"
+  ],
+  "kind": "list",
+  "pt": "RR, AC, AP, RO, TO, MS, MT, DF, SE, ES e AM",
+  "en": "RR, AC, AP, RO, TO, MS, MT, DF, SE, ES and AM",
+  "desc": "those states"
+ },
+ "e2026r2_l_s_states_sum": {
+  "value": 6473547.0,
+  "kind": "mi",
+  "pt": "6,5 milhões",
+  "en": "6.5 million",
+  "desc": "their combined votes"
+ },
+ "e2014r2_most_b_name": {
+  "value": "Nova Pádua (RS)",
+  "kind": "text",
+  "pt": "Nova Pádua (RS)",
+  "en": "Nova Pádua (RS)",
+  "desc": "2014 runoff: most_b municipality"
+ },
+ "e2014r2_most_b_share_l": {
+  "value": 0.11858974358974358,
+  "kind": "pct",
+  "pt": "11,9%",
+  "en": "11.9%",
+  "desc": "2014 runoff: most_b: L share"
+ },
+ "e2014r2_most_b_share_b": {
+  "value": 0.8814102564102564,
+  "kind": "pct",
+  "pt": "88,1%",
+  "en": "88.1%",
+  "desc": "2014 runoff: most_b: B share"
+ },
+ "e2014r2_most_b_votes_l": {
+  "value": 222,
+  "kind": "int",
+  "pt": "222",
+  "en": "222",
+  "desc": "2014 runoff: most_b: L votes"
+ },
+ "e2014r2_most_b_votes_b": {
+  "value": 1650,
+  "kind": "int",
+  "pt": "1.650",
+  "en": "1,650",
+  "desc": "2014 runoff: most_b: B votes"
+ },
+ "e2014r2_most_b_aptos": {
+  "value": 2144,
+  "kind": "int",
+  "pt": "2.144",
+  "en": "2,144",
+  "desc": "2014 runoff: most_b: electorate"
+ },
+ "e2014r2_most_b_100k_name": {
+  "value": "Bragança Paulista (SP)",
+  "kind": "text",
+  "pt": "Bragança Paulista (SP)",
+  "en": "Bragança Paulista (SP)",
+  "desc": "2014 runoff: most_b_100k municipality"
+ },
+ "e2014r2_most_b_100k_share_l": {
+  "value": 0.1997669773635153,
+  "kind": "pct",
+  "pt": "20,0%",
+  "en": "20.0%",
+  "desc": "2014 runoff: most_b_100k: L share"
+ },
+ "e2014r2_most_b_100k_share_b": {
+  "value": 0.8002330226364847,
+  "kind": "pct",
+  "pt": "80,0%",
+  "en": "80.0%",
+  "desc": "2014 runoff: most_b_100k: B share"
+ },
+ "e2014r2_most_b_100k_votes_l": {
+  "value": 18003,
+  "kind": "int",
+  "pt": "18.003",
+  "en": "18,003",
+  "desc": "2014 runoff: most_b_100k: L votes"
+ },
+ "e2014r2_most_b_100k_votes_b": {
+  "value": 72117,
+  "kind": "int",
+  "pt": "72.117",
+  "en": "72,117",
+  "desc": "2014 runoff: most_b_100k: B votes"
+ },
+ "e2014r2_most_b_100k_aptos": {
+  "value": 117990,
+  "kind": "int",
+  "pt": "117.990",
+  "en": "117,990",
+  "desc": "2014 runoff: most_b_100k: electorate"
+ },
+ "e2014r2_most_l_name": {
+  "value": "Belágua (MA)",
+  "kind": "text",
+  "pt": "Belágua (MA)",
+  "en": "Belágua (MA)",
+  "desc": "2014 runoff: most_l municipality"
+ },
+ "e2014r2_most_l_share_l": {
+  "value": 0.9392819429778247,
+  "kind": "pct",
+  "pt": "93,9%",
+  "en": "93.9%",
+  "desc": "2014 runoff: most_l: L share"
+ },
+ "e2014r2_most_l_share_b": {
+  "value": 0.060718057022175254,
+  "kind": "pct",
+  "pt": "6,1%",
+  "en": "6.1%",
+  "desc": "2014 runoff: most_l: B share"
+ },
+ "e2014r2_most_l_votes_l": {
+  "value": 3558,
+  "kind": "int",
+  "pt": "3.558",
+  "en": "3,558",
+  "desc": "2014 runoff: most_l: L votes"
+ },
+ "e2014r2_most_l_votes_b": {
+  "value": 230,
+  "kind": "int",
+  "pt": "230",
+  "en": "230",
+  "desc": "2014 runoff: most_l: B votes"
+ },
+ "e2014r2_most_l_aptos": {
+  "value": 5157,
+  "kind": "int",
+  "pt": "5.157",
+  "en": "5,157",
+  "desc": "2014 runoff: most_l: electorate"
+ },
+ "e2014r2_most_l_100k_name": {
+  "value": "Caxias (MA)",
+  "kind": "text",
+  "pt": "Caxias (MA)",
+  "en": "Caxias (MA)",
+  "desc": "2014 runoff: most_l_100k municipality"
+ },
+ "e2014r2_most_l_100k_share_l": {
+  "value": 0.8438162737559347,
+  "kind": "pct",
+  "pt": "84,4%",
+  "en": "84.4%",
+  "desc": "2014 runoff: most_l_100k: L share"
+ },
+ "e2014r2_most_l_100k_share_b": {
+  "value": 0.1561837262440653,
+  "kind": "pct",
+  "pt": "15,6%",
+  "en": "15.6%",
+  "desc": "2014 runoff: most_l_100k: B share"
+ },
+ "e2014r2_most_l_100k_votes_l": {
+  "value": 61672,
+  "kind": "int",
+  "pt": "61.672",
+  "en": "61,672",
+  "desc": "2014 runoff: most_l_100k: L votes"
+ },
+ "e2014r2_most_l_100k_votes_b": {
+  "value": 11415,
+  "kind": "int",
+  "pt": "11.415",
+  "en": "11,415",
+  "desc": "2014 runoff: most_l_100k: B votes"
+ },
+ "e2014r2_most_l_100k_aptos": {
+  "value": 107693,
+  "kind": "int",
+  "pt": "107.693",
+  "en": "107,693",
+  "desc": "2014 runoff: most_l_100k: electorate"
+ },
+ "e2018r2_most_b_name": {
+  "value": "Nova Pádua (RS)",
+  "kind": "text",
+  "pt": "Nova Pádua (RS)",
+  "en": "Nova Pádua (RS)",
+  "desc": "2018 runoff: most_b municipality"
+ },
+ "e2018r2_most_b_share_l": {
+  "value": 0.0703781512605042,
+  "kind": "pct",
+  "pt": "7,0%",
+  "en": "7.0%",
+  "desc": "2018 runoff: most_b: L share"
+ },
+ "e2018r2_most_b_share_b": {
+  "value": 0.9296218487394958,
+  "kind": "pct",
+  "pt": "93,0%",
+  "en": "93.0%",
+  "desc": "2018 runoff: most_b: B share"
+ },
+ "e2018r2_most_b_votes_l": {
+  "value": 134,
+  "kind": "int",
+  "pt": "134",
+  "en": "134",
+  "desc": "2018 runoff: most_b: L votes"
+ },
+ "e2018r2_most_b_votes_b": {
+  "value": 1770,
+  "kind": "int",
+  "pt": "1.770",
+  "en": "1,770",
+  "desc": "2018 runoff: most_b: B votes"
+ },
+ "e2018r2_most_b_aptos": {
+  "value": 2308,
+  "kind": "int",
+  "pt": "2.308",
+  "en": "2,308",
+  "desc": "2018 runoff: most_b: electorate"
+ },
+ "e2018r2_most_b_100k_name": {
+  "value": "Blumenau (SC)",
+  "kind": "text",
+  "pt": "Blumenau (SC)",
+  "en": "Blumenau (SC)",
+  "desc": "2018 runoff: most_b_100k municipality"
+ },
+ "e2018r2_most_b_100k_share_l": {
+  "value": 0.16049599405302717,
+  "kind": "pct",
+  "pt": "16,0%",
+  "en": "16.0%",
+  "desc": "2018 runoff: most_b_100k: L share"
+ },
+ "e2018r2_most_b_100k_share_b": {
+  "value": 0.8395040059469728,
+  "kind": "pct",
+  "pt": "84,0%",
+  "en": "84.0%",
+  "desc": "2018 runoff: most_b_100k: B share"
+ },
+ "e2018r2_most_b_100k_votes_l": {
+  "value": 31090,
+  "kind": "int",
+  "pt": "31.090",
+  "en": "31,090",
+  "desc": "2018 runoff: most_b_100k: L votes"
+ },
+ "e2018r2_most_b_100k_votes_b": {
+  "value": 162622,
+  "kind": "int",
+  "pt": "162.622",
+  "en": "162,622",
+  "desc": "2018 runoff: most_b_100k: B votes"
+ },
+ "e2018r2_most_b_100k_aptos": {
+  "value": 244336,
+  "kind": "int",
+  "pt": "244.336",
+  "en": "244,336",
+  "desc": "2018 runoff: most_b_100k: electorate"
+ },
+ "e2018r2_most_l_name": {
+  "value": "Guaribas (PI)",
+  "kind": "text",
+  "pt": "Guaribas (PI)",
+  "en": "Guaribas (PI)",
+  "desc": "2018 runoff: most_l municipality"
+ },
+ "e2018r2_most_l_share_l": {
+  "value": 0.9799183117767188,
+  "kind": "pct",
+  "pt": "98,0%",
+  "en": "98.0%",
+  "desc": "2018 runoff: most_l: L share"
+ },
+ "e2018r2_most_l_share_b": {
+  "value": 0.020081688223281158,
+  "kind": "pct",
+  "pt": "2,0%",
+  "en": "2.0%",
+  "desc": "2018 runoff: most_l: B share"
+ },
+ "e2018r2_most_l_votes_l": {
+  "value": 2879,
+  "kind": "int",
+  "pt": "2.879",
+  "en": "2,879",
+  "desc": "2018 runoff: most_l: L votes"
+ },
+ "e2018r2_most_l_votes_b": {
+  "value": 59,
+  "kind": "int",
+  "pt": "59",
+  "en": "59",
+  "desc": "2018 runoff: most_l: B votes"
+ },
+ "e2018r2_most_l_aptos": {
+  "value": 3575,
+  "kind": "int",
+  "pt": "3.575",
+  "en": "3,575",
+  "desc": "2018 runoff: most_l: electorate"
+ },
+ "e2018r2_most_l_100k_name": {
+  "value": "Juazeiro do Norte (CE)",
+  "kind": "text",
+  "pt": "Juazeiro do Norte (CE)",
+  "en": "Juazeiro do Norte (CE)",
+  "desc": "2018 runoff: most_l_100k municipality"
+ },
+ "e2018r2_most_l_100k_share_l": {
+  "value": 0.7611003824738317,
+  "kind": "pct",
+  "pt": "76,1%",
+  "en": "76.1%",
+  "desc": "2018 runoff: most_l_100k: L share"
+ },
+ "e2018r2_most_l_100k_share_b": {
+  "value": 0.23889961752616828,
+  "kind": "pct",
+  "pt": "23,9%",
+  "en": "23.9%",
+  "desc": "2018 runoff: most_l_100k: B share"
+ },
+ "e2018r2_most_l_100k_votes_l": {
+  "value": 101288,
+  "kind": "int",
+  "pt": "101.288",
+  "en": "101,288",
+  "desc": "2018 runoff: most_l_100k: L votes"
+ },
+ "e2018r2_most_l_100k_votes_b": {
+  "value": 31793,
+  "kind": "int",
+  "pt": "31.793",
+  "en": "31,793",
+  "desc": "2018 runoff: most_l_100k: B votes"
+ },
+ "e2018r2_most_l_100k_aptos": {
+  "value": 169155,
+  "kind": "int",
+  "pt": "169.155",
+  "en": "169,155",
+  "desc": "2018 runoff: most_l_100k: electorate"
+ },
+ "e2022r2_most_b_name": {
+  "value": "Nova Pádua (RS)",
+  "kind": "text",
+  "pt": "Nova Pádua (RS)",
+  "en": "Nova Pádua (RS)",
+  "desc": "2022 runoff: most_b municipality"
+ },
+ "e2022r2_most_b_share_l": {
+  "value": 0.11007827788649706,
+  "kind": "pct",
+  "pt": "11,0%",
+  "en": "11.0%",
+  "desc": "2022 runoff: most_b: L share"
+ },
+ "e2022r2_most_b_share_b": {
+  "value": 0.889921722113503,
+  "kind": "pct",
+  "pt": "89,0%",
+  "en": "89.0%",
+  "desc": "2022 runoff: most_b: B share"
+ },
+ "e2022r2_most_b_votes_l": {
+  "value": 225,
+  "kind": "int",
+  "pt": "225",
+  "en": "225",
+  "desc": "2022 runoff: most_b: L votes"
+ },
+ "e2022r2_most_b_votes_b": {
+  "value": 1819,
+  "kind": "int",
+  "pt": "1.819",
+  "en": "1,819",
+  "desc": "2022 runoff: most_b: B votes"
+ },
+ "e2022r2_most_b_aptos": {
+  "value": 2401,
+  "kind": "int",
+  "pt": "2.401",
+  "en": "2,401",
+  "desc": "2022 runoff: most_b: electorate"
+ },
+ "e2022r2_most_b_100k_name": {
+  "value": "Boa Vista (RR)",
+  "kind": "text",
+  "pt": "Boa Vista (RR)",
+  "en": "Boa Vista (RR)",
+  "desc": "2022 runoff: most_b_100k municipality"
+ },
+ "e2022r2_most_b_100k_share_l": {
+  "value": 0.2053224009527416,
+  "kind": "pct",
+  "pt": "20,5%",
+  "en": "20.5%",
+  "desc": "2022 runoff: most_b_100k: L share"
+ },
+ "e2022r2_most_b_100k_share_b": {
+  "value": 0.7946775990472584,
+  "kind": "pct",
+  "pt": "79,5%",
+  "en": "79.5%",
+  "desc": "2022 runoff: most_b_100k: B share"
+ },
+ "e2022r2_most_b_100k_votes_l": {
+  "value": 37412,
+  "kind": "int",
+  "pt": "37.412",
+  "en": "37,412",
+  "desc": "2022 runoff: most_b_100k: L votes"
+ },
+ "e2022r2_most_b_100k_votes_b": {
+  "value": 144799,
+  "kind": "int",
+  "pt": "144.799",
+  "en": "144,799",
+  "desc": "2022 runoff: most_b_100k: B votes"
+ },
+ "e2022r2_most_b_100k_aptos": {
+  "value": 233102,
+  "kind": "int",
+  "pt": "233.102",
+  "en": "233,102",
+  "desc": "2022 runoff: most_b_100k: electorate"
+ },
+ "e2022r2_most_l_name": {
+  "value": "Guaribas (PI)",
+  "kind": "text",
+  "pt": "Guaribas (PI)",
+  "en": "Guaribas (PI)",
+  "desc": "2022 runoff: most_l municipality"
+ },
+ "e2022r2_most_l_share_l": {
+  "value": 0.9385741565881605,
+  "kind": "pct",
+  "pt": "93,9%",
+  "en": "93.9%",
+  "desc": "2022 runoff: most_l: L share"
+ },
+ "e2022r2_most_l_share_b": {
+  "value": 0.06142584341183954,
+  "kind": "pct",
+  "pt": "6,1%",
+  "en": "6.1%",
+  "desc": "2022 runoff: most_l: B share"
+ },
+ "e2022r2_most_l_votes_l": {
+  "value": 2949,
+  "kind": "int",
+  "pt": "2.949",
+  "en": "2,949",
+  "desc": "2022 runoff: most_l: L votes"
+ },
+ "e2022r2_most_l_votes_b": {
+  "value": 193,
+  "kind": "int",
+  "pt": "193",
+  "en": "193",
+  "desc": "2022 runoff: most_l: B votes"
+ },
+ "e2022r2_most_l_aptos": {
+  "value": 4184,
+  "kind": "int",
+  "pt": "4.184",
+  "en": "4,184",
+  "desc": "2022 runoff: most_l: electorate"
+ },
+ "e2022r2_most_l_100k_name": {
+  "value": "Caxias (MA)",
+  "kind": "text",
+  "pt": "Caxias (MA)",
+  "en": "Caxias (MA)",
+  "desc": "2022 runoff: most_l_100k municipality"
+ },
+ "e2022r2_most_l_100k_share_l": {
+  "value": 0.7718006392802178,
+  "kind": "pct",
+  "pt": "77,2%",
+  "en": "77.2%",
+  "desc": "2022 runoff: most_l_100k: L share"
+ },
+ "e2022r2_most_l_100k_share_b": {
+  "value": 0.2281993607197822,
+  "kind": "pct",
+  "pt": "22,8%",
+  "en": "22.8%",
+  "desc": "2022 runoff: most_l_100k: B share"
+ },
+ "e2022r2_most_l_100k_votes_l": {
+  "value": 65194,
+  "kind": "int",
+  "pt": "65.194",
+  "en": "65,194",
+  "desc": "2022 runoff: most_l_100k: L votes"
+ },
+ "e2022r2_most_l_100k_votes_b": {
+  "value": 19276,
+  "kind": "int",
+  "pt": "19.276",
+  "en": "19,276",
+  "desc": "2022 runoff: most_l_100k: B votes"
+ },
+ "e2022r2_most_l_100k_aptos": {
+  "value": 108400,
+  "kind": "int",
+  "pt": "108.400",
+  "en": "108,400",
+  "desc": "2022 runoff: most_l_100k: electorate"
+ },
+ "e2026r2_most_b_name": {
+  "value": "Nova Pádua (RS)",
+  "kind": "text",
+  "pt": "Nova Pádua (RS)",
+  "en": "Nova Pádua (RS)",
+  "desc": "2026 runoff: most_b municipality"
+ },
+ "e2026r2_most_b_share_l": {
+  "value": 0.09439386679444178,
+  "kind": "pct",
+  "pt": "9,4%",
+  "en": "9.4%",
+  "desc": "2026 runoff: most_b: L share"
+ },
+ "e2026r2_most_b_share_b": {
+  "value": 0.9056061332055583,
+  "kind": "pct",
+  "pt": "90,6%",
+  "en": "90.6%",
+  "desc": "2026 runoff: most_b: B share"
+ },
+ "e2026r2_most_b_votes_l": {
+  "value": 197,
+  "kind": "int",
+  "pt": "197",
+  "en": "197",
+  "desc": "2026 runoff: most_b: L votes"
+ },
+ "e2026r2_most_b_votes_b": {
+  "value": 1890,
+  "kind": "int",
+  "pt": "1.890",
+  "en": "1,890",
+  "desc": "2026 runoff: most_b: B votes"
+ },
+ "e2026r2_most_b_aptos": {
+  "value": 2410,
+  "kind": "int",
+  "pt": "2.410",
+  "en": "2,410",
+  "desc": "2026 runoff: most_b: electorate"
+ },
+ "e2026r2_most_b_100k_name": {
+  "value": "Sinop (MT)",
+  "kind": "text",
+  "pt": "Sinop (MT)",
+  "en": "Sinop (MT)",
+  "desc": "2026 runoff: most_b_100k municipality"
+ },
+ "e2026r2_most_b_100k_share_l": {
+  "value": 0.22293957834163752,
+  "kind": "pct",
+  "pt": "22,3%",
+  "en": "22.3%",
+  "desc": "2026 runoff: most_b_100k: L share"
+ },
+ "e2026r2_most_b_100k_share_b": {
+  "value": 0.7770604216583625,
+  "kind": "pct",
+  "pt": "77,7%",
+  "en": "77.7%",
+  "desc": "2026 runoff: most_b_100k: B share"
+ },
+ "e2026r2_most_b_100k_votes_l": {
+  "value": 22238,
+  "kind": "int",
+  "pt": "22.238",
+  "en": "22,238",
+  "desc": "2026 runoff: most_b_100k: L votes"
+ },
+ "e2026r2_most_b_100k_votes_b": {
+  "value": 77511,
+  "kind": "int",
+  "pt": "77.511",
+  "en": "77,511",
+  "desc": "2026 runoff: most_b_100k: B votes"
+ },
+ "e2026r2_most_b_100k_aptos": {
+  "value": 127152,
+  "kind": "int",
+  "pt": "127.152",
+  "en": "127,152",
+  "desc": "2026 runoff: most_b_100k: electorate"
+ },
+ "e2026r2_most_l_name": {
+  "value": "Carnaubeira da Penha (PE)",
+  "kind": "text",
+  "pt": "Carnaubeira da Penha (PE)",
+  "en": "Carnaubeira da Penha (PE)",
+  "desc": "2026 runoff: most_l municipality"
+ },
+ "e2026r2_most_l_share_l": {
+  "value": 0.9233918128654971,
+  "kind": "pct",
+  "pt": "92,3%",
+  "en": "92.3%",
+  "desc": "2026 runoff: most_l: L share"
+ },
+ "e2026r2_most_l_share_b": {
+  "value": 0.0766081871345029,
+  "kind": "pct",
+  "pt": "7,7%",
+  "en": "7.7%",
+  "desc": "2026 runoff: most_l: B share"
+ },
+ "e2026r2_most_l_votes_l": {
+  "value": 9474,
+  "kind": "int",
+  "pt": "9.474",
+  "en": "9,474",
+  "desc": "2026 runoff: most_l: L votes"
+ },
+ "e2026r2_most_l_votes_b": {
+  "value": 786,
+  "kind": "int",
+  "pt": "786",
+  "en": "786",
+  "desc": "2026 runoff: most_l: B votes"
+ },
+ "e2026r2_most_l_aptos": {
+  "value": 12560,
+  "kind": "int",
+  "pt": "12.560",
+  "en": "12,560",
+  "desc": "2026 runoff: most_l: electorate"
+ },
+ "e2026r2_most_l_100k_name": {
+  "value": "Cametá (PA)",
+  "kind": "text",
+  "pt": "Cametá (PA)",
+  "en": "Cametá (PA)",
+  "desc": "2026 runoff: most_l_100k municipality"
+ },
+ "e2026r2_most_l_100k_share_l": {
+  "value": 0.7819941982054914,
+  "kind": "pct",
+  "pt": "78,2%",
+  "en": "78.2%",
+  "desc": "2026 runoff: most_l_100k: L share"
+ },
+ "e2026r2_most_l_100k_share_b": {
+  "value": 0.21800580179450857,
+  "kind": "pct",
+  "pt": "21,8%",
+  "en": "21.8%",
+  "desc": "2026 runoff: most_l_100k: B share"
+ },
+ "e2026r2_most_l_100k_votes_l": {
+  "value": 69549,
+  "kind": "int",
+  "pt": "69.549",
+  "en": "69,549",
+  "desc": "2026 runoff: most_l_100k: L votes"
+ },
+ "e2026r2_most_l_100k_votes_b": {
+  "value": 19389,
+  "kind": "int",
+  "pt": "19.389",
+  "en": "19,389",
+  "desc": "2026 runoff: most_l_100k: B votes"
+ },
+ "e2026r2_most_l_100k_aptos": {
+  "value": 106189,
+  "kind": "int",
+  "pt": "106.189",
+  "en": "106,189",
+  "desc": "2026 runoff: most_l_100k: electorate"
+ },
+ "q4_n_b_grew": {
+  "value": 3830,
+  "kind": "int",
+  "pt": "3.830",
+  "en": "3,830",
+  "desc": "2014->2018 runoff: municipalities where the non-PT side grew"
+ },
+ "q4_share_b_grew": {
+  "value": 0.6876122082585279,
+  "kind": "pct",
+  "pt": "68,8%",
+  "en": "68.8%",
+  "desc": "same, share"
+ },
+ "q4_n_b_fell": {
+  "value": 1740,
+  "kind": "int",
+  "pt": "1.740",
+  "en": "1,740",
+  "desc": "2014->2018: municipalities where it fell"
+ },
+ "q4_n_flipped_to_b": {
+  "value": 775,
+  "kind": "int",
+  "pt": "775",
+  "en": "775",
+  "desc": "2014->2018: municipalities led by PT in 2014 and by Bolsonaro in 2018"
+ },
+ "q4_n_flipped_to_l": {
+  "value": 58,
+  "kind": "int",
+  "pt": "58",
+  "en": "58",
+  "desc": "2014->2018: the opposite"
+ },
+ "q4_delta_b_votes": {
+  "value": 6756692,
+  "kind": "mi",
+  "pt": "6,8 milhões",
+  "en": "6.8 million",
+  "desc": "Bolsonaro 2018 runoff votes minus Aecio 2014 runoff votes, national (abroad included)"
+ },
+ "q4_delta_l_votes": {
+  "value": -7460212,
+  "kind": "mi",
+  "pt": "−7,5 milhões",
+  "en": "−7.5 million",
+  "desc": "Haddad 2018 runoff votes minus Dilma 2014 runoff votes, national (negative = fewer)"
+ },
+ "q4_delta_l_votes_abs": {
+  "value": 7460212,
+  "kind": "mi",
+  "pt": "7,5 milhões",
+  "en": "7.5 million",
+  "desc": "absolute value of the previous fact"
+ },
+ "q4_median_delta_b": {
+  "value": 0.03926609760302713,
+  "kind": "pts",
+  "pt": "3,9 pontos",
+  "en": "3.9 points",
+  "desc": "median municipal change of the non-PT runoff share"
+ },
+ "q4_reg_n_b_share_2014": {
+  "value": 0.4346590627675457,
+  "kind": "pct",
+  "pt": "43,5%",
+  "en": "43.5%",
+  "desc": "Norte: non-PT runoff share in 2014"
+ },
+ "q4_reg_n_b_share_2018": {
+  "value": 0.5189277891715498,
+  "kind": "pct",
+  "pt": "51,9%",
+  "en": "51.9%",
+  "desc": "Norte: non-PT runoff share in 2018"
+ },
+ "q4_reg_ne_b_share_2014": {
+  "value": 0.2832164257831231,
+  "kind": "pct",
+  "pt": "28,3%",
+  "en": "28.3%",
+  "desc": "Nordeste: non-PT runoff share in 2014"
+ },
+ "q4_reg_ne_b_share_2018": {
+  "value": 0.3030972513612399,
+  "kind": "pct",
+  "pt": "30,3%",
+  "en": "30.3%",
+  "desc": "Nordeste: non-PT runoff share in 2018"
+ },
+ "q4_reg_se_b_share_2014": {
+  "value": 0.5619198563727231,
+  "kind": "pct",
+  "pt": "56,2%",
+  "en": "56.2%",
+  "desc": "Sudeste: non-PT runoff share in 2014"
+ },
+ "q4_reg_se_b_share_2018": {
+  "value": 0.6537487354166218,
+  "kind": "pct",
+  "pt": "65,4%",
+  "en": "65.4%",
+  "desc": "Sudeste: non-PT runoff share in 2018"
+ },
+ "q4_reg_s_b_share_2014": {
+  "value": 0.5891105311388193,
+  "kind": "pct",
+  "pt": "58,9%",
+  "en": "58.9%",
+  "desc": "Sul: non-PT runoff share in 2014"
+ },
+ "q4_reg_s_b_share_2018": {
+  "value": 0.6826593821056496,
+  "kind": "pct",
+  "pt": "68,3%",
+  "en": "68.3%",
+  "desc": "Sul: non-PT runoff share in 2018"
+ },
+ "q4_reg_co_b_share_2014": {
+  "value": 0.5743111612812486,
+  "kind": "pct",
+  "pt": "57,4%",
+  "en": "57.4%",
+  "desc": "Centro-Oeste: non-PT runoff share in 2014"
+ },
+ "q4_reg_co_b_share_2018": {
+  "value": 0.6654710239121248,
+  "kind": "pct",
+  "pt": "66,5%",
+  "en": "66.5%",
+  "desc": "Centro-Oeste: non-PT runoff share in 2018"
+ },
+ "q4_reg_n_share_mun_b_grew": {
+  "value": 0.7022222222222222,
+  "kind": "pct",
+  "pt": "70,2%",
+  "en": "70.2%",
+  "desc": "Norte: share of municipalities where it grew"
+ },
+ "q4_reg_n_delta_b_votes": {
+  "value": 863810,
+  "kind": "mi",
+  "pt": "864 mil",
+  "en": "864 thousand",
+  "desc": "Norte: vote change"
+ },
+ "q4_reg_n_delta_b_share": {
+  "value": 0.08426872640400412,
+  "kind": "pts",
+  "pt": "8,4 pontos",
+  "en": "8.4 points",
+  "desc": "Norte: change of the non-PT runoff share"
+ },
+ "q4_reg_ne_share_mun_b_grew": {
+  "value": 0.33835005574136007,
+  "kind": "pct",
+  "pt": "33,8%",
+  "en": "33.8%",
+  "desc": "Nordeste: share of municipalities where it grew"
+ },
+ "q4_reg_ne_delta_b_votes": {
+  "value": 850977,
+  "kind": "mi",
+  "pt": "851 mil",
+  "en": "851 thousand",
+  "desc": "Nordeste: vote change"
+ },
+ "q4_reg_ne_delta_b_share": {
+  "value": 0.019880825578116768,
+  "kind": "pts",
+  "pt": "2,0 pontos",
+  "en": "2.0 points",
+  "desc": "Nordeste: change of the non-PT runoff share"
+ },
+ "q4_reg_se_share_mun_b_grew": {
+  "value": 0.8597122302158273,
+  "kind": "pct",
+  "pt": "86,0%",
+  "en": "86.0%",
+  "desc": "Sudeste: share of municipalities where it grew"
+ },
+ "q4_reg_se_delta_b_votes": {
+  "value": 2857064,
+  "kind": "mi",
+  "pt": "2,9 milhões",
+  "en": "2.9 million",
+  "desc": "Sudeste: vote change"
+ },
+ "q4_reg_se_delta_b_share": {
+  "value": 0.09182887904389869,
+  "kind": "pts",
+  "pt": "9,2 pontos",
+  "en": "9.2 points",
+  "desc": "Sudeste: change of the non-PT runoff share"
+ },
+ "q4_reg_s_share_mun_b_grew": {
+  "value": 0.9026028547439127,
+  "kind": "pct",
+  "pt": "90,3%",
+  "en": "90.3%",
+  "desc": "Sul: share of municipalities where it grew"
+ },
+ "q4_reg_s_delta_b_votes": {
+  "value": 1387985,
+  "kind": "mi",
+  "pt": "1,4 milhão",
+  "en": "1.4 million",
+  "desc": "Sul: vote change"
+ },
+ "q4_reg_s_delta_b_share": {
+  "value": 0.0935488509668303,
+  "kind": "pts",
+  "pt": "9,4 pontos",
+  "en": "9.4 points",
+  "desc": "Sul: change of the non-PT runoff share"
+ },
+ "q4_reg_co_share_mun_b_grew": {
+  "value": 0.8522483940042827,
+  "kind": "pct",
+  "pt": "85,2%",
+  "en": "85.2%",
+  "desc": "Centro-Oeste: share of municipalities where it grew"
+ },
+ "q4_reg_co_delta_b_votes": {
+  "value": 769306,
+  "kind": "mi",
+  "pt": "769 mil",
+  "en": "769 thousand",
+  "desc": "Centro-Oeste: vote change"
+ },
+ "q4_reg_co_delta_b_share": {
+  "value": 0.09115986263087617,
+  "kind": "pts",
+  "pt": "9,1 pontos",
+  "en": "9.1 points",
+  "desc": "Centro-Oeste: change of the non-PT runoff share"
+ },
+ "q4_top_name": {
+  "value": "Belford Roxo (RJ)",
+  "kind": "text",
+  "pt": "Belford Roxo (RJ)",
+  "en": "Belford Roxo (RJ)",
+  "desc": "largest growth among municipalities with 50,000+ voters"
+ },
+ "q4_top_delta": {
+  "value": 0.43696530604640726,
+  "kind": "pts",
+  "pt": "43,7 pontos",
+  "en": "43.7 points",
+  "desc": "its change"
+ },
+ "q4_top_b_2014": {
+  "value": 0.2517934002869441,
+  "kind": "pct",
+  "pt": "25,2%",
+  "en": "25.2%",
+  "desc": "non-PT share there in 2014"
+ },
+ "q4_top_b_2018": {
+  "value": 0.6887587063333513,
+  "kind": "pct",
+  "pt": "68,9%",
+  "en": "68.9%",
+  "desc": "Bolsonaro share there in 2018"
+ },
+ "q4_top10_rj": {
+  "value": 10,
+  "kind": "int",
+  "pt": "10",
+  "en": "10",
+  "desc": "of the 10 largest increases (50,000+ voters), how many in RJ"
+ },
+ "q4_top10_rj_phrase": {
+  "value": {
+   "pt": "as 10 maiores altas foram todas no estado do Rio de Janeiro",
+   "en": "all 10 largest increases were in Rio de Janeiro state"
+  },
+  "kind": "phrase",
+  "pt": "as 10 maiores altas foram todas no estado do Rio de Janeiro",
+  "en": "all 10 largest increases were in Rio de Janeiro state",
+  "desc": "sentence about the 10 largest increases, 2014->2018"
+ },
+ "q5_n_l_grew": {
+  "value": 3300,
+  "kind": "int",
+  "pt": "3.300",
+  "en": "3,300",
+  "desc": "2018->2022 runoff: municipalities where the lulista share grew"
+ },
+ "q5_share_l_grew": {
+  "value": 0.59245960502693,
+  "kind": "pct",
+  "pt": "59,2%",
+  "en": "59.2%",
+  "desc": "same, share"
+ },
+ "q5_n_l_fell": {
+  "value": 2270,
+  "kind": "int",
+  "pt": "2.270",
+  "en": "2,270",
+  "desc": "2018->2022: municipalities where it fell"
+ },
+ "q5_n_flipped_to_l": {
+  "value": 368,
+  "kind": "int",
+  "pt": "368",
+  "en": "368",
+  "desc": "2018->2022: municipalities led by Bolsonaro in 2018 and by Lula in 2022"
+ },
+ "q5_n_flipped_to_b": {
+  "value": 54,
+  "kind": "int",
+  "pt": "54",
+  "en": "54",
+  "desc": "2018->2022: the opposite"
+ },
+ "q5_delta_l_votes": {
+  "value": 13305093,
+  "kind": "mi",
+  "pt": "13,3 milhões",
+  "en": "13.3 million",
+  "desc": "Lula 2022 runoff votes minus Haddad 2018 runoff votes, national (abroad included)"
+ },
+ "q5_delta_b_votes": {
+  "value": 408507,
+  "kind": "mi",
+  "pt": "409 mil",
+  "en": "409 thousand",
+  "desc": "Bolsonaro 2022 runoff minus Bolsonaro 2018 runoff, national (abroad included)"
+ },
+ "q5_reg_n_delta_l_share": {
+  "value": 0.00867670955319727,
+  "kind": "pts_signed",
+  "pt": "+0,9 ponto",
+  "en": "+0.9 points",
+  "desc": "Norte: change of the lulista runoff share"
+ },
+ "q5_reg_n_delta_l_share_u": {
+  "value": 0.00867670955319727,
+  "kind": "pts",
+  "pt": "0,9 ponto",
+  "en": "0.9 points",
+  "desc": "Norte: same, absolute value"
+ },
+ "q5_reg_n_delta_l_votes": {
+  "value": 657169,
+  "kind": "mi",
+  "pt": "657 mil",
+  "en": "657 thousand",
+  "desc": "Norte: change in lulista votes"
+ },
+ "q5_reg_n_delta_b_votes": {
+  "value": 539837,
+  "kind": "mi",
+  "pt": "540 mil",
+  "en": "540 thousand",
+  "desc": "Norte: change in Bolsonaro votes (signed)"
+ },
+ "q5_reg_n_share_mun_l_grew": {
+  "value": 0.24888888888888888,
+  "kind": "pct",
+  "pt": "24,9%",
+  "en": "24.9%",
+  "desc": "Norte: share of municipalities where it grew"
+ },
+ "q5_reg_n_n_flipped_to_l": {
+  "value": 9,
+  "kind": "int",
+  "pt": "9",
+  "en": "9",
+  "desc": "Norte: municipalities flipped to Lula"
+ },
+ "q5_reg_ne_delta_l_share": {
+  "value": -0.003474641222388719,
+  "kind": "pts_signed",
+  "pt": "−0,3 ponto",
+  "en": "−0.3 points",
+  "desc": "Nordeste: change of the lulista runoff share"
+ },
+ "q5_reg_ne_delta_l_share_u": {
+  "value": 0.003474641222388719,
+  "kind": "pts",
+  "pt": "0,3 ponto",
+  "en": "0.3 points",
+  "desc": "Nordeste: same, absolute value"
+ },
+ "q5_reg_ne_delta_l_votes": {
+  "value": 2245155,
+  "kind": "mi",
+  "pt": "2,2 milhões",
+  "en": "2.2 million",
+  "desc": "Nordeste: change in lulista votes"
+ },
+ "q5_reg_ne_delta_b_votes": {
+  "value": 1138493,
+  "kind": "mi",
+  "pt": "1,1 milhão",
+  "en": "1.1 million",
+  "desc": "Nordeste: change in Bolsonaro votes (signed)"
+ },
+ "q5_reg_ne_share_mun_l_grew": {
+  "value": 0.20512820512820512,
+  "kind": "pct",
+  "pt": "20,5%",
+  "en": "20.5%",
+  "desc": "Nordeste: share of municipalities where it grew"
+ },
+ "q5_reg_ne_n_flipped_to_l": {
+  "value": 9,
+  "kind": "int",
+  "pt": "9",
+  "en": "9",
+  "desc": "Nordeste: municipalities flipped to Lula"
+ },
+ "q5_reg_se_delta_l_share": {
+  "value": 0.11110928061927355,
+  "kind": "pts_signed",
+  "pt": "+11,1 pontos",
+  "en": "+11.1 points",
+  "desc": "Sudeste: change of the lulista runoff share"
+ },
+ "q5_reg_se_delta_l_share_u": {
+  "value": 0.11110928061927355,
+  "kind": "pts",
+  "pt": "11,1 pontos",
+  "en": "11.1 points",
+  "desc": "Sudeste: same, absolute value"
+ },
+ "q5_reg_se_delta_l_votes": {
+  "value": 7777588,
+  "kind": "mi",
+  "pt": "7,8 milhões",
+  "en": "7.8 million",
+  "desc": "Sudeste: change in lulista votes"
+ },
+ "q5_reg_se_delta_b_votes": {
+  "value": -1307864,
+  "kind": "mi",
+  "pt": "−1,3 milhão",
+  "en": "−1.3 million",
+  "desc": "Sudeste: change in Bolsonaro votes (signed)"
+ },
+ "q5_reg_se_share_mun_l_grew": {
+  "value": 0.9406474820143885,
+  "kind": "pct",
+  "pt": "94,1%",
+  "en": "94.1%",
+  "desc": "Sudeste: share of municipalities where it grew"
+ },
+ "q5_reg_se_n_flipped_to_l": {
+  "value": 263,
+  "kind": "int",
+  "pt": "263",
+  "en": "263",
+  "desc": "Sudeste: municipalities flipped to Lula"
+ },
+ "q5_reg_s_delta_l_share": {
+  "value": 0.06424055784417454,
+  "kind": "pts_signed",
+  "pt": "+6,4 pontos",
+  "en": "+6.4 points",
+  "desc": "Sul: change of the lulista runoff share"
+ },
+ "q5_reg_s_delta_l_share_u": {
+  "value": 0.06424055784417454,
+  "kind": "pts",
+  "pt": "6,4 pontos",
+  "en": "6.4 points",
+  "desc": "Sul: same, absolute value"
+ },
+ "q5_reg_s_delta_l_votes": {
+  "value": 1597689,
+  "kind": "mi",
+  "pt": "1,6 milhão",
+  "en": "1.6 million",
+  "desc": "Sul: change in lulista votes"
+ },
+ "q5_reg_s_delta_b_votes": {
+  "value": -144237,
+  "kind": "mi",
+  "pt": "−144 mil",
+  "en": "−144 thousand",
+  "desc": "Sul: change in Bolsonaro votes (signed)"
+ },
+ "q5_reg_s_share_mun_l_grew": {
+  "value": 0.7716204869857263,
+  "kind": "pct",
+  "pt": "77,2%",
+  "en": "77.2%",
+  "desc": "Sul: share of municipalities where it grew"
+ },
+ "q5_reg_s_n_flipped_to_l": {
+  "value": 61,
+  "kind": "int",
+  "pt": "61",
+  "en": "61",
+  "desc": "Sul: municipalities flipped to Lula"
+ },
+ "q5_reg_co_delta_l_share": {
+  "value": 0.06338898427348855,
+  "kind": "pts_signed",
+  "pt": "+6,3 pontos",
+  "en": "+6.3 points",
+  "desc": "Centro-Oeste: change of the lulista runoff share"
+ },
+ "q5_reg_co_delta_l_share_u": {
+  "value": 0.06338898427348855,
+  "kind": "pts",
+  "pt": "6,3 pontos",
+  "en": "6.3 points",
+  "desc": "Centro-Oeste: same, absolute value"
+ },
+ "q5_reg_co_delta_l_votes": {
+  "value": 928317,
+  "kind": "mi",
+  "pt": "928 mil",
+  "en": "928 thousand",
+  "desc": "Centro-Oeste: change in lulista votes"
+ },
+ "q5_reg_co_delta_b_votes": {
+  "value": 168685,
+  "kind": "mi",
+  "pt": "169 mil",
+  "en": "169 thousand",
+  "desc": "Centro-Oeste: change in Bolsonaro votes (signed)"
+ },
+ "q5_reg_co_share_mun_l_grew": {
+  "value": 0.7109207708779444,
+  "kind": "pct",
+  "pt": "71,1%",
+  "en": "71.1%",
+  "desc": "Centro-Oeste: share of municipalities where it grew"
+ },
+ "q5_reg_co_n_flipped_to_l": {
+  "value": 26,
+  "kind": "int",
+  "pt": "26",
+  "en": "26",
+  "desc": "Centro-Oeste: municipalities flipped to Lula"
+ },
+ "q5_se_share_of_l_gain": {
+  "value": 0.5889471674744611,
+  "kind": "pct",
+  "pt": "58,9%",
+  "en": "58.9%",
+  "desc": "share of Lula's 2018->2022 vote gain inside Brazil (abroad excluded) that came from the Southeast"
+ },
+ "q5_top_name": {
+  "value": "Cruzeiro (SP)",
+  "kind": "text",
+  "pt": "Cruzeiro (SP)",
+  "en": "Cruzeiro (SP)",
+  "desc": "largest lulista growth among 50,000+ voters"
+ },
+ "q5_top_delta": {
+  "value": 0.16994848930413262,
+  "kind": "pts",
+  "pt": "17,0 pontos",
+  "en": "17.0 points",
+  "desc": "its change"
+ },
+ "q5_top10_sp": {
+  "value": 10,
+  "kind": "int",
+  "pt": "10",
+  "en": "10",
+  "desc": "of the 10 largest increases (50,000+ voters), how many in SP"
+ },
+ "q5_top10_sp_phrase": {
+  "value": {
+   "pt": "as 10 maiores altas foram todas no estado de São Paulo",
+   "en": "all 10 largest increases were in São Paulo state"
+  },
+  "kind": "phrase",
+  "pt": "as 10 maiores altas foram todas no estado de São Paulo",
+  "en": "all 10 largest increases were in São Paulo state",
+  "desc": "sentence about the 10 largest increases, 2018->2022"
+ },
+ "q6_delta_l_votes": {
+  "value": 10376694,
+  "kind": "mi",
+  "pt": "10,4 milhões",
+  "en": "10.4 million",
+  "desc": "2026 round 1 -> runoff: delta_l_votes"
+ },
+ "q6_delta_b_votes": {
+  "value": 3721538,
+  "kind": "mi",
+  "pt": "3,7 milhões",
+  "en": "3.7 million",
+  "desc": "2026 round 1 -> runoff: delta_b_votes"
+ },
+ "q6_others_r1": {
+  "value": 9316747,
+  "kind": "mi",
+  "pt": "9,3 milhões",
+  "en": "9.3 million",
+  "desc": "2026 round 1 -> runoff: others_r1"
+ },
+ "q6_delta_turnout": {
+  "value": 2960239,
+  "kind": "mi",
+  "pt": "3,0 milhões",
+  "en": "3.0 million",
+  "desc": "2026 round 1 -> runoff: delta_turnout"
+ },
+ "q6_delta_blank_null": {
+  "value": 1821246,
+  "kind": "mi",
+  "pt": "1,8 milhão",
+  "en": "1.8 million",
+  "desc": "2026 round 1 -> runoff: delta_blank_null (absolute value; it fell)"
+ },
+ "q6_b_lead_r1": {
+  "value": 2224965,
+  "kind": "mi",
+  "pt": "2,2 milhões",
+  "en": "2.2 million",
+  "desc": "2026 round 1 -> runoff: b_lead_r1"
+ },
+ "q6_l_lead_r2": {
+  "value": 4430191,
+  "kind": "mi",
+  "pt": "4,4 milhões",
+  "en": "4.4 million",
+  "desc": "2026 round 1 -> runoff: l_lead_r2"
+ },
+ "q6_n_l_gained_more": {
+  "value": 5230,
+  "kind": "int",
+  "pt": "5.230",
+  "en": "5,230",
+  "desc": "2026: municipalities n_l_gained_more"
+ },
+ "q6_n_l_gained_votes": {
+  "value": 5491,
+  "kind": "int",
+  "pt": "5.491",
+  "en": "5,491",
+  "desc": "2026: municipalities n_l_gained_votes"
+ },
+ "q6_n_b_gained_votes": {
+  "value": 4624,
+  "kind": "int",
+  "pt": "4.624",
+  "en": "4,624",
+  "desc": "2026: municipalities n_b_gained_votes"
+ },
+ "q6_n_flipped_to_l": {
+  "value": 211,
+  "kind": "int",
+  "pt": "211",
+  "en": "211",
+  "desc": "2026: municipalities n_flipped_to_l"
+ },
+ "q6_n_flipped_to_b": {
+  "value": 1,
+  "kind": "int",
+  "pt": "1",
+  "en": "1",
+  "desc": "2026: municipalities n_flipped_to_b"
+ },
+ "q6_n_turnout_up": {
+  "value": 4440,
+  "kind": "int",
+  "pt": "4.440",
+  "en": "4,440",
+  "desc": "2026: municipalities n_turnout_up"
+ },
+ "q6_share_l_gained_more": {
+  "value": 0.9387901633458984,
+  "kind": "pct",
+  "pt": "93,9%",
+  "en": "93.9%",
+  "desc": "share of municipalities where Lula grew more than Flavio"
+ },
+ "q6_n_turnout_down": {
+  "value": 1128,
+  "kind": "int",
+  "pt": "1.128",
+  "en": "1,128",
+  "desc": "municipalities where the turnout rate fell"
+ },
+ "q6_n_b_gained_more": {
+  "value": 340,
+  "kind": "int",
+  "pt": "340",
+  "en": "340",
+  "desc": "municipalities where Flavio grew more than Lula (points of the electorate)"
+ },
+ "q6_share_b_gained_more": {
+  "value": 0.06103033566684617,
+  "kind": "pct",
+  "pt": "6,1%",
+  "en": "6.1%",
+  "desc": "same, share"
+ },
+ "q6_median_gain_l": {
+  "value": 0.05451612903225808,
+  "kind": "pts",
+  "pt": "5,5 pontos",
+  "en": "5.5 points",
+  "desc": "median municipal gain of Lula, points of the electorate"
+ },
+ "q6_median_gain_b": {
+  "value": 0.019205002233139812,
+  "kind": "pts",
+  "pt": "1,9 ponto",
+  "en": "1.9 points",
+  "desc": "median municipal gain of Flavio, points of the electorate"
+ },
+ "q6_flipped_to_b_names": {
+  "value": [
+   "Uirapuru (GO)"
+  ],
+  "kind": "list",
+  "pt": "Uirapuru (GO)",
+  "en": "Uirapuru (GO)",
+  "desc": "municipalities led by Lula in round 1 and by Flavio in the runoff"
+ },
+ "q6_r_gain_l_pts_others_r1_pts": {
+  "value": 0.4828916933667579,
+  "kind": "r",
+  "pt": "0,48",
+  "en": "0.48",
+  "desc": "weighted correlation gain_l_pts x others_r1_pts"
+ },
+ "q6_r_gain_l_pts_turnout_change_pts": {
+  "value": 0.7139438418645351,
+  "kind": "r",
+  "pt": "0,71",
+  "en": "0.71",
+  "desc": "weighted correlation gain_l_pts x turnout_change_pts"
+ },
+ "q6_r_gain_b_pts_others_r1_pts": {
+  "value": 0.7653367574062904,
+  "kind": "r",
+  "pt": "0,77",
+  "en": "0.77",
+  "desc": "weighted correlation gain_b_pts x others_r1_pts"
+ },
+ "q6_r_gain_b_pts_turnout_change_pts": {
+  "value": 0.5791317578416423,
+  "kind": "r",
+  "pt": "0,58",
+  "en": "0.58",
+  "desc": "weighted correlation gain_b_pts x turnout_change_pts"
+ },
+ "q6_r_gain_l_pts_blank_null_change_pts": {
+  "value": -0.401587176407028,
+  "kind": "r",
+  "pt": "−0,40",
+  "en": "−0.40",
+  "desc": "weighted correlation gain_l_pts x blank_null_change_pts"
+ },
+ "q6_bin_others_r1_pts_q1_gain_l": {
+  "value": 0.04498989976097488,
+  "kind": "pts",
+  "pt": "4,5 pontos",
+  "en": "4.5 points",
+  "desc": "others_r1_pts quintile 1: Lula gain"
+ },
+ "q6_bin_others_r1_pts_q1_gain_b": {
+  "value": 0.001999744014399477,
+  "kind": "pts",
+  "pt": "0,2 ponto",
+  "en": "0.2 points",
+  "desc": "others_r1_pts quintile 1: Flavio gain"
+ },
+ "q6_bin_others_r1_pts_q1_min": {
+  "value": 0.01018843120070114,
+  "kind": "pct",
+  "pt": "1,0%",
+  "en": "1.0%",
+  "desc": "others_r1_pts quintile 1: lower bound"
+ },
+ "q6_bin_others_r1_pts_q1_max": {
+  "value": 0.030843373493975902,
+  "kind": "pct",
+  "pt": "3,1%",
+  "en": "3.1%",
+  "desc": "others_r1_pts quintile 1: upper bound"
+ },
+ "q6_bin_others_r1_pts_q5_gain_l": {
+  "value": 0.07266658973153739,
+  "kind": "pts",
+  "pt": "7,3 pontos",
+  "en": "7.3 points",
+  "desc": "others_r1_pts quintile 5: Lula gain"
+ },
+ "q6_bin_others_r1_pts_q5_gain_b": {
+  "value": 0.03545204310041102,
+  "kind": "pts",
+  "pt": "3,5 pontos",
+  "en": "3.5 points",
+  "desc": "others_r1_pts quintile 5: Flavio gain"
+ },
+ "q6_bin_others_r1_pts_q5_min": {
+  "value": 0.06046804732032884,
+  "kind": "pct",
+  "pt": "6,0%",
+  "en": "6.0%",
+  "desc": "others_r1_pts quintile 5: lower bound"
+ },
+ "q6_bin_others_r1_pts_q5_max": {
+  "value": 0.2633444537114262,
+  "kind": "pct",
+  "pt": "26,3%",
+  "en": "26.3%",
+  "desc": "others_r1_pts quintile 5: upper bound"
+ },
+ "q6_bin_turnout_change_pts_q1_gain_l": {
+  "value": 0.03730066442180589,
+  "kind": "pts",
+  "pt": "3,7 pontos",
+  "en": "3.7 points",
+  "desc": "turnout_change_pts quintile 1: Lula gain"
+ },
+ "q6_bin_turnout_change_pts_q1_gain_b": {
+  "value": -0.002163692406872191,
+  "kind": "pts",
+  "pt": "−0,2 ponto",
+  "en": "−0.2 points",
+  "desc": "turnout_change_pts quintile 1: Flavio gain"
+ },
+ "q6_bin_turnout_change_pts_q1_min": {
+  "value": -0.23814885711068567,
+  "kind": "pts",
+  "pt": "−23,8 pontos",
+  "en": "−23.8 points",
+  "desc": "turnout_change_pts quintile 1: lower bound"
+ },
+ "q6_bin_turnout_change_pts_q1_max": {
+  "value": -0.00034124183246431183,
+  "kind": "pts",
+  "pt": "0,0 ponto",
+  "en": "0.0 points",
+  "desc": "turnout_change_pts quintile 1: upper bound"
+ },
+ "q6_bin_turnout_change_pts_q5_gain_l": {
+  "value": 0.07930025945831129,
+  "kind": "pts",
+  "pt": "7,9 pontos",
+  "en": "7.9 points",
+  "desc": "turnout_change_pts quintile 5: Lula gain"
+ },
+ "q6_bin_turnout_change_pts_q5_gain_b": {
+  "value": 0.02795012667825227,
+  "kind": "pts",
+  "pt": "2,8 pontos",
+  "en": "2.8 points",
+  "desc": "turnout_change_pts quintile 5: Flavio gain"
+ },
+ "q6_bin_turnout_change_pts_q5_min": {
+  "value": 0.029318371519737263,
+  "kind": "pts",
+  "pt": "2,9 pontos",
+  "en": "2.9 points",
+  "desc": "turnout_change_pts quintile 5: lower bound"
+ },
+ "q6_bin_turnout_change_pts_q5_max": {
+  "value": 0.08153648436384409,
+  "kind": "pts",
+  "pt": "8,2 pontos",
+  "en": "8.2 points",
+  "desc": "turnout_change_pts quintile 5: upper bound"
+ },
+ "q6_net_gain_min": {
+  "value": 0.0370736883559128,
+  "kind": "pts",
+  "pt": "3,7 pontos",
+  "en": "3.7 points",
+  "desc": "smallest net gain of Lula over Flavio across the ten quintile groups (pts of electorate)"
+ },
+ "q6_net_gain_min_num": {
+  "value": 0.0370736883559128,
+  "kind": "pts_num",
+  "pt": "3,7",
+  "en": "3.7",
+  "desc": "same, number only"
+ },
+ "q6_net_gain_max": {
+  "value": 0.05135013278005902,
+  "kind": "pts",
+  "pt": "5,1 pontos",
+  "en": "5.1 points",
+  "desc": "largest net gain of Lula over Flavio across the ten quintile groups"
+ },
+ "q6_reg_n_net_swing": {
+  "value": 459914,
+  "kind": "mi",
+  "pt": "460 mil",
+  "en": "460 thousand",
+  "desc": "Norte: Lula gain minus Flavio gain, votes"
+ },
+ "q6_reg_n_delta_l": {
+  "value": 474024,
+  "kind": "mi",
+  "pt": "474 mil",
+  "en": "474 thousand",
+  "desc": "Norte: Lula gain"
+ },
+ "q6_reg_n_delta_b": {
+  "value": 14110,
+  "kind": "mi",
+  "pt": "14 mil",
+  "en": "14 thousand",
+  "desc": "Norte: Flavio gain"
+ },
+ "q6_reg_ne_net_swing": {
+  "value": 2558085,
+  "kind": "mi",
+  "pt": "2,6 milhões",
+  "en": "2.6 million",
+  "desc": "Nordeste: Lula gain minus Flavio gain, votes"
+ },
+ "q6_reg_ne_delta_l": {
+  "value": 2955848,
+  "kind": "mi",
+  "pt": "3,0 milhões",
+  "en": "3.0 million",
+  "desc": "Nordeste: Lula gain"
+ },
+ "q6_reg_ne_delta_b": {
+  "value": 397763,
+  "kind": "mi",
+  "pt": "398 mil",
+  "en": "398 thousand",
+  "desc": "Nordeste: Flavio gain"
+ },
+ "q6_reg_se_net_swing": {
+  "value": 2855441,
+  "kind": "mi",
+  "pt": "2,9 milhões",
+  "en": "2.9 million",
+  "desc": "Sudeste: Lula gain minus Flavio gain, votes"
+ },
+ "q6_reg_se_delta_l": {
+  "value": 4800333,
+  "kind": "mi",
+  "pt": "4,8 milhões",
+  "en": "4.8 million",
+  "desc": "Sudeste: Lula gain"
+ },
+ "q6_reg_se_delta_b": {
+  "value": 1944892,
+  "kind": "mi",
+  "pt": "1,9 milhão",
+  "en": "1.9 million",
+  "desc": "Sudeste: Flavio gain"
+ },
+ "q6_reg_s_net_swing": {
+  "value": 466101,
+  "kind": "mi",
+  "pt": "466 mil",
+  "en": "466 thousand",
+  "desc": "Sul: Lula gain minus Flavio gain, votes"
+ },
+ "q6_reg_s_delta_l": {
+  "value": 1332846,
+  "kind": "mi",
+  "pt": "1,3 milhão",
+  "en": "1.3 million",
+  "desc": "Sul: Lula gain"
+ },
+ "q6_reg_s_delta_b": {
+  "value": 866745,
+  "kind": "mi",
+  "pt": "867 mil",
+  "en": "867 thousand",
+  "desc": "Sul: Flavio gain"
+ },
+ "q6_reg_co_net_swing": {
+  "value": 300445,
+  "kind": "mi",
+  "pt": "300 mil",
+  "en": "300 thousand",
+  "desc": "Centro-Oeste: Lula gain minus Flavio gain, votes"
+ },
+ "q6_reg_co_delta_l": {
+  "value": 770876,
+  "kind": "mi",
+  "pt": "771 mil",
+  "en": "771 thousand",
+  "desc": "Centro-Oeste: Lula gain"
+ },
+ "q6_reg_co_delta_b": {
+  "value": 470431,
+  "kind": "mi",
+  "pt": "470 mil",
+  "en": "470 thousand",
+  "desc": "Centro-Oeste: Flavio gain"
+ },
+ "q6_top_pts_name": {
+  "value": "Mariana (MG)",
+  "kind": "text",
+  "pt": "Mariana (MG)",
+  "en": "Mariana (MG)",
+  "desc": "largest Lula gain in points, 50,000+ voters"
+ },
+ "q6_top_pts_gain": {
+  "value": 0.11150299084891513,
+  "kind": "pts",
+  "pt": "11,2 pontos",
+  "en": "11.2 points",
+  "desc": "its gain"
+ },
+ "q6_top_pts_b_name": {
+  "value": "Trindade (GO)",
+  "kind": "text",
+  "pt": "Trindade (GO)",
+  "en": "Trindade (GO)",
+  "desc": "largest Flavio gain in points, 50,000+ voters"
+ },
+ "q6_top_pts_b_gain": {
+  "value": 0.07571716904304593,
+  "kind": "pts",
+  "pt": "7,6 pontos",
+  "en": "7.6 points",
+  "desc": "its gain"
+ },
+ "q6_top_pts_b_gain_l": {
+  "value": 0.09512679731927703,
+  "kind": "pts",
+  "pt": "9,5 pontos",
+  "en": "9.5 points",
+  "desc": "Lula's gain in the same municipality"
+ },
+ "q6_top10_b_go": {
+  "value": 8,
+  "kind": "int",
+  "pt": "8",
+  "en": "8",
+  "desc": "of Flavio's 10 largest gains in points (50,000+ voters), how many in Goias"
+ },
+ "q6_top_votes_b_name": {
+  "value": "São Paulo (SP)",
+  "kind": "text",
+  "pt": "São Paulo (SP)",
+  "en": "São Paulo (SP)",
+  "desc": "largest Flavio gain in votes"
+ },
+ "q6_top_votes_b_gain": {
+  "value": 337176,
+  "kind": "mi",
+  "pt": "337 mil",
+  "en": "337 thousand",
+  "desc": "its gain in votes"
+ },
+ "q6_top_votes_name": {
+  "value": "São Paulo (SP)",
+  "kind": "text",
+  "pt": "São Paulo (SP)",
+  "en": "São Paulo (SP)",
+  "desc": "largest Lula gain in votes"
+ },
+ "q6_top_votes_gain": {
+  "value": 812005,
+  "kind": "mil",
+  "pt": "812 mil",
+  "en": "812 thousand",
+  "desc": "its gain in votes"
+ },
+ "q6_top_votes_gain_b": {
+  "value": 337176,
+  "kind": "mil",
+  "pt": "337 mil",
+  "en": "337 thousand",
+  "desc": "Flavio gain in votes there"
+ },
+ "q7_income1_p50_l": {
+  "value": 0.7637517196626749,
+  "kind": "pct",
+  "pt": "76,4%",
+  "en": "76.4%",
+  "desc": "2026 runoff, income group 1: median municipal L share"
+ },
+ "q7_income1_p50_b": {
+  "value": 0.23624828033732514,
+  "kind": "pct",
+  "pt": "23,6%",
+  "en": "23.6%",
+  "desc": "2026 runoff, income group 1: median municipal B share"
+ },
+ "q7_income1_p10_l": {
+  "value": 0.6327537631687111,
+  "kind": "pct",
+  "pt": "63,3%",
+  "en": "63.3%",
+  "desc": "... 10th percentile of L share"
+ },
+ "q7_income1_p90_l": {
+  "value": 0.8512870710016178,
+  "kind": "pct",
+  "pt": "85,1%",
+  "en": "85.1%",
+  "desc": "... 90th percentile of L share"
+ },
+ "q7_income1_led_by_l": {
+  "value": 1082,
+  "kind": "int",
+  "pt": "1.082",
+  "en": "1,082",
+  "desc": "... municipalities led by L"
+ },
+ "q7_income1_led_by_b": {
+  "value": 32,
+  "kind": "int",
+  "pt": "32",
+  "en": "32",
+  "desc": "... municipalities led by B"
+ },
+ "q7_income1_municipalities": {
+  "value": 1114,
+  "kind": "int",
+  "pt": "1.114",
+  "en": "1,114",
+  "desc": "... municipalities"
+ },
+ "q7_income1_share_l_weighted": {
+  "value": 0.7366761519804746,
+  "kind": "pct",
+  "pt": "73,7%",
+  "en": "73.7%",
+  "desc": "... L share of the group's votes"
+ },
+ "q7_income1_income_min": {
+  "value": 160.0,
+  "kind": "brl",
+  "pt": "R$ 160",
+  "en": "R$ 160",
+  "desc": "... lowest median income in the group"
+ },
+ "q7_income1_income_max": {
+  "value": 552.4,
+  "kind": "brl",
+  "pt": "R$ 552",
+  "en": "R$ 552",
+  "desc": "... highest median income in the group"
+ },
+ "q7_income2_p50_l": {
+  "value": 0.7047429553028703,
+  "kind": "pct",
+  "pt": "70,5%",
+  "en": "70.5%",
+  "desc": "2026 runoff, income group 2: median municipal L share"
+ },
+ "q7_income2_p50_b": {
+  "value": 0.29525704469712966,
+  "kind": "pct",
+  "pt": "29,5%",
+  "en": "29.5%",
+  "desc": "2026 runoff, income group 2: median municipal B share"
+ },
+ "q7_income2_p10_l": {
+  "value": 0.5338245656190094,
+  "kind": "pct",
+  "pt": "53,4%",
+  "en": "53.4%",
+  "desc": "... 10th percentile of L share"
+ },
+ "q7_income2_p90_l": {
+  "value": 0.8174063551270666,
+  "kind": "pct",
+  "pt": "81,7%",
+  "en": "81.7%",
+  "desc": "... 90th percentile of L share"
+ },
+ "q7_income2_led_by_l": {
+  "value": 1034,
+  "kind": "int",
+  "pt": "1.034",
+  "en": "1,034",
+  "desc": "... municipalities led by L"
+ },
+ "q7_income2_led_by_b": {
+  "value": 84,
+  "kind": "int",
+  "pt": "84",
+  "en": "84",
+  "desc": "... municipalities led by B"
+ },
+ "q7_income2_municipalities": {
+  "value": 1118,
+  "kind": "int",
+  "pt": "1.118",
+  "en": "1,118",
+  "desc": "... municipalities"
+ },
+ "q7_income2_share_l_weighted": {
+  "value": 0.6534120015436062,
+  "kind": "pct",
+  "pt": "65,3%",
+  "en": "65.3%",
+  "desc": "... L share of the group's votes"
+ },
+ "q7_income2_income_min": {
+  "value": 553.0,
+  "kind": "brl",
+  "pt": "R$ 553",
+  "en": "R$ 553",
+  "desc": "... lowest median income in the group"
+ },
+ "q7_income2_income_max": {
+  "value": 731.0,
+  "kind": "brl",
+  "pt": "R$ 731",
+  "en": "R$ 731",
+  "desc": "... highest median income in the group"
+ },
+ "q7_income3_p50_l": {
+  "value": 0.493051584402298,
+  "kind": "pct",
+  "pt": "49,3%",
+  "en": "49.3%",
+  "desc": "2026 runoff, income group 3: median municipal L share"
+ },
+ "q7_income3_p50_b": {
+  "value": 0.506948415597702,
+  "kind": "pct",
+  "pt": "50,7%",
+  "en": "50.7%",
+  "desc": "2026 runoff, income group 3: median municipal B share"
+ },
+ "q7_income3_p10_l": {
+  "value": 0.36337784257860223,
+  "kind": "pct",
+  "pt": "36,3%",
+  "en": "36.3%",
+  "desc": "... 10th percentile of L share"
+ },
+ "q7_income3_p90_l": {
+  "value": 0.6489202412602026,
+  "kind": "pct",
+  "pt": "64,9%",
+  "en": "64.9%",
+  "desc": "... 90th percentile of L share"
+ },
+ "q7_income3_led_by_l": {
+  "value": 527,
+  "kind": "int",
+  "pt": "527",
+  "en": "527",
+  "desc": "... municipalities led by L"
+ },
+ "q7_income3_led_by_b": {
+  "value": 583,
+  "kind": "int",
+  "pt": "583",
+  "en": "583",
+  "desc": "... municipalities led by B"
+ },
+ "q7_income3_municipalities": {
+  "value": 1110,
+  "kind": "int",
+  "pt": "1.110",
+  "en": "1,110",
+  "desc": "... municipalities"
+ },
+ "q7_income3_share_l_weighted": {
+  "value": 0.5311317995529984,
+  "kind": "pct",
+  "pt": "53,1%",
+  "en": "53.1%",
+  "desc": "... L share of the group's votes"
+ },
+ "q7_income3_income_min": {
+  "value": 732.5,
+  "kind": "brl",
+  "pt": "R$ 732",
+  "en": "R$ 732",
+  "desc": "... lowest median income in the group"
+ },
+ "q7_income3_income_max": {
+  "value": 1015.5,
+  "kind": "brl",
+  "pt": "R$ 1.016",
+  "en": "R$ 1,016",
+  "desc": "... highest median income in the group"
+ },
+ "q7_income4_p50_l": {
+  "value": 0.4055474375648469,
+  "kind": "pct",
+  "pt": "40,6%",
+  "en": "40.6%",
+  "desc": "2026 runoff, income group 4: median municipal L share"
+ },
+ "q7_income4_p50_b": {
+  "value": 0.5944525624351531,
+  "kind": "pct",
+  "pt": "59,4%",
+  "en": "59.4%",
+  "desc": "2026 runoff, income group 4: median municipal B share"
+ },
+ "q7_income4_p10_l": {
+  "value": 0.3049949591211505,
+  "kind": "pct",
+  "pt": "30,5%",
+  "en": "30.5%",
+  "desc": "... 10th percentile of L share"
+ },
+ "q7_income4_p90_l": {
+  "value": 0.5236939448441247,
+  "kind": "pct",
+  "pt": "52,4%",
+  "en": "52.4%",
+  "desc": "... 90th percentile of L share"
+ },
+ "q7_income4_led_by_l": {
+  "value": 208,
+  "kind": "int",
+  "pt": "208",
+  "en": "208",
+  "desc": "... municipalities led by L"
+ },
+ "q7_income4_led_by_b": {
+  "value": 1183,
+  "kind": "int",
+  "pt": "1.183",
+  "en": "1,183",
+  "desc": "... municipalities led by B"
+ },
+ "q7_income4_municipalities": {
+  "value": 1392,
+  "kind": "int",
+  "pt": "1.392",
+  "en": "1,392",
+  "desc": "... municipalities"
+ },
+ "q7_income4_share_l_weighted": {
+  "value": 0.444918996580691,
+  "kind": "pct",
+  "pt": "44,5%",
+  "en": "44.5%",
+  "desc": "... L share of the group's votes"
+ },
+ "q7_income4_income_min": {
+  "value": 1016.67,
+  "kind": "brl",
+  "pt": "R$ 1.017",
+  "en": "R$ 1,017",
+  "desc": "... lowest median income in the group"
+ },
+ "q7_income4_income_max": {
+  "value": 1212.0,
+  "kind": "brl",
+  "pt": "R$ 1.212",
+  "en": "R$ 1,212",
+  "desc": "... highest median income in the group"
+ },
+ "q7_income5_p50_l": {
+  "value": 0.31929938348401915,
+  "kind": "pct",
+  "pt": "31,9%",
+  "en": "31.9%",
+  "desc": "2026 runoff, income group 5: median municipal L share"
+ },
+ "q7_income5_p50_b": {
+  "value": 0.6807006165159808,
+  "kind": "pct",
+  "pt": "68,1%",
+  "en": "68.1%",
+  "desc": "2026 runoff, income group 5: median municipal B share"
+ },
+ "q7_income5_p10_l": {
+  "value": 0.21071387331240066,
+  "kind": "pct",
+  "pt": "21,1%",
+  "en": "21.1%",
+  "desc": "... 10th percentile of L share"
+ },
+ "q7_income5_p90_l": {
+  "value": 0.4370092595794207,
+  "kind": "pct",
+  "pt": "43,7%",
+  "en": "43.7%",
+  "desc": "... 90th percentile of L share"
+ },
+ "q7_income5_led_by_l": {
+  "value": 24,
+  "kind": "int",
+  "pt": "24",
+  "en": "24",
+  "desc": "... municipalities led by L"
+ },
+ "q7_income5_led_by_b": {
+  "value": 812,
+  "kind": "int",
+  "pt": "812",
+  "en": "812",
+  "desc": "... municipalities led by B"
+ },
+ "q7_income5_municipalities": {
+  "value": 836,
+  "kind": "int",
+  "pt": "836",
+  "en": "836",
+  "desc": "... municipalities"
+ },
+ "q7_income5_share_l_weighted": {
+  "value": 0.41983762656999496,
+  "kind": "pct",
+  "pt": "42,0%",
+  "en": "42.0%",
+  "desc": "... L share of the group's votes"
+ },
+ "q7_income5_income_min": {
+  "value": 1212.5,
+  "kind": "brl",
+  "pt": "R$ 1.212",
+  "en": "R$ 1,212",
+  "desc": "... lowest median income in the group"
+ },
+ "q7_income5_income_max": {
+  "value": 2500.0,
+  "kind": "brl",
+  "pt": "R$ 2.500",
+  "en": "R$ 2,500",
+  "desc": "... highest median income in the group"
+ },
+ "q7_region1_p50_l": {
+  "value": 0.5387462847430347,
+  "kind": "pct",
+  "pt": "53,9%",
+  "en": "53.9%",
+  "desc": "2026 runoff, region group 1: median municipal L share"
+ },
+ "q7_region1_p50_b": {
+  "value": 0.46125371525696535,
+  "kind": "pct",
+  "pt": "46,1%",
+  "en": "46.1%",
+  "desc": "2026 runoff, region group 1: median municipal B share"
+ },
+ "q7_region1_p10_l": {
+  "value": 0.2821592886540122,
+  "kind": "pct",
+  "pt": "28,2%",
+  "en": "28.2%",
+  "desc": "... 10th percentile of L share"
+ },
+ "q7_region1_p90_l": {
+  "value": 0.737363315320336,
+  "kind": "pct",
+  "pt": "73,7%",
+  "en": "73.7%",
+  "desc": "... 90th percentile of L share"
+ },
+ "q7_region1_led_by_l": {
+  "value": 267,
+  "kind": "int",
+  "pt": "267",
+  "en": "267",
+  "desc": "... municipalities led by L"
+ },
+ "q7_region1_led_by_b": {
+  "value": 183,
+  "kind": "int",
+  "pt": "183",
+  "en": "183",
+  "desc": "... municipalities led by B"
+ },
+ "q7_region1_municipalities": {
+  "value": 450,
+  "kind": "int",
+  "pt": "450",
+  "en": "450",
+  "desc": "... municipalities"
+ },
+ "q7_region1_share_l_weighted": {
+  "value": 0.5000536913526469,
+  "kind": "pct",
+  "pt": "50,0%",
+  "en": "50.0%",
+  "desc": "... L share of the group's votes"
+ },
+ "q7_region2_p50_l": {
+  "value": 0.7567006394378741,
+  "kind": "pct",
+  "pt": "75,7%",
+  "en": "75.7%",
+  "desc": "2026 runoff, region group 2: median municipal L share"
+ },
+ "q7_region2_p50_b": {
+  "value": 0.24329936056212587,
+  "kind": "pct",
+  "pt": "24,3%",
+  "en": "24.3%",
+  "desc": "2026 runoff, region group 2: median municipal B share"
+ },
+ "q7_region2_p10_l": {
+  "value": 0.6377486585286652,
+  "kind": "pct",
+  "pt": "63,8%",
+  "en": "63.8%",
+  "desc": "... 10th percentile of L share"
+ },
+ "q7_region2_p90_l": {
+  "value": 0.8438030770271898,
+  "kind": "pct",
+  "pt": "84,4%",
+  "en": "84.4%",
+  "desc": "... 90th percentile of L share"
+ },
+ "q7_region2_led_by_l": {
+  "value": 1774,
+  "kind": "int",
+  "pt": "1.774",
+  "en": "1,774",
+  "desc": "... municipalities led by L"
+ },
+ "q7_region2_led_by_b": {
+  "value": 20,
+  "kind": "int",
+  "pt": "20",
+  "en": "20",
+  "desc": "... municipalities led by B"
+ },
+ "q7_region2_municipalities": {
+  "value": 1794,
+  "kind": "int",
+  "pt": "1.794",
+  "en": "1,794",
+  "desc": "... municipalities"
+ },
+ "q7_region2_share_l_weighted": {
+  "value": 0.693685007544436,
+  "kind": "pct",
+  "pt": "69,4%",
+  "en": "69.4%",
+  "desc": "... L share of the group's votes"
+ },
+ "q7_region3_p50_l": {
+  "value": 0.4589255082257976,
+  "kind": "pct",
+  "pt": "45,9%",
+  "en": "45.9%",
+  "desc": "2026 runoff, region group 3: median municipal L share"
+ },
+ "q7_region3_p50_b": {
+  "value": 0.5410744917742024,
+  "kind": "pct",
+  "pt": "54,1%",
+  "en": "54.1%",
+  "desc": "2026 runoff, region group 3: median municipal B share"
+ },
+ "q7_region3_p10_l": {
+  "value": 0.33270822830083846,
+  "kind": "pct",
+  "pt": "33,3%",
+  "en": "33.3%",
+  "desc": "... 10th percentile of L share"
+ },
+ "q7_region3_p90_l": {
+  "value": 0.6531791613722998,
+  "kind": "pct",
+  "pt": "65,3%",
+  "en": "65.3%",
+  "desc": "... 90th percentile of L share"
+ },
+ "q7_region3_led_by_l": {
+  "value": 636,
+  "kind": "int",
+  "pt": "636",
+  "en": "636",
+  "desc": "... municipalities led by L"
+ },
+ "q7_region3_led_by_b": {
+  "value": 1032,
+  "kind": "int",
+  "pt": "1.032",
+  "en": "1,032",
+  "desc": "... municipalities led by B"
+ },
+ "q7_region3_municipalities": {
+  "value": 1668,
+  "kind": "int",
+  "pt": "1.668",
+  "en": "1,668",
+  "desc": "... municipalities"
+ },
+ "q7_region3_share_l_weighted": {
+  "value": 0.4724189575645974,
+  "kind": "pct",
+  "pt": "47,2%",
+  "en": "47.2%",
+  "desc": "... L share of the group's votes"
+ },
+ "q7_region4_p50_l": {
+  "value": 0.3642439431913116,
+  "kind": "pct",
+  "pt": "36,4%",
+  "en": "36.4%",
+  "desc": "2026 runoff, region group 4: median municipal L share"
+ },
+ "q7_region4_p50_b": {
+  "value": 0.6357560568086884,
+  "kind": "pct",
+  "pt": "63,6%",
+  "en": "63.6%",
+  "desc": "2026 runoff, region group 4: median municipal B share"
+ },
+ "q7_region4_p10_l": {
+  "value": 0.22443469456631793,
+  "kind": "pct",
+  "pt": "22,4%",
+  "en": "22.4%",
+  "desc": "... 10th percentile of L share"
+ },
+ "q7_region4_p90_l": {
+  "value": 0.5078424538166608,
+  "kind": "pct",
+  "pt": "50,8%",
+  "en": "50.8%",
+  "desc": "... 90th percentile of L share"
+ },
+ "q7_region4_led_by_l": {
+  "value": 136,
+  "kind": "int",
+  "pt": "136",
+  "en": "136",
+  "desc": "... municipalities led by L"
+ },
+ "q7_region4_led_by_b": {
+  "value": 1054,
+  "kind": "int",
+  "pt": "1.054",
+  "en": "1,054",
+  "desc": "... municipalities led by B"
+ },
+ "q7_region4_municipalities": {
+  "value": 1191,
+  "kind": "int",
+  "pt": "1.191",
+  "en": "1,191",
+  "desc": "... municipalities"
+ },
+ "q7_region4_share_l_weighted": {
+  "value": 0.3742386136435621,
+  "kind": "pct",
+  "pt": "37,4%",
+  "en": "37.4%",
+  "desc": "... L share of the group's votes"
+ },
+ "q7_region5_p50_l": {
+  "value": 0.40884616096919446,
+  "kind": "pct",
+  "pt": "40,9%",
+  "en": "40.9%",
+  "desc": "2026 runoff, region group 5: median municipal L share"
+ },
+ "q7_region5_p50_b": {
+  "value": 0.5911538390308055,
+  "kind": "pct",
+  "pt": "59,1%",
+  "en": "59.1%",
+  "desc": "2026 runoff, region group 5: median municipal B share"
+ },
+ "q7_region5_p10_l": {
+  "value": 0.2677282171283974,
+  "kind": "pct",
+  "pt": "26,8%",
+  "en": "26.8%",
+  "desc": "... 10th percentile of L share"
+ },
+ "q7_region5_p90_l": {
+  "value": 0.5173897202342225,
+  "kind": "pct",
+  "pt": "51,7%",
+  "en": "51.7%",
+  "desc": "... 90th percentile of L share"
+ },
+ "q7_region5_led_by_l": {
+  "value": 62,
+  "kind": "int",
+  "pt": "62",
+  "en": "62",
+  "desc": "... municipalities led by L"
+ },
+ "q7_region5_led_by_b": {
+  "value": 406,
+  "kind": "int",
+  "pt": "406",
+  "en": "406",
+  "desc": "... municipalities led by B"
+ },
+ "q7_region5_municipalities": {
+  "value": 468,
+  "kind": "int",
+  "pt": "468",
+  "en": "468",
+  "desc": "... municipalities"
+ },
+ "q7_region5_share_l_weighted": {
+  "value": 0.3998719825020621,
+  "kind": "pct",
+  "pt": "40,0%",
+  "en": "40.0%",
+  "desc": "... L share of the group's votes"
+ },
+ "q7_size1_p50_l": {
+  "value": 0.49511514305652476,
+  "kind": "pct",
+  "pt": "49,5%",
+  "en": "49.5%",
+  "desc": "2026 runoff, size group 1: median municipal L share"
+ },
+ "q7_size1_p50_b": {
+  "value": 0.5048848569434752,
+  "kind": "pct",
+  "pt": "50,5%",
+  "en": "50.5%",
+  "desc": "2026 runoff, size group 1: median municipal B share"
+ },
+ "q7_size1_p10_l": {
+  "value": 0.29521009401856846,
+  "kind": "pct",
+  "pt": "29,5%",
+  "en": "29.5%",
+  "desc": "... 10th percentile of L share"
+ },
+ "q7_size1_p90_l": {
+  "value": 0.7980683236863013,
+  "kind": "pct",
+  "pt": "79,8%",
+  "en": "79.8%",
+  "desc": "... 90th percentile of L share"
+ },
+ "q7_size1_led_by_l": {
+  "value": 1220,
+  "kind": "int",
+  "pt": "1.220",
+  "en": "1,220",
+  "desc": "... municipalities led by L"
+ },
+ "q7_size1_led_by_b": {
+  "value": 1274,
+  "kind": "int",
+  "pt": "1.274",
+  "en": "1,274",
+  "desc": "... municipalities led by B"
+ },
+ "q7_size1_municipalities": {
+  "value": 2495,
+  "kind": "int",
+  "pt": "2.495",
+  "en": "2,495",
+  "desc": "... municipalities"
+ },
+ "q7_size1_share_l_weighted": {
+  "value": 0.542226252671664,
+  "kind": "pct",
+  "pt": "54,2%",
+  "en": "54.2%",
+  "desc": "... L share of the group's votes"
+ },
+ "q7_size2_p50_l": {
+  "value": 0.5712507511374367,
+  "kind": "pct",
+  "pt": "57,1%",
+  "en": "57.1%",
+  "desc": "2026 runoff, size group 2: median municipal L share"
+ },
+ "q7_size2_p50_b": {
+  "value": 0.42874924886256327,
+  "kind": "pct",
+  "pt": "42,9%",
+  "en": "42.9%",
+  "desc": "2026 runoff, size group 2: median municipal B share"
+ },
+ "q7_size2_p10_l": {
+  "value": 0.30790171599902433,
+  "kind": "pct",
+  "pt": "30,8%",
+  "en": "30.8%",
+  "desc": "... 10th percentile of L share"
+ },
+ "q7_size2_p90_l": {
+  "value": 0.8058760979051793,
+  "kind": "pct",
+  "pt": "80,6%",
+  "en": "80.6%",
+  "desc": "... 90th percentile of L share"
+ },
+ "q7_size2_led_by_l": {
+  "value": 1383,
+  "kind": "int",
+  "pt": "1.383",
+  "en": "1,383",
+  "desc": "... municipalities led by L"
+ },
+ "q7_size2_led_by_b": {
+  "value": 1036,
+  "kind": "int",
+  "pt": "1.036",
+  "en": "1,036",
+  "desc": "... municipalities led by B"
+ },
+ "q7_size2_municipalities": {
+  "value": 2419,
+  "kind": "int",
+  "pt": "2.419",
+  "en": "2,419",
+  "desc": "... municipalities"
+ },
+ "q7_size2_share_l_weighted": {
+  "value": 0.5649827176773128,
+  "kind": "pct",
+  "pt": "56,5%",
+  "en": "56.5%",
+  "desc": "... L share of the group's votes"
+ },
+ "q7_size3_p50_l": {
+  "value": 0.46355192437199016,
+  "kind": "pct",
+  "pt": "46,4%",
+  "en": "46.4%",
+  "desc": "2026 runoff, size group 3: median municipal L share"
+ },
+ "q7_size3_p50_b": {
+  "value": 0.5364480756280099,
+  "kind": "pct",
+  "pt": "53,6%",
+  "en": "53.6%",
+  "desc": "2026 runoff, size group 3: median municipal B share"
+ },
+ "q7_size3_p10_l": {
+  "value": 0.30567010225768093,
+  "kind": "pct",
+  "pt": "30,6%",
+  "en": "30.6%",
+  "desc": "... 10th percentile of L share"
+ },
+ "q7_size3_p90_l": {
+  "value": 0.741258899687241,
+  "kind": "pct",
+  "pt": "74,1%",
+  "en": "74.1%",
+  "desc": "... 90th percentile of L share"
+ },
+ "q7_size3_led_by_l": {
+  "value": 221,
+  "kind": "int",
+  "pt": "221",
+  "en": "221",
+  "desc": "... municipalities led by L"
+ },
+ "q7_size3_led_by_b": {
+  "value": 284,
+  "kind": "int",
+  "pt": "284",
+  "en": "284",
+  "desc": "... municipalities led by B"
+ },
+ "q7_size3_municipalities": {
+  "value": 505,
+  "kind": "int",
+  "pt": "505",
+  "en": "505",
+  "desc": "... municipalities"
+ },
+ "q7_size3_share_l_weighted": {
+  "value": 0.4939174258862227,
+  "kind": "pct",
+  "pt": "49,4%",
+  "en": "49.4%",
+  "desc": "... L share of the group's votes"
+ },
+ "q7_size4_p50_l": {
+  "value": 0.4558497765599191,
+  "kind": "pct",
+  "pt": "45,6%",
+  "en": "45.6%",
+  "desc": "2026 runoff, size group 4: median municipal L share"
+ },
+ "q7_size4_p50_b": {
+  "value": 0.5441502234400809,
+  "kind": "pct",
+  "pt": "54,4%",
+  "en": "54.4%",
+  "desc": "2026 runoff, size group 4: median municipal B share"
+ },
+ "q7_size4_p10_l": {
+  "value": 0.33458846813267124,
+  "kind": "pct",
+  "pt": "33,5%",
+  "en": "33.5%",
+  "desc": "... 10th percentile of L share"
+ },
+ "q7_size4_p90_l": {
+  "value": 0.6220028753860105,
+  "kind": "pct",
+  "pt": "62,2%",
+  "en": "62.2%",
+  "desc": "... 90th percentile of L share"
+ },
+ "q7_size4_led_by_l": {
+  "value": 43,
+  "kind": "int",
+  "pt": "43",
+  "en": "43",
+  "desc": "... municipalities led by L"
+ },
+ "q7_size4_led_by_b": {
+  "value": 94,
+  "kind": "int",
+  "pt": "94",
+  "en": "94",
+  "desc": "... municipalities led by B"
+ },
+ "q7_size4_municipalities": {
+  "value": 137,
+  "kind": "int",
+  "pt": "137",
+  "en": "137",
+  "desc": "... municipalities"
+ },
+ "q7_size4_share_l_weighted": {
+  "value": 0.470033044083115,
+  "kind": "pct",
+  "pt": "47,0%",
+  "en": "47.0%",
+  "desc": "... L share of the group's votes"
+ },
+ "q7_size5_p50_l": {
+  "value": 0.5153644991338611,
+  "kind": "pct",
+  "pt": "51,5%",
+  "en": "51.5%",
+  "desc": "2026 runoff, size group 5: median municipal L share"
+ },
+ "q7_size5_p50_b": {
+  "value": 0.48463550086613894,
+  "kind": "pct",
+  "pt": "48,5%",
+  "en": "48.5%",
+  "desc": "2026 runoff, size group 5: median municipal B share"
+ },
+ "q7_size5_p10_l": {
+  "value": 0.40291184905615507,
+  "kind": "pct",
+  "pt": "40,3%",
+  "en": "40.3%",
+  "desc": "... 10th percentile of L share"
+ },
+ "q7_size5_p90_l": {
+  "value": 0.6173989893715387,
+  "kind": "pct",
+  "pt": "61,7%",
+  "en": "61.7%",
+  "desc": "... 90th percentile of L share"
+ },
+ "q7_size5_led_by_l": {
+  "value": 8,
+  "kind": "int",
+  "pt": "8",
+  "en": "8",
+  "desc": "... municipalities led by L"
+ },
+ "q7_size5_led_by_b": {
+  "value": 7,
+  "kind": "int",
+  "pt": "7",
+  "en": "7",
+  "desc": "... municipalities led by B"
+ },
+ "q7_size5_municipalities": {
+  "value": 15,
+  "kind": "int",
+  "pt": "15",
+  "en": "15",
+  "desc": "... municipalities"
+ },
+ "q7_size5_share_l_weighted": {
+  "value": 0.5324729872454311,
+  "kind": "pct",
+  "pt": "53,2%",
+  "en": "53.2%",
+  "desc": "... L share of the group's votes"
+ },
+ "q7_r_income_2026": {
+  "value": -0.8316316032898579,
+  "kind": "r",
+  "pt": "−0,83",
+  "en": "−0.83",
+  "desc": "2026 runoff: correlation of L share with log median income"
+ },
+ "q7_r_pop_2026": {
+  "value": 0.004378323110465516,
+  "kind": "r",
+  "pt": "0,00",
+  "en": "0.00",
+  "desc": "2026 runoff: correlation of L share with log population"
+ },
+ "q7_r_income_within_2026": {
+  "value": -0.5943851817842023,
+  "kind": "r",
+  "pt": "−0,59",
+  "en": "−0.59",
+  "desc": "same correlation with log income, inside regions (deviations from each region's mean)"
+ },
+ "q7_r_pop_within_2026": {
+  "value": -0.16212340193897337,
+  "kind": "r",
+  "pt": "−0,16",
+  "en": "−0.16",
+  "desc": "same correlation with log population, inside regions"
+ },
+ "q7_income_cut_p20": {
+  "value": 552.4,
+  "kind": "brl2",
+  "pt": "R$ 552,40",
+  "en": "R$ 552.40",
+  "desc": "income band cut point (p20 of municipal median income per capita)"
+ },
+ "q7_income_cut_p40": {
+  "value": 731.0,
+  "kind": "brl2",
+  "pt": "R$ 731,00",
+  "en": "R$ 731.00",
+  "desc": "income band cut point (p40 of municipal median income per capita)"
+ },
+ "q7_income_cut_p60": {
+  "value": 1015.5,
+  "kind": "brl2",
+  "pt": "R$ 1.015,50",
+  "en": "R$ 1,015.50",
+  "desc": "income band cut point (p60 of municipal median income per capita)"
+ },
+ "q7_income_cut_p80": {
+  "value": 1212.0,
+  "kind": "brl2",
+  "pt": "R$ 1.212,00",
+  "en": "R$ 1,212.00",
+  "desc": "income band cut point (p80 of municipal median income per capita)"
+ },
+ "q7_income1_in_ne": {
+  "value": 907,
+  "kind": "int",
+  "pt": "907",
+  "en": "907",
+  "desc": "municipalities of the lowest income band located in the Northeast"
+ },
+ "q7_income5_in_s": {
+  "value": 578,
+  "kind": "int",
+  "pt": "578",
+  "en": "578",
+  "desc": "municipalities of the highest income band located in the South"
+ },
+ "validation_cells": {
+  "value": 3625,
+  "kind": "int",
+  "pt": "3.625",
+  "en": "3,625",
+  "desc": "cells compared with official totals (all years, rounds and sources)"
+ },
+ "validation_unexplained": {
+  "value": 0,
+  "kind": "int",
+  "pt": "0",
+  "en": "0",
+  "desc": "cells with an unexplained difference"
+ },
+ "dot_votes": {
+  "value": 1000,
+  "kind": "int",
+  "pt": "1.000",
+  "en": "1,000",
+  "desc": "votes per dot in the dot map"
+ }
+}

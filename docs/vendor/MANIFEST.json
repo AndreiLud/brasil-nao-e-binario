@@ -1,0 +1,106 @@
+{
+ "d3-array@3.2.4": {
+  "url": "https://cdn.jsdelivr.net/npm/d3-array@3.2.4/dist/d3-array.min.js",
+  "sha256": "80aa70d0cd17dabddf6d056494ea17926a45a69da8b7850220aace331bad671d"
+ },
+ "d3-color@3.1.0": {
+  "url": "https://cdn.jsdelivr.net/npm/d3-color@3.1.0/dist/d3-color.min.js",
+  "sha256": "a12639010163230b8c130fbeb92a3a49bb5f6989a566d3664d759522db458489"
+ },
+ "d3-interpolate@3.0.1": {
+  "url": "https://cdn.jsdelivr.net/npm/d3-interpolate@3.0.1/dist/d3-interpolate.min.js",
+  "sha256": "bfc321e4c3f3b3aadc88cfe15ccb5e443abfeadef8b75c65b41c33a4d78a98ae"
+ },
+ "d3-dispatch@3.0.1": {
+  "url": "https://cdn.jsdelivr.net/npm/d3-dispatch@3.0.1/dist/d3-dispatch.min.js",
+  "sha256": "94b3bbdb6b98dc1325a15762b051013e8253999b0e0436b27d1da17b952ba0af"
+ },
+ "d3-timer@3.0.1": {
+  "url": "https://cdn.jsdelivr.net/npm/d3-timer@3.0.1/dist/d3-timer.min.js",
+  "sha256": "911ceda305f014b6b53ca68d5c896a9a387da120cfd56a421a2c60cca2fc9b36"
+ },
+ "d3-ease@3.0.1": {
+  "url": "https://cdn.jsdelivr.net/npm/d3-ease@3.0.1/dist/d3-ease.min.js",
+  "sha256": "e60a1ed750a1ad138dd18e8d3f463238113cfbf7d89685a13d19bd4e048dc3ce"
+ },
+ "d3-selection@3.0.0": {
+  "url": "https://cdn.jsdelivr.net/npm/d3-selection@3.0.0/dist/d3-selection.min.js",
+  "sha256": "45daab9cf677901bcae102f3f23ca2930db3c0fb8ff9e3dbed087d9c4de921ca"
+ },
+ "d3-transition@3.0.1": {
+  "url": "https://cdn.jsdelivr.net/npm/d3-transition@3.0.1/dist/d3-transition.min.js",
+  "sha256": "c248d97f6c131af7f4a12a3ff1f2ed83f1cc6c0e17fc764a198b6ee452e6621b"
+ },
+ "d3-format@3.1.2": {
+  "url": "https://cdn.jsdelivr.net/npm/d3-format@3.1.2/dist/d3-format.min.js",
+  "sha256": "6e6ab271cc152b3cdb99b750ab7ac0814b65f462edaa33351c642499da3ccba8"
+ },
+ "d3-time@3.1.0": {
+  "url": "https://cdn.jsdelivr.net/npm/d3-time@3.1.0/dist/d3-time.min.js",
+  "sha256": "0e67c6eed5832f4ac5bece0da0ea595860c4527d21c271a17013b7efe2665c00"
+ },
+ "d3-time-format@4.1.0": {
+  "url": "https://cdn.jsdelivr.net/npm/d3-time-format@4.1.0/dist/d3-time-format.min.js",
+  "sha256": "ce7c943affe8cbb049de1c4ee29ce98bd4cb4b393bd48cb0c7b4f8078c4752f5"
+ },
+ "d3-scale@4.0.2": {
+  "url": "https://cdn.jsdelivr.net/npm/d3-scale@4.0.2/dist/d3-scale.min.js",
+  "sha256": "e76a84839ffba3b94fef22ea1e39da8398fa0e039c7e6a0a93b7d938dbd50632"
+ },
+ "d3-path@3.1.0": {
+  "url": "https://cdn.jsdelivr.net/npm/d3-path@3.1.0/dist/d3-path.min.js",
+  "sha256": "28d70841c60f313c3e6411fe0831e539ed6cea51eaee951d62d88908c40619c2"
+ },
+ "d3-shape@3.2.0": {
+  "url": "https://cdn.jsdelivr.net/npm/d3-shape@3.2.0/dist/d3-shape.min.js",
+  "sha256": "49236896e989f251dd36679ea4a879538e9ca2ece3a90a82740f953cac4a3fa5"
+ },
+ "d3-geo@3.1.1": {
+  "url": "https://cdn.jsdelivr.net/npm/d3-geo@3.1.1/dist/d3-geo.min.js",
+  "sha256": "23e574f1e8d4716d622bce45356a379b66a277162b145f5f147e4c8daefb73d2"
+ },
+ "d3-quadtree@3.0.1": {
+  "url": "https://cdn.jsdelivr.net/npm/d3-quadtree@3.0.1/dist/d3-quadtree.min.js",
+  "sha256": "57e2ad12824ed82893ba447523f2a2fb9beeb9222aafb2c778a9f5b313348b0e"
+ },
+ "vendor/topojson-client.min.js": {
+  "url": "https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js",
+  "sha256": "25cd02ae486cc5063e0215a4e4cfb15de83700c87ac48bac4d57dc6aaf3ebb89"
+ },
+ "vendor/scrollama.min.js": {
+  "url": "https://cdn.jsdelivr.net/npm/scrollama@3.2.0/build/scrollama.min.js",
+  "sha256": "17d8c6db877708006d0f22a42d030b192fa68a721292253ce70a7d85301e7433"
+ },
+ "vendor/LICENSE-d3.txt": {
+  "url": "https://cdn.jsdelivr.net/npm/d3@7.9.0/LICENSE",
+  "sha256": "3e6849627f74ff73c257a3ae1efb574015d94fc1035c05ec3c15805165efcbc4"
+ },
+ "vendor/LICENSE-topojson-client.txt": {
+  "url": "https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/LICENSE",
+  "sha256": "4c4d15b635e04e691825a76db7d33f7f2033b55669a7430011694f31e6c65999"
+ },
+ "vendor/LICENSE-scrollama.txt": {
+  "url": "https://cdn.jsdelivr.net/npm/scrollama@3.2.0/LICENSE",
+  "sha256": "fe771e9233e0799859ed7f779bc60611e7c3f093d958cf08a25fad974adacf9b"
+ },
+ "fonts/fraunces-latin-opsz-normal.woff2": {
+  "url": "https://cdn.jsdelivr.net/npm/@fontsource-variable/fraunces@5.3.0/files/fraunces-latin-opsz-normal.woff2",
+  "sha256": "7234ed860a9cc83045413c4faee63c960a8f2d1917adcf728119307d56e0d783"
+ },
+ "fonts/fraunces-latin-opsz-italic.woff2": {
+  "url": "https://cdn.jsdelivr.net/npm/@fontsource-variable/fraunces@5.3.0/files/fraunces-latin-opsz-italic.woff2",
+  "sha256": "066710ce7ed235a339d3d6cdcc8b55c0bea5632232662d83aacea25852108271"
+ },
+ "fonts/inter-latin-wght-normal.woff2": {
+  "url": "https://cdn.jsdelivr.net/npm/@fontsource-variable/inter@5.3.0/files/inter-latin-wght-normal.woff2",
+  "sha256": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62"
+ },
+ "fonts/LICENSE-Fraunces-OFL.txt": {
+  "url": "https://cdn.jsdelivr.net/npm/@fontsource-variable/fraunces@5.3.0/LICENSE",
+  "sha256": "cd3384cafac6f2bddc3955273958a2e029f97027c8037ac539ef5744a77b579e"
+ },
+ "fonts/LICENSE-Inter-OFL.txt": {
+  "url": "https://cdn.jsdelivr.net/npm/@fontsource-variable/inter@5.3.0/LICENSE",
+  "sha256": "3b0a5fca3d17942cde889069889dedbbbd075e9b599968c82a95f4d944e9b345"
+ }
+}
