@@ -40,8 +40,8 @@ def fmt(value, kind: str, lang: str) -> str:
         txt = _sep(f"{value / 1e6:,.1f}", lang)
         unit = ("milhão" if abs(round(value / 1e6, 1)) < 2 else "milhões") if lang == "pt" else "million"
         return f"{txt} {unit}"
-    if kind == "mil":  # thousands, no decimals
-        return _sep(f"{value / 1e3:,.0f}", lang) + (" mil" if lang == "pt" else " thousand")
+    if kind == "mil":  # thousands, no decimals: "812 mil" / "812,000"
+        return _sep(f"{value / 1e3:,.0f}", lang) + (" mil" if lang == "pt" else ",000")
     if kind == "pct":
         return _sep(f"{value * 100:,.1f}", lang) + "%"
     if kind == "pct0":
@@ -59,9 +59,9 @@ def fmt(value, kind: str, lang: str) -> str:
     if kind == "r":
         return _sep(f"{value:.2f}", lang)
     if kind == "brl":
-        return "R$\u00a0" + _sep(f"{value:,.0f}", lang)
+        return ("R$\u00a0" if lang == "pt" else "R$") + _sep(f"{value:,.0f}", lang)
     if kind == "brl2":
-        return "R$\u00a0" + _sep(f"{value:,.2f}", lang)
+        return ("R$\u00a0" if lang == "pt" else "R$") + _sep(f"{value:,.2f}", lang)
     if kind == "mi_num":  # the number part of "46,6 milhões"
         return _sep(f"{value / 1e6:,.1f}", lang)
     if kind == "mi_unit":
@@ -78,8 +78,36 @@ class Facts:
             raise KeyError(f"duplicate fact {key}")
         if hasattr(value, "item"):
             value = value.item()
+        if isinstance(value, float):
+            # parallel sums in DuckDB differ in the last bits between runs; round so the file is stable
+            value = round(value, 10)
         self.d[key] = {"value": value, "kind": kind, "pt": fmt(value, kind, "pt"), "en": fmt(value, kind, "en"),
                        "desc": desc}
+
+
+UF_NAME = {"AC": "Acre", "AL": "Alagoas", "AM": "Amazonas", "AP": "Amapá", "BA": "Bahia", "CE": "Ceará",
+           "DF": ("Distrito Federal", "Federal District"), "ES": "Espírito Santo", "GO": "Goiás", "MA": "Maranhão",
+           "MG": "Minas Gerais", "MS": "Mato Grosso do Sul", "MT": "Mato Grosso", "PA": "Pará", "PB": "Paraíba",
+           "PE": "Pernambuco", "PI": "Piauí", "PR": "Paraná", "RJ": "Rio de Janeiro", "RN": "Rio Grande do Norte",
+           "RO": "Rondônia", "RR": "Roraima", "RS": "Rio Grande do Sul", "SC": "Santa Catarina", "SE": "Sergipe",
+           "SP": "São Paulo", "TO": "Tocantins"}
+
+
+def uf_name(uf, lang):
+    n = UF_NAME[uf]
+    return n if isinstance(n, str) else n[0 if lang == "pt" else 1]
+
+
+REGION_EN = {"Norte": "North", "Nordeste": "Northeast", "Sudeste": "Southeast", "Sul": "South",
+             "Centro-Oeste": "Center-West", "Exterior": "Abroad"}
+
+
+def both_lists(items_pt, items_en):
+    return {"pt": fmt(items_pt, "list", "pt"), "en": fmt(items_en, "list", "en")}
+
+
+def round_phrase(year, rnd):
+    return {"pt": f"{rnd}º turno de {year}", "en": f"{year} first round" if rnd == 1 else f"{year} runoff"}
 
 
 def r_lab(year, camp):
@@ -150,20 +178,25 @@ def build(con):
              WHERE m.round = 1 AND m.leader = 'O' GROUP BY ALL ORDER BY m.year, n DESC""")
     for y in C.YEARS:
         g = ol[ol.year == y]
-        names = [f"{n.title()}" for n in g.nm_urna] or ["nenhum"]
-        F.add(f"e{y}r1_other_leader_names", names, "list", f"{y} round 1: third candidates who came first somewhere")
+        names = [f"{n.title()}" for n in g.nm_urna]
+        F.add(f"e{y}r1_other_leader_names", both_lists(names or ["nenhum"], names or ["none"]), "phrase",
+              f"{y} round 1: third candidates who came first somewhere")
 
     # Across rounds
     best = max([(float(r.pct_l_aptos), r.year, r.round, "L") for r in nat.itertuples()]
                + [(float(r.pct_b_aptos), r.year, r.round, "B") for r in nat.itertuples()])
     F.add("max_pct_aptos_any", best[0], "pct", "largest share of the electorate any candidate got, any round 2014-2026")
-    F.add("max_pct_aptos_any_who", f"{r_lab(best[1], best[3])}, {best[1]}, {best[2]}º turno", "text", "who and when")
+    rp = round_phrase(best[1], best[2])
+    F.add("max_pct_aptos_any_who", {"pt": f"{r_lab(best[1], best[3])}, {rp['pt']}", "en": f"{r_lab(best[1], best[3])}, {rp['en']}"},
+          "phrase", "who and when")
     for camp, col in (("L", "pct_l_aptos"), ("B", "pct_b_aptos")):
         sub = nat[nat.year >= 2018]
         r = sub.loc[sub[col].idxmax()]
         F.add(f"max_pct_aptos_{camp.lower()}", float(r[col]), "pct", f"largest share of the electorate of camp {camp}, 2018-2026")
-        F.add(f"max_pct_aptos_{camp.lower()}_who", f"{C.CANDIDATE_LABELS[int(r.year)][camp]} no {int(r['round'])}º turno de {int(r.year)}",
-              "text", "who and when")
+        rp = round_phrase(int(r.year), int(r["round"]))
+        who = C.CANDIDATE_LABELS[int(r.year)][camp]
+        F.add(f"max_pct_aptos_{camp.lower()}_who", {"pt": f"{who} no {rp['pt']}", "en": f"{who} in the {rp['en']}"},
+              "phrase", "who and when")
     F.add("absent_min", float(nat.pct_absent_aptos.min()), "pct", "lowest share of the electorate that did not vote, any round")
     F.add("absent_max", float(nat.pct_absent_aptos.max()), "pct", "highest share of the electorate that did not vote, any round")
     F.add("e2026r2_two_camp_total", int(nat[(nat.year == 2026) & (nat["round"] == 2)].iloc[0].validos), "mi",
@@ -190,7 +223,8 @@ def build(con):
     r26 = reg[(reg.year == 2026) & (reg.region != "Exterior")]
     F.add("e2026r2_b_lead_where_b_led_regions", int((r26.camp_b - r26.camp_l)[r26.camp_b > r26.camp_l].sum()), "mi",
           "2026 runoff: Flavio's lead summed over the regions where he was ahead")
-    F.add("e2026r2_b_led_regions", [x for x in r26[r26.camp_b > r26.camp_l].sort_values("region_id").region], "list",
+    led = [x for x in r26[r26.camp_b > r26.camp_l].sort_values("region_id").region]
+    F.add("e2026r2_b_led_regions", both_lists(led, [REGION_EN[x] for x in led]), "phrase",
           "regions where Flavio was ahead")
     # "More votes in region R than in N states of other regions combined", same rule for both camps
     st = q("SELECT * FROM q3_state WHERE year = 2026 AND round = 2")
@@ -208,7 +242,8 @@ def build(con):
         F.add(f"e2026r2_{key}_states_n", n, "int",
               f"2026 runoff: number of states outside {region} whose {camp} votes, added from the smallest, stay below "
               f"{camp}'s votes in {region}")
-        F.add(f"e2026r2_{key}_states_list", names, "list", "those states")
+        F.add(f"e2026r2_{key}_states_list", both_lists([uf_name(u, "pt") for u in names], [uf_name(u, "en") for u in names]),
+              "phrase", "those states (names)")
         F.add(f"e2026r2_{key}_states_sum", cum, "mi", "their combined votes")
     ext = q("SELECT * FROM q3_extremes WHERE round = 2")
     for r in ext.itertuples():
@@ -252,7 +287,7 @@ def build(con):
     F.add("q4_top10_rj", rj_top, "int", "of the 10 largest increases (50,000+ voters), how many in RJ")
     F.add("q4_top10_rj_phrase", {"pt": "as 10 maiores altas foram todas no estado do Rio de Janeiro" if rj_top == 10
                                  else f"{rj_top} das 10 maiores altas foram no estado do Rio de Janeiro",
-                                 "en": "all 10 largest increases were in Rio de Janeiro state" if rj_top == 10
+                                 "en": "the 10 largest increases were all in Rio de Janeiro state" if rj_top == 10
                                  else f"{rj_top} of the 10 largest increases were in Rio de Janeiro state"}, "phrase",
           "sentence about the 10 largest increases, 2014->2018")
 
@@ -285,7 +320,7 @@ def build(con):
     F.add("q5_top10_sp", sp_top, "int", "of the 10 largest increases (50,000+ voters), how many in SP")
     F.add("q5_top10_sp_phrase", {"pt": "as 10 maiores altas foram todas no estado de São Paulo" if sp_top == 10
                                  else f"{sp_top} das 10 maiores altas foram no estado de São Paulo",
-                                 "en": "all 10 largest increases were in São Paulo state" if sp_top == 10
+                                 "en": "the 10 largest increases were all in São Paulo state" if sp_top == 10
                                  else f"{sp_top} of the 10 largest increases were in São Paulo state"}, "phrase",
           "sentence about the 10 largest increases, 2018->2022")
 
@@ -309,8 +344,14 @@ def build(con):
     F.add("q6_median_gain_l", float(s6.median_gain_l_pts), "pts", "median municipal gain of Lula, points of the electorate")
     F.add("q6_median_gain_b", float(s6.median_gain_b_pts), "pts", "median municipal gain of Flavio, points of the electorate")
     flip_b = q("SELECT name, uf FROM q6_municipal WHERE leader_r1 = 'L' AND leader_r2 = 'B'")
-    F.add("q6_flipped_to_b_names", [f"{r['name']} ({r.uf})" for _, r in flip_b.iterrows()], "list",
-          "municipalities led by Lula in round 1 and by Flavio in the runoff")
+    fb = [f"{r['name']} ({r.uf})" for _, r in flip_b.iterrows()]
+    F.add("q6_flipped_to_b_names", fb, "list", "municipalities led by Lula in round 1 and by Flavio in the runoff")
+    if len(fb) == 1:
+        sent = {"pt": f"Em um, {fb[0]}, o caminho foi o inverso.", "en": f"In one, {fb[0]}, it went the other way."}
+    else:
+        sent = {"pt": f"Em {fmt(len(fb), 'int', 'pt')}, o caminho foi o inverso: {fmt(fb, 'list', 'pt')}.",
+                "en": f"In {fmt(len(fb), 'int', 'en')}, it went the other way: {fmt(fb, 'list', 'en')}."}
+    F.add("q6_flipped_to_b_sentence", sent, "phrase", "sentence about municipalities that flipped to Flavio")
     for r in q("SELECT * FROM q6_assoc").itertuples():
         F.add(f"q6_r_{r.outcome}_{r.factor}", float(r.r_weighted), "r", f"weighted correlation {r.outcome} x {r.factor}")
     for r in q("SELECT * FROM q6_bins").itertuples():
@@ -321,6 +362,8 @@ def build(con):
             F.add(f"q6_bin_{r.factor}_q{r.quintile}_min", float(r.factor_min), kind, f"{r.factor} quintile {r.quintile}: lower bound")
             F.add(f"q6_bin_{r.factor}_q{r.quintile}_max", float(r.factor_max), kind, f"{r.factor} quintile {r.quintile}: upper bound")
     nets = q("SELECT net_gain_l_pts_weighted AS v FROM q6_bins")["v"]
+    if not (nets > 0).all():   # the text says Lula gained more in every group
+        raise AssertionError("q6: a quintile group where Flavio gained more; rewrite the 2026 text")
     F.add("q6_net_gain_min", float(nets.min()), "pts", "smallest net gain of Lula over Flavio across the ten quintile groups (pts of electorate)")
     F.add("q6_net_gain_min_num", float(nets.min()), "pts_num", "same, number only")
     F.add("q6_net_gain_max", float(nets.max()), "pts", "largest net gain of Lula over Flavio across the ten quintile groups")
@@ -345,6 +388,16 @@ def build(con):
     F.add("q6_top_votes_name", f"{tv['name']} ({tv.uf})", "text", "largest Lula gain in votes")
     F.add("q6_top_votes_gain", int(tv.delta_l_votes), "mil", "its gain in votes")
     F.add("q6_top_votes_gain_b", int(tv.delta_b_votes), "mil", "Flavio gain in votes there")
+    gl, gb = fmt(int(tv.delta_l_votes), "mi", "pt"), fmt(int(tvb.delta_b_votes), "mi", "pt")
+    gle, gbe = fmt(int(tv.delta_l_votes), "mi", "en"), fmt(int(tvb.delta_b_votes), "mi", "en")
+    if tv.cd_ibge == tvb.cd_ibge:
+        city = f"{tv['name']} ({tv.uf})"
+        sent = {"pt": f"Em número de votos, o maior ganho dos dois foi no mesmo município, {city}: {gl} para Lula e {gb} para Flávio.",
+                "en": f"In absolute votes, both candidates' largest gains came in the same municipality, {city}: {gle} for Lula and {gbe} for Flávio."}
+    else:
+        sent = {"pt": f"Em número de votos, o maior ganho de Lula foi em {tv['name']} ({tv.uf}) ({gl}), e o de Flávio, em {tvb['name']} ({tvb.uf}) ({gb}).",
+                "en": f"In absolute votes, Lula's largest gain came in {tv['name']} ({tv.uf}), with {gle}, and Flávio's in {tvb['name']} ({tvb.uf}), with {gbe}."}
+    F.add("q6_top_votes_sentence", sent, "phrase", "sentence about the largest absolute gains of each candidate")
 
     # Q7 context (2026 runoff)
     g = q("SELECT * FROM q7_groups WHERE year = 2026")

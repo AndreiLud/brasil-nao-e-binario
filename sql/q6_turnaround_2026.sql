@@ -88,6 +88,7 @@ SELECT region_id, region,
        sum(others_r1) AS others_r1,
        sum(turnout_r2) - sum(turnout_r1) AS delta_turnout,
        count(*) FILTER (WHERE gain_l_pts > gain_b_pts) AS n_mun_l_gained_more,
+       count(*) FILTER (WHERE gain_b_pts > gain_l_pts) AS n_mun_b_gained_more,
        count(*) AS municipalities,
        count(*) FILTER (WHERE leader_r1 = 'B' AND leader_r2 = 'L') AS n_flipped_to_l
 FROM q6_municipal

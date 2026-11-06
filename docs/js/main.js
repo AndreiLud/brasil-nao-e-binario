@@ -1,5 +1,5 @@
 // Entry point: each chapter loads its data only when the reader gets close to it.
-import { C, getJSON, results, municipios, row, whenNear, reducedMotion } from "./core.js";
+import { C, T, getJSON, results, municipios, row, whenNear, reducedMotion } from "./core.js";
 import { peopleSVG } from "./people.js";
 
 const $ = (id) => document.getElementById(id);
@@ -37,7 +37,7 @@ async function extremes() {
   for (const [kind, id] of [["most_l", "people-most-l"], ["most_b", "people-most-b"]]) {
     const e = stories.extremes.find((d) => d.year === 2026 && d.round === 2 && d.kind === kind);
     const r = row(res, mun._idx.get(e.cd_ibge));
-    const { svg } = peopleSVG(r, { size: 180, title: `${e.name} (${e.uf}), 2º turno de 2026`, names: { L: "Lula", B: "Flávio" } });
+    const { svg } = peopleSVG(r, { size: 180, title: T.extremeTitle(`${e.name} (${e.uf})`), names: { L: "Lula", B: "Flávio" } });
     $(id).replaceChildren(svg);
   }
 }

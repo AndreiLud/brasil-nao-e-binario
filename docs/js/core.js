@@ -1,9 +1,11 @@
-// Shared helpers: data loading (cached), formatting (pt-BR), colors and labels.
+// Shared helpers: data loading (cached), formatting (pt-BR or en), colors and labels.
+import { LANG, LOCALE, BASE, T, regionName } from "./i18n.js";
+export { LANG, T, regionName };
 
 const cache = new Map();
 export function getJSON(path) {
   if (!cache.has(path)) {
-    cache.set(path, fetch(path).then((r) => {
+    cache.set(path, fetch(BASE + path).then((r) => {
       if (!r.ok) throw new Error(`${path}: ${r.status}`);
       return r.json();
     }));
@@ -12,7 +14,7 @@ export function getJSON(path) {
 }
 export function getBinary(path) {
   if (!cache.has(path)) {
-    cache.set(path, fetch(path).then((r) => {
+    cache.set(path, fetch(BASE + path).then((r) => {
       if (!r.ok) throw new Error(`${path}: ${r.status}`);
       return r.arrayBuffer();
     }));
@@ -33,7 +35,7 @@ export const FULLNAMES = {
   2022: { L: "Lula", B: "Jair Bolsonaro" },
   2026: { L: "Lula", B: "Flávio Bolsonaro" },
 };
-export const REGION_NAMES = { 1: "Norte", 2: "Nordeste", 3: "Sudeste", 4: "Sul", 5: "Centro-Oeste" };
+export const REGION_NAMES = { 1: regionName(1), 2: regionName(2), 3: regionName(3), 4: regionName(4), 5: regionName(5) };
 
 // Colors: identical meaning everywhere on the page.
 export const C = {
@@ -59,26 +61,28 @@ export function changeScale(max) {
     .interpolate(d3.interpolateLab).clamp(true);
 }
 
-// ---- formatting (pt-BR) ----
+// ---- formatting (locale of the page) ----
 const MINUS = "−";
-const fInt = new Intl.NumberFormat("pt-BR", { maximumFractionDigits: 0 });
+const fInt = new Intl.NumberFormat(LOCALE, { maximumFractionDigits: 0 });
 export const int = (n) => fInt.format(Math.round(n)).replace("-", MINUS);
 export function dec(x, d = 1) {
-  return new Intl.NumberFormat("pt-BR", { minimumFractionDigits: d, maximumFractionDigits: d }).format(x).replace("-", MINUS);
+  return new Intl.NumberFormat(LOCALE, { minimumFractionDigits: d, maximumFractionDigits: d }).format(x).replace("-", MINUS);
 }
 export const pct = (x, d = 1) => `${dec(x * 100, d)}%`;
 export function pts(x, d = 1, signed = false) {
   const v = Math.round(x * 100 * 10 ** d) / 10 ** d + 0;
   const s = signed && v > 0 ? "+" : "";
-  return `${s}${dec(v, d)} ${Math.abs(v) < 2 ? "ponto" : "pontos"}`;
+  const unit = LANG === "en" ? (Math.abs(v) === 1 ? "point" : "points") : (Math.abs(v) < 2 ? "ponto" : "pontos");
+  return `${s}${dec(v, d)} ${unit}`;
 }
 export function votes(n) {
   const a = Math.abs(n);
   if (a >= 1e6) {
     const v = Math.round(n / 1e5) / 10;
+    if (LANG === "en") return `${dec(v, 1)} million`;
     return `${dec(v, 1)} ${Math.abs(v) < 2 ? "milhão" : "milhões"}`;
   }
-  if (a >= 1e4) return `${int(n / 1e3)} mil`;
+  if (a >= 1e4) return LANG === "en" ? `${int(n / 1e3)},000` : `${int(n / 1e3)} mil`;
   return int(n);
 }
 export function norm(s) {
@@ -133,7 +137,7 @@ export function table(container, head, rows) {
   container.setAttribute("role", "region");
   const fig = container.closest("figure");
   const title = fig && fig.querySelector(".chart-title");
-  container.setAttribute("aria-label", `Tabela: ${title ? title.textContent : head.join(", ")}`);
+  container.setAttribute("aria-label", T.table(title ? title.textContent : head.join(", ")));
 }
 
 // Segmented control (buttons with aria-pressed).

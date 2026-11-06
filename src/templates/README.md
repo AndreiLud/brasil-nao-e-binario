@@ -1,11 +1,14 @@
 # Brazil is not binary
 
-![Dot map of the 2026 Brazilian presidential runoff: one dot per 1,000 votes, violet for Lula and ochre for Flávio Bolsonaro, mixed across the country](docs/img/hero.png)
+![Dot map of the 2026 Brazilian presidential runoff: one dot per 1,000 votes, violet for Lula and ochre for Flávio Bolsonaro, mixed across the country](docs/img/hero-en.png)
 
 A data story about the Brazilian presidential elections of 2018, 2022 and 2026 (with 2014 as a baseline), built from official TSE and IBGE data, municipality by municipality. The "who won in each city" map draws a country split in two blocks. The votes say something else: both camps have voters everywhere, alongside people who voted for someone else, voted blank or null, or stayed home.
 
-* **Site:** {{cfg_site_url}} (Portuguese)
+* **Site in English:** {{cfg_site_url}}en/
+* **Site in Portuguese:** {{cfg_site_url}}
 * **Versão em português deste README:** [README.pt-BR.md](README.pt-BR.md)
+
+The site is bilingual. Both versions use the same data, charts and design, and a PT/EN switch at the top of each page links them.
 
 ## Key findings
 
@@ -18,7 +21,7 @@ All figures come from `docs/data/facts.json`, which the pipeline computes; this 
 * **Against the thesis, shown with the same weight.** Region and income are strongly associated with the municipal vote. Lula led {{e2026r2_reg_ne_led_by_l}} of the {{e2026r2_reg_ne_municipalities}} Northeast municipalities; Flávio led {{e2026r2_reg_s_led_by_b}} of {{e2026r2_reg_s_municipalities}} in the South. The median lulista share was {{q7_income1_p50_l}} in the lowest income band and {{q7_income5_p50_l}} in the highest (correlation with log median income: {{q7_r_income_2026}}).
 * **2018.** The runoff share of the candidate facing the PT (Aécio in 2014, Bolsonaro in 2018) grew in {{q4_n_b_grew}} of {{n_mun_2022}} municipalities: by {{q4_reg_se_delta_b_share}} in the Southeast, {{q4_reg_s_delta_b_share}} in the South and {{q4_reg_ne_delta_b_share}} in the Northeast.
 * **2022.** Lula had {{q5_delta_l_votes}} more runoff votes than Haddad; the Southeast accounted for {{q5_se_share_of_l_gain}} of that gain inside Brazil.
-* **2026 turnaround.** Flávio led the first round by {{q6_b_lead_r1}} votes and Lula won the runoff by {{q6_l_lead_r2}}. Between rounds Lula gained {{q6_delta_l_votes}} votes and Flávio {{q6_delta_b_votes}}; Lula grew more than Flávio in {{q6_n_l_gained_more}} municipalities and Flávio more than Lula in {{q6_n_b_gained_more}}.
+* **2026 turnaround.** Flávio led the first round by {{q6_b_lead_r1}} votes and Lula won the runoff by {{q6_l_lead_r2}}. Between rounds Lula gained {{q6_delta_l_votes}} votes and Flávio {{q6_delta_b_votes}}; Lula gained more than Flávio in {{q6_n_l_gained_more}} municipalities and Flávio more than Lula in {{q6_n_b_gained_more}}.
 
 ## Questions
 
@@ -82,12 +85,26 @@ python3.12 -m venv .venv
 .venv/bin/python run_all.py          # download, clean, validate, analyse, export, render
 .venv/bin/python -m src.vendor       # optional: re-download pinned JS libraries and fonts
 .venv/bin/python -m playwright install chromium
-.venv/bin/python -m src.screenshots og   # optional: regenerate the share image
-.venv/bin/python -m src.smoke            # browser smoke test (no JS errors, controls, search, deep link)
-cd docs && python3 -m http.server 8000   # open http://localhost:8000
+.venv/bin/python -m src.screenshots og   # optional: regenerate the share images (PT and EN)
+.venv/bin/python -m src.smoke            # browser smoke test of both languages (JS errors, controls, search, deep link)
+cd docs && python3 -m http.server 8000   # open http://localhost:8000 (Portuguese) or /en/ (English)
 ```
 
 `make all`, `make serve` and `make screenshots` do the same. Versions are pinned in `requirements.txt`. DuckDB is pinned to version 1.5.6 on purpose: the 2.0 wheels require AVX instructions that some virtual machines do not have. Raw data are not versioned (`data/raw/` is ignored); `src/download.py` fetches them again and records checksums.
+
+## Bilingual site
+
+| Piece | Portuguese | English |
+|---|---|---|
+| Page | `docs/index.html` | `docs/en/index.html` |
+| Template (all prose) | `src/templates/index.html` | `src/templates/index.en.html` |
+| Numbers in the prose | `pt` text of each key in `docs/data/facts.json` | `en` text of the same key |
+| Chart labels, legends, tooltips | `pt` block of `docs/js/i18n.js` | `en` block of `docs/js/i18n.js` |
+| Share image | `docs/img/og.png` | `docs/img/og-en.png` |
+
+* The JavaScript reads the language from `<html lang>` and formats numbers to match (`46,6 milhões` or `46.6 million`). The English page sets `data-base="../"` so it reads the same data files in `docs/data/`.
+* To change the text, edit both templates and run `.venv/bin/python -m src.render`. The renderer refuses to write the pages if they lose structural parity (same element ids, scrollytelling steps and figures in both languages), if a number in the prose is not a computed fact, or if an em dash, en dash or spaced hyphen appears.
+* Both pages declare each other with `hreflang` links, and each has its own Open Graph image and description.
 
 ## Repository structure
 
@@ -96,12 +113,14 @@ run_all.py            one command for the whole pipeline
 requirements.txt      pinned Python dependencies
 sql/                  one SQL file per question, plus staging, model and validation
 src/                  download, crosswalk, checks, validation, geo, export, facts, render
-src/templates/        page, READMEs and methodology templates (numbers come from facts.json)
+src/templates/        page templates (index.html in Portuguese, index.en.html in English), share cards,
+                      READMEs and methodology (numbers come from facts.json)
 notebooks/            exploratory analysis with questions and takeaways (executed)
 project_docs/         brief, data dictionary, quality log, methodology
 data/raw, interim     not versioned
 data/processed/       analysis tables (CSV), validation results
-docs/                 the site (GitHub Pages)
+docs/                 the site (GitHub Pages): Portuguese at the root, English in docs/en/
+docs/js/i18n.js       chart and interface strings in both languages
 ```
 
 ## Publish with GitHub Pages

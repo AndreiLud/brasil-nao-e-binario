@@ -4,8 +4,11 @@
 
 Uma reportagem de dados sobre as eleições presidenciais de 2018, 2022 e 2026, com 2014 como ponto de partida. Os dados são oficiais, do TSE e do IBGE, município por município. O mapa de quem venceu em cada cidade desenha um país partido em dois blocos. Os votos contam outra história: em todo lugar há eleitores dos dois campos, além de quem votou em outro candidato, anulou, votou em branco ou ficou em casa.
 
-* **Site:** https://andreilud.github.io/brasil-nao-e-binario/
+* **Site em português:** https://andreilud.github.io/brasil-nao-e-binario/
+* **Site em inglês:** https://andreilud.github.io/brasil-nao-e-binario/en/
 * **English version of this README:** [README.md](README.md)
+
+O site é bilíngue. As duas versões usam os mesmos dados, gráficos e visual, e um seletor PT/EN no topo de cada página leva de uma à outra.
 
 ## Principais achados
 
@@ -80,12 +83,26 @@ python3.12 -m venv .venv
 .venv/bin/python run_all.py          # baixa, limpa, confere, analisa, exporta e gera os textos
 .venv/bin/python -m src.vendor       # opcional: baixa de novo as bibliotecas e fontes fixadas
 .venv/bin/python -m playwright install chromium
-.venv/bin/python -m src.screenshots og   # opcional: gera de novo a imagem de compartilhamento
-.venv/bin/python -m src.smoke            # teste no navegador (erros de JS, controles, busca, link direto)
-cd docs && python3 -m http.server 8000   # abra http://localhost:8000
+.venv/bin/python -m src.screenshots og   # opcional: gera de novo as imagens de compartilhamento (PT e EN)
+.venv/bin/python -m src.smoke            # teste no navegador dos dois idiomas (erros de JS, controles, busca, link direto)
+cd docs && python3 -m http.server 8000   # abra http://localhost:8000 (português) ou /en/ (inglês)
 ```
 
 Também funciona com `make all`, `make serve` e `make screenshots`. As versões estão fixadas em `requirements.txt`. O DuckDB está fixado na versão 1.5.6 de propósito: os pacotes da 2.0 exigem instruções AVX que algumas máquinas virtuais não têm. Os dados brutos não entram no Git (`data/raw/` é ignorado); `src/download.py` baixa tudo de novo e registra os hashes.
+
+## Site bilíngue
+
+| Peça | Português | Inglês |
+|---|---|---|
+| Página | `docs/index.html` | `docs/en/index.html` |
+| Modelo (todo o texto) | `src/templates/index.html` | `src/templates/index.en.html` |
+| Números do texto | texto `pt` de cada chave em `docs/data/facts.json` | texto `en` da mesma chave |
+| Rótulos, legendas e tooltips | bloco `pt` de `docs/js/i18n.js` | bloco `en` de `docs/js/i18n.js` |
+| Imagem de compartilhamento | `docs/img/og.png` | `docs/img/og-en.png` |
+
+* O JavaScript lê o idioma de `<html lang>` e formata os números de acordo (`46,6 milhões` ou `46.6 million`). A página em inglês declara `data-base="../"` para ler os mesmos arquivos de `docs/data/`.
+* Para mudar o texto, edite os dois modelos e rode `.venv/bin/python -m src.render`. O gerador se recusa a escrever as páginas se elas perderem a paridade de estrutura (mesmos ids, passos da rolagem e figuras nos dois idiomas), se aparecer no texto um número que não seja um fato calculado ou se surgir travessão, meia-risca ou hífen como pausa.
+* As duas páginas se apontam com links `hreflang`, e cada uma tem sua própria imagem e descrição para compartilhamento.
 
 ## Estrutura
 
@@ -94,12 +111,14 @@ run_all.py            um comando para o pipeline inteiro
 requirements.txt      dependências Python com versões fixadas
 sql/                  um arquivo SQL por pergunta, além de staging, modelo e conferência
 src/                  download, correspondência de códigos, checagens, conferência, mapa, exportação, fatos, textos
-src/templates/        modelos da página, dos READMEs e da metodologia (números vêm do facts.json)
+src/templates/        modelos das páginas (index.html em português, index.en.html em inglês), cartões de
+                      compartilhamento, READMEs e metodologia (números vêm do facts.json)
 notebooks/            análise exploratória com perguntas e conclusões (executada)
 project_docs/         brief, dicionário de dados, registro de qualidade, metodologia
 data/raw, interim     fora do Git
 data/processed/       tabelas da análise (CSV) e resultados da conferência
-docs/                 o site (GitHub Pages)
+docs/                 o site (GitHub Pages): português na raiz, inglês em docs/en/
+docs/js/i18n.js       textos dos gráficos e da interface nos dois idiomas
 ```
 
 ## Publicar no GitHub Pages

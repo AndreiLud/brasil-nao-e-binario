@@ -1,8 +1,8 @@
 // The scrollytelling map: winner -> proportion -> dots, then free exploration.
-import { C, NAMES, FULLNAMES, results, row, leader, shareScale, segmented, int, pct, votes, reducedMotion, getJSON } from "./core.js";
+import { C, NAMES, FULLNAMES, T, results, row, leader, shareScale, segmented, int, pct, votes, reducedMotion, getJSON } from "./core.js";
 import { CanvasMap, loadDots, isNewMunicipality, tipNode } from "./mapcore.js";
 
-const MODES = [["winner", "Vencedor"], ["share", "Proporção"], ["dots", "Pontos"]];
+const MODES = [["winner", T.modes.winner], ["share", T.modes.share], ["dots", T.modes.dots]];
 const STEP_STATE = [
   { year: 2026, round: 2, mode: "winner" },
   { year: 2026, round: 2, mode: "winner" },
@@ -110,23 +110,23 @@ export async function initMainMap() {
     const wrap = document.createElement("div");
     if (state.mode === "winner") {
       const l = document.createElement("div"); l.className = "legend";
-      l.append(key(C.lStage, `${n.L} venceu`), key(C.bStage, `${n.B} venceu`));
-      if (state.round === 1 && (state.year === 2014 || state.year === 2018)) l.append(key(C.thirdStage, "Outro candidato venceu"));
-      if (state.year < 2026) l.append(key("repeating-linear-gradient(135deg,#6b6672 0 2px,#221f28 2px 5px)", "Município ainda não instalado"));
+      l.append(key(C.lStage, T.won(n.L)), key(C.bStage, T.won(n.B)));
+      if (state.round === 1 && (state.year === 2014 || state.year === 2018)) l.append(key(C.thirdStage, T.otherWon));
+      if (state.year < 2026) l.append(key("repeating-linear-gradient(135deg,#6b6672 0 2px,#221f28 2px 5px)", T.notInstalled));
       wrap.append(l);
     } else if (state.mode === "share") {
       const g = document.createElement("div"); g.className = "grad";
       g.style.background = `linear-gradient(90deg, ${d3.range(0, 1.001, 0.1).map((t) => scale(0.15 + t * 0.7)).join(",")})`;
       const labels = document.createElement("div"); labels.className = "grad-labels";
-      for (const t of [`${n.B} 85% ou mais`, "meio a meio", `${n.L} 85% ou mais`]) { const s = document.createElement("span"); s.textContent = t; labels.append(s); }
+      for (const t of [T.orMore(n.B), T.half, T.orMore(n.L)]) { const s = document.createElement("span"); s.textContent = t; labels.append(s); }
       const sub = document.createElement("p"); sub.className = "chart-sub"; sub.style.margin = "6px 0 0"; sub.style.fontSize = "0.78rem";
-      sub.textContent = "Fatia de cada lado na soma dos votos dos dois.";
+      sub.textContent = T.shareSub;
       wrap.append(g, labels, sub);
     } else {
       const l = document.createElement("div"); l.className = "legend";
       const f = index.files[`${state.year}-${state.round}`];
       l.append(key(C.lGlow, `${n.L}`), key(C.bGlow, `${n.B}`));
-      const s = document.createElement("span"); s.textContent = `1 ponto = ${int(index.votes_per_dot)} votos`; s.style.color = C.stageMuted;
+      const s = document.createElement("span"); s.textContent = T.perDot(int(index.votes_per_dot)); s.style.color = C.stageMuted;
       l.append(s);
       wrap.append(l);
       if (f) wrap.dataset.n = f.n;
@@ -135,15 +135,15 @@ export async function initMainMap() {
   }
   function renderCaption() {
     const n = FULLNAMES[state.year];
-    const text = `${state.round}º turno de ${state.year}: ${n.L} contra ${n.B}${state.round === 1 ? ". No mapa de proporção, os outros candidatos ficam de fora." : "."}`;
+    const text = T.caption(state.year, state.round, n.L, n.B);
     if (caption.textContent !== text) caption.textContent = text;
   }
 
   // controls (live inside the sticky panel)
   const ctl = {};
-  ctl.year = segmented(controls, "Ano", [[2014, "2014"], [2018, "2018"], [2022, "2022"], [2026, "2026"]], state.year, (v) => { state.year = +v; update(); });
-  ctl.round = segmented(controls, "Turno", [[1, "1º"], [2, "2º"]], state.round, (v) => { state.round = +v; update(); });
-  ctl.mode = segmented(controls, "Mapa", MODES, state.mode, (v) => { state.mode = v; update(); });
+  ctl.year = segmented(controls, T.year, [[2014, "2014"], [2018, "2018"], [2022, "2022"], [2026, "2026"]], state.year, (v) => { state.year = +v; update(); });
+  ctl.round = segmented(controls, T.round, [[1, T.roundBtn(1)], [2, T.roundBtn(2)]], state.round, (v) => { state.round = +v; update(); });
+  ctl.mode = segmented(controls, T.map, MODES, state.mode, (v) => { state.mode = v; update(); });
 
   // tooltip
   map.bindTooltip(box, tip, (i) => {
@@ -151,15 +151,15 @@ export async function initMainMap() {
     const m = map.geo.mun.rows[f.row];
     const title = `${m[1]} (${m[2]})`;
     if (isNewMunicipality(f.id, state.year)) {
-      return tipNode(title, [], "Município instalado em 2025. Nas eleições presidenciais anteriores, seus eleitores votavam em Sorriso ou Nova Ubiratã.");
+      return tipNode(title, [], T.tipNew);
     }
     const r = row(res, f.row);
-    if (!r) return tipNode(title, [], "Sem resultado nesta eleição.");
+    if (!r) return tipNode(title, [], T.tipNone);
     const n = NAMES[state.year];
     const rows = [[C.lStage, n.L, `${pct(r.l / r.valid)} · ${int(r.l)}`], [C.bStage, n.B, `${pct(r.b / r.valid)} · ${int(r.b)}`]];
-    if (state.round === 1) rows.push([C.third, "Outros candidatos", `${pct(r.o / r.valid)} · ${int(r.o)}`]);
-    rows.push([C.blank, "Branco ou nulo", int(r.bn)], [C.absent, "Não votou", int(r.ab)]);
-    return tipNode(title, rows, `${state.round}º turno de ${state.year}. Percentuais sobre os votos válidos.`);
+    if (state.round === 1) rows.push([C.third, T.others, `${pct(r.o / r.valid)} · ${int(r.o)}`]);
+    rows.push([C.blank, T.blankNull, int(r.bn)], [C.absent, T.absent, int(r.ab)]);
+    return tipNode(title, rows, T.tipNote(state.year, state.round));
   });
 
   await update();

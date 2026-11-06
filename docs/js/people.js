@@ -1,5 +1,5 @@
 // "If your city had 100 voters": a 10 x 10 grid of small figures.
-import { C } from "./core.js";
+import { C, T } from "./core.js";
 
 const svgNS = "http://www.w3.org/2000/svg";
 
@@ -16,17 +16,17 @@ export function hundred(r) {
 
 const FILL = { l: C.l, b: C.b, o: C.third, bn: C.blank, ab: "none" };
 
-export function peopleSVG(r, { size = 180, title = "", names = { L: "o campo lulista", B: "o campo bolsonarista" } } = {}) {
+export function peopleSVG(r, { size = 180, title = "", names = { L: T.campLName, B: T.campBName } } = {}) {
   const h = hundred(r);
   const cell = 18, W = cell * 10, H = cell * 10 + 4;
   const svg = document.createElementNS(svgNS, "svg");
   svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
   svg.setAttribute("width", size); svg.setAttribute("height", (size * H) / W);
   svg.setAttribute("role", "img");
-  const parts = [[h.l, `votaram em ${names.L}`], [h.b, `em ${names.B}`], [h.o, "em outros candidatos"],
-    [h.bn, "votaram em branco ou anularam"], [h.ab, "não foram votar"]].filter(([n]) => n > 0).map(([n, t]) => `${n} ${t}`);
-  const said = parts.length > 1 ? `${parts.slice(0, -1).join(", ")} e ${parts[parts.length - 1]}` : parts[0];
-  svg.setAttribute("aria-label", `${title}${title ? ". " : ""}De cada 100 eleitores, ${said}.`);
+  const parts = [[h.l, T.pVotedL(h.l, names.L)], [h.b, T.pVotedB(h.b, names.B)], [h.o, T.pOthers(h.o)],
+    [h.bn, T.pBlank(h.bn)], [h.ab, T.pAbsent(h.ab)]].filter(([n]) => n > 0).map(([, t]) => t);
+  const said = parts.length > 1 ? `${parts.slice(0, -1).join(", ")}${T.and}${parts[parts.length - 1]}` : parts[0];
+  svg.setAttribute("aria-label", T.people(title, said));
   let k = 0;
   for (const key of ["l", "b", "o", "bn", "ab"]) {
     for (let j = 0; j < h[key]; j++, k++) {

@@ -28,7 +28,8 @@ SELECT
     coalesce(sum(votes) FILTER (WHERE camp IS NULL), 0)    AS others,
     -- best-placed third candidate (first rounds): votes and ballot number
     coalesce(max(votes) FILTER (WHERE camp IS NULL), 0)    AS top_other,
-    arg_max(nr_candidato, votes) FILTER (WHERE camp IS NULL) AS top_other_nr,
+    -- ties between other candidates go to the lower ballot number, so reruns are identical
+    arg_max(nr_candidato, [votes, -nr_candidato]) FILTER (WHERE camp IS NULL) AS top_other_nr,
     sum(votes)                                             AS nominal_votes
 FROM cand
 GROUP BY ALL;

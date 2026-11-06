@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en" data-base="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Brazil is not binary</title>
+<meta name="description" content="In Brazil's 2026 presidential runoff, {{e2026r2_local_minority_votes}} people voted for the candidate who lost in their own municipality. A data story on the 2018, 2022 and 2026 elections, built from official TSE data.">
+<meta name="theme-color" content="#17161c">
+<link rel="canonical" href="{{cfg_site_url}}en/">
+<link rel="alternate" hreflang="pt-BR" href="{{cfg_site_url}}">
+<link rel="alternate" hreflang="en" href="{{cfg_site_url}}en/">
+<link rel="alternate" hreflang="x-default" href="{{cfg_site_url}}">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:title" content="Brazil is not binary">
+<meta property="og:description" content="In the 2026 runoff, {{e2026r2_local_minority_votes}} people voted for the candidate who lost in their own municipality. The map of winners hides a mixed country.">
+<meta property="og:url" content="{{cfg_site_url}}en/">
+<meta property="og:image" content="{{cfg_site_url}}img/og-en.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Map of Brazil made of mixed violet and ochre dots, with the title Brazil is not binary">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Brazil is not binary">
+<meta name="twitter:description" content="In the 2026 runoff, {{e2026r2_local_minority_votes}} people voted for the candidate who lost in their own municipality.">
+<meta name="twitter:image" content="{{cfg_site_url}}img/og-en.png">
+<link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../fonts/fraunces-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<a class="skip" href="#conteudo">Skip to content</a>
+
+<header class="hero" aria-label="Opening">
+  <canvas id="hero-canvas" aria-hidden="true"></canvas>
+  <nav class="lang-switch" aria-label="Language">
+    <a href="../" hreflang="pt-BR" lang="pt-BR" title="Ler em português">PT</a><span aria-current="page" lang="en">EN</span>
+  </nav>
+  <div class="wrap">
+    <p class="kicker">Brazil's presidential elections of 2018, 2022 and 2026</p>
+    <h1>Brazil is not <em>binary</em></h1>
+    <p class="lede">The map of who won each city shows a country split in two. The votes show something else: every municipality has voters on both sides, plus people who backed another candidate, cast a blank or null vote, or stayed home.</p>
+    <p class="byline">Official data from Brazil's electoral court (TSE) and statistics agency (IBGE), municipality by municipality.</p>
+    <p class="scroll-cue" aria-hidden="true">Scroll to begin</p>
+  </div>
+</header>
+
+<main id="conteudo">
+
+<!-- 1. The question -->
+<section class="chapter bignum" id="pergunta" aria-labelledby="h-pergunta">
+  <div class="wrap">
+    <p class="kicker">The question</p>
+    <h2 id="h-pergunta">Is Brazil divided?</h2>
+    <div class="prose" style="margin-top:20px">
+      <p>In the 2026 runoff, Lula won in {{e2026r2_led_by_l}} municipalities and Flávio Bolsonaro in {{e2026r2_led_by_b}}. Counted that way, the municipalities seem to form two countries of almost the same size, each in its own color.</p>
+    </div>
+    <p class="figure-num" style="margin-top:36px">{{e2026r2_local_minority_votes_num}} <small>{{e2026r2_local_minority_votes_unit}}</small></p>
+    <p class="lede">people voted, in the 2026 runoff, for the candidate who lost in their own municipality. That is {{e2026r2_local_minority_vote_share}} of the valid votes cast in Brazil.</p>
+    <figure class="chart" id="fig-minority" aria-labelledby="t-minority">
+      <p class="chart-title" id="t-minority">More than a third of the votes went to the candidate who lost locally</p>
+      <p class="chart-sub">Valid votes in the 2026 runoff in Brazilian municipalities, split by the result in each municipality.</p>
+      <div class="mixbar" id="minority-bar" role="img" aria-label="Bar with Lula's votes where he won, Lula's votes where he lost, Flávio's votes where he lost and Flávio's votes where he won."></div>
+      <div class="mixbar-legend" id="minority-legend"></div>
+      <p class="chart-foot">Source: TSE. Votes cast abroad are not included here, because they do not belong to any municipality.</p>
+    </figure>
+    <div class="prose">
+      <p>This story uses official data from the latest presidential elections to show that each side's vote is spread across the whole country. It also shows where it is not: in some regions and income bands one side dominates, and the story gives that the same prominence.</p>
+      <div class="city-note" role="note">
+        <p><strong>How we compare different elections.</strong> Votes are grouped into two camps. <span class="nowrap"><span class="swatch l"></span><span class="l">Lula camp</span></span>: Fernando Haddad in 2018 and Luiz Inácio Lula da Silva in 2022 and 2026. <span class="nowrap"><span class="swatch b"></span><span class="b">Bolsonaro camp</span></span>: Jair Bolsonaro in 2018 and 2022 and his son Flávio Bolsonaro in 2026. The 2014 election, between Dilma Rousseff and Aécio Neves, appears only as a baseline, in the same colors and always with the candidates' names; neither is counted in either camp. Municipality names are followed by their state's two-letter abbreviation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. Three elections in one minute -->
+<section class="chapter" id="tres-eleicoes" aria-labelledby="h-tres">
+  <div class="wrap">
+    <div class="chapter-head">
+      <p class="kicker">Three elections in one minute</p>
+      <h2 id="h-tres">People who chose neither also count</h2>
+    </div>
+    <div class="prose">
+      <p>Brazil elects its president in two rounds. If no candidate gets more than half of the valid votes in the first round, the top two meet in a runoff. Official percentages are based on valid votes, which exclude blank and null ballots. Here the count starts from the whole electorate: people who voted for one of the two camps or for another candidate, people who voted blank or null, and people who did not vote at all.</p>
+    </div>
+  </div>
+  <div class="wrap">
+    <figure class="chart" aria-labelledby="t-nat">
+      <p class="chart-title" id="t-nat">In no round from 2014 to 2026 did a candidate get the votes of half the electorate</p>
+      <p class="chart-sub">How the eligible electorate split in each round, in %. Includes votes cast abroad.</p>
+      <div class="legend" id="nat-legend"></div>
+      <div class="natbars" id="natbars" role="img" aria-label="Stacked bars showing how the electorate split in each round from 2014 to 2026. The values are in the table below."></div>
+      <details class="table-view"><summary>See the numbers in a table</summary><div class="table-scroll" id="nat-table"></div></details>
+      <p class="chart-foot">Source: TSE, turnout detail and votes by municipality and zone. In 2014, Dilma Rousseff and Aécio Neves appear in the same colors only as a reference.</p>
+    </figure>
+    <div class="prose">
+      <p>In 2018, Jair Bolsonaro won with {{e2018r2_pct_b_valid}} of the valid vote. In 2022, Lula won with {{e2022r2_pct_l_valid}}. In 2026, Flávio Bolsonaro led the first round with {{e2026r1_pct_b_valid}} to Lula's {{e2026r1_pct_l_valid}}. In the runoff, Lula won with {{e2026r2_pct_l_valid}}.</p>
+      <p>The Lula camp's highest share was {{max_pct_aptos_l}} of the electorate, reached by {{max_pct_aptos_l_who}}. The Bolsonaro camp's highest was {{max_pct_aptos_b}}, reached by {{max_pct_aptos_b_who}}. In every round, between {{absent_min}} and {{absent_max}} of the electorate did not vote. In the 2026 runoff, {{e2026r2_pct_neither_aptos}} of the electorate voted for neither candidate: {{e2026r2_pct_absent_aptos}} did not turn out and {{e2026r2_pct_blank_null_aptos}} voted blank or null.</p>
+      <p>Voting is compulsory for most Brazilian adults. Abstention figures also include outdated records of people who moved or died, so part of the abstention does not reflect a decision not to vote.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 3. The map that misleads -->
+<section class="dark" id="mapa" aria-labelledby="h-mapa">
+  <div class="wrap" style="padding-top:96px;padding-bottom:24px">
+    <p class="kicker">The map that misleads</p>
+    <h2 id="h-mapa">A country in two colors, or in many</h2>
+  </div>
+  <div class="scrolly" id="scrolly">
+    <div class="sticky">
+      <div class="map-ui map-ui-top">
+        <div class="map-legend" id="map-legend"></div>
+      </div>
+      <div class="mapbox" id="mainmap" role="img" aria-label="Map of Brazil's municipalities. The numbers for each municipality are in the Your city section below.">
+        <canvas class="layer" id="map-fill" aria-hidden="true"></canvas>
+        <canvas class="layer" id="map-dots" aria-hidden="true" style="opacity:0"></canvas>
+        <canvas id="map-hover" aria-hidden="true"></canvas>
+        <div class="tooltip" id="map-tip" aria-hidden="true"></div>
+      </div>
+      <div class="map-ui">
+        <div class="controls" id="map-controls" role="group" aria-label="Map controls"></div>
+        <p class="chart-sub map-caption" id="map-caption"></p>
+      </div>
+    </div>
+    <div class="steps">
+      <div class="step" data-step="0"><div class="card">
+        <p>This is the usual map. Each municipality takes the color of whoever got the most votes there. In the 2026 runoff, <span class="l">Lula</span> won in {{e2026r2_led_by_l}} municipalities and <span class="b">Flávio</span> in {{e2026r2_led_by_b}}.</p>
+      </div></div>
+      <div class="step" data-step="1"><div class="card">
+        <p>The municipalities Lula won hold half of the electorate registered in Brazil, and those Flávio won hold the other half ({{e2026r2_aptos_share_in_l_led}} and {{e2026r2_aptos_share_in_b_led}}). It looks like a country cut in half. But the color of each municipality hides everyone who voted for the other candidate there.</p>
+      </div></div>
+      <div class="step" data-step="2"><div class="card">
+        <p>Now the same election as shares. The closer to <span style="color:var(--mix)">pink</span>, the more balanced the municipality. In {{e2026r2_n_minority_over_30}} municipalities, the candidate who lost locally got more than 30% of the vote. In {{e2026r2_n_minority_over_40}}, more than 40%.</p>
+      </div></div>
+      <div class="step" data-step="3"><div class="card">
+        <p>Finally, each dot is worth {{dot_votes}} votes and sits at a random spot inside its municipality. The map now shows where the votes are. Where more voters live, the two colors mix.</p>
+      </div></div>
+      <div class="step" data-step="4"><div class="card">
+        <p>Lula got {{e2026r2_l_votes_where_b_led}} votes in municipalities Flávio won. Flávio got {{e2026r2_b_votes_where_l_led}} in municipalities Lula won. That is {{e2026r2_l_share_of_votes_where_b_led}} and {{e2026r2_b_share_of_votes_where_l_led}} of each candidate's votes in Brazil.</p>
+      </div></div>
+      <div class="step" data-step="5"><div class="card">
+        <p><strong>Your turn.</strong> Use the buttons below the map to change the year, the round and the type of map. Hover over or tap a municipality to see its numbers. Without a mouse, search for a municipality in <a href="#sua-cidade">Your city</a>.</p>
+      </div></div>
+      <div class="step step-spacer" data-step="6" aria-hidden="true"></div>
+    </div>
+  </div>
+  <div class="wrap explore" id="explore">
+    <p class="chart-foot">In the first rounds of 2014 and 2018, a third candidate came first in some municipalities: {{e2014r1_led_by_other}} in 2014 ({{e2014r1_other_leader_names}}) and {{e2018r1_led_by_other}} in 2018 ({{e2018r1_other_leader_names}}). On the winner map they appear in light gray. On the share map, color shows only the split between the two camps. Boa Esperança do Norte (MT) was formally established in 2025; in earlier presidential elections its area is hatched. Source: TSE and IBGE (2025 municipal boundaries). Albers equal-area conic projection, which keeps areas proportional. Votes cast abroad are not on the map.</p>
+  </div>
+</section>
+
+<!-- 4. Nobody lives in a bubble -->
+<section class="chapter" id="bolha" aria-labelledby="h-bolha">
+  <div class="wrap">
+    <div class="chapter-head">
+      <p class="kicker">Nobody lives in a bubble</p>
+      <h2 id="h-bolha">The side that loses a city does not vanish from it</h2>
+    </div>
+    <div class="prose">
+      <p>In the 2026 runoff, the losing side got more than 10% of the valid vote in {{e2026r2_n_minority_over_10}} of the {{n_mun_2026}} municipalities.</p>
+    </div>
+    <figure class="chart" aria-labelledby="t-hist">
+      <p class="chart-title" id="t-hist">In the 2026 runoff, the candidate who lost locally got more than 30% of the valid vote in {{e2026r2_n_minority_over_30}} municipalities</p>
+      <p class="chart-sub">Number of municipalities by each side's share of the runoff valid vote. Each bar covers 5 percentage points. Use the buttons to see other years.</p>
+      <div class="controls" id="hist-controls"></div>
+      <div id="hist" class="svg-chart" role="img" aria-label="Histogram of municipalities by each side's share of the runoff vote."></div>
+      <details class="table-view"><summary>See the numbers in a table</summary><div class="table-scroll" id="hist-table"></div></details>
+      <p class="chart-foot">Source: TSE. The light band marks municipalities where the losing side got more than 30%. Municipalities with an exact tie are not counted as having a losing side.</p>
+    </figure>
+
+    <figure class="chart" aria-labelledby="t-reg">
+      <p class="chart-title" id="t-reg">Each side has millions of votes in the regions where it loses</p>
+      <p class="chart-sub">Votes for each candidate in the 2026 runoff, by region.</p>
+      <div class="legend"><span class="key"><i style="background:var(--l)"></i>Lula</span><span class="key"><i style="background:var(--b)"></i>Flávio Bolsonaro</span></div>
+      <div id="regions" class="svg-chart" role="img" aria-label="Bars with Lula's and Flávio Bolsonaro's votes in each region in the 2026 runoff."></div>
+      <details class="table-view"><summary>See the numbers in a table</summary><div class="table-scroll" id="regions-table"></div></details>
+      <p class="chart-foot">Source: TSE. Abroad: votes cast by Brazilians outside the country.</p>
+    </figure>
+    <div class="prose">
+      <p>Flávio got {{e2026r2_reg_ne_camp_b}} votes in the Northeast, more than in {{e2026r2_b_ne_states_n}} states of other regions combined, with the Federal District counted as a state ({{e2026r2_b_ne_states_list}}). Lula got {{e2026r2_reg_s_camp_l}} in the South, more than in {{e2026r2_l_s_states_n}} states of other regions combined ({{e2026r2_l_s_states_list}}). In the North, the two were {{e2026r2_reg_n_diff_int}} votes apart, out of {{e2026r2_reg_n_two_camp_total}} votes.</p>
+      <p>That does not mean regions vote alike. In the Northeast, Lula won in {{e2026r2_reg_ne_led_by_l}} of the {{e2026r2_reg_ne_municipalities}} municipalities. In the South, Flávio won in {{e2026r2_reg_s_led_by_b}} of {{e2026r2_reg_s_municipalities}}, and in the Center-West in {{e2026r2_reg_co_led_by_b}} of {{e2026r2_reg_co_municipalities}}. Lula's lead in the Northeast was {{e2026r2_reg_ne_lead}} votes. Flávio's, adding up the {{e2026r2_b_led_regions}}, was {{e2026r2_b_lead_where_b_led_regions}}.</p>
+    </div>
+
+    <figure class="chart" aria-labelledby="t-ext">
+      <p class="chart-title" id="t-ext">Not even the most lopsided municipalities voted for only one side</p>
+      <p class="chart-sub">The two municipalities with the most lopsided results in the 2026 runoff, as if each had 100 voters.</p>
+      <div class="cards">
+        <div class="card-x">
+          <h3>{{e2026r2_most_l_name}}</h3>
+          <p class="where">The country's most pro-Lula municipality</p>
+          <div class="people" id="people-most-l"></div>
+          <p>Lula got {{e2026r2_most_l_share_l}} of the valid vote. Even so, {{e2026r2_most_l_votes_b}} voters chose Flávio ({{e2026r2_most_l_share_b}} of the valid vote).</p>
+        </div>
+        <div class="card-x">
+          <h3>{{e2026r2_most_b_name}}</h3>
+          <p class="where">The country's most pro-Bolsonaro municipality</p>
+          <div class="people" id="people-most-b"></div>
+          <p>Flávio got {{e2026r2_most_b_share_b}} of the valid vote. Even so, {{e2026r2_most_b_votes_l}} voters chose Lula ({{e2026r2_most_b_share_l}} of the valid vote).</p>
+        </div>
+      </div>
+      <p class="chart-foot">Each icon is 1% of the eligible electorate, including people who did not vote (outlined icons). That is why the count of icons differs from the share of valid votes. Source: TSE.</p>
+    </figure>
+    <div class="prose">
+      <p>Among municipalities with 100,000 voters or more, the most pro-Lula was {{e2026r2_most_l_100k_name}}, where Flávio got {{e2026r2_most_l_100k_share_b}}. The most pro-Bolsonaro was {{e2026r2_most_b_100k_name}}, where Lula got {{e2026r2_most_b_100k_share_l}}.</p>
+    </div>
+
+    <h3 style="margin-top:56px">Income, size and region</h3>
+    <div class="prose" style="margin-top:12px">
+      <p>The vote is also associated with characteristics of the municipalities. The chart shows each group's median and the range where most of its municipalities fall.</p>
+    </div>
+    <figure class="chart" aria-labelledby="t-ctx">
+      <p class="chart-title" id="t-ctx">Lula's share varies a lot across income bands and little across municipality sizes</p>
+      <p class="chart-sub">Lula's share of the valid vote in each group's municipalities, 2026 runoff. The thick bar covers the middle half of the municipalities; the thin one, 80% of them; the dot marks the median.</p>
+      <div id="context" class="svg-chart" role="img" aria-label="Distribution of Lula's share by income band, by municipality size and by region."></div>
+      <details class="table-view"><summary>See the numbers in a table</summary><div class="table-scroll" id="context-table"></div></details>
+      <p class="chart-foot">Source: TSE (votes) and IBGE, 2022 Census (income and population). Income: the municipality's median household income per capita. Band cutoffs: {{q7_income_cut_p20}}, {{q7_income_cut_p40}}, {{q7_income_cut_p60}} and {{q7_income_cut_p80}}. Many municipalities have a median equal to the 2022 minimum wage, so the bands do not hold the same number of municipalities. Size: 2022 Census population.</p>
+    </figure>
+    <div class="prose">
+      <p>Of these three measures, income is the one most closely associated with the vote. In the lowest income band, the median municipality gave Lula {{q7_income1_p50_l}}; in the highest, {{q7_income5_p50_l}}. At the extremes, the results barely overlap. Income and region go together: {{q7_income1_in_ne}} of the {{q7_income1_municipalities}} lowest-income municipalities are in the Northeast, and {{q7_income5_in_s}} of the {{q7_income5_municipalities}} highest-income ones are in the South. Even when each municipality is compared with its region's average, higher income goes with a smaller share for Lula.</p>
+      <p>There are exceptions on both sides: Flávio won in {{q7_income1_led_by_b}} municipalities of the lowest income band, and Lula in {{q7_income5_led_by_l}} of the highest. And this describes places, not people. High-income municipalities also have low-income voters, and vice versa.</p>
+      <p>Municipality size is barely associated with the vote in the country as a whole. Small and large municipalities appear on both sides.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 5. 2018 -->
+<section class="chapter" id="em-2018" aria-labelledby="h-2018" style="background:var(--paper-2)">
+  <div class="wrap">
+    <div class="chapter-head">
+      <p class="kicker">2018</p>
+      <h2 id="h-2018">The PT's opponent gains ground in all five regions</h2>
+    </div>
+    <div class="prose">
+      <p>To measure Jair Bolsonaro's rise, the comparison starts from the 2014 runoff, when Aécio Neves of the Brazilian Social Democracy Party (PSDB) faced Dilma Rousseff of the Workers' Party (PT). It is not the same political movement. What is measured is how much the vote share of the PT's runoff opponent grew, municipality by municipality.</p>
+    </div>
+    <figure class="chart" aria-labelledby="t-2018">
+      <p class="chart-title" id="t-2018">The candidate who faced the PT gained ground in {{q4_n_b_grew}} of the {{n_mun_2022}} municipalities</p>
+      <p class="chart-sub">Change in each side's runoff share, from 2014 (Dilma and Aécio) to 2018 (Haddad and Bolsonaro), in percentage points.</p>
+      <div class="legend" id="legend-2018"></div>
+      <div class="twocol">
+        <div class="smallmap" id="map-2018" role="img" aria-label="Map of the change in each side's share between 2014 and 2018, by municipality. The summary by region is in the chart beside it and in the table."><div class="tooltip" aria-hidden="true"></div></div>
+        <div id="bars-2018" class="svg-chart" role="img" aria-label="Change by region in the share of the candidate who faced the PT, 2014 to 2018."></div>
+      </div>
+      <details class="table-view"><summary>See the numbers by region</summary><div class="table-scroll" id="table-2018"></div></details>
+      <p class="chart-foot">Source: TSE. Bolsonaro's share (2018) minus Aécio's share (2014) of the runoff valid vote, and the same for Haddad and Dilma.</p>
+    </figure>
+    <div class="prose">
+      <p>The share of the PT's opponent rose by {{q4_reg_n_delta_b_share}} in the North, {{q4_reg_se_delta_b_share}} in the Southeast, {{q4_reg_s_delta_b_share}} in the South and {{q4_reg_co_delta_b_share}} in the Center-West. In the Northeast, it rose {{q4_reg_ne_delta_b_share}}. In {{q4_n_flipped_to_b}} municipalities, Dilma had won in 2014 and Bolsonaro won in 2018. In {{q4_n_flipped_to_l}}, it went the other way: Aécio won in 2014 and Haddad in 2018.</p>
+      <p>Among municipalities with 50,000 voters or more, {{q4_top10_rj_phrase}}. The largest was in {{q4_top_name}}. There, Aécio got {{q4_top_b_2014}} of the valid vote in 2014, and Bolsonaro {{q4_top_b_2018}} in 2018.</p>
+      <p>Nationwide, Bolsonaro got {{q4_delta_b_votes}} more runoff votes than Aécio. Haddad got {{q4_delta_l_votes_abs}} fewer than Dilma.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 6. 2022 -->
+<section class="chapter" id="em-2022" aria-labelledby="h-2022">
+  <div class="wrap">
+    <div class="chapter-head">
+      <p class="kicker">2022</p>
+      <h2 id="h-2022">Lula's return runs through the Southeast</h2>
+    </div>
+    <div class="prose">
+      <p>From 2018 to 2022, Lula got {{q5_delta_l_votes}} more runoff votes than Haddad. Bolsonaro got {{q5_delta_b_votes}} more than in the previous election.</p>
+    </div>
+    <figure class="chart" aria-labelledby="t-2022">
+      <p class="chart-title" id="t-2022">The Lula camp's share grew in {{q5_n_l_grew}} municipalities and fell in {{q5_n_l_fell}}</p>
+      <p class="chart-sub">Change in each side's runoff share, from 2018 (Haddad and Bolsonaro) to 2022 (Lula and Bolsonaro), in percentage points.</p>
+      <div class="legend" id="legend-2022"></div>
+      <div class="twocol">
+        <div class="smallmap" id="map-2022" role="img" aria-label="Map of the change in each side's share between 2018 and 2022, by municipality. The summary by region is in the chart beside it and in the table."><div class="tooltip" aria-hidden="true"></div></div>
+        <div id="bars-2022" class="svg-chart" role="img" aria-label="Change by region in the Lula camp's share, 2018 to 2022."></div>
+      </div>
+      <details class="table-view"><summary>See the numbers by region</summary><div class="table-scroll" id="table-2022"></div></details>
+      <p class="chart-foot">Source: TSE. Lula's share (2022) minus Haddad's share (2018) of the runoff valid vote.</p>
+    </figure>
+    <div class="prose">
+      <p>The Lula camp's share rose by {{q5_reg_se_delta_l_share_u}} in the Southeast, {{q5_reg_s_delta_l_share_u}} in the South, {{q5_reg_co_delta_l_share_u}} in the Center-West and {{q5_reg_n_delta_l_share_u}} in the North. In the Northeast it barely moved ({{q5_reg_ne_delta_l_share}}). The Southeast accounted for {{q5_se_share_of_l_gain}} of the Lula camp's vote gain inside Brazil.</p>
+      <p>In all, {{q5_n_flipped_to_l}} municipalities went from Bolsonaro to Lula, and {{q5_n_flipped_to_b}} went the other way. Among municipalities with 50,000 voters or more, {{q5_top10_sp_phrase}}. The largest was in {{q5_top_name}}: {{q5_top_delta}}.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 7. 2026 -->
+<section class="chapter" id="em-2026" aria-labelledby="h-2026" style="background:var(--paper-2)">
+  <div class="wrap">
+    <div class="chapter-head">
+      <p class="kicker">2026</p>
+      <h2 id="h-2026">A turnaround between two Sundays</h2>
+    </div>
+    <div class="prose">
+      <p>In the first round, on October 4, Flávio Bolsonaro finished {{q6_b_lead_r1}} votes ahead of Lula. In the runoff, on October 25, Lula won by {{q6_l_lead_r2}}.</p>
+    </div>
+    <figure class="chart" aria-labelledby="t-bridge">
+      <p class="chart-title" id="t-bridge">Between rounds, Lula added {{q6_delta_l_votes}} votes and Flávio {{q6_delta_b_votes}}</p>
+      <p class="chart-sub">What changed between the two rounds nationwide, in votes. Both bars add up to the same total.</p>
+      <div id="bridge" class="svg-chart"></div>
+      <p class="chart-foot">The arithmetic balances for the country, but it does not show who switched. A voter who backed another candidate in the first round may have voted for Lula or Flávio, cast a blank or null vote, or stayed home. Source: TSE.</p>
+    </figure>
+
+    <figure class="chart" aria-labelledby="t-scatter">
+      <p class="chart-title" id="t-scatter">Where other candidates got more votes, both finalists gained more</p>
+      <p class="chart-sub">Each circle is a municipality, with area proportional to its electorate. Horizontal axis: votes for other candidates in the first round, or the change in turnout. Vertical axis: each candidate's change between rounds, in points of the electorate.</p>
+      <div class="controls" id="scatter-controls"></div>
+      <div id="scatter" class="svg-chart" role="img" aria-label="Two scatter plots, one for Lula and one for Flávio, with each municipality's change between rounds."></div>
+      <div class="tooltip" id="scatter-tip" aria-hidden="true"></div>
+      <details class="table-view"><summary>See the numbers by group of municipalities</summary><div class="table-scroll" id="scatter-table"></div></details>
+      <p class="chart-foot">Source: TSE. An association between municipalities, not between people.</p>
+    </figure>
+    <div class="prose">
+      <p>Where other candidates got more votes in the first round, both Lula and Flávio gained more in the runoff. Where turnout rose more, they also gained more. Part of this is arithmetic: in points of the electorate, the two gains add up to the vote for other candidates plus the rise in turnout, minus the change in blank and null votes.</p>
+      <p>Across the ten groups in the table (municipalities split into fifths by the vote for other candidates and by the change in turnout), Lula gained more than Flávio in every one, by {{q6_net_gain_min_num}} to {{q6_net_gain_max}} of the electorate. Municipality by municipality, Lula gained more than Flávio in {{q6_n_l_gained_more}}; Flávio gained more than Lula in {{q6_n_b_gained_more}}.</p>
+    </div>
+    <figure class="chart" aria-labelledby="t-2026map">
+      <p class="chart-title" id="t-2026map">Lula gained more than Flávio in {{q6_n_l_gained_more}} of the {{n_mun_2026}} municipalities</p>
+      <p class="chart-sub">Lula's gain minus Flávio's gain between the first round and the runoff of 2026, in points of the electorate.</p>
+      <div class="legend" id="legend-2026"></div>
+      <div class="smallmap" id="map-2026" style="max-width:720px" role="img" aria-label="Map of the difference between Lula's and Flávio's gains between the 2026 rounds, by municipality. The summary by region is in the table."><div class="tooltip" aria-hidden="true"></div></div>
+      <details class="table-view"><summary>See the numbers by region</summary><div class="table-scroll" id="table-2026"></div></details>
+      <p class="chart-foot">Source: TSE.</p>
+    </figure>
+    <div class="prose">
+      <p>In {{q6_n_flipped_to_l}} municipalities, Flávio was ahead in the first round and Lula finished ahead in the runoff. {{q6_flipped_to_b_sentence}}</p>
+      <p>Among municipalities with 50,000 voters or more, Lula's largest gain was in {{q6_top_pts_name}}: {{q6_top_pts_gain}} of the electorate. Flávio's was in {{q6_top_pts_b_name}}: {{q6_top_pts_b_gain}}. {{q6_top_votes_sentence}}</p>
+      <div class="city-note" role="note"><p><strong>A word of caution.</strong> Municipal data do not tell how each person voted. If a municipality had many votes for other candidates and Lula or Flávio gained there, one cannot conclude that those voters switched to that candidate. Drawing that conclusion is known as the ecological fallacy.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. Your city -->
+<section class="chapter" id="sua-cidade" aria-labelledby="h-cidade">
+  <div class="wrap">
+    <div class="chapter-head">
+      <p class="kicker">Your city</p>
+      <h2 id="h-cidade">What if your city had 100 voters?</h2>
+    </div>
+    <div class="prose">
+      <p>Type the name of a Brazilian municipality. Each icon is 1% of the registered electorate. Outlined icons stand for people who did not vote.</p>
+    </div>
+    <div class="city-search" id="city-search">
+      <label for="city-input" class="sr-only">Municipality name</label>
+      <input id="city-input" type="text" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="city-list" autocomplete="off" spellcheck="false" placeholder="E.g. Campinas, Sobral, Chapecó">
+      <ul id="city-list" role="listbox" aria-label="Municipalities found" hidden></ul>
+    </div>
+    <p class="sr-only" id="city-status" aria-live="polite"></p>
+    <div class="city-out" id="city-out"></div>
+  </div>
+</section>
+
+<!-- 9. How we did it -->
+<section class="chapter method" id="metodo" aria-labelledby="h-metodo">
+  <div class="wrap">
+    <div class="chapter-head">
+      <p class="kicker">How we did it</p>
+      <h2 id="h-metodo">Sources, method and limits</h2>
+    </div>
+    <h3>Sources</h3>
+    <ul>
+      <li><strong>Votes and turnout:</strong> open data portal of Brazil's Superior Electoral Court (TSE), with votes and turnout detail by municipality and electoral zone for 2014, 2018, 2022 and 2026. The 2026 files already include both rounds.</li>
+      <li><strong>Municipality codes:</strong> the official TSE table linking TSE codes to IBGE codes, checked against the municipality directory of Base dos Dados, a Brazilian open-data project.</li>
+      <li><strong>Map:</strong> IBGE 2025 municipal boundaries, simplified so that shared borders still line up.</li>
+      <li><strong>Population and income:</strong> IBGE 2022 Census (tables 4709 and 10295 of SIDRA, IBGE's online database).</li>
+    </ul>
+    <h3>Validation</h3>
+    <p>Each round's totals, for Brazil, each state and abroad, were compared one by one with the TSE's official results reports and, for 2026, also with the results-portal files. In total, {{validation_cells}} numbers were compared. Only one difference appeared, and it has an explanation: in the 2018 runoff, the municipal file counts voters at polling stations whose votes were not counted as abstention, while the official report lists them separately. For 2014, no official report was available; the check used the section-level vote file, which comes from the same TSE database.</p>
+    <h3>Decisions</h3>
+    <ul>
+      <li>Votes cast abroad count in national totals and are left out of the maps.</li>
+      <li>On the share maps, color shows each camp's share of the two camps' combined votes. In first rounds, this leaves out the other candidates.</li>
+      <li>On the dot map, each dot is worth {{dot_votes}} votes and is placed at a random spot inside its municipality, with a fixed seed. The position inside the municipality has no meaning.</li>
+      <li>Boa Esperança do Norte (MT) was formally established in 2025, with parts of Sorriso and Nova Ubiratã, and had its first presidential election in 2026. The 2026 results of those two municipalities cover a smaller area than in earlier elections.</li>
+      <li>“Did not vote” is the eligible electorate minus turnout. It includes voters at polling stations that did not open.</li>
+    </ul>
+    <h3>Limits</h3>
+    <ul>
+      <li>Municipal data describe places, not people. No number here says how any individual voted.</li>
+      <li>The associations with income, size, third candidates and turnout do not indicate cause.</li>
+      <li>The comparison with 2014 measures the candidate who faced the PT in the runoff, not the same political group.</li>
+      <li>Abstention includes outdated records of people who moved or died.</li>
+    </ul>
+    <p>Code, SQL queries, the quality log and processed data are in the <a href="{{cfg_repo_url}}">project repository</a>. <a href="../" hreflang="pt-BR" lang="pt-BR">Leia em português</a>.</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Data: Superior Electoral Court (TSE) and Brazilian Institute of Geography and Statistics (IBGE). Typefaces: Fraunces and Inter, under the SIL Open Font License.</p>
+  </div>
+</footer>
+
+<script src="../vendor/d3-custom.min.js"></script>
+<script src="../vendor/topojson-client.min.js"></script>
+<script src="../vendor/scrollama.min.js"></script>
+<script type="module" src="../js/main.js"></script>
+</body>
+</html>

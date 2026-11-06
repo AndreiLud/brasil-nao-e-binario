@@ -2,7 +2,7 @@
 
 ## Goal
 
-A complete, reproducible analysis of the Brazilian presidential elections of 2018, 2022 and 2026 (2014 as a baseline) and a static data story for GitHub Pages, written for a general audience in Brazilian Portuguese.
+A complete, reproducible analysis of the Brazilian presidential elections of 2018, 2022 and 2026 (2014 as a baseline) and a static data story for GitHub Pages, written for a general audience in Brazilian Portuguese, with an English version (`docs/en/`) that shares the same data, charts and design.
 
 ## Thesis to test
 

@@ -54,8 +54,14 @@ def processed_tables(con):
     C.PROCESSED.mkdir(parents=True, exist_ok=True)
     tables = [r[0] for r in con.execute("SELECT table_name FROM information_schema.tables "
                                         "WHERE table_name LIKE 'q%' ORDER BY 1").fetchall()]
+    order = ("year", "round", "region_id", "cd_ibge", "uf", "dimension", "grp", "bin_start_pct", "factor", "quintile",
+             "kind", "nr_candidato", "scope", "item")
     for t in tables:
-        con.sql(f"SELECT * FROM {t}").df().to_csv(C.PROCESSED / f"{t}.csv", index=False, float_format="%.6g")
+        df = con.sql(f"SELECT * FROM {t}").df()
+        keys = [c for c in order if c in df.columns]
+        if keys and not t.endswith("_top") and "_top_" not in t:   # top-N tables keep their ranking order
+            df = df.sort_values(keys, kind="mergesort")
+        df.to_csv(C.PROCESSED / f"{t}.csv", index=False, float_format="%.6g")
     return tables
 
 

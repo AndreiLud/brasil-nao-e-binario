@@ -105,6 +105,24 @@ def number_problems(text: str, facts: dict, lang: str) -> list[str]:
     return bad
 
 
+def parity_problems(a: Path, b: Path) -> list[str]:
+    """Both language versions must have the same structure (ids and scrollytelling steps),
+    because the same JavaScript drives both pages."""
+    if not (a.exists() and b.exists()):
+        return []
+    def shape(p):
+        html_ = p.read_text(encoding="utf-8")
+        return (sorted(re.findall(r'\bid="([^"]+)"', html_)), len(re.findall(r'class="step\b', html_)),
+                len(re.findall(r"<figure\b", html_)))
+    sa, sb = shape(a), shape(b)
+    out = []
+    if sa[0] != sb[0]:
+        out.append(f"id mismatch between languages: only pt {sorted(set(sa[0]) - set(sb[0]))}, only en {sorted(set(sb[0]) - set(sa[0]))}")
+    if sa[1:] != sb[1:]:
+        out.append(f"structure mismatch between languages (steps, figures): pt {sa[1:]}, en {sb[1:]}")
+    return out
+
+
 def render_file(src: Path, dst: Path, lang: str, facts: dict, kind: str) -> list[str]:
     tpl = src.read_text(encoding="utf-8")
     out = render_text(tpl, lang, facts)
@@ -122,6 +140,7 @@ def main(strict: bool = True):
     facts = load_facts()
     jobs = [
         (C.TEMPLATES / "index.html", C.DOCS / "index.html", "pt", "html"),
+        (C.TEMPLATES / "index.en.html", C.DOCS / "en" / "index.html", "en", "html"),
         (C.TEMPLATES / "README.md", C.ROOT / "README.md", "en", "md"),
         (C.TEMPLATES / "README.pt-BR.md", C.ROOT / "README.pt-BR.md", "pt", "md"),
         (C.TEMPLATES / "methodology.md", C.PROJECT_DOCS / "methodology.md", "en", "md"),
@@ -133,6 +152,7 @@ def main(strict: bool = True):
             continue
         problems += render_file(src, dst, lang, facts, kind)
         print(f"  rendered {dst.relative_to(C.ROOT)}")
+    problems += parity_problems(C.DOCS / "index.html", C.DOCS / "en" / "index.html")
     if problems:
         print("  Text problems found:")
         for p in problems:

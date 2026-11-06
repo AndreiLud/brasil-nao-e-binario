@@ -7,8 +7,12 @@
 <meta name="description" content="No 2º turno de 2026, 46,6 milhões de pessoas votaram no candidato que perdeu no próprio município. Uma análise das eleições presidenciais de 2018, 2022 e 2026 com dados oficiais do TSE.">
 <meta name="theme-color" content="#17161c">
 <link rel="canonical" href="https://andreilud.github.io/brasil-nao-e-binario/">
+<link rel="alternate" hreflang="pt-BR" href="https://andreilud.github.io/brasil-nao-e-binario/">
+<link rel="alternate" hreflang="en" href="https://andreilud.github.io/brasil-nao-e-binario/en/">
+<link rel="alternate" hreflang="x-default" href="https://andreilud.github.io/brasil-nao-e-binario/">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="pt_BR">
+<meta property="og:locale:alternate" content="en_US">
 <meta property="og:title" content="O Brasil não é binário">
 <meta property="og:description" content="No 2º turno de 2026, 46,6 milhões de pessoas votaram no candidato que perdeu no próprio município. O mapa de vencedores esconde um país misturado.">
 <meta property="og:url" content="https://andreilud.github.io/brasil-nao-e-binario/">
@@ -30,6 +34,9 @@
 
 <header class="hero" aria-label="Abertura">
   <canvas id="hero-canvas" aria-hidden="true"></canvas>
+  <nav class="lang-switch" aria-label="Idioma">
+    <span aria-current="page" lang="pt-BR">PT</span><a href="en/" hreflang="en" lang="en" title="Read in English">EN</a>
+  </nav>
   <div class="wrap">
     <p class="kicker">Eleições presidenciais de 2018, 2022 e 2026</p>
     <h1>O Brasil não é <em>binário</em></h1>
@@ -61,7 +68,7 @@
     <div class="prose">
       <p>Este texto mostra, com os dados oficiais das últimas eleições presidenciais, que o voto de cada lado está espalhado pelo país inteiro. Mostra também onde ele não está: há regiões e faixas de renda em que um dos lados domina, e isso aparece aqui com o mesmo destaque.</p>
       <div class="city-note" role="note">
-        <p><strong>Como comparamos eleições diferentes.</strong> Os votos foram agrupados em dois campos. <span class="nowrap"><span class="swatch l"></span><span class="l">Campo lulista</span></span>: Fernando Haddad em 2018 e Luiz Inácio Lula da Silva em 2022 e 2026. <span class="nowrap"><span class="swatch b"></span><span class="b">Campo bolsonarista</span></span>: Jair Bolsonaro em 2018 e 2022 e Flávio Bolsonaro em 2026. A eleição de 2014, entre Dilma Rousseff e Aécio Neves, aparece só como ponto de partida, nas mesmas cores e sempre com o nome dos candidatos. Nenhum dos dois fazia parte desses campos.</p>
+        <p><strong>Como comparamos eleições diferentes.</strong> Os votos foram agrupados em dois campos. <span class="nowrap"><span class="swatch l"></span><span class="l">Campo lulista</span></span>: Fernando Haddad em 2018 e Luiz Inácio Lula da Silva em 2022 e 2026. <span class="nowrap"><span class="swatch b"></span><span class="b">Campo bolsonarista</span></span>: Jair Bolsonaro em 2018 e 2022 e Flávio Bolsonaro em 2026. A eleição de 2014, entre Dilma Rousseff e Aécio Neves, aparece só como ponto de partida, nas mesmas cores e sempre com o nome dos candidatos; os dois não entram na contagem de nenhum dos campos.</p>
       </div>
     </div>
   </div>
@@ -89,7 +96,7 @@
     </figure>
     <div class="prose">
       <p>Em 2018, Jair Bolsonaro venceu com 55,1% dos votos válidos. Em 2022, Lula venceu com 50,9%. Em 2026, Flávio Bolsonaro terminou o 1º turno à frente, com 47,0% contra 45,2% de Lula. No 2º turno, Lula venceu com 51,8%.</p>
-      <p>O maior apoio no período foi o de Lula no 2º turno de 2026: 40,5% do eleitorado. No campo bolsonarista, o maior foi o de Jair Bolsonaro no 2º turno de 2018: 39,2%. Em cada turno, entre 19,2% e 21,3% dos eleitores não foram votar. No 2º turno de 2026, 21,8% do eleitorado não votou em nenhum dos dois: 19,2% não compareceram e 2,6% votaram em branco ou anularam.</p>
+      <p>O maior apoio do campo lulista foi de 40,5% do eleitorado, com Lula no 2º turno de 2026. O do campo bolsonarista foi de 39,2%, com Jair Bolsonaro no 2º turno de 2018. Em cada turno, entre 19,2% e 21,3% do eleitorado não foi votar. No 2º turno de 2026, 21,8% do eleitorado não votou em nenhum dos dois: 19,2% não compareceram e 2,6% votaram em branco ou anularam.</p>
       <p>A abstenção inclui registros desatualizados, de pessoas que mudaram de cidade ou morreram. Por isso, parte dela não reflete uma decisão de não votar.</p>
     </div>
   </div>
@@ -122,7 +129,7 @@
         <p>Este é o mapa de sempre. Cada município ganha a cor de quem teve mais votos ali. No 2º turno de 2026, <span class="l">Lula</span> venceu em 2.875 municípios e <span class="b">Flávio</span> em 2.695.</p>
       </div></div>
       <div class="step" data-step="1"><div class="card">
-        <p>Os municípios vencidos por Lula reúnem metade do eleitorado que vota no Brasil, e os vencidos por Flávio, a outra metade (50,0% e 50,0%). Parece um país cortado ao meio. Mas a cor de cada município esconde quem votou no perdedor ali.</p>
+        <p>Os municípios vencidos por Lula reúnem metade do eleitorado inscrito no Brasil, e os vencidos por Flávio, a outra metade (50,0% e 50,0%). Parece um país cortado ao meio. Mas a cor de cada município esconde quem votou no perdedor ali.</p>
       </div></div>
       <div class="step" data-step="2"><div class="card">
         <p>Agora a mesma eleição em proporção. Quanto mais perto do <span style="color:var(--mix)">rosé</span>, mais equilibrado foi o município. Em 3.554 municípios, quem perdeu teve mais de 30% dos votos. Em 1.804, mais de 40%.</p>
@@ -140,7 +147,7 @@
     </div>
   </div>
   <div class="wrap explore" id="explore">
-    <p class="chart-foot">No 1º turno de 2014 e de 2018, um terceiro candidato chegou em primeiro em alguns municípios: 99 em 2014 (Marina Silva) e 103 em 2018 (Ciro Gomes). No mapa de vencedor eles aparecem em cinza azulado. No mapa de proporção, a cor mostra só a divisão entre os dois campos. Boa Esperança do Norte (MT) foi instalado em 2025; nas eleições presidenciais anteriores, sua área aparece hachurada. Fonte: TSE e IBGE (malha municipal 2025). Projeção cônica equivalente de Albers, que mantém as áreas proporcionais. Votos no exterior não aparecem no mapa.</p>
+    <p class="chart-foot">No 1º turno de 2014 e de 2018, um terceiro candidato chegou em primeiro em alguns municípios: 99 em 2014 (Marina Silva) e 103 em 2018 (Ciro Gomes). No mapa de vencedor eles aparecem em cinza claro. No mapa de proporção, a cor mostra só a divisão entre os dois campos. Boa Esperança do Norte (MT) foi instalado em 2025; nas eleições presidenciais anteriores, sua área aparece hachurada. Fonte: TSE e IBGE (malha municipal 2025). Projeção cônica equivalente de Albers, que mantém as áreas proporcionais. Votos no exterior não aparecem no mapa.</p>
   </div>
 </section>
 
@@ -172,7 +179,7 @@
       <p class="chart-foot">Fonte: TSE. Exterior: votos de brasileiros que votaram fora do país.</p>
     </figure>
     <div class="prose">
-      <p>Flávio teve 10,8 milhões de votos no Nordeste, mais do que em 11 unidades da federação de outras regiões somadas (AP, RR, AC, TO, RO, MS, AM, DF, ES, MT e PA). Lula teve 6,8 milhões no Sul, mais do que em 11 unidades de outras regiões somadas (RR, AC, AP, RO, TO, MS, MT, DF, SE, ES e AM). No Norte, os dois ficaram a 1.079 votos de distância, num total de 10,0 milhões de votos.</p>
+      <p>Flávio teve 10,8 milhões de votos no Nordeste, mais do que em 11 unidades da federação de outras regiões somadas (Amapá, Roraima, Acre, Tocantins, Rondônia, Mato Grosso do Sul, Amazonas, Distrito Federal, Espírito Santo, Mato Grosso e Pará). Lula teve 6,8 milhões no Sul, mais do que em 11 unidades da federação de outras regiões somadas (Roraima, Acre, Amapá, Rondônia, Tocantins, Mato Grosso do Sul, Mato Grosso, Distrito Federal, Sergipe, Espírito Santo e Amazonas). No Norte, os dois ficaram a 1.079 votos de distância, num total de 10,0 milhões de votos.</p>
       <p>Isso não quer dizer que as regiões votem igual. No Nordeste, Lula venceu em 1.774 dos 1.794 municípios. No Sul, Flávio venceu em 1.054 de 1.191, e no Centro-Oeste em 406 de 468. A vantagem de Lula no Nordeste foi de 13,7 milhões de votos. A de Flávio, somando Sudeste, Sul e Centro-Oeste, foi de 9,3 milhões.</p>
     </div>
 
@@ -303,7 +310,7 @@
     </figure>
     <div class="prose">
       <p>Onde os candidatos de fora da disputa principal tiveram mais votos no 1º turno, Lula e Flávio cresceram mais no 2º. Onde o comparecimento subiu mais, também. Parte disso é aritmética: em pontos do eleitorado, o crescimento dos dois soma os votos em terceiros e o aumento do comparecimento, menos a variação de brancos e nulos.</p>
-      <p>Em todos esses grupos, porém, Lula cresceu mais que Flávio, e por uma diferença parecida: de 3,7 a 5,1 pontos do eleitorado. Município a município, Lula cresceu mais que Flávio em 5.230; Flávio cresceu mais que Lula em 340.</p>
+      <p>Nos dez grupos da tabela (municípios divididos em quintos pelo voto em terceiros e pela variação do comparecimento), Lula cresceu mais que Flávio em todos, por 3,7 a 5,1 pontos do eleitorado. Município a município, Lula cresceu mais que Flávio em 5.230; Flávio cresceu mais que Lula em 340.</p>
     </div>
     <figure class="chart" aria-labelledby="t-2026map">
       <p class="chart-title" id="t-2026map">Lula cresceu mais que Flávio em 5.230 dos 5.571 municípios</p>
@@ -314,8 +321,8 @@
       <p class="chart-foot">Fonte: TSE.</p>
     </figure>
     <div class="prose">
-      <p>Em 211 municípios, Flávio estava à frente no 1º turno e Lula terminou à frente no 2º. Em 1, o caminho foi o inverso: Uirapuru (GO).</p>
-      <p>Entre os municípios com 50 mil eleitores ou mais, Lula teve o maior crescimento em Mariana (MG): 11,2 pontos do eleitorado. O de Flávio foi em Trindade (GO): 7,6 pontos. Em número de votos, o maior ganho de Lula foi em São Paulo (SP) (812 mil), e o de Flávio, em São Paulo (SP) (337 mil).</p>
+      <p>Em 211 municípios, Flávio estava à frente no 1º turno e Lula terminou à frente no 2º. Em um, Uirapuru (GO), o caminho foi o inverso.</p>
+      <p>Entre os municípios com 50 mil eleitores ou mais, Lula teve o maior crescimento em Mariana (MG): 11,2 pontos do eleitorado. O de Flávio foi em Trindade (GO): 7,6 pontos. Em número de votos, o maior ganho dos dois foi no mesmo município, São Paulo (SP): 812 mil para Lula e 337 mil para Flávio.</p>
       <div class="city-note" role="note"><p><strong>Um cuidado.</strong> Dados por município não dizem como cada pessoa votou. Se um município teve muitos votos em terceiros e Lula ou Flávio cresceu ali, não dá para concluir que aqueles eleitores mudaram de candidato. Esse erro de leitura se chama falácia ecológica.</p></div>
     </div>
   </div>
@@ -372,7 +379,7 @@
       <li>A comparação com 2014 mede o candidato que enfrentou o PT no 2º turno, não um mesmo grupo político.</li>
       <li>A abstenção inclui registros desatualizados, de pessoas que mudaram de cidade ou morreram.</li>
     </ul>
-    <p>Código, consultas SQL, registro de qualidade e dados processados estão no <a href="https://github.com/AndreiLud/brasil-nao-e-binario">repositório do projeto</a>.</p>
+    <p>Código, consultas SQL, registro de qualidade e dados processados estão no <a href="https://github.com/AndreiLud/brasil-nao-e-binario">repositório do projeto</a>. <a href="en/" hreflang="en" lang="en">Read in English</a>.</p>
   </div>
 </section>
 </main>

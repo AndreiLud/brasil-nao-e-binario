@@ -7,8 +7,12 @@
 <meta name="description" content="No 2º turno de 2026, {{e2026r2_local_minority_votes}} de pessoas votaram no candidato que perdeu no próprio município. Uma análise das eleições presidenciais de 2018, 2022 e 2026 com dados oficiais do TSE.">
 <meta name="theme-color" content="#17161c">
 <link rel="canonical" href="{{cfg_site_url}}">
+<link rel="alternate" hreflang="pt-BR" href="{{cfg_site_url}}">
+<link rel="alternate" hreflang="en" href="{{cfg_site_url}}en/">
+<link rel="alternate" hreflang="x-default" href="{{cfg_site_url}}">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="pt_BR">
+<meta property="og:locale:alternate" content="en_US">
 <meta property="og:title" content="O Brasil não é binário">
 <meta property="og:description" content="No 2º turno de 2026, {{e2026r2_local_minority_votes}} de pessoas votaram no candidato que perdeu no próprio município. O mapa de vencedores esconde um país misturado.">
 <meta property="og:url" content="{{cfg_site_url}}">
@@ -30,6 +34,9 @@
 
 <header class="hero" aria-label="Abertura">
   <canvas id="hero-canvas" aria-hidden="true"></canvas>
+  <nav class="lang-switch" aria-label="Idioma">
+    <span aria-current="page" lang="pt-BR">PT</span><a href="en/" hreflang="en" lang="en" title="Read in English">EN</a>
+  </nav>
   <div class="wrap">
     <p class="kicker">Eleições presidenciais de 2018, 2022 e 2026</p>
     <h1>O Brasil não é <em>binário</em></h1>
@@ -61,7 +68,7 @@
     <div class="prose">
       <p>Este texto mostra, com os dados oficiais das últimas eleições presidenciais, que o voto de cada lado está espalhado pelo país inteiro. Mostra também onde ele não está: há regiões e faixas de renda em que um dos lados domina, e isso aparece aqui com o mesmo destaque.</p>
       <div class="city-note" role="note">
-        <p><strong>Como comparamos eleições diferentes.</strong> Os votos foram agrupados em dois campos. <span class="nowrap"><span class="swatch l"></span><span class="l">Campo lulista</span></span>: Fernando Haddad em 2018 e Luiz Inácio Lula da Silva em 2022 e 2026. <span class="nowrap"><span class="swatch b"></span><span class="b">Campo bolsonarista</span></span>: Jair Bolsonaro em 2018 e 2022 e Flávio Bolsonaro em 2026. A eleição de 2014, entre Dilma Rousseff e Aécio Neves, aparece só como ponto de partida, nas mesmas cores e sempre com o nome dos candidatos. Nenhum dos dois fazia parte desses campos.</p>
+        <p><strong>Como comparamos eleições diferentes.</strong> Os votos foram agrupados em dois campos. <span class="nowrap"><span class="swatch l"></span><span class="l">Campo lulista</span></span>: Fernando Haddad em 2018 e Luiz Inácio Lula da Silva em 2022 e 2026. <span class="nowrap"><span class="swatch b"></span><span class="b">Campo bolsonarista</span></span>: Jair Bolsonaro em 2018 e 2022 e Flávio Bolsonaro em 2026. A eleição de 2014, entre Dilma Rousseff e Aécio Neves, aparece só como ponto de partida, nas mesmas cores e sempre com o nome dos candidatos; os dois não entram na contagem de nenhum dos campos.</p>
       </div>
     </div>
   </div>
@@ -89,7 +96,7 @@
     </figure>
     <div class="prose">
       <p>Em 2018, Jair Bolsonaro venceu com {{e2018r2_pct_b_valid}} dos votos válidos. Em 2022, Lula venceu com {{e2022r2_pct_l_valid}}. Em 2026, Flávio Bolsonaro terminou o 1º turno à frente, com {{e2026r1_pct_b_valid}} contra {{e2026r1_pct_l_valid}} de Lula. No 2º turno, Lula venceu com {{e2026r2_pct_l_valid}}.</p>
-      <p>O maior apoio no período foi o de {{max_pct_aptos_l_who}}: {{max_pct_aptos_l}} do eleitorado. No campo bolsonarista, o maior foi o de {{max_pct_aptos_b_who}}: {{max_pct_aptos_b}}. Em cada turno, entre {{absent_min}} e {{absent_max}} dos eleitores não foram votar. No 2º turno de 2026, {{e2026r2_pct_neither_aptos}} do eleitorado não votou em nenhum dos dois: {{e2026r2_pct_absent_aptos}} não compareceram e {{e2026r2_pct_blank_null_aptos}} votaram em branco ou anularam.</p>
+      <p>O maior apoio do campo lulista foi de {{max_pct_aptos_l}} do eleitorado, com {{max_pct_aptos_l_who}}. O do campo bolsonarista foi de {{max_pct_aptos_b}}, com {{max_pct_aptos_b_who}}. Em cada turno, entre {{absent_min}} e {{absent_max}} do eleitorado não foi votar. No 2º turno de 2026, {{e2026r2_pct_neither_aptos}} do eleitorado não votou em nenhum dos dois: {{e2026r2_pct_absent_aptos}} não compareceram e {{e2026r2_pct_blank_null_aptos}} votaram em branco ou anularam.</p>
       <p>A abstenção inclui registros desatualizados, de pessoas que mudaram de cidade ou morreram. Por isso, parte dela não reflete uma decisão de não votar.</p>
     </div>
   </div>
@@ -122,7 +129,7 @@
         <p>Este é o mapa de sempre. Cada município ganha a cor de quem teve mais votos ali. No 2º turno de 2026, <span class="l">Lula</span> venceu em {{e2026r2_led_by_l}} municípios e <span class="b">Flávio</span> em {{e2026r2_led_by_b}}.</p>
       </div></div>
       <div class="step" data-step="1"><div class="card">
-        <p>Os municípios vencidos por Lula reúnem metade do eleitorado que vota no Brasil, e os vencidos por Flávio, a outra metade ({{e2026r2_aptos_share_in_l_led}} e {{e2026r2_aptos_share_in_b_led}}). Parece um país cortado ao meio. Mas a cor de cada município esconde quem votou no perdedor ali.</p>
+        <p>Os municípios vencidos por Lula reúnem metade do eleitorado inscrito no Brasil, e os vencidos por Flávio, a outra metade ({{e2026r2_aptos_share_in_l_led}} e {{e2026r2_aptos_share_in_b_led}}). Parece um país cortado ao meio. Mas a cor de cada município esconde quem votou no perdedor ali.</p>
       </div></div>
       <div class="step" data-step="2"><div class="card">
         <p>Agora a mesma eleição em proporção. Quanto mais perto do <span style="color:var(--mix)">rosé</span>, mais equilibrado foi o município. Em {{e2026r2_n_minority_over_30}} municípios, quem perdeu teve mais de 30% dos votos. Em {{e2026r2_n_minority_over_40}}, mais de 40%.</p>
@@ -140,7 +147,7 @@
     </div>
   </div>
   <div class="wrap explore" id="explore">
-    <p class="chart-foot">No 1º turno de 2014 e de 2018, um terceiro candidato chegou em primeiro em alguns municípios: {{e2014r1_led_by_other}} em 2014 ({{e2014r1_other_leader_names}}) e {{e2018r1_led_by_other}} em 2018 ({{e2018r1_other_leader_names}}). No mapa de vencedor eles aparecem em cinza azulado. No mapa de proporção, a cor mostra só a divisão entre os dois campos. Boa Esperança do Norte (MT) foi instalado em 2025; nas eleições presidenciais anteriores, sua área aparece hachurada. Fonte: TSE e IBGE (malha municipal 2025). Projeção cônica equivalente de Albers, que mantém as áreas proporcionais. Votos no exterior não aparecem no mapa.</p>
+    <p class="chart-foot">No 1º turno de 2014 e de 2018, um terceiro candidato chegou em primeiro em alguns municípios: {{e2014r1_led_by_other}} em 2014 ({{e2014r1_other_leader_names}}) e {{e2018r1_led_by_other}} em 2018 ({{e2018r1_other_leader_names}}). No mapa de vencedor eles aparecem em cinza claro. No mapa de proporção, a cor mostra só a divisão entre os dois campos. Boa Esperança do Norte (MT) foi instalado em 2025; nas eleições presidenciais anteriores, sua área aparece hachurada. Fonte: TSE e IBGE (malha municipal 2025). Projeção cônica equivalente de Albers, que mantém as áreas proporcionais. Votos no exterior não aparecem no mapa.</p>
   </div>
 </section>
 
@@ -172,7 +179,7 @@
       <p class="chart-foot">Fonte: TSE. Exterior: votos de brasileiros que votaram fora do país.</p>
     </figure>
     <div class="prose">
-      <p>Flávio teve {{e2026r2_reg_ne_camp_b}} de votos no Nordeste, mais do que em {{e2026r2_b_ne_states_n}} unidades da federação de outras regiões somadas ({{e2026r2_b_ne_states_list}}). Lula teve {{e2026r2_reg_s_camp_l}} no Sul, mais do que em {{e2026r2_l_s_states_n}} unidades de outras regiões somadas ({{e2026r2_l_s_states_list}}). No Norte, os dois ficaram a {{e2026r2_reg_n_diff_int}} votos de distância, num total de {{e2026r2_reg_n_two_camp_total}} de votos.</p>
+      <p>Flávio teve {{e2026r2_reg_ne_camp_b}} de votos no Nordeste, mais do que em {{e2026r2_b_ne_states_n}} unidades da federação de outras regiões somadas ({{e2026r2_b_ne_states_list}}). Lula teve {{e2026r2_reg_s_camp_l}} no Sul, mais do que em {{e2026r2_l_s_states_n}} unidades da federação de outras regiões somadas ({{e2026r2_l_s_states_list}}). No Norte, os dois ficaram a {{e2026r2_reg_n_diff_int}} votos de distância, num total de {{e2026r2_reg_n_two_camp_total}} de votos.</p>
       <p>Isso não quer dizer que as regiões votem igual. No Nordeste, Lula venceu em {{e2026r2_reg_ne_led_by_l}} dos {{e2026r2_reg_ne_municipalities}} municípios. No Sul, Flávio venceu em {{e2026r2_reg_s_led_by_b}} de {{e2026r2_reg_s_municipalities}}, e no Centro-Oeste em {{e2026r2_reg_co_led_by_b}} de {{e2026r2_reg_co_municipalities}}. A vantagem de Lula no Nordeste foi de {{e2026r2_reg_ne_lead}} de votos. A de Flávio, somando {{e2026r2_b_led_regions}}, foi de {{e2026r2_b_lead_where_b_led_regions}}.</p>
     </div>
 
@@ -303,7 +310,7 @@
     </figure>
     <div class="prose">
       <p>Onde os candidatos de fora da disputa principal tiveram mais votos no 1º turno, Lula e Flávio cresceram mais no 2º. Onde o comparecimento subiu mais, também. Parte disso é aritmética: em pontos do eleitorado, o crescimento dos dois soma os votos em terceiros e o aumento do comparecimento, menos a variação de brancos e nulos.</p>
-      <p>Em todos esses grupos, porém, Lula cresceu mais que Flávio, e por uma diferença parecida: de {{q6_net_gain_min_num}} a {{q6_net_gain_max}} do eleitorado. Município a município, Lula cresceu mais que Flávio em {{q6_n_l_gained_more}}; Flávio cresceu mais que Lula em {{q6_n_b_gained_more}}.</p>
+      <p>Nos dez grupos da tabela (municípios divididos em quintos pelo voto em terceiros e pela variação do comparecimento), Lula cresceu mais que Flávio em todos, por {{q6_net_gain_min_num}} a {{q6_net_gain_max}} do eleitorado. Município a município, Lula cresceu mais que Flávio em {{q6_n_l_gained_more}}; Flávio cresceu mais que Lula em {{q6_n_b_gained_more}}.</p>
     </div>
     <figure class="chart" aria-labelledby="t-2026map">
       <p class="chart-title" id="t-2026map">Lula cresceu mais que Flávio em {{q6_n_l_gained_more}} dos {{n_mun_2026}} municípios</p>
@@ -314,8 +321,8 @@
       <p class="chart-foot">Fonte: TSE.</p>
     </figure>
     <div class="prose">
-      <p>Em {{q6_n_flipped_to_l}} municípios, Flávio estava à frente no 1º turno e Lula terminou à frente no 2º. Em {{q6_n_flipped_to_b}}, o caminho foi o inverso: {{q6_flipped_to_b_names}}.</p>
-      <p>Entre os municípios com 50 mil eleitores ou mais, Lula teve o maior crescimento em {{q6_top_pts_name}}: {{q6_top_pts_gain}} do eleitorado. O de Flávio foi em {{q6_top_pts_b_name}}: {{q6_top_pts_b_gain}}. Em número de votos, o maior ganho de Lula foi em {{q6_top_votes_name}} ({{q6_top_votes_gain}}), e o de Flávio, em {{q6_top_votes_b_name}} ({{q6_top_votes_b_gain}}).</p>
+      <p>Em {{q6_n_flipped_to_l}} municípios, Flávio estava à frente no 1º turno e Lula terminou à frente no 2º. {{q6_flipped_to_b_sentence}}</p>
+      <p>Entre os municípios com 50 mil eleitores ou mais, Lula teve o maior crescimento em {{q6_top_pts_name}}: {{q6_top_pts_gain}} do eleitorado. O de Flávio foi em {{q6_top_pts_b_name}}: {{q6_top_pts_b_gain}}. {{q6_top_votes_sentence}}</p>
       <div class="city-note" role="note"><p><strong>Um cuidado.</strong> Dados por município não dizem como cada pessoa votou. Se um município teve muitos votos em terceiros e Lula ou Flávio cresceu ali, não dá para concluir que aqueles eleitores mudaram de candidato. Esse erro de leitura se chama falácia ecológica.</p></div>
     </div>
   </div>
@@ -372,7 +379,7 @@
       <li>A comparação com 2014 mede o candidato que enfrentou o PT no 2º turno, não um mesmo grupo político.</li>
       <li>A abstenção inclui registros desatualizados, de pessoas que mudaram de cidade ou morreram.</li>
     </ul>
-    <p>Código, consultas SQL, registro de qualidade e dados processados estão no <a href="{{cfg_repo_url}}">repositório do projeto</a>.</p>
+    <p>Código, consultas SQL, registro de qualidade e dados processados estão no <a href="{{cfg_repo_url}}">repositório do projeto</a>. <a href="en/" hreflang="en" lang="en">Read in English</a>.</p>
   </div>
 </section>
 </main>

@@ -1,10 +1,8 @@
 // "Sua cidade": accessible combobox search + 100-voter profiles for every election.
-import { C, NAMES, REGION_NAMES, ELECTIONS, results, municipios, row, getJSON, norm, int, pct } from "./core.js";
+import { C, NAMES, REGION_NAMES, ELECTIONS, T, results, municipios, row, getJSON, norm, int, pct } from "./core.js";
 import { peopleSVG } from "./people.js";
 
-const SPLIT = { 5101837: "Boa Esperança do Norte foi instalado em 2025 com partes de Sorriso e Nova Ubiratã. Por isso só tem resultado de eleição presidencial em 2026.",
-  5107925: "Sorriso perdeu parte do território para Boa Esperança do Norte em 2025. O resultado de 2026 cobre uma área menor que o das eleições anteriores.",
-  5106240: "Nova Ubiratã perdeu parte do território para Boa Esperança do Norte em 2025. O resultado de 2026 cobre uma área menor que o das eleições anteriores." };
+const SPLIT = T.split;
 
 export async function initCity() {
   const mun = await municipios();
@@ -48,8 +46,8 @@ export async function initCity() {
     const q = input.value.trim();
     if (q.length >= 2 && !options.length) {
       const li = document.createElement("li"); li.setAttribute("role", "option"); li.setAttribute("aria-disabled", "true");
-      li.textContent = "Nenhum município encontrado"; list.replaceChildren(li); list.hidden = false;
-      status.textContent = `Nenhum município encontrado para ${q}.`;
+      li.textContent = T.noMatch; list.replaceChildren(li); list.hidden = false;
+      status.textContent = T.noMatchFor(q);
     }
   });
   input.addEventListener("keydown", (e) => {
@@ -65,23 +63,23 @@ export async function initCity() {
     input.value = `${m.name} (${m.uf})`;
     options = []; active = -1; renderList();
     await profile(m);
-    status.textContent = `Mostrando ${m.name} (${m.uf}).`;
+    status.textContent = T.showing(`${m.name} (${m.uf})`);
     try { history.replaceState(null, "", `#cidade-${m.id}`); } catch (e) { /* ignore */ }
   }
 
   async function profile(m) {
     const all = m ? await Promise.all(ELECTIONS.map(([y, r]) => results(y, r))) : null;
     const frag = document.createDocumentFragment();
-    const h = document.createElement("h3"); h.className = "city-name"; h.textContent = m ? m.name : "Brasil inteiro";
+    const h = document.createElement("h3"); h.className = "city-name"; h.textContent = m ? m.name : T.allBrazil;
     const meta = document.createElement("p"); meta.className = "city-meta";
     if (m) {
       const r = mun.rows[m.i];
-      meta.textContent = `${m.uf}, região ${REGION_NAMES[r[3]]}. População: ${int(r[4])} habitantes.`;
-    } else meta.textContent = "Todos os eleitores, inclusive os que votam no exterior. Busque um município acima.";
+      meta.textContent = T.cityMeta(m.uf, REGION_NAMES[r[3]], int(r[4]));
+    } else meta.textContent = T.allMeta;
     frag.append(h, meta);
     if (m && SPLIT[m.id]) { const n = document.createElement("p"); n.className = "city-note"; n.textContent = SPLIT[m.id]; frag.append(n); }
     const legend = document.createElement("div"); legend.className = "legend";
-    for (const [col, lab, ring] of [[C.l, "Haddad e Lula (em 2014, Dilma)"], [C.b, "Bolsonaro e Flávio (em 2014, Aécio)"], [C.third, "Outros candidatos"], [C.blank, "Branco ou nulo"], [null, "Não votou", true]]) {
+    for (const [col, lab, ring] of [[C.l, T.campLLegend], [C.b, T.campBLegend], [C.third, T.others], [C.blank, T.blankNull], [null, T.absent, true]]) {
       const s = document.createElement("span"); s.className = "key";
       const i = document.createElement("i"); if (ring) i.className = "ring"; else i.style.background = col;
       s.append(i, document.createTextNode(lab)); legend.append(s);
@@ -92,7 +90,7 @@ export async function initCity() {
     for (const year of [2026, 2022, 2018, 2014]) {
       const box = document.createElement("div"); box.className = "city-year";
       const t = document.createElement("h4");
-      t.textContent = `${year}: ${NAMES[year].L} x ${NAMES[year].B}${year === 2014 ? " (base)" : ""}`;
+      t.textContent = T.yearHead(year, NAMES[year].L, NAMES[year].B);
       const rounds = document.createElement("div"); rounds.className = "rounds";
       for (const rnd of [1, 2]) {
         const k = ELECTIONS.findIndex(([y, r]) => y === year && r === rnd);
@@ -100,15 +98,15 @@ export async function initCity() {
         if (m) rr = row(all[k], m.i);
         else { const n = nat.find((d) => d.year === year && d.round === rnd); rr = { l: n.camp_l, b: n.camp_b, o: n.others, bn: n.blank_null, ab: n.absent }; }
         const cell = document.createElement("div");
-        const lab = document.createElement("div"); lab.className = "round-label"; lab.textContent = `${rnd}º turno`;
+        const lab = document.createElement("div"); lab.className = "round-label"; lab.textContent = T.roundShort(rnd);
         cell.append(lab);
-        if (!rr) { const p = document.createElement("p"); p.className = "city-meta"; p.textContent = "Município ainda não instalado."; cell.append(p); }
+        if (!rr) { const p = document.createElement("p"); p.className = "city-meta"; p.textContent = T.notInstalledDot; cell.append(p); }
         else {
-          const { svg, counts } = peopleSVG(rr, { size: 150, title: `${m ? m.name : "Brasil"}, ${rnd}º turno de ${year}`, names: NAMES[year] });
+          const { svg, counts } = peopleSVG(rr, { size: 150, title: `${m ? m.name : T.brazil}, ${T.roundOf(year, rnd)}`, names: NAMES[year] });
           const c = document.createElement("div"); c.className = "counts";
           const parts = [[NAMES[year].L, counts.l], [NAMES[year].B, counts.b]];
-          if (rnd === 1) parts.push(["Outros", counts.o]);
-          parts.push(["Branco/nulo", counts.bn], ["Não votou", counts.ab]);
+          if (rnd === 1) parts.push([T.othersShort, counts.o]);
+          parts.push([T.blankNullShort, counts.bn], [T.absent, counts.ab]);
           parts.forEach(([n, v]) => { const s = document.createElement("span"); s.textContent = `${n} ${v}`; c.append(s); });
           cell.append(svg, c);
         }
@@ -126,7 +124,7 @@ export async function initCity() {
     if (!m) return false;
     input.value = `${m.name} (${m.uf})`;
     await profile(m);
-    status.textContent = `Mostrando ${m.name} (${m.uf}).`;
+    status.textContent = T.showing(`${m.name} (${m.uf})`);
     return true;
   }
   const hash = location.hash.match(/^#cidade-(\d{7})$/);

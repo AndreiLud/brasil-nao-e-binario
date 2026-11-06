@@ -14,7 +14,7 @@ This file is rendered from `src/templates/methodology.md`; numbers come from `do
 6. **Questions** (`sql/q1_national.sql` to `sql/q7_context.sql`), one file per question. Tables are written to `data/processed/*.csv`.
 7. **Site data** (`src/export.py`, `src/geo.py`): mesh, per-municipality results, dot layers, chapter aggregates.
 8. **Facts** (`src/facts.py`): every number used in the text, with a description.
-9. **Render** (`src/render.py`): page, READMEs and this file are rendered from templates; the renderer fails if a placeholder is unknown, if an em dash, en dash or spaced hyphen appears in the prose, or if a number in the prose is not a computed fact (or one of a short list of fixed values such as election years).
+9. **Render** (`src/render.py`): the Portuguese page (`src/templates/index.html`), the English page (`src/templates/index.en.html` to `docs/en/index.html`), the READMEs and this file are rendered from templates; the renderer fails if a placeholder is unknown, if an em dash, en dash or spaced hyphen appears in the prose, if a number in the prose is not a computed fact (or one of a short list of fixed values such as election years), or if the two language versions stop having the same structure (element ids, scrollytelling steps, figures). Chart and interface strings live in `docs/js/i18n.js`.
 10. **Notebook** (`src/notebook.py`): builds and executes `notebooks/01_exploratory_analysis.ipynb`.
 
 ## Definitions

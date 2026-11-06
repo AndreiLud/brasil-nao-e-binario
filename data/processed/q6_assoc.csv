@@ -1,6 +1,6 @@
 outcome,factor,r_weighted,r_unweighted
-gain_l_pts,others_r1_pts,0.482892,0.36682
-gain_l_pts,turnout_change_pts,0.713944,0.698504
-gain_b_pts,others_r1_pts,0.765337,0.67867
-gain_b_pts,turnout_change_pts,0.579132,0.607534
 gain_l_pts,blank_null_change_pts,-0.401587,-0.426096
+gain_l_pts,others_r1_pts,0.482892,0.36682
+gain_b_pts,others_r1_pts,0.765337,0.67867
+gain_l_pts,turnout_change_pts,0.713944,0.698504
+gain_b_pts,turnout_change_pts,0.579132,0.607534

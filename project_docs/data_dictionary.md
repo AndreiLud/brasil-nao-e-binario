@@ -60,4 +60,4 @@ One CSV per question table: `q1_national`, `q1_candidates`, `q2_municipal`, `q2_
 | `dots/<year>-<round>.bin` | little-endian binary: `n` x Uint16, `n` y Uint16 (scaled to 0..65535 over the map box), `n` Uint8 camp (0 = L, 1 = B); counts in `dots/index.json` |
 | `national.json` | national results (question 1) and every candidate |
 | `stories.json` | aggregates used by the chapters (questions 2 to 7) |
-| `facts.json` | every number quoted in the text: `{key: {value, kind, pt, en, desc}}` |
+| `facts.json` | every number quoted in the text: `{key: {value, kind, pt, en, desc}}`; the Portuguese page uses `pt`, the English page (`docs/en/index.html`) uses `en` |

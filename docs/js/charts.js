@@ -1,5 +1,5 @@
 // Non-map charts. SVG for axes and bars; canvas for the dense scatter.
-import { C, NAMES, FULLNAMES, REGION_NAMES, getJSON, results, municipios, row, leader, int, pct, pts, votes, dec, table, segmented, shareScale } from "./core.js";
+import { C, NAMES, FULLNAMES, REGION_NAMES, T, regionName, getJSON, results, municipios, row, leader, int, pct, pts, votes, dec, table, segmented, shareScale } from "./core.js";
 import { tipNode } from "./mapcore.js";
 
 const svgNS = "http://www.w3.org/2000/svg";
@@ -15,8 +15,8 @@ export async function minorityBar() {
   }
   const total = lWin + lLose + bWin + bLose;
   const parts = [
-    ["Lula, onde venceu", lWin, C.l, false], ["Lula, onde perdeu", lLose, C.l, true],
-    ["Flávio, onde perdeu", bLose, C.b, true], ["Flávio, onde venceu", bWin, C.b, false],
+    [T.lWon, lWin, C.l, false], [T.lLost, lLose, C.l, true],
+    [T.bLost, bLose, C.b, true], [T.bWon, bWin, C.b, false],
   ];
   const bar = document.getElementById("minority-bar");
   const leg = document.getElementById("minority-legend");
@@ -32,18 +32,18 @@ export async function minorityBar() {
     k.append(i, document.createTextNode(`${label}: ${votes(v)}`));
     leg.appendChild(k);
   }
-  bar.setAttribute("aria-label", parts.map(([l, v]) => `${l}: ${votes(v)} de votos`).join("; "));
+  bar.setAttribute("aria-label", parts.map(([l, v]) => T.votesOf(l, votes(v))).join("; "));
 }
 
 // ---------- 2. national stacked bars over the electorate ----------
 export async function nationalBars() {
   const { national } = await getJSON("data/national.json");
   const cats = [
-    ["camp_l", (y) => (y === 2014 ? "Dilma (base)" : "Campo lulista"), C.l, false],
-    ["camp_b", (y) => (y === 2014 ? "Aécio (base)" : "Campo bolsonarista"), C.b, false],
-    ["others", () => "Outros candidatos", C.third, true],
-    ["blank_null", () => "Branco ou nulo", C.blank, true],
-    ["absent", () => "Não votou", C.absent, true],
+    ["camp_l", (y) => (y === 2014 ? T.dilmaBase : T.campL), C.l, false],
+    ["camp_b", (y) => (y === 2014 ? T.aecioBase : T.campB), C.b, false],
+    ["others", () => T.others, C.third, true],
+    ["blank_null", () => T.blankNull, C.blank, true],
+    ["absent", () => T.absent, C.absent, true],
   ];
   const legend = document.getElementById("nat-legend");
   legend.replaceChildren();
@@ -51,7 +51,7 @@ export async function nationalBars() {
     const s = document.createElement("span"); s.className = "key";
     const i = document.createElement("i");
     i.style.background = col;
-    s.append(i, document.createTextNode(k === "camp_l" ? "Haddad e Lula (em 2014, Dilma)" : k === "camp_b" ? "Bolsonaro e Flávio (em 2014, Aécio)" : lab()));
+    s.append(i, document.createTextNode(k === "camp_l" ? T.campLLegend : k === "camp_b" ? T.campBLegend : lab()));
     legend.appendChild(s);
   }
   const host = document.getElementById("natbars");
@@ -63,7 +63,7 @@ export async function nationalBars() {
     const r = document.createElement("div"); r.className = "row" + (n.year === 2014 ? " baseline" : "");
     const lab = document.createElement("div"); lab.className = "row-label";
     const b = document.createElement("b"); b.textContent = String(n.year);
-    lab.append(b, document.createTextNode(`${n.round}º turno`));
+    lab.append(b, document.createTextNode(T.roundShort(n.round)));
     const bar = document.createElement("div"); bar.className = "bar";
     for (const [k, labf, col] of cats) {
       const v = n[k] / n.aptos;
@@ -78,14 +78,14 @@ export async function nationalBars() {
         s.classList.add("dark-text");
       }
       if (v >= 0.1) s.textContent = `${dec(v * 100, 0)}%`;
-      s.title = `${labf(n.year)}: ${pct(v)} do eleitorado (${votes(n[k])})`;
+      s.title = T.ofElectorate(labf(n.year), pct(v), votes(n[k]));
       bar.appendChild(s);
     }
     r.append(lab, bar); host.appendChild(r);
   }
   table(document.getElementById("nat-table"),
-    ["Turno", "Campo lulista", "Campo bolsonarista", "Outros", "Branco ou nulo", "Não votou", "Eleitorado"],
-    national.map((n) => [`${n.year}, ${n.round}º${n.year === 2014 ? " (Dilma x Aécio)" : ""}`, pct(n.pct_l_aptos), pct(n.pct_b_aptos), pct(n.pct_others_aptos),
+    [T.round, T.campL, T.campB, T.othersShort, T.blankNull, T.absent, T.electorate],
+    national.map((n) => [T.natRow(n.year, n.round), pct(n.pct_l_aptos), pct(n.pct_b_aptos), pct(n.pct_others_aptos),
       pct(n.pct_blank_null_aptos), pct(n.pct_absent_aptos), int(n.aptos)]));
 }
 
@@ -97,20 +97,20 @@ export async function histogram() {
   let year = 2026;
   const ctl = document.getElementById("hist-controls");
   ctl.replaceChildren();
-  segmented(ctl, "2º turno de", [[2014, "2014"], [2018, "2018"], [2022, "2022"], [2026, "2026"]], year, (v) => { year = +v; draw(); });
+  segmented(ctl, T.yearOfRunoff, [[2014, "2014"], [2018, "2018"], [2022, "2022"], [2026, "2026"]], year, (v) => { year = +v; draw(); });
   function draw() {
     const data = stories.hist.filter((d) => d.year === year && d.round === 2);
     const bins = d3.range(0, 100, 5).map((b) => data.find((d) => d.bin_start_pct === b) || { bin_start_pct: b, municipalities: 0 });
     const mino = stories.minority.find((d) => d.year === year && d.round === 2);
     const title = document.getElementById("t-hist");
-    if (title) title.textContent = `No 2º turno de ${year}, quem perdeu teve mais de 30% dos votos válidos em ${int(mino.n_minority_over_30)} municípios`;
+    if (title) title.textContent = T.histTitle(year, int(mino.n_minority_over_30));
     const W = width(host), H = W < 500 ? 250 : 300, m = { t: 30, r: 8, b: 44, l: 36 };
     const x = d3.scaleLinear().domain([0, 100]).range([m.l, W - m.r]);
     const y = d3.scaleLinear().domain([0, d3.max(bins, (d) => d.municipalities) * 1.08]).nice().range([H - m.b, m.t]);
     const svg = d3.create("svg").attr("viewBox", `0 0 ${W} ${H}`).attr("width", W).attr("height", H).attr("role", "presentation");
     svg.append("rect").attr("x", x(30)).attr("width", x(70) - x(30)).attr("y", m.t - 8).attr("height", H - m.b - m.t + 8).attr("fill", C.paper2);
     svg.append("text").attr("class", "anno").attr("x", x(50)).attr("y", m.t - 14).attr("text-anchor", "middle")
-      .text(`${int(mino.n_minority_over_30)} municípios nesta faixa`);
+      .text(T.histBand(int(mino.n_minority_over_30)));
     const g = svg.append("g").attr("class", "grid");
     y.ticks(4).forEach((t) => g.append("line").attr("x1", m.l).attr("x2", W - m.r).attr("y1", y(t)).attr("y2", y(t)));
     const ax = svg.append("g").attr("class", "axis");
@@ -123,18 +123,18 @@ export async function histogram() {
       .attr("stroke", "rgba(30,26,22,0.35)").attr("stroke-width", 1)
       .on("pointermove pointerdown", (ev, d) => {
         const n = NAMES[year];
-        showTip(tip, host, ev, tipNode(`${n.L} entre ${d.bin_start_pct}% e ${d.bin_start_pct + 5}%`, [[null, "Municípios", int(d.municipalities)]],
-          `${n.B} entre ${100 - d.bin_start_pct - 5}% e ${100 - d.bin_start_pct}%.`));
+        showTip(tip, host, ev, tipNode(T.between(n.L, d.bin_start_pct, d.bin_start_pct + 5), [[null, T.municipalities, int(d.municipalities)]],
+          `${T.between(n.B, 100 - d.bin_start_pct - 5, 100 - d.bin_start_pct)}.`));
       })
       .on("pointerleave", (e) => { if (e.pointerType !== "touch") tip.classList.remove("on"); });
     const n = NAMES[year];
     const lab = svg.append("g").attr("class", "axis");
     [[0, "0%"], [50, "50%"], [100, "100%"]].forEach(([v, t]) => lab.append("text").attr("x", x(v)).attr("y", H - m.b + 16).attr("text-anchor", v === 0 ? "start" : v === 100 ? "end" : "middle").text(t));
-    svg.append("text").attr("x", m.l).attr("y", H - 8).attr("class", "anno").text(`← mais ${n.B}`);
-    svg.append("text").attr("x", W - m.r).attr("y", H - 8).attr("text-anchor", "end").attr("class", "anno").text(`mais ${n.L} →`);
-    if (W >= 440) svg.append("text").attr("x", x(50)).attr("y", H - 8).attr("text-anchor", "middle").attr("class", "anno anno-muted").text(`fatia de ${n.L}`);
+    svg.append("text").attr("x", m.l).attr("y", H - 8).attr("class", "anno").text(`← ${T.more(n.B)}`);
+    svg.append("text").attr("x", W - m.r).attr("y", H - 8).attr("text-anchor", "end").attr("class", "anno").text(`${T.more(n.L)} →`);
+    if (W >= 440) svg.append("text").attr("x", x(50)).attr("y", H - 8).attr("text-anchor", "middle").attr("class", "anno anno-muted").text(T.shareOf(n.L));
     host.replaceChildren(svg.node(), tip);
-    table(document.getElementById("hist-table"), [`Fatia de ${n.L}`, "Municípios"], bins.map((d) => [`${d.bin_start_pct}% a ${d.bin_start_pct + 5}%`, int(d.municipalities)]));
+    table(document.getElementById("hist-table"), [T.shareOfCap(n.L), T.municipalities], bins.map((d) => [T.pctRange(d.bin_start_pct, d.bin_start_pct + 5), int(d.municipalities)]));
   }
   draw();
   onResize(host, draw);
@@ -152,7 +152,7 @@ export async function regions() {
     const svg = d3.create("svg").attr("viewBox", `0 0 ${W} ${H}`).attr("width", W).attr("height", H);
     data.forEach((d, i) => {
       const y0 = m.t + i * rowH;
-      svg.append("text").attr("x", 0).attr("y", y0 + 24).attr("class", "anno").style("font-weight", 600).text(d.region);
+      svg.append("text").attr("x", 0).attr("y", y0 + 24).attr("class", "anno").style("font-weight", 600).text(regionName(d.region_id));
       [["camp_l", C.l, 6], ["camp_b", C.b, 26]].forEach(([k, col, dy]) => {
         const w = Math.max(2, x(d[k]) - m.l);
         svg.append("path").attr("d", roundedRight(m.l, y0 + dy, w, 16, 4)).attr("fill", col);
@@ -162,8 +162,8 @@ export async function regions() {
     host.replaceChildren(svg.node());
   }
   draw(); onResize(host, draw);
-  table(document.getElementById("regions-table"), ["Região", "Votos de Lula", "Votos de Flávio", "Municípios vencidos por Lula", "Municípios vencidos por Flávio"],
-    data.map((d) => [d.region, int(d.camp_l), int(d.camp_b), d.region === "Exterior" ? "" : int(d.led_by_l), d.region === "Exterior" ? "" : int(d.led_by_b)]));
+  table(document.getElementById("regions-table"), [T.region, T.votesOfL, T.votesOfB, T.wonByL, T.wonByB],
+    data.map((d) => [regionName(d.region_id), int(d.camp_l), int(d.camp_b), d.region_id === 9 ? "" : int(d.led_by_l), d.region_id === 9 ? "" : int(d.led_by_b)]));
 }
 
 // ---------- 4d. income, size, region ----------
@@ -173,11 +173,11 @@ export async function context() {
   const g = stories.context.groups.filter((d) => d.year === 2026);
   const fmtBRL = (v) => `R$\u00a0${dec(v, 2)}`;
   const label = {
-    income: (d) => (d.grp === 1 ? "Menor renda" : d.grp === 5 ? "Maior renda" : `${d.grp}ª faixa`),
-    size: (d) => ["", "Até 10 mil hab.", "De 10 mil a 50 mil hab.", "De 50 mil a 200 mil hab.", "De 200 mil a 1 milhão de hab.", "Mais de 1 milhão de hab."][d.grp],
+    income: (d) => (d.grp === 1 ? T.incomeLow : d.grp === 5 ? T.incomeHigh : T.incomeBand(d.grp)),
+    size: (d) => T.sizes[d.grp],
     region: (d) => REGION_NAMES[d.grp],
   };
-  const dims = [["income", "Renda do município"], ["size", "Tamanho"], ["region", "Região"]];
+  const dims = [["income", T.dimIncome], ["size", T.dimSize], ["region", T.dimRegion]];
   const scale = shareScale(false);
   function draw() {
     const W = width(host), rowH = 30, m = { l: W < 500 ? 118 : 150, r: 16 };
@@ -199,9 +199,9 @@ export async function context() {
         gg.append("line").attr("x1", x(d.p25)).attr("x2", x(d.p75)).attr("y1", cy).attr("y2", cy).attr("stroke", scale(d.p50)).attr("stroke-width", 12).attr("stroke-linecap", "round");
         gg.append("circle").attr("cx", x(d.p50)).attr("cy", cy).attr("r", 5).attr("fill", C.ink).attr("stroke", C.paper).attr("stroke-width", 2);
         gg.on("pointermove pointerdown", (ev) => showTip(tip, host, ev, tipNode(label[dim](d), [
-          [null, "Municípios", int(d.municipalities)], [C.l, "Lula venceu em", int(d.led_by_l)], [C.b, "Flávio venceu em", int(d.led_by_b)],
-          [null, "Mediana de Lula", pct(d.p50)], [null, "Metade central", `${pct(d.p25, 0)} a ${pct(d.p75, 0)}`]],
-          dim === "income" ? `Renda mediana per capita de ${fmtBRL(d.income_min)} a ${fmtBRL(d.income_max)}.` : null)))
+          [null, T.municipalities, int(d.municipalities)], [C.l, T.lWonIn, int(d.led_by_l)], [C.b, T.bWonIn, int(d.led_by_b)],
+          [null, T.lMedian, pct(d.p50)], [null, T.middleHalf, T.to(pct(d.p25, 0), pct(d.p75, 0))]],
+          dim === "income" ? T.incomeRange(fmtBRL(d.income_min), fmtBRL(d.income_max)) : null)))
           .on("pointerleave", (e) => { if (e.pointerType !== "touch") tip.classList.remove("on"); });
         y += rowH;
       });
@@ -209,14 +209,14 @@ export async function context() {
     }
     const ax = svg.append("g").attr("class", "axis");
     (W < 500 ? [0, 0.5, 1] : [0, 0.25, 0.5, 0.75, 1]).forEach((t) => ax.append("text").attr("x", x(t)).attr("y", y + 4).attr("text-anchor", t === 0 ? "start" : t === 1 ? "end" : "middle").text(pct(t, 0)));
-    svg.append("text").attr("x", x(0.5)).attr("y", y + 22).attr("text-anchor", "middle").attr("class", "anno anno-muted").text("fatia de Lula nos votos válidos");
+    svg.append("text").attr("x", x(0.5)).attr("y", y + 22).attr("text-anchor", "middle").attr("class", "anno anno-muted").text(T.lShareValid);
     svg.attr("height", y + 30).attr("viewBox", `0 0 ${W} ${y + 30}`);
     host.replaceChildren(svg.node(), tip);
   }
   draw(); onResize(host, draw);
-  table(document.getElementById("context-table"), ["Grupo", "Municípios", "Mediana de Lula", "10% a 90% dos municípios", "Lula venceu", "Flávio venceu"],
+  table(document.getElementById("context-table"), T.ctxHead,
     dims.flatMap(([dim, title]) => g.filter((d) => d.dimension === dim).sort((a, b) => a.grp - b.grp)
-      .map((d) => [`${title}: ${label[dim](d)}`, int(d.municipalities), pct(d.p50), `${pct(d.p10, 0)} a ${pct(d.p90, 0)}`, int(d.led_by_l), int(d.led_by_b)])));
+      .map((d) => [`${title}: ${label[dim](d)}`, int(d.municipalities), pct(d.p50), T.to(pct(d.p10, 0), pct(d.p90, 0)), int(d.led_by_l), int(d.led_by_b)])));
 }
 
 // ---------- 7a. the turnaround as two balanced bars ----------
@@ -224,14 +224,14 @@ export async function bridge() {
   const stories = await getJSON("data/stories.json");
   const n = stories.turnaround2026.national;
   const host = document.getElementById("bridge");
-  const top = [["Votos em terceiros no 1º turno", n.others_r1, C.third], ["Mais gente foi votar", n.delta_turnout, C.absent], ["Menos brancos e nulos", -n.delta_blank_null, C.blank]];
-  const bottom = [["Lula cresceu", n.delta_l_votes, C.l], ["Flávio cresceu", n.delta_b_votes, C.b]];
+  const top = [[T.thirdR1, n.others_r1, C.third], [T.moreTurnout, n.delta_turnout, C.absent], [T.fewerBlank, -n.delta_blank_null, C.blank]];
+  const bottom = [[T.lGain, n.delta_l_votes, C.l], [T.bGain, n.delta_b_votes, C.b]];
   function draw() {
     const W = width(host), barH = 34;
     const total = d3.sum(top, (d) => d[1]);
     const x = d3.scaleLinear().domain([0, total]).range([0, W]);
     const frag = document.createDocumentFragment();
-    for (const [title, parts] of [["Terceiros, comparecimento e brancos e nulos", top], ["Quanto cada candidato cresceu", bottom]]) {
+    for (const [title, parts] of [[T.bridgeTop, top], [T.bridgeBottom, bottom]]) {
       const h = document.createElement("p"); h.className = "chart-title"; h.style.fontSize = "0.9rem"; h.style.margin = "0 0 6px"; h.textContent = title;
       const svg = d3.create("svg").attr("width", W).attr("height", barH).attr("viewBox", `0 0 ${W} ${barH}`).attr("aria-hidden", "true");
       let x0 = 0;
@@ -271,7 +271,7 @@ export async function scatter() {
   let xKey = "others";
   const ctl = document.getElementById("scatter-controls");
   ctl.replaceChildren();
-  segmented(ctl, "Eixo horizontal", [["others", "Terceiros"], ["turnout", "Comparecimento"]], xKey, (v) => { xKey = v; draw(); });
+  segmented(ctl, T.xAxis, [["others", T.xThird], ["turnout", T.xTurnout]], xKey, (v) => { xKey = v; draw(); });
   const bins = stories.turnaround2026.bins;
   function draw() {
     const W = width(host), narrow = W < 640;
@@ -314,13 +314,13 @@ export async function scatter() {
       ctx.stroke();
       line.forEach(([xx, yy]) => { ctx.fillStyle = C.ink; ctx.beginPath(); ctx.arc(xx, yy, 4.5, 0, 7); ctx.fill(); ctx.strokeStyle = C.paper2; ctx.lineWidth = 2; ctx.stroke(); });
       const svg = d3.create("svg").attr("width", panelW).attr("height", panelH).style("position", "absolute").style("left", 0).style("top", 0).attr("aria-hidden", "true");
-      if (out) svg.append("text").attr("x", panelW - m.r).attr("y", 14).attr("text-anchor", "end").attr("class", "anno anno-muted").text(`${int(out)} fora da escala`);
-      svg.append("text").attr("x", m.l).attr("y", 14).attr("class", "anno").style("font-weight", 650).text(`Variação de ${who}`);
+      if (out) svg.append("text").attr("x", panelW - m.r).attr("y", 14).attr("text-anchor", "end").attr("class", "anno anno-muted").text(T.offScale(int(out)));
+      svg.append("text").attr("x", m.l).attr("y", 14).attr("class", "anno").style("font-weight", 650).text(T.changeOf(who));
       const ax = svg.append("g").attr("class", "axis");
       y.ticks(5).forEach((t) => ax.append("text").attr("x", m.l - 6).attr("y", y(t) + 4).attr("text-anchor", "end").text(`${t > 0 ? "+" : ""}${dec(t * 100, 0)}`));
       x.ticks(4).forEach((t) => ax.append("text").attr("x", x(t)).attr("y", panelH - m.b + 16).attr("text-anchor", "middle").text(`${xKey === "turnout" && t > 0 ? "+" : ""}${dec(t * 100, 0)}`));
       svg.append("text").attr("x", (m.l + panelW - m.r) / 2).attr("y", panelH - 6).attr("text-anchor", "middle").attr("class", "anno anno-muted")
-        .text(xKey === "others" ? "votos em terceiros no 1º turno (% do eleitorado)" : "variação do comparecimento (pontos)");
+        .text(xKey === "others" ? T.xLabelThird : T.xLabelTurnout);
       const hl = svg.append("circle").attr("r", 0).attr("fill", "none").attr("stroke", C.ink).attr("stroke-width", 2);
       p.append(cv, svg.node());
       wrap.appendChild(p);
@@ -334,21 +334,21 @@ export async function scatter() {
         const d = (k === 0 ? qt : qtb).find(ev.clientX - r.left, ev.clientY - r.top, 24);
         if (!d) { tip.classList.remove("on"); panels.forEach((q) => q.hl.attr("r", 0)); return; }
         panels.forEach((q) => q.hl.attr("cx", x(d[xKey])).attr("cy", y(d[q.key])).attr("r", rs(d.aptos) + 3));
-        showTip(tip, host.parentElement, ev, tipNode(d.name, [[C.l, "Variação de Lula", pts(d.gl, 1, true)], [C.b, "Variação de Flávio", pts(d.gb, 1, true)],
-          [C.third, "Terceiros no 1º turno", pct(d.others)], [C.absent, "Comparecimento", pts(d.turnout, 1, true)]], `Eleitorado: ${int(d.aptos)}`));
+        showTip(tip, host.parentElement, ev, tipNode(d.name, [[C.l, T.changeOf("Lula"), pts(d.gl, 1, true)], [C.b, T.changeOf("Flávio"), pts(d.gb, 1, true)],
+          [C.third, T.thirdInR1, pct(d.others)], [C.absent, T.turnout, pts(d.turnout, 1, true)]], T.electorateN(int(d.aptos))));
       };
       p.addEventListener("pointermove", onMove);
       p.addEventListener("pointerdown", onMove);
       p.addEventListener("pointerleave", (e) => { if (e.pointerType === "touch") return; tip.classList.remove("on"); panels.forEach((q) => q.hl.attr("r", 0)); });
     });
     const note = document.createElement("p"); note.className = "chart-sub"; note.style.marginTop = "8px";
-    note.textContent = "Linha escura: média de cinco grupos com o mesmo número de municípios, ponderada pelo eleitorado.";
+    note.textContent = T.fifthsNote;
     host.replaceChildren(wrap, note);
   }
   draw(); onResize(host, draw);
-  table(document.getElementById("scatter-table"), ["Grupo (quinto de municípios)", "Faixa", "Variação de Lula", "Variação de Flávio"],
-    bins.map((b) => [`${b.factor === "others_r1_pts" ? "Terceiros" : "Comparecimento"}, ${b.quintile}º quinto`,
-      b.factor === "others_r1_pts" ? `${pct(b.factor_min)} a ${pct(b.factor_max)}` : `${pts(b.factor_min, 1, true)} a ${pts(b.factor_max, 1, true)}`,
+  table(document.getElementById("scatter-table"), T.fifthsHead,
+    bins.map((b) => [T.fifthRow(b.factor === "others_r1_pts", b.quintile),
+      b.factor === "others_r1_pts" ? T.to(pct(b.factor_min), pct(b.factor_max)) : T.to(pts(b.factor_min, 1, true), pts(b.factor_max, 1, true)),
       pts(b.gain_l_pts_weighted, 1, true), pts(b.gain_b_pts_weighted, 1, true)]));
 }
 
