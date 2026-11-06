@@ -246,15 +246,19 @@ details.table-view th:first-child, details.table-view td:first-child, details.ta
 /* ---------- 100 people ---------- */
 .people svg { width: 100%; height: auto; max-width: 180px; }
 .city-search { position: relative; max-width: 28rem; }
-.city-search input { width: 100%; font: 500 1.05rem var(--sans); padding: 14px 16px; border: 1.5px solid var(--ink); border-radius: 10px; background: #fff; color: var(--ink); }
+.city-search input { width: 100%; font: 500 1.05rem var(--sans); padding: 14px 52px 14px 16px; border: 1.5px solid var(--ink); border-radius: 10px; background: #fff; color: var(--ink); }
 .city-search input::placeholder { color: var(--muted); }
+.city-clear { position: absolute; top: 4px; right: 4px; width: 44px; height: 44px; border: 0; border-radius: 8px; background: transparent; color: var(--ink-2); font: 400 1.6rem/1 var(--sans); cursor: pointer; }
+.city-clear:hover { background: var(--paper-2); color: var(--ink); }
+.city-back { margin: 0 0 18px; padding: 8px 0; border: 0; background: none; color: var(--l-ink); font: 600 0.92rem var(--sans); cursor: pointer; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+.city-back:hover { text-decoration-thickness: 2px; }
 .city-search ul { list-style: none; margin: 4px 0 0; padding: 4px; position: absolute; z-index: 30; left: 0; right: 0; background: #fff; border: 1px solid var(--rule); border-radius: 10px; box-shadow: 0 12px 28px rgba(0,0,0,0.12); max-height: 300px; overflow-y: auto; }
 .city-search li { padding: 10px 12px; border-radius: 6px; cursor: pointer; display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
 .city-search li[aria-selected="true"], .city-search li:hover { background: var(--paper-2); }
 .city-search li small { color: var(--muted); }
 .city-out { margin-top: 28px; }
 .city-name { font-family: var(--serif); font-size: clamp(1.6rem, 6vw, 2.3rem); font-weight: 650; margin: 0; }
-.city-meta { color: var(--muted); font-size: 0.9rem; margin: 2px 0 18px; }
+.city-meta { color: var(--muted); font-size: 0.9rem; margin: 2px 0 10px; }
 .city-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 26px; }
 .city-grid > * { min-width: 0; }
 .city-year h4 { font: 650 0.95rem var(--sans); margin: 0 0 8px; }

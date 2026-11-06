@@ -41,6 +41,23 @@ export async function initCity() {
     } else input.removeAttribute("aria-activedescendant");
   }
   const status = document.getElementById("city-status");
+  const clearBtn = document.createElement("button");
+  clearBtn.type = "button"; clearBtn.className = "city-clear"; clearBtn.hidden = true;
+  clearBtn.setAttribute("aria-label", T.clearSearch); clearBtn.title = T.clearSearch;
+  clearBtn.textContent = "\u00d7";
+  input.after(clearBtn);
+  const updateClear = () => { clearBtn.hidden = !input.value; };
+  input.addEventListener("input", updateClear);
+  clearBtn.addEventListener("click", () => { showAll(); input.focus(); });
+  // Back to the national view: empty search, no city in the address (so a reload shows Brazil too).
+  async function showAll() {
+    input.value = ""; options = []; active = -1; renderList(); updateClear();
+    await profile(null);
+    status.textContent = T.showingAll;
+    if (/^#cidade-/.test(location.hash)) {
+      try { history.replaceState(null, "", location.pathname + location.search); } catch (e) { /* ignore */ }
+    }
+  }
   input.addEventListener("input", () => {
     options = search(input.value); active = options.length ? 0 : -1; renderList();
     const q = input.value.trim();
@@ -61,7 +78,7 @@ export async function initCity() {
 
   async function choose(m) {
     input.value = `${m.name} (${m.uf})`;
-    options = []; active = -1; renderList();
+    options = []; active = -1; renderList(); updateClear();
     await profile(m);
     status.textContent = T.showing(`${m.name} (${m.uf})`);
     try { history.replaceState(null, "", `#cidade-${m.id}`); } catch (e) { /* ignore */ }
@@ -77,6 +94,12 @@ export async function initCity() {
       meta.textContent = T.cityMeta(m.uf, REGION_NAMES[r[3]], int(r[4]));
     } else meta.textContent = T.allMeta;
     frag.append(h, meta);
+    if (m) {
+      const back = document.createElement("button");
+      back.type = "button"; back.className = "city-back"; back.textContent = `\u2190 ${T.backToBrazil}`;
+      back.addEventListener("click", () => { showAll(); input.focus(); });
+      frag.append(back);
+    }
     if (m && SPLIT[m.id]) { const n = document.createElement("p"); n.className = "city-note"; n.textContent = SPLIT[m.id]; frag.append(n); }
     const legend = document.createElement("div"); legend.className = "legend";
     for (const [col, lab, ring] of [[C.l, T.campLLegend], [C.b, T.campBLegend], [C.third, T.others], [C.blank, T.blankNull], [null, T.absent, true]]) {
@@ -122,12 +145,12 @@ export async function initCity() {
   async function showById(id) {
     const m = idx.find((x) => x.id === id);
     if (!m) return false;
-    input.value = `${m.name} (${m.uf})`;
+    input.value = `${m.name} (${m.uf})`; updateClear();
     await profile(m);
     status.textContent = T.showing(`${m.name} (${m.uf})`);
     return true;
   }
   const hash = location.hash.match(/^#cidade-(\d{7})$/);
   if (!(hash && await showById(+hash[1]))) await profile(null);
-  return { showById };
+  return { showById, showAll };
 }

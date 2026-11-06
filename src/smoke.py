@@ -22,9 +22,9 @@ from src.screenshots import scroll_through, serve
 
 LANGS = {
     "pt": {"path": "", "clicks": ("2014", "1º", "2018", "Proporção", "2022", "2º", "Pontos", "2026", "Vencedor"),
-           "caption": "2º turno de 2026", "nomatch": "Nenhum"},
+           "caption": "2º turno de 2026", "nomatch": "Nenhum", "all": "Brasil inteiro"},
     "en": {"path": "en/", "clicks": ("2014", "First", "2018", "Share", "2022", "Runoff", "Dots", "2026", "Winner"),
-           "caption": "2026 runoff", "nomatch": "No municipality"},
+           "caption": "2026 runoff", "nomatch": "No municipality", "all": "All of Brazil"},
 }
 
 
@@ -82,6 +82,25 @@ def main() -> int:
             page.wait_for_timeout(800)
             if "Campinas" not in page.locator("#city-out").inner_text():
                 failures.append(f"{name}: city search did not show Campinas")
+            # going back to the national view: link under the city name, then the clear button, then a reload
+            page.locator(".city-back").click()
+            page.wait_for_timeout(600)
+            if L["all"] not in page.locator("#city-out").inner_text() or "#cidade-" in page.url:
+                failures.append(f"{name}: 'back to Brazil' did not reset the city view")
+            page.locator("#city-input").fill("sobral")
+            page.wait_for_timeout(300)
+            page.keyboard.press("Enter")
+            page.wait_for_timeout(800)
+            page.locator(".city-clear").click()
+            page.wait_for_timeout(600)
+            if L["all"] not in page.locator("#city-out").inner_text() or "#cidade-" in page.url \
+                    or page.locator("#city-input").input_value():
+                failures.append(f"{name}: the clear button did not reset the city view")
+            page.reload(wait_until="networkidle")
+            page.locator("#city-input").scroll_into_view_if_needed()
+            page.wait_for_timeout(1200)
+            if L["all"] not in page.locator("#city-out").inner_text():
+                failures.append(f"{name}: after clearing and reloading, a city is still shown")
             page.locator("#city-input").fill("xqzwvk")
             page.wait_for_timeout(300)
             if L["nomatch"] not in page.locator("#city-list").inner_text():

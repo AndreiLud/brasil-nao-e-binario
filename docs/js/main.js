@@ -27,7 +27,10 @@ whenNear($("sua-cidade"), safe(loadCity));
 // deep link: #cidade-<IBGE code> opens the city view directly
 async function deepLink() {
   const m = location.hash.match(/^#cidade-(\d{7})$/);
-  if (!m) return;
+  if (!m) {
+    if (cityReady) (await cityReady).showAll();   // the city left the address: back to Brazil
+    return;
+  }
   const api = await loadCity();
   await api.showById(+m[1]);
   $("sua-cidade").scrollIntoView();
