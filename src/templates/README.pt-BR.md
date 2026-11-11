@@ -124,7 +124,7 @@ docs/js/i18n.js       textos dos gráficos e da interface nos dois idiomas
 
 ## Publicar
 
-O site é a pasta estática `docs/`, publicada como está. `SITE_URL` e `REPO_URL` em `src/config.py` guardam os endereços públicos (os links canônicos e as imagens de compartilhamento precisam de endereço absoluto); se mudar algum deles, rode `.venv/bin/python -m src.render`.
+O site é a pasta estática `docs/`, publicada como está. `SITE_URL` e `REPO_URL` em `src/config.py` guardam os endereços públicos (os links canônicos e as imagens de compartilhamento precisam de endereço absoluto); se mudar algum deles, rode `.venv/bin/python -m src.render`. O GitHub Pages continua publicando `docs/` no endereço anterior (`OLD_SITE_URL`), e uma página aberta lá leva o leitor para o mesmo ponto em `SITE_URL`.
 
 * **Cloudflare Workers:** o `wrangler.jsonc` envia `docs/` como arquivos estáticos (nenhum script roda) e declara os domínios próprios. A Cloudflare cria os registros de DNS e os certificados na publicação. No painel da Cloudflare: **Workers & Pages → Create → Import a repository**, escolha este repositório, mantenha o nome `brasil-nao-e-binario`, deixe o comando de build vazio e use `npx wrangler@4.158.0 deploy` como comando de deploy. Cada push na `main` publica de novo.
 * **GitHub Pages:** **Settings → Pages → Build and deployment → Source: Deploy from a branch → Branch: main, pasta /docs → Save.**

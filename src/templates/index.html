@@ -2,6 +2,14 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
+<script>
+(function () {
+  var old = new URL("{{cfg_old_site_url}}");
+  if (location.hostname === old.hostname && location.pathname.indexOf(old.pathname) === 0) {
+    location.replace("{{cfg_site_url}}" + location.pathname.slice(old.pathname.length) + location.search + location.hash);
+  }
+})();
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>O Brasil não é binário</title>
 <meta name="description" content="No 2º turno de 2026, {{e2026r2_local_minority_votes}} de pessoas votaram no candidato que perdeu no próprio município. Uma análise das eleições presidenciais de 2018, 2022 e 2026 com dados oficiais do TSE.">

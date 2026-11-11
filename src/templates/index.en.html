@@ -2,6 +2,14 @@
 <html lang="en" data-base="../">
 <head>
 <meta charset="utf-8">
+<script>
+(function () {
+  var old = new URL("{{cfg_old_site_url}}");
+  if (location.hostname === old.hostname && location.pathname.indexOf(old.pathname) === 0) {
+    location.replace("{{cfg_site_url}}" + location.pathname.slice(old.pathname.length) + location.search + location.hash);
+  }
+})();
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Brazil is not binary</title>
 <meta name="description" content="In Brazil's 2026 presidential runoff, {{e2026r2_local_minority_votes}} people voted for the candidate who lost in their own municipality. A data story on the 2018, 2022 and 2026 elections, built from official TSE data.">

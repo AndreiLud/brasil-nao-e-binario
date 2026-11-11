@@ -2,28 +2,36 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
+<script>
+(function () {
+  var old = new URL("https://andreilud.github.io/brasil-nao-e-binario/");
+  if (location.hostname === old.hostname && location.pathname.indexOf(old.pathname) === 0) {
+    location.replace("https://brasil-nao-e-binario.andreiludescher.com/" + location.pathname.slice(old.pathname.length) + location.search + location.hash);
+  }
+})();
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>O Brasil não é binário</title>
 <meta name="description" content="No 2º turno de 2026, 46,6 milhões de pessoas votaram no candidato que perdeu no próprio município. Uma análise das eleições presidenciais de 2018, 2022 e 2026 com dados oficiais do TSE.">
 <meta name="theme-color" content="#17161c">
-<link rel="canonical" href="https://andreilud.github.io/brasil-nao-e-binario/">
-<link rel="alternate" hreflang="pt-BR" href="https://andreilud.github.io/brasil-nao-e-binario/">
-<link rel="alternate" hreflang="en" href="https://andreilud.github.io/brasil-nao-e-binario/en/">
-<link rel="alternate" hreflang="x-default" href="https://andreilud.github.io/brasil-nao-e-binario/">
+<link rel="canonical" href="https://brasil-nao-e-binario.andreiludescher.com/">
+<link rel="alternate" hreflang="pt-BR" href="https://brasil-nao-e-binario.andreiludescher.com/">
+<link rel="alternate" hreflang="en" href="https://brasil-nao-e-binario.andreiludescher.com/en/">
+<link rel="alternate" hreflang="x-default" href="https://brasil-nao-e-binario.andreiludescher.com/">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:locale:alternate" content="en_US">
 <meta property="og:title" content="O Brasil não é binário">
 <meta property="og:description" content="No 2º turno de 2026, 46,6 milhões de pessoas votaram no candidato que perdeu no próprio município. O mapa de vencedores esconde um país misturado.">
-<meta property="og:url" content="https://andreilud.github.io/brasil-nao-e-binario/">
-<meta property="og:image" content="https://andreilud.github.io/brasil-nao-e-binario/img/og.png">
+<meta property="og:url" content="https://brasil-nao-e-binario.andreiludescher.com/">
+<meta property="og:image" content="https://brasil-nao-e-binario.andreiludescher.com/img/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Mapa do Brasil feito de pontos violeta e ocre misturados, com o título O Brasil não é binário">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="O Brasil não é binário">
 <meta name="twitter:description" content="No 2º turno de 2026, 46,6 milhões de pessoas votaram no candidato que perdeu no próprio município.">
-<meta name="twitter:image" content="https://andreilud.github.io/brasil-nao-e-binario/img/og.png">
+<meta name="twitter:image" content="https://brasil-nao-e-binario.andreiludescher.com/img/og.png">
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="fonts/fraunces-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>

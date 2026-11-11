@@ -6,20 +6,21 @@ Checks both language versions (/ and /en/), at phone and desktop sizes: no JavaS
 the whole page; no horizontal overflow; the map caption follows rapid control clicks; a tap
 on the map shows a tooltip (touch); the city search finds a municipality; the deep link
 #cidade-<IBGE> opens the city view; the share button in the opening offers the networks and
-copies the page address, and the button beside it opens the code repository. Exits with status 1 on any failure.
+copies the page address (also through the native share sheet), and the button beside it opens
+the code repository; the earlier GitHub Pages address sends readers to the new one. Exits with status 1 on any failure.
 """
 from __future__ import annotations
 
 import sys
 from pathlib import Path
-from urllib.parse import quote
+from urllib.parse import quote, urlparse
 
 if __package__ in (None, ""):
     sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from playwright.sync_api import sync_playwright
 
-from src.config import REPO_URL, SITE_URL
+from src.config import OLD_SITE_URL, REPO_URL, SITE_URL
 from src.screenshots import scroll_through, serve
 
 
@@ -31,6 +32,22 @@ LANGS = {
            "caption": "2026 runoff", "nomatch": "No municipality", "all": "All of Brazil",
            "copied": "Link copied", "canon": SITE_URL + "en/"},
 }
+
+
+DOCS = Path(__file__).resolve().parents[1] / "docs"
+NATIVE_SHARE_STUB = "navigator.share = (d) => { window.__shared = d; return Promise.resolve(); };"
+
+
+def serve_old_address(route):
+    """Answer requests to the earlier GitHub Pages address with the local files."""
+    rel = urlparse(route.request.url).path[len(urlparse(OLD_SITE_URL).path):]
+    f = DOCS / rel
+    if f.is_dir():
+        f = f / "index.html"
+    if f.is_file():
+        route.fulfill(path=str(f))
+    else:
+        route.fulfill(status=404, body="")
 
 
 def main() -> int:
@@ -61,8 +78,12 @@ def main() -> int:
                 share.click()
                 page.wait_for_timeout(300)
                 wa = page.locator('#share-menu [data-net="whatsapp"]')
-                if not wa.is_visible() or quote(L["canon"], safe="") not in (wa.get_attribute("href") or ""):
-                    failures.append(f"{name}: share options missing or not pointing to {L['canon']}")
+                if not wa.is_visible():
+                    failures.append(f"{name}: share options did not open")
+                for net in ("whatsapp", "linkedin", "x"):
+                    href = page.locator(f'#share-menu [data-net="{net}"]').get_attribute("href") or ""
+                    if quote(L["canon"], safe="") not in href or "github.io" in href:
+                        failures.append(f"{name}: {net} share link does not carry {L['canon']}: {href}")
                 page.keyboard.press("Escape")
                 page.wait_for_timeout(200)
                 if wa.is_visible():
@@ -169,6 +190,32 @@ def main() -> int:
                     failures.append(f"{name}: after switching, section em-2022 is not in view (top={top:.0f})")
                 if "s=" in page.url:
                     failures.append(f"{name}: position parameters left in the address bar")
+
+            # phones use the native share sheet: it must receive the new address and the text
+            if vname == "phone":
+                native = ctx.new_page()
+                native.add_init_script(NATIVE_SHARE_STUB)
+                native.goto(url, wait_until="networkidle")
+                native.locator("#share-btn").click()
+                native.wait_for_timeout(300)
+                shared = native.evaluate("window.__shared || null")
+                if not shared or shared.get("url") != L["canon"] or not shared.get("text"):
+                    failures.append(f"{name}: native share got {shared!r}")
+                native.close()
+
+            # the earlier address sends the reader to the same place on the new one
+            old = ctx.new_page()
+            old.route(OLD_SITE_URL + "**", serve_old_address)
+            old.route(SITE_URL + "**", lambda r: r.fulfill(body="<!doctype html><title>new</title>", content_type="text/html"))
+            tail = L["path"] + "?s=em-2022&p=0.4#cidade-3550308"
+            old.goto(OLD_SITE_URL + tail)
+            try:
+                old.wait_for_url(SITE_URL + "**", timeout=5000)
+            except Exception:
+                pass
+            if old.url != SITE_URL + tail:
+                failures.append(f"{name}: the earlier address went to {old.url}")
+            old.close()
 
             failures += [f"{name}: {e}" for e in errors]
             print(f"{name}: done, {len(errors)} JS/network errors")

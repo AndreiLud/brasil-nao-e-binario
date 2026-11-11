@@ -126,7 +126,7 @@ docs/js/i18n.js       chart and interface strings in both languages
 
 ## Publish
 
-The site is the static folder `docs/`, served as is. `SITE_URL` and `REPO_URL` in `src/config.py` hold the public addresses (canonical links and share images need absolute URLs); after changing them, run `.venv/bin/python -m src.render`.
+The site is the static folder `docs/`, served as is. `SITE_URL` and `REPO_URL` in `src/config.py` hold the public addresses (canonical links and share images need absolute URLs); after changing them, run `.venv/bin/python -m src.render`. GitHub Pages still serves `docs/` at the earlier address (`OLD_SITE_URL`), and a page opened there sends the reader to the same section under `SITE_URL`.
 
 * **Cloudflare Workers:** `wrangler.jsonc` uploads `docs/` as static assets (no script runs) and declares the custom domains, whose DNS records and certificates Cloudflare creates on deploy. In the Cloudflare dashboard: **Workers & Pages → Create → Import a repository**, pick this repository, keep the name `brasil-nao-e-binario`, leave the build command empty and set the deploy command to `npx wrangler@4.158.0 deploy`. Every push to `main` publishes again.
 * **GitHub Pages:** **Settings → Pages → Build and deployment → Source: Deploy from a branch → Branch: main, folder: /docs → Save.**

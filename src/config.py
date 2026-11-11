@@ -100,5 +100,8 @@ REGIONS = {1: "Norte", 2: "Nordeste", 3: "Sudeste", 4: "Sul", 5: "Centro-Oeste"}
 
 # Public address of the site and of the repository. Set them before publishing so the
 # share preview (Open Graph image) uses an absolute URL, then run: python -m src.render
-SITE_URL = "https://andreilud.github.io/brasil-nao-e-binario/"
+SITE_URL = "https://brasil-nao-e-binario.andreiludescher.com/"
+# Earlier address (GitHub Pages, which still serves docs/). A page opened there sends the
+# reader to the same path, query and hash under SITE_URL.
+OLD_SITE_URL = "https://andreilud.github.io/brasil-nao-e-binario/"
 REPO_URL = "https://github.com/AndreiLud/brasil-nao-e-binario"

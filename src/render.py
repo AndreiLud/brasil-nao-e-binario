@@ -43,7 +43,7 @@ ALLOWED_NUMBERS = {
 def load_facts():
     facts = json.loads((C.SITE_DATA / "facts.json").read_text(encoding="utf-8"))
     # configuration values usable in templates (not numbers)
-    for key, val in (("cfg_site_url", C.SITE_URL), ("cfg_repo_url", C.REPO_URL)):
+    for key, val in (("cfg_site_url", C.SITE_URL), ("cfg_repo_url", C.REPO_URL), ("cfg_old_site_url", C.OLD_SITE_URL)):
         facts[key] = {"value": val, "kind": "text", "pt": val, "en": val, "desc": "configuration"}
     return facts
 

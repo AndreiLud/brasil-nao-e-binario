@@ -4,8 +4,8 @@
 
 Uma reportagem de dados sobre as eleições presidenciais de 2018, 2022 e 2026, com 2014 como ponto de partida. Os dados são oficiais, do TSE e do IBGE, município por município. O mapa de quem venceu em cada cidade desenha um país partido em dois blocos. Os votos contam outra história: em todo lugar há eleitores dos dois campos, além de quem votou em outro candidato, anulou, votou em branco ou ficou em casa.
 
-* **Site em português:** https://andreilud.github.io/brasil-nao-e-binario/
-* **Site em inglês:** https://andreilud.github.io/brasil-nao-e-binario/en/
+* **Site em português:** https://brasil-nao-e-binario.andreiludescher.com/
+* **Site em inglês:** https://brasil-nao-e-binario.andreiludescher.com/en/
 * **English version of this README:** [README.md](README.md)
 
 O site é bilíngue. As duas versões usam os mesmos dados, gráficos e visual, e um seletor PT/EN no topo de cada página leva de uma à outra.
@@ -124,7 +124,7 @@ docs/js/i18n.js       textos dos gráficos e da interface nos dois idiomas
 
 ## Publicar
 
-O site é a pasta estática `docs/`, publicada como está. `SITE_URL` e `REPO_URL` em `src/config.py` guardam os endereços públicos (os links canônicos e as imagens de compartilhamento precisam de endereço absoluto); se mudar algum deles, rode `.venv/bin/python -m src.render`.
+O site é a pasta estática `docs/`, publicada como está. `SITE_URL` e `REPO_URL` em `src/config.py` guardam os endereços públicos (os links canônicos e as imagens de compartilhamento precisam de endereço absoluto); se mudar algum deles, rode `.venv/bin/python -m src.render`. O GitHub Pages continua publicando `docs/` no endereço anterior (`OLD_SITE_URL`), e uma página aberta lá leva o leitor para o mesmo ponto em `SITE_URL`.
 
 * **Cloudflare Workers:** o `wrangler.jsonc` envia `docs/` como arquivos estáticos (nenhum script roda) e declara os domínios próprios. A Cloudflare cria os registros de DNS e os certificados na publicação. No painel da Cloudflare: **Workers & Pages → Create → Import a repository**, escolha este repositório, mantenha o nome `brasil-nao-e-binario`, deixe o comando de build vazio e use `npx wrangler@4.158.0 deploy` como comando de deploy. Cada push na `main` publica de novo.
 * **GitHub Pages:** **Settings → Pages → Build and deployment → Source: Deploy from a branch → Branch: main, pasta /docs → Save.**
