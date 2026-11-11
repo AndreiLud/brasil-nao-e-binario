@@ -79,7 +79,7 @@ function shareButton() {
     }
   });
   menu.querySelectorAll("a[data-net]").forEach((a) => a.addEventListener("click", () => open(false)));
-  document.addEventListener("pointerdown", (e) => { if (!menu.hidden && !$("share").contains(e.target)) open(false); });
+  document.addEventListener("pointerdown", (e) => { if (!menu.hidden && !$("hero-actions").contains(e.target)) open(false); });
   document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !menu.hidden) { open(false); btn.focus(); } });
 }
 

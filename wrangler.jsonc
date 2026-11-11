@@ -1,0 +1,22 @@
+{
+  // Cloudflare Workers configuration. The site is static: every file in docs/ is served
+  // as a static asset and no script runs. GitHub Pages serves the same folder.
+  // Must match the Worker name in the Cloudflare dashboard (Workers Builds checks it).
+  "name": "brasil-nao-e-binario",
+  // Never a future date.
+  "compatibility_date": "2026-11-06",
+  "assets": {
+    // Relative to this file. Only this folder is uploaded.
+    "directory": "./docs",
+    // /en answers with a redirect to /en/, which serves en/index.html (same as GitHub Pages).
+    "html_handling": "auto-trailing-slash"
+  },
+  // Custom Domains: Cloudflare creates the DNS records and certificates on deploy.
+  // The .com.br address gets a 301 to the .com one from a Redirect Rule in that zone.
+  "routes": [
+    { "pattern": "brasil-nao-e-binario.andreiludescher.com", "custom_domain": true },
+    { "pattern": "brasil-nao-e-binario.andreiludescher.com.br", "custom_domain": true }
+  ],
+  "workers_dev": false,
+  "preview_urls": false
+}

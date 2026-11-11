@@ -108,6 +108,7 @@ Também funciona com `make all`, `make serve` e `make screenshots`. As versões 
 
 ```
 run_all.py            um comando para o pipeline inteiro
+wrangler.jsonc        configuração do Cloudflare Workers (publica docs/)
 requirements.txt      dependências Python com versões fixadas
 sql/                  um arquivo SQL por pergunta, além de staging, modelo e conferência
 src/                  download, correspondência de códigos, checagens, conferência, mapa, exportação, fatos, textos
@@ -117,14 +118,16 @@ notebooks/            análise exploratória com perguntas e conclusões (execut
 project_docs/         brief, dicionário de dados, registro de qualidade, metodologia
 data/raw, interim     fora do Git
 data/processed/       tabelas da análise (CSV) e resultados da conferência
-docs/                 o site (GitHub Pages): português na raiz, inglês em docs/en/
+docs/                 o site estático: português na raiz, inglês em docs/en/
 docs/js/i18n.js       textos dos gráficos e da interface nos dois idiomas
 ```
 
-## Publicar no GitHub Pages
+## Publicar
 
-1. `SITE_URL` e `REPO_URL` em `src/config.py` guardam os endereços públicos (a imagem de compartilhamento precisa de endereço absoluto); se mudar algum deles, rode `.venv/bin/python -m src.render`.
-2. No GitHub: **Settings → Pages → Build and deployment → Source: Deploy from a branch → Branch: main, pasta /docs → Save.**
+O site é a pasta estática `docs/`, publicada como está. `SITE_URL` e `REPO_URL` em `src/config.py` guardam os endereços públicos (os links canônicos e as imagens de compartilhamento precisam de endereço absoluto); se mudar algum deles, rode `.venv/bin/python -m src.render`.
+
+* **Cloudflare Workers:** o `wrangler.jsonc` envia `docs/` como arquivos estáticos (nenhum script roda) e declara os domínios próprios. A Cloudflare cria os registros de DNS e os certificados na publicação. No painel da Cloudflare: **Workers & Pages → Create → Import a repository**, escolha este repositório, mantenha o nome `brasil-nao-e-binario`, deixe o comando de build vazio e use `npx wrangler@4.158.0 deploy` como comando de deploy. Cada push na `main` publica de novo.
+* **GitHub Pages:** **Settings → Pages → Build and deployment → Source: Deploy from a branch → Branch: main, pasta /docs → Save.**
 
 ## Créditos
 

@@ -110,6 +110,7 @@ cd docs && python3 -m http.server 8000   # open http://localhost:8000 (Portugues
 
 ```
 run_all.py            one command for the whole pipeline
+wrangler.jsonc        Cloudflare Workers configuration (serves docs/)
 requirements.txt      pinned Python dependencies
 sql/                  one SQL file per question, plus staging, model and validation
 src/                  download, crosswalk, checks, validation, geo, export, facts, render
@@ -119,14 +120,16 @@ notebooks/            exploratory analysis with questions and takeaways (execute
 project_docs/         brief, data dictionary, quality log, methodology
 data/raw, interim     not versioned
 data/processed/       analysis tables (CSV), validation results
-docs/                 the site (GitHub Pages): Portuguese at the root, English in docs/en/
+docs/                 the static site: Portuguese at the root, English in docs/en/
 docs/js/i18n.js       chart and interface strings in both languages
 ```
 
-## Publish with GitHub Pages
+## Publish
 
-1. `SITE_URL` and `REPO_URL` in `src/config.py` hold the public addresses (the share image needs an absolute URL); after changing them, run `.venv/bin/python -m src.render`.
-2. On GitHub: **Settings → Pages → Build and deployment → Source: Deploy from a branch → Branch: main, folder: /docs → Save.**
+The site is the static folder `docs/`, served as is. `SITE_URL` and `REPO_URL` in `src/config.py` hold the public addresses (canonical links and share images need absolute URLs); after changing them, run `.venv/bin/python -m src.render`.
+
+* **Cloudflare Workers:** `wrangler.jsonc` uploads `docs/` as static assets (no script runs) and declares the custom domains, whose DNS records and certificates Cloudflare creates on deploy. In the Cloudflare dashboard: **Workers & Pages → Create → Import a repository**, pick this repository, keep the name `brasil-nao-e-binario`, leave the build command empty and set the deploy command to `npx wrangler@4.158.0 deploy`. Every push to `main` publishes again.
+* **GitHub Pages:** **Settings → Pages → Build and deployment → Source: Deploy from a branch → Branch: main, folder: /docs → Save.**
 
 ## Credits
 

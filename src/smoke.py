@@ -6,7 +6,7 @@ Checks both language versions (/ and /en/), at phone and desktop sizes: no JavaS
 the whole page; no horizontal overflow; the map caption follows rapid control clicks; a tap
 on the map shows a tooltip (touch); the city search finds a municipality; the deep link
 #cidade-<IBGE> opens the city view; the share button in the opening offers the networks and
-copies the page address. Exits with status 1 on any failure.
+copies the page address, and the button beside it opens the code repository. Exits with status 1 on any failure.
 """
 from __future__ import annotations
 
@@ -19,7 +19,7 @@ if __package__ in (None, ""):
 
 from playwright.sync_api import sync_playwright
 
-from src.config import SITE_URL
+from src.config import REPO_URL, SITE_URL
 from src.screenshots import scroll_through, serve
 
 
@@ -74,6 +74,10 @@ def main() -> int:
                     failures.append(f"{name}: no confirmation after copying the link")
                 if page.evaluate("navigator.clipboard.readText()") != L["canon"]:
                     failures.append(f"{name}: clipboard does not hold {L['canon']}")
+
+            repo = page.locator("#repo-btn")
+            if not repo.is_visible() or repo.get_attribute("href") != REPO_URL:
+                failures.append(f"{name}: repository button missing or not pointing to {REPO_URL}")
 
             scroll_through(page, step=600, wait=100)
             page.wait_for_timeout(800)
